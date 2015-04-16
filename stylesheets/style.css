@@ -13,6 +13,15 @@ html, body {
 	padding: 0;
 }
 
+a {
+	color: #0099CC;
+	transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+	color: #99d6ea;
+}
+
 hr {
 	width: 90%;
 }
@@ -42,12 +51,10 @@ hr {
 	padding-right: 10px;
 	padding-top: 8px;
 	padding-bottom: 8px;
-	color: white;
 	border: solid;
 	border-color: white;
 	border-width: 2px;
 	border-radius: 5px;
-	background-color: transparent;
 	text-decoration: none;
 	display: inline-block;
 	transition: color 0.3s ease-in-out,
@@ -56,12 +63,28 @@ hr {
 
 .btn:hover {
 	cursor: pointer;
+}
+
+.btn-default, .btn-no-edge {
+	color: white;
+	background-color: transparent;
+}
+
+.btn-default:hover, .btn-no-edge:hover {
 	color: black;
 	background-color: white;
 }
 
-.btn:active {
-	box-shadow: 0 2px 35px rgba(255, 255, 255, 0.5);
+.btn-default:active, .btn-no-edge:active {
+	box-shadow: 0 2px 20px rgba(255, 255, 255, 0.5);
+}
+
+.btn-no-edge {
+	border: none;
+}
+
+.btn-prev {
+	display: none;
 }
 
 .container {
@@ -84,22 +107,51 @@ hr {
 	height: 300px;
 }
 
-.panel-header, .panel-body {
+.panel > .panel-header,
+.panel > .panel-body {
 	margin-top: 5px;
 	margin-bottom: 5px;
+	display: inline-block;
 }
 
-.panel-header {
-	float: left;
+.panel > .panel-header {
+	position: relative;
+	top: -20px;
 	width: 300px;
 	height: 100%;
+	margin-top: 0;
 	margin-right: 20px;
-	display: inline-block;
 }
 
-.panel-body {
+.panel > .panel-body {
 	height: 100%;
-	display: inline-block;
+	overflow: hidden;
+}
+
+.panel > .panel-navigation {
+	display: block;
+}
+
+.panel > .panel-navigation > .btn {
+	font-size: 50px;
+	color: gray;
+}
+
+.panel > .panel-navigation > .btn:hover {
+	background-color: transparent;
+	color: white;
+}
+
+.panel > .panel-navigation > .btn:active {
+	box-shadow: none;
+}
+
+.panel > .panel-navigation > .btn-prev {
+	float: left;
+}
+
+.panel > .panel-navigation > .btn-next {
+	float: right;
 }
 
 .table {
@@ -108,11 +160,13 @@ hr {
 }
 
 .table td {
-	padding: 3px;
+	padding: 5px;
+	padding-left: 12px;
+	padding-left: 12px;
 }
 
 .table > caption {
-	padding: 5px;
+	padding: 12px;
 	padding-top: 0;
 	padding-bottom: 10px;
 	text-align: left;
@@ -121,6 +175,7 @@ hr {
 }
 
 .thumbnail {
+	height: calc(100% - 17px);
 	border-color: gray;
 	border-width: 1px;
 	border-radius: 5px;
