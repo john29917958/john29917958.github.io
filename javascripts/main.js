@@ -8,7 +8,20 @@ var Panel = (function() {
 
 		this.$nextButton.click(function () {
 			that.next();
-		})
+		});
+
+		$(document).keydown(function (e) {
+			switch(e.keyCode) {
+				case 39:
+					that.next();
+					break;
+				case 37:
+					that.prev();
+					break;
+				default:
+					break;
+			}
+		});
 	}
 
 	function Panel(panel) {
