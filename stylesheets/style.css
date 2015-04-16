@@ -1,3 +1,135 @@
 html {
 	font-family: "Noto Sans", "Open Sans", Arial, Helvetica, "Microsoft JhengHei", "Apple LiGothic Medium", sans-serif;
 }
+
+body {
+	background-color: black;
+	color: white;
+}
+
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+hr {
+	width: 90%;
+}
+
+#page-wrapper {
+	min-height: 100%;
+}
+
+#page-content {
+	padding-bottom: 100px;
+}
+
+#page-footer {
+	position: absolute;
+	height: 100px;
+	margin: 0;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.btn {
+	margin: 0;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	color: white;
+	border: solid;
+	border-color: white;
+	border-width: 2px;
+	border-radius: 5px;
+	background-color: transparent;
+	text-decoration: none;
+	display: inline-block;
+	transition: color 0.3s ease-in-out,
+		background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+	cursor: pointer;
+	color: black;
+	background-color: white;
+}
+
+.btn:active {
+	box-shadow: 0 2px 35px rgba(255, 255, 255, 0.5);
+}
+
+.container {
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.page-title {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	font-weight: bolder;
+	font-size: 50px;
+}
+
+.panel {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 300px;
+}
+
+.panel-header, .panel-body {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.panel-header {
+	float: left;
+	width: 300px;
+	height: 100%;
+	margin-right: 20px;
+	display: inline-block;
+}
+
+.panel-body {
+	height: 100%;
+	display: inline-block;
+}
+
+.table {
+	margin: 0;
+	border: none;
+}
+
+.table td {
+	padding: 3px;
+}
+
+.table > caption {
+	padding: 5px;
+	padding-top: 0;
+	padding-bottom: 10px;
+	text-align: left;
+	font-weight: bolder;
+	font-size: 30px;
+}
+
+.thumbnail {
+	border-color: gray;
+	border-width: 1px;
+	border-radius: 5px;
+	border-style: solid;
+	margin: 0;
+	padding: 5px;
+}
+
+.thumbnail > img {
+	max-width: 100%;
+	max-height: 100%;
+}
