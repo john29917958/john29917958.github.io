@@ -32,7 +32,7 @@ var Panel = (function() {
 			this.blockHeight = this.$panelBody.first().css('height');
 			this.$prevButton = this.$panel.find('.btn-prev');
 			this.$nextButton = this.$panel.find('.btn-next');
-			this.$currentBlock = this.$panelBody.children().first();
+			this.$currentBlock = this.$panelBody.find('.panel-body-block').first();
 
 			this.$panelBody.children().hide();
 			this.$panelBody.children().first().show();
@@ -100,6 +100,26 @@ var Panel = (function() {
 	return Panel;
 })();
 
+function showHeader(callback) {
+	$('#page-header').animate({
+		opacity: 'show',
+		width: 'show'
+	}, 1000, callback);
+}
+
+function showContent(callback) {
+	$('#page-content').animate({
+		opacity: 'show',
+		height: 'show'
+	}, 1000, callback);
+}
+
+function onReadyAnimation() {
+	showHeader(showContent);
+}
+
 $(document).ready(function () {
 	var panel = new Panel($('.panel'));
+
+	onReadyAnimation();
 });
