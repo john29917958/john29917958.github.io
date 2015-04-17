@@ -191,16 +191,22 @@ hr {
 .table {
 	margin: 0;
 	border: none;
+	max-width: 1100px;
 }
 
 .table th, .table td {
 	padding: 5px;
 	padding-left: 12px;
 	padding-left: 12px;
+	vertical-align: top;
 }
 
 .table th {
 	text-align: left;
+}
+
+.table th.wrapable {
+	white-space: pre-wrap;
 }
 
 .table > thead > tr > th {
@@ -223,11 +229,30 @@ hr {
 	border-width: 1px;
 	border-radius: 5px;
 	border-style: solid;
-	margin: 0;
+	margin: 2px;
+	margin-left: 1px;
+	margin-right: 1px;
 	padding: 5px;
+	padding-bottom: 2px;
+	display: inline-block;
+	vertical-align: middle;
+	transition: background-color 0.3s ease-in-out,
+		box-shadow 0.3s ease-in-out;
 }
 
-.thumbnail > img {
+.thumbnail-vertical {
+	width: 95px;
+	height: 140px;
+}
+
+.thumbnail img {
 	max-width: 100%;
 	max-height: 100%;
+}
+
+.thumbnail-responsive:hover {
+	cursor: pointer;
+	position: relative;
+	background-color: rgba(255, 255, 255, 0.1);
+	box-shadow: 0 2px 20px rgba(255, 255, 255, 0.5);
 }
