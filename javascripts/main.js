@@ -29,13 +29,14 @@ var Panel = (function() {
 			this.$panel = $(panel);
 			this.$emoticon = this.$panel.find('.emoticon');
 			this.$panelBody = this.$panel.find('.panel-body');
-			this.blockHeight = this.$panelBody.first().css('height');
 			this.$prevButton = this.$panel.find('.btn-prev');
 			this.$nextButton = this.$panel.find('.btn-next');
 			this.$currentBlock = this.$panelBody.find('.panel-body-block').first();
 
 			this.$panelBody.children().hide();
-			this.$panelBody.children().first().show();
+			this.$panelBody.children().first().show().css('left', 0);
+
+			this.blockWidth = this.$panelBody.children().first().width();
 
 			registerEvents.call(this);
 		}
@@ -63,8 +64,7 @@ var Panel = (function() {
 		var $prevBlock = this.$currentBlock.prev();
 
 		if (!this.isAtTop()) {
-			this.$currentBlock.hide();
-			$prevBlock.show();
+			this.toggleBlocks(this.$currentBlock, $prevBlock, 'right');
 			this.$currentBlock = $prevBlock;
 
 			if (this.isAtTop()) {
@@ -82,8 +82,7 @@ var Panel = (function() {
 		var $nextBlock = this.$currentBlock.next();
 
 		if (!this.isAtBottom()) {
-			this.$currentBlock.hide();
-			$nextBlock.show();
+			this.toggleBlocks(this.$currentBlock, $nextBlock, 'left');
 			this.$currentBlock = $nextBlock;
 
 			if (this.isAtBottom()) {
@@ -95,6 +94,29 @@ var Panel = (function() {
 
 			this.$prevButton.show();
 		}
+	};
+
+	Panel.prototype.toggleBlocks = function($toHide, $toShow, direction) {
+		var offset = $toHide.width();
+
+		if (direction === 'left') {
+			offset = -offset;
+		}
+		else {
+			$toShow.css('left', -offset);
+		}
+
+		$toHide.animate({
+			left: offset,
+			opacity: 0
+		}, function () {
+			$toHide.hide().css('left', '100%');
+
+			$toShow.show().css('opacity', 0).animate({
+				left: 0,
+				opacity: 1
+			});
+		});
 	};
 
 	return Panel;

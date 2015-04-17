@@ -144,6 +144,13 @@ hr {
 	overflow: hidden;
 }
 
+.panel > .panel-body > .panel-body-block {
+	position: relative;
+	left: 100%;
+	width: 100%;
+	display: inline-block;
+}
+
 .panel > .panel-navigation {
 	display: block;
 }
