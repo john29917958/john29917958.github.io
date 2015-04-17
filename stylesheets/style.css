@@ -156,17 +156,22 @@ hr {
 }
 
 .panel > .panel-navigation > .btn {
+	position: relative;
 	font-size: 50px;
 	color: gray;
+	transition: font-size 0.3s ease-in-out;
 }
 
 .panel > .panel-navigation > .btn:hover {
 	background-color: transparent;
 	color: white;
+	font-size: 70px;
 }
 
 .panel > .panel-navigation > .btn:active {
 	box-shadow: none;
+	font-size: 50px;
+	transition: font-size 0.1s ease-in-out;
 }
 
 .panel > .panel-navigation > .btn-prev {
