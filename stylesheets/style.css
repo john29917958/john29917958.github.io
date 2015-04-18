@@ -56,14 +56,13 @@ hr {
 }
 
 #page-footer {
-	position: absolute;
-	height: 100px;
+	position: fixed;
 	margin: 0;
 	width: 100%;
 	bottom: 0;
 	left: 0;
 	padding: 0;
-	text-align: center;
+	opacity: 0;
 }
 
 .btn {
@@ -115,6 +114,16 @@ hr {
 	margin-right: 5%;
 }
 
+.keyboard-key {
+	padding: 2px;
+	padding-left: 7px;
+	padding-right: 7px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: white;
+	border-radius: 4px;
+}
+
 .page-title {
 	padding-top: 30px;
 	padding-bottom: 30px;
@@ -157,35 +166,52 @@ hr {
 	display: inline-block;
 }
 
-.panel > .panel-navigation {
+.page-navigator {
+	width: 100%;
 	display: block;
+	text-align: center;
+	vertical-align: middle;
+	background-color: rgba(0, 0, 0, 0.85);
+	box-shadow: 0 3px 20px rgba(255, 255, 255, 0.3);
 }
 
-.panel > .panel-navigation > .btn {
-	position: relative;
-	font-size: 50px;
-	color: gray;
-	transition: font-size 0.3s ease-in-out;
+.page-navigator > .btn {
+	position: absolute;
+	font-size: 30px;
+	color: rgba(255, 255, 255, 0.5);
+	transition: font-size 0.3s ease-in-out,
+		color 0.3s ease-in-out;
 }
 
-.panel > .panel-navigation > .btn:hover {
+.page-navigator > .btn:hover {
 	background-color: transparent;
 	color: white;
-	font-size: 70px;
 }
 
-.panel > .panel-navigation > .btn:active {
+.page-navigator > .btn:active {
 	box-shadow: none;
-	font-size: 50px;
-	transition: font-size 0.1s ease-in-out;
+	color: rgba(255, 255, 255, 0.25);
+	transition: color 0.08s ease-in-out;
 }
 
-.panel > .panel-navigation > .btn-prev {
-	float: left;
+.page-navigator > .btn-prev {
+	top: calc(50% - 27px);
+	left: calc(50% - 180px);
 }
 
-.panel > .panel-navigation > .btn-next {
-	float: right;
+.page-navigator > .btn-next {
+	top: calc(50% - 27px);
+	left: calc(50% + 150px);
+}
+
+.page-navigator > .tip-reminder {
+	width: 300px;
+	display: inline-block;
+	overflow: hidden;
+}
+
+.page-navigator > .tip-reminder > :not(:nth-child(1)) {
+	display: none;
 }
 
 .table {
