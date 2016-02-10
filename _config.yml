@@ -70,4 +70,4 @@ theme: landscape
 deploy:
   type: git
   repository: git@github.com:john29917958/john29917958.github.io.git
-  branch: gh-pages
+  branch: master
