@@ -71,3 +71,6 @@ deploy:
   type: git
   repository: git@github.com:john29917958/john29917958.github.io.git
   branch: master
+
+# Disqus
+disqus_shortname: john29917958
