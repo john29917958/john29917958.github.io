@@ -19,8 +19,8 @@ widgets:
 
 # Miscellaneous
 google_analytics:
-favicon: /favicon.png
-twitter: https://twitter.com/john29917958
-google_plus: https://plus.google.com/+%E6%B1%AA%E5%AD%90%E8%B6%85
-fb_admins: https://www.facebook.com/tzuchaowang
-fb_app_id:
+favicon: /favicon.ico
+twitter: john29917958
+google_plus: +汪子超
+fb_admins: 100002225898735
+fb_app_id: 284882215
