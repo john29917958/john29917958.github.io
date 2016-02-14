@@ -21,6 +21,7 @@ Constellation: Scorpio
 - E-mail: john29917958ATgmailDOTcom
 - [Facebook](https://www.facebook.com/tzuchaowang)
 - [Twitter](https://twitter.com/john29917958)
+- [Tumblr](https://www.tumblr.com/blog/john29917958)
 - [LinkedIn](https://www.linkedin.com/in/john29917958)
 
 ## Education
