@@ -1,6 +1,6 @@
 title: Intro to CHST Poster Design
 date: 2016-02-24 14:39:09
-tags: [design, graphic, work]
+tags: [design, graphic]
 category: Graphic design
 ---
 Preview:

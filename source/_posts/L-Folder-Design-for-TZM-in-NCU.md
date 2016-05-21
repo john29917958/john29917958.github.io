@@ -1,6 +1,6 @@
 title: L Folder Design for TZM in NCU
 date: 2016-02-14 11:59:13
-tags: [design, graphic, work]
+tags: [design, graphic]
 category: Graphic design
 ---
 Preview:

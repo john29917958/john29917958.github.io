@@ -1,6 +1,6 @@
 title: First Poster Design for TZM in NCU
 date: 2016-02-15 12:47:21
-tags: [design, graphic, work]
+tags: [design, graphic]
 category: Graphic design
 ---
 Preview:

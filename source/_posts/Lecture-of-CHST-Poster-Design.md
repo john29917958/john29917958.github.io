@@ -1,6 +1,6 @@
 title: Lecture of CHST Poster Design
 date: 2016-02-26 15:19:49
-tags: [graphic, design, work]
+tags: [graphic, design]
 category: Graphic design
 ---
 Preview:
