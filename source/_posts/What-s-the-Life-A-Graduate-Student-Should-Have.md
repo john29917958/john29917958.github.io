@@ -3,7 +3,7 @@ date: 2016-03-22 07:32:52
 tags: [research, life, reflection]
 category: Reflection
 ---
-{% asset_img octupus.jpg I'm just working as an octupus %}
+{% asset_img octupus.png I'm just working as an octupus %}
 Writing products, having meetings with company, managing servers, handling tasks of teaching assistant, taking courses, reading papers, preparing demonstrations... As a graduate student in NCU, I have so many tasks and works to complete, just like an octupus. Focusing on only one task is impossible. Working days are usually not enough. I have to spent a lot of holidays and weekends on dealing with the tasks that have not been done yet. I have little time to study and research techniques / knowledge I'm interested in, or sharpen my skills of programming. Is this really a valuable life of graduate student? Does it really worth it?
 <!-- more -->
 My answer is: Maybe, but with suspicions.
