@@ -7,7 +7,7 @@ When you visit [國父紀念館](http://www.yatsen.gov.tw/) or [中正紀念堂]
 <!--more-->
 
 ## Music, Then Dance
-If you did take courses given by any legendary street dancers in the world, the first thing you'll be taught must be how to listen to music. Before you start to learn how to do some special dance steps or tricks, you should learn how to appreciate the music and how to be moved and inspired by the music first, because dance bases on music.
+Yes, and it is groove to the beat. Groove to the beat meas we should dance to the music. If you did take courses given by any legendary street dancers in the world, the first thing you'll be taught must be how to listen to music instead of steps. Before you start to learn how to do some special dance steps or tricks, you should learn how to appreciate the music, how to be moved and inspired by the music first. But why? Why can't I learn how to flip, how to wave? Why can't I just learn what I think that is cool at first? It's just because, dance bases on the music.
 If you're wondering whether it is true or not, try to verify "dance bases on music" yourself by opening YouTube, search one of the following keywords:
 
 - Rock Steady Crew
@@ -31,7 +31,7 @@ then click into one of the result and watch the way they dance. For example:
 When you're appreciating the video, try to pay attention to the timing that the dancer performs stops, hits and stamps. If you did pay attention to it, you should notice that most times when they stop, hit, and stamp, you can hear drumbeats at the same time. It's not a coincidence, it's because they felt what music gave them, and they just reacted to what made them feel good naturally.
 
 ## How to Dance to The Music
-Now, you should be convinced that dance bases on music right? If not, try to watch more dance videos on YouTube, try to appreciate what legendary dancers do, then you should gradually understand what concept I'm trying deliver.
+Now, you should be convinced that dance bases on music right? If not, try to watch more dance videos on YouTube, try to appreciate what legendary dancers do, then you should gradually understand what I'm trying to deliver.
 So how can I improve my connection to the music? Well, just listen to it and enjoy everything music gives you. However, someone may need some helps to get started quickly. The following are some tips for you if you need guidances, but please remember, enjoy what you hear is the fundamental way to get closer and closer to the music.
 
 ### Timing
@@ -39,3 +39,23 @@ Timing means if you match the speed of music or not. Let's take signing for exam
 
 ### Strength
 Instead of the speed and timing of music, ability to perform the strength of beats also plays an important role in street dance. More precisely, how to perform the characteristic of each type of elements in the music also means something in street dance, and imitate the characteristic of beats is the most basic one.
+Unfortunately, I'm unable to describe how to be like the beat you hear because the beat inside different music has different characteristic. Another thing is if you're never touched by the beat, you don't know how exactly it feels like. Once you hit the beat with appropriate power / strength, you will know it, you'll understand, just like the fireworks are set off within your heart.
+However, there's a way for you to start. When you're listening to the music with strong beats, try to hit it hard no matter with your hands or feet. Just hit it hard without any doubt. After doing this several times, one day you may feel: Oh Yeah! That is it! Once you feel that, it means you've been touched by the beat you hear. You've taken your first step into the music imitation game. After you've learned how to imitate the beats, it should be much more easier to extend to intimate any other musical instruments.
+
+### Grooving
+Groove is the natural reaction when hearing music. For example, watch this video:
+{% youtube O3pyCGnZzYA %}
+In this video, you can see people nodding their head naturally. That is Groove. Groove is not cool skills, flips, windmills, and so on. Groove is the natural reaction to the music. Groove cannot be trained, it can only be brought up gradually. Groove can be improved as the amount of music you hear grows. If you want to learn how to Groove, then you should try your best to hear a lot of songs **you like**. Yes, the songs **you like**, because only the songs you like can connect deeply into your heart, only the songs you like can make you touched and bring out your reaction naturally. When you're hearing the songs you like, try to relax and slightly nodding your heat or shaking your shoulders, enjoy the song you hear with a blank mind. Once you notice that you can help but boogie your body while hearing the song which is to your taste, congratulations, you've entered the paradise of Grooving. Remember, Grooving is not artificial, it's simple and natural.
+
+
+After you mastered these points, you've already learned the very fundamental part of dance. If you keep following these points on the way you dance, it's hard for you to go astray.
+And finally, as a normal street dancer, I think the most beautiful thing in street dance is to groove to the beat, to groove to right to the music.
+
+## Groove to The Beat
+In the previous paragraph, I split the fundamental of street dance into three parts. However, these part should not be split. As my opinion, dancing is the combination of the three parts I described above. While you're dancing, you should always present these parts at the same time. You should always groove to the beat.
+Groove to the beat means, you are deeply moved by the music you hear so that you can help but move your body with the music. You feel like you are the music itself. You step **on the beat** without losing your groove, you hit **right on the beat** without losing your groove, your hits are very **similar to the beat**, and you still **not losing your groove**. That is groove to the beat.
+If you are grooving to the beat, you should be very satisfied. You don't want to stop, because you regard this the best thing around the world. I don't know why human beings have this characteristic, and yes, it do exists, it definitely exists, because I did experience it. Groove to the beat is a very ordinary, straightforward state. If you simply love the song you hear, simply shake your body with the music naturally, simply touched by the beat and can't help but hit it and intimate it, then you're at the groove to the beat state.
+
+## Conclusion
+So, if you want to dance well, you should love the music you hear first. After you're truly touched by the music, feel free to shake with it, to clap on it, to stamp on it, to groove on it. After you can groove to the beat, groove to the music you hear, then you can start to practice any skills, any styles you like. Finally, you should develop your own, unique, inimitable flavor while you're dancing.
+Hope my experience does benefit those who want to become a street dancer. If you want to become a street dancer, love the music first.
