@@ -3,7 +3,7 @@ date: 2016-06-03 09:02:11
 tags: [dance, music]
 category: Dance
 ---
-When you visit [國父紀念館](http://www.yatsen.gov.tw/) or [中正紀念堂](http://www.cksmh.gov.tw/), you should see many many teenagers moving their bodies with music. You should see a lot of styles there such as Breaking (Hip - Hop), Popping, Locking, Girls' New Jazz and Freestyle Hip - Hop. Yet, have you ever become aware of that... no matter which style they dance, there's one general concept behind all these styles?
+When you visit [國父紀念館](http://www.yatsen.gov.tw/) or [中正紀念堂](http://www.cksmh.gov.tw/), you should see many many teenagers moving their bodies with music. You should see a lot of styles there such as Breaking (Hip - Hop), Popping, Locking, Jazz and Freestyle Hip - Hop. Yet, have you ever become aware of that... no matter which style they dance, there's one general concept behind all these styles?
 <!--more-->
 
 ## Music, Then Dance
@@ -38,8 +38,8 @@ So how can I improve my connection to the music? How can I dance to the music an
 Timing means to match the speed of music. Let's take signing for example. If there's someone sings affectionately, but what he / she sings does not match the rhythm at all, what would you think? In other words, if he / she sings a little bit faster or slower than the melody, do you think the singer is good at singing or not? Dance to the music is exactly the same! No matter which style you're trying to learn, dance to the music is the very fundamental stage on the road to a great dancer. If you are moving your body without caring whether you are faster or slower then the music, try to calm down, and clap on the second beat first. Clap on two is an easy way to examine whether you match the speed of music or not. As you can control the rhythm little by little, try to step on beat, hit on beat, stop on beat with any postures and any positions. Only after you mastered the speed of music can you start to become a good street dancer.
 
 ### Strength
-In addition to the speed and timing of music, ability to perform the strength of beats also plays an important role in street dance. More precisely, how to perform the characteristic of each type of elements in the music also means something in street dance, and imitate the characteristic of beats is the most basic one.
-Unfortunately, I'm unable to describe how to be like the beat you hear because the beat inside different music has different characteristic. Another point is that if you're never touched by the beat, you don't know how exactly it feels like.
+In addition to the speed and timing of music, ability to perform the strength of beats also plays an important role in street dance. More precisely, how to perform the characteristic of each type of elements in the music also means something in street dance, and present the characteristic of beats is the most basic one.
+Unfortunately, I'm unable to describe how to be like the beat you hear because the beats inside different music have different characteristics. Another point is that if you're never touched by the beat, you will never know how exactly it feels like, thus unable to know how to be like it.
 However, there's a way for you to start. When you're listening to the music with strong beats, try to hit it hard no matter with your hands or feet. Just hit it hard without any doubt. After doing this several times, someday you might feel: Oh Yeah! That is it! Once you hit the beat with appropriate power / strength, you will know it, you'll understand, just like the fireworks are set off within your heart. If you feel that, it means you've been touched by the beat you hear. You've taken your first step into the music imitation game. After you've learned how to imitate the beats, it should be much more easier to extend to the intimation of any other musical instruments.
 
 ### Grooving
