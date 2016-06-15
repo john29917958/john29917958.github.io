@@ -3,7 +3,7 @@ date: 2016-06-03 09:02:11
 tags: [dance, music]
 category: Dance
 ---
-{% asset_img dance.png Dance Is Not For Battle, But For Social %}
+{% asset_img dance.png Dance is not for battle, but for social and for fun %}
 When you visit [國父紀念館](http://www.yatsen.gov.tw/) or [中正紀念堂](http://www.cksmh.gov.tw/), you should see many many teenagers moving their bodies with music. You should see a lot of styles there such as Hip - Hop, Popping, Locking and Jazz. Yet, have you ever become aware of that... no matter which style they dance, there's one general concept behind all these styles?
 <!--more-->
 
@@ -66,4 +66,4 @@ Hope my experience does benefit those who want to become a street dancer. If you
 > Thank [董書恆](https://www.facebook.com/don7954?fref=ts) for giving me the key to dance
 > Thank [Kwon](https://www.facebook.com/kwonkwontenten/?fref=ts) for giving me an example of a legendary dancer
 
-> Dance Is Not For Battle, But For Social
+> Dance Is Not For Battle, But For Social And For Fun
