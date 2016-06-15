@@ -3,6 +3,7 @@ date: 2016-06-03 09:02:11
 tags: [dance, music]
 category: Dance
 ---
+{% asset_img dance.png Dance Is Not For Battle, But For Social %}
 When you visit [國父紀念館](http://www.yatsen.gov.tw/) or [中正紀念堂](http://www.cksmh.gov.tw/), you should see many many teenagers moving their bodies with music. You should see a lot of styles there such as Hip - Hop, Popping, Locking and Jazz. Yet, have you ever become aware of that... no matter which style they dance, there's one general concept behind all these styles?
 <!--more-->
 
