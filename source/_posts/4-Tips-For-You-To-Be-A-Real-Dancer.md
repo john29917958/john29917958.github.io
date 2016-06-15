@@ -1,13 +1,13 @@
-title: 4 Tips For You To A Real Dancer
+title: 4 Tips For You To Be A Real Dancer
 date: 2016-06-03 09:02:11
 tags: [dance, music]
 category: Dance
 ---
-When you visit [國父紀念館](http://www.yatsen.gov.tw/) or [中正紀念堂](http://www.cksmh.gov.tw/), you should see many many teenagers moving their bodies with music. You should see a lot of styles there such as Breaking (Hip - Hop), Popping, Locking, Jazz and Freestyle Hip - Hop. Yet, have you ever become aware of that... no matter which style they dance, there's one general concept behind all these styles?
+When you visit [國父紀念館](http://www.yatsen.gov.tw/) or [中正紀念堂](http://www.cksmh.gov.tw/), you should see many many teenagers moving their bodies with music. You should see a lot of styles there such as Hip - Hop, Popping, Locking and Jazz. Yet, have you ever become aware of that... no matter which style they dance, there's one general concept behind all these styles?
 <!--more-->
 
 ## Music, Then Dance
-Yes, and it is groove to the beat. Groove to the beat meas we should dance to the music. If you did take courses given by any legendary street dancers in the world, the first thing you'll be taught must be how to listen to music instead of steps. Before you start to learn how to do some special dance steps or tricks, you should learn how to appreciate the music, how to be moved and inspired by the music first. But why? Why can't I learn how to flip, how to wave? Why can't I just learn what I think that is cool at first? It's just because, dance bases on the music.
+Yes, and it is groove to the beat. Groove to the beat meas we should dance to the music. If you did take courses given by any legendary street dancers in the world, the first thing you'll be taught must be how to listen to music instead of steps. Before you start to learn how to do some special dance steps or tricks, you should learn how to appreciate the music, how to be moved and inspired by the music first. But why? Why can't I learn how to flip, how to wave? Why can't I just learn what I think that are cool at first? It's just because, dance bases on the music.
 If you're wondering whether it is true or not, try to verify "dance bases on music" yourself by opening YouTube, search one of the following keywords:
 
 - Rock Steady Crew
@@ -59,8 +59,10 @@ Groove to the beat means, you are deeply moved by the music you hear so that you
 If you are grooving to the beat, you should be very satisfied. You don't want to stop, because you regard this the best thing around the world. I don't know why human beings have this characteristic, and yes, it do exists, it definitely exists because I did experience it. Groove to the beat is a very ordinary, straightforward state. If you simply love the song you hear, simply shake your body with the music naturally, simply touched by the beat and can't help but hit it and intimate it without losing your groove, then you're at the groove to the beat state.
 
 ## Conclusion
-So, if you want to dance well, you should love the music you hear first. After you're truly touched by the music, feel free to shake with it, to clap on it, to stamp on it, to groove on it. After you can groove to the beat, groove to the music you hear, then you can start to practice any skills, any styles you like. Finally, you should develop your own, unique, inimitable flavor by yourself.
+So, if you want to dance well, you should love the music you hear first. After you're truly touched by the music, feel free to shake with it, to clap on it, to stamp on it, to groove with it. After you can groove to the beat, groove to the music you hear, then you can start to practice any skills, any styles you like. Finally, you should develop your own, unique, inimitable flavor by yourself.
 Hope my experience does benefit those who want to become a street dancer. If you want to become a street dancer, love the music first.
 
 > Thank [董書恆](https://www.facebook.com/don7954?fref=ts) for giving me the key to dance
 > Thank [Kwon](https://www.facebook.com/kwonkwontenten/?fref=ts) for giving me an example of a legendary dancer
+
+> Dance Is Not For Battle, But For Social
