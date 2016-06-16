@@ -8,7 +8,9 @@ When you visit [國父紀念館](http://www.yatsen.gov.tw/) or [中正紀念堂]
 <!--more-->
 
 ## Music, Then Dance
-Yes, and it is groove to the beat. Groove to the beat means we should dance to the music. If you did take courses given by any legendary street dancers in the world, the first thing you'll be taught must be how to listen to music instead of steps. Before you start to learn how to do some special dance steps or tricks, you should learn how to appreciate the music, how to be moved and inspired by the music first. But why? Why can't I learn how to flip, how to wave? Why can't I just learn what I think that are cool at first? It's just because, dance bases on the music.
+Yes, and it is groove to the beat. Groove to the beat means we should dance to the music. If you did take courses given by any legendary street dancers in the world, the first thing you'll be taught must be how to listen to music instead of steps.
+{% youtube L-fabjfYi-w %}
+Before you start to learn how to do some special dance steps or tricks, you should learn how to appreciate the music, how to be moved and inspired by the music first. But why? Why can't I learn how to flip, how to wave? Why can't I just learn what I think that are cool at first? It's just because, dance bases on the music.
 If you're wondering whether it is true or not, try to verify "dance bases on music" yourself by opening YouTube, search one of the following keywords:
 
 - Rock Steady Crew
