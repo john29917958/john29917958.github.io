@@ -1,4 +1,4 @@
-title: 4 Tips For You To Be A Real Dancer
+title: 5 Tips For You To Be A Real Dancer
 date: 2016-06-03 09:02:11
 tags: [dance, music]
 category: Dance
@@ -60,6 +60,9 @@ And finally, as a normal street dancer, I think the most beautiful thing in stre
 In the previous paragraph, I split the fundamental of street dance into three parts. However, these part should not be split. As my opinion, dancing is the combination of the three parts described above. While you're dancing, you should always present these parts at the same time. You should always groove to the beat.
 Groove to the beat means, you are deeply moved by the music you hear so that you can help but boogie your body with the music. You feel like you are the music itself. You step **on the beat** without losing your groove, you hit **right on the beat** without losing your groove, your hits are very **similar to the beat**, and you still **not losing your groove**. That is groove to the beat.
 If you are grooving to the beat, you should be very satisfied. You don't want to stop, because you regard this the best thing around the world. I don't know why human beings have this characteristic, and yes, it do exists, it definitely exists because I did experience it. Groove to the beat is a very ordinary, straightforward state. If you simply love the song you hear, simply shake your body with the music naturally, simply touched by the beat and can't help but hit it and intimate it without losing your groove, then you're at the groove to the beat state.
+
+## 5. Imitate Great Dancers
+So we've gone through the fundamental of street dance. And there I want to suggest you to choose one dancer you like, then start imitating this dancer. A great way to enter a domain that you're not familiar with is to imitate the masters in this domain. Imitate masters forces you to keep absorbing and practicing what are good and right, thus makes you grow up very fast. So it's good to select a dancer you like, keeping watching and imitating the way he / she dance. It should benefit you of improving your dance skills.
 
 ## Conclusion
 So, if you want to dance well, you should love the music you hear first. After you're truly touched by the music, feel free to shake with it, to clap on it, to stamp on it, to groove with it. After you can groove to the beat, groove to the music you hear, then you can start to practice any skills, any styles you like. Finally, you should develop your own, unique, inimitable flavor by yourself.
