@@ -42,6 +42,8 @@ Timing means to match the speed of music. Let's take signing for example. If the
 In addition to catching the speed and timing of music, ability to perform the strength of beats also plays an important role in street dance. More precisely, how to perform the characteristic of each type of elements in the music also means something in street dance, and present the characteristic of beats is the most basic one.
 Unfortunately, I'm unable to describe how to be like the beat you hear because the beats inside different music have different characteristics. Another point is that if you're never touched by the beat, you will never know how exactly it feels like, thus unable to know how to be like it.
 However, there's a way for you to start. When you're listening to the music with strong beats, try to hit it hard no matter with your hands or feet. Just hit it hard without any doubt. After doing this several times, someday you might feel: Oh Yeah! That is it! Once you hit the beat with appropriate power / strength, you will know, you'll understand, just like the fireworks set off within your heart. If you feel that, it means you've been touched by the beat you hear. You've taken your first step into the music imitation game. After you've learned how to imitate the beats, it should be much more easier to extend to the intimation of any other musical instruments.
+Here is an example for you. Just watch how the legendary dancer Henry Link present the elements inside the music.
+{% youtube WNftRsU9dd8 %}
 
 ### 3. Grooving
 Groove is the natural reaction while hearing music. For example, watch this video:
