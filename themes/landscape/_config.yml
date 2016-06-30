@@ -19,7 +19,7 @@ widgets:
 - recent_posts
 
 # Miscellaneous
-google_analytics:
+google_analytics: UA-80121293-1
 favicon: /favicon.ico
 twitter: john29917958
 google_plus: +汪子超
