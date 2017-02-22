@@ -2,7 +2,9 @@ title: About Me
 date: 2016-02-13 14:58:08
 comments: false
 ---
+<span class="img-left">
 ![Hi! it's me!](/images/profile-picture.jpg)
+</span>
 ## Basic Information
 English Name: John Wang
 Chinese name: 汪子超
