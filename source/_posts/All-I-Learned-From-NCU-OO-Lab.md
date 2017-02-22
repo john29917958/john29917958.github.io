@@ -3,6 +3,7 @@ date: 2016-11-28 23:28:12
 tags: [life, project management, reflection]
 category: Reflection
 ---
+{% asset_img Intro-to-software-engineering.png Introduction to software engineering design %}
 As a young fellow, I wrote some posts such as "Insights and Experience In Schedule Management", "What's the Life A Graduate Student Should Have?" and so on. After learned from my advising professor for two years, I now regard those posts I wrote before "interesting" XD. My advising professor is a person that has real insights and experience to project management and software engineering. I learned a lot from him, and appreciate his professional knowledge in software engineering field.
 <!--more-->
 ## Schedule Management Requires Common Sense and Deep Mind
