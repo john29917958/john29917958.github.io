@@ -36,6 +36,14 @@ Challenges and Contributions:
 - Dominant entire software process and implementation of POC app
 - Deliver the POC prototype to ADLINK within only 1 month
 
+#### Network Administrator
+Challenges and Contributions:
+- Maintain the GitLab, Backup servers of OO Lab
+- Add HTTPs and auto-renewing of HTTPs certificate of GitLab server
+- Write comprehensive maintenance document for GitLab and Backup server
+- Maintain the Nine-Grids compiler course system written in Ruby-on-Rails
+- Write all-in-one Nine-Grids installation shell script (complete installation with `./deploy.sh`)
+
 ---
 
 ### NCU Computer Center Service Desk
@@ -51,6 +59,7 @@ Challenges and Contributions:
 - Own and develop more than half of the features of whole system
 - Dominant and push the deployment and maintenance of the production web server
 - Design and execute the freshman cultivation plan with teammates
+- Write comprehensive installation and maintenance guide for newcomers.
 
 ---
 
