@@ -1,12 +1,12 @@
-title: Love v.s. Dream
+title: Loves, Wishes, Dreams. The Choice
 date: 2017-02-23 23:22:02
 tags: [life, reflection]
 category: Reflection
 ---
-As one of the individual life in the great nature, as a person like everyone else, I have dreams, I dreamed. However, some dream and wishes conflict with what you love. For you, how would you make your own decision?
+As one of the individual life in the great nature, as a person like everyone else, I have dreams, I dreamed. I have interests, wishes and things I love as well. However, some of them conflict with the others. For you, how would you make your own decision?
 <!-- more -->
 
-I have two dreams. One is I want to get a web engineer position I love in modern company, another is I really can't wait to be self-relience so my parents can have easier life. At first, I have strong againstment to research and development alternative service because it requires four years service in total which means I must stay at same company for four years. I will lost my control to my life for totally four years! However, things are unpredictable. [TSMC](http://www.tsmc.com) rushed into my life.
+I have a dream. I want to get a web engineer position I love in modern company. I have a wish. I really can't wait to be self-relience so my parents can have easier life. At first, I have strong againstment to research and development alternative service because it requires four years service in total which means I must stay at same company for four years. I will lost my control to my life for totally four years! However, things are unpredictable. [TSMC](http://www.tsmc.com) rushed into my life.
 
 # Lifeline
 
@@ -21,8 +21,8 @@ In the twinkling of eye, I became a graduate student in [NCU](http://www.ncu.edu
 Now, I'm at the second year. I'm about to graduate from my graduate school. As you can see on any technical artical, web improves everyday. I did try to catch up with it, but seems like it is a impossible mission for me. Now, I feel like, everything does not matter for me.
 First, I want to become a game engineer. It changed after I met Mozilla. I want to be a web engineer. Direction changed again after I joined the Object-Oriented Lab. Now, it really doesn't matter.
 
-# Final Dream
+# Goodbye My Dreams and My Loves, Hello My Wish
 
-Originally, I don't want to serve four-year research and development alternative service, let along the semiconductor industry [TSMC](http://www.tsmc.com) cause I want to be a web engineer "at first", I love it as well. But with the twists and turns of my direction, it really doesn't matter now. [TSMC](http://www.tsmc.com) rushed into my life. At least, my final wish, I want my parents not to worry about me anymore, is about to come true. I choosed, the [TSMC](http://www.tsmc.com) as my first job. I will servce the four-year research and development alternative service. I don't know if my decision was right. I really don't know... I love art, I love drawing, I love UI / UX design, I love dance, I love music. I found that, all the things I love is about art. But it seems like, there's no space for art to survive in the semiconductor industry [TSMC](http://www.tsmc.com). But finally, a chance for me to realize my last dream came. With the strong desire of my last dream, I will not let the chance slip away from me. Goodbye, my loves. Hello! my dream.
+Originally, I don't want to serve four-year research and development alternative service, let along the semiconductor industry [TSMC](http://www.tsmc.com) cause I want to be a web engineer "at first", I love it as well. But with the twists and turns of my direction, it really doesn't matter now. From that night, with a phone call out of the blue, [TSMC](http://www.tsmc.com) rushed into my life. At least, my final wish, I want my parents not to worry about me anymore, is about to come true. I choosed, the [TSMC](http://www.tsmc.com) as my first job. I will servce the four-year research and development alternative service. I don't know if my decision was right. I really don't know... I love art, I love drawing, I love UI / UX design, I love front-end, I love dance, I love music. I found that, all the things I love is about art. But it seems like, there's no space for art to survive in the semiconductor industry [TSMC](http://www.tsmc.com). But finally and at least, a chance for me to realize my wish came. I will not let the chance slip away from me. Goodbye, my loves. See you, my dream. Hello! my wish.
 
 > Love and Dream, For Yourself or For The People You Care, What's Your Choice?
