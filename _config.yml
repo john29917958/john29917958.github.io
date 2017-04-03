@@ -4,11 +4,11 @@
 
 # Site
 title: John Wang's Blog
-subtitle: Zealot of programming and dance
-description: Here holds all stories about me - A zealot of programming and dance
+subtitle: A fanatic of bringing technique, art into Things and dancing.
+description: Here holds all stories about me - A fanatic of bringing technique, art into Things and dancing
 author: John Wang
 language: zh-TW
-timezone:
+timezone: Asia/Taipei
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
