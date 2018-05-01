@@ -27,4 +27,4 @@ Surprisingly, the release of 2nd. beta version succeeded immediately without any
 ## Unit Test Or Not?
 In my opinion, good unit tests can benefit both code quality and code correctness. About code quality, it’s really hard to write unit tests for highly coupled code since “faking” (stub) related objects for test environment control is pretty difficult. As for code correctness, once test cases are written, we can have it run again and again every time the code changed to ensure nothing’s broken.
 The only drawback of writing unit test I can think of is, it needs to be maintained. For example, all unit test cases I’ve written require corrections after I change the parameters of my main logic functions. Even so, for code quality and code correctness concern, it’s worth it, I think.
-
+Some day in the future, I should be benefited from these tests again once code changed.
