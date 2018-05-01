@@ -5,9 +5,9 @@ date: 2018-04-28 19:50:36
 tags: [programming]
 category: Programming
 ---
-{% asset_img Intro-to-software-engineering.png Introduction to software engineering design %}
+{% asset_img Unit-Test.png Unit Test %}
 
-Actually, it’s the first time I surprised and benefited from unit tests.
+Actually, it’s the first time I'm surprised and benefited from unit tests.
 Recently, I added a new feature to a project in my company. After writing pseudo code for main logic and had it reviewed with my leader, seems like it’s time to jump in and code. For me, I prefer to have the feature tested before sending it to beta environment for user acceptance tests.
 
 <!--more-->
@@ -27,3 +27,4 @@ Surprisingly, the release of 2nd. beta version succeeded immediately without any
 ## Unit Test Or Not?
 As my opinion, good unit tests can benefit both code quality and code correctness. For code quality aspect, it’s really hard to write unit tests for highly coupled code since “faking” (stub) related objects for test environment control is pretty difficult. As for code correctness, once test are written, we can have it run again and again every time the code changed to ensure nothing’s broken.
 The only drawback of writing unit test I can think of is, it needs to be maintained. For example, all unit test cases I’ve written were fixed after I change the parameters of my main logic functions. But for code quality and code correctness concern, it’s worth it, I think.
+
