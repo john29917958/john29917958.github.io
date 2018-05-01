@@ -5,7 +5,7 @@ date: 2018-04-28 19:50:36
 tags: [programming]
 category: Programming
 ---
-{% asset_img Unit-Test.png Unit Test %}
+{% asset_img Unit-Test.jpg Unit Test %}
 
 Actually, it’s the first time I'm surprised and benefited from unit tests.
 Recently, I added a new feature to a project in my company. After writing pseudo code for main logic and had it reviewed with my leader, seems like it’s time to jump in and code. For me, I prefer to have the feature tested before sending it to beta environment for user acceptance tests.
