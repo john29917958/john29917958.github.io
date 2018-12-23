@@ -22,7 +22,10 @@ The first time I was surprised by Henry Link's grooving >///<
 {% youtube rnO7dIUNpXY %}
 
 First time I tried King Tut~
+{% youtube kZdC6QM1fGk %}
+
+Playing King Tut
 {% youtube MN-dVIAmeWk %}
 
-Playing King Tut :)
+Playing King Tut again!
 {% youtube 4L-v4tGENKc %}
