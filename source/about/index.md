@@ -5,17 +5,25 @@ comments: false
 <span class="img-left">
 ![Hi! it's me!](/images/profile-picture.jpg)
 </span>
+
 ## Basic Information
-English Name: John Wang
+English Name: Tzu-Chao, Wang
 Chinese name: 汪子超
 Birthday: 2<sup>10</sup> (October 24)
 Constellation: Scorpio
 
 ## Work Experience
 
+### Taiwan Semiconductor Manufacturing Company Limited
+Daya, Taichung
+2017/08 ~ now
+Computer Integrated Manufacturing Engineer
+
+---
+
 ### NCU Object-Oriented Lab
 Chungli, Taoyuan
-2015/08 ~ now
+2015/08 ~ 2017/07
 
 #### KORAT
 A powerful regression test automation system with capture / replay ability.
@@ -96,17 +104,16 @@ English: TOEIC 690, better at reading and writing
 ## Interests
 1. Dancing and listen to music
 2. Programming (especially web)
-3. Graphic design
-4. Drawing
-5. Play basketball
-6. Watch movies or Animes
+3. Drawing
+4. Watch movies or Animes
 
 ## Contact Information
 - E-mail: john29917958ATgmailDOTcom
+- [LinkedIn](https://www.linkedin.com/in/john29917958)
 - [Facebook](https://www.facebook.com/tzuchaowang)
+- [Instagram](https://www.instagram.com/john29917958/)
 - [Twitter](https://twitter.com/john29917958)
 - [Tumblr](https://www.tumblr.com/blog/john29917958)
-- [LinkedIn](https://www.linkedin.com/in/john29917958)
 
 ## Education
 - [國立中央大學](http://www.ncu.edu.tw/) [資訊工程學系](http://www.csie.ncu.edu.tw/) [Object-Oriented Lab](http://oolab.csie.ncu.edu.tw/wiki/index.php/OO_Lab) (currently studying in)
