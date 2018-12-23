@@ -2,6 +2,7 @@ title: Loves, Wishes, Dreams. The Choice
 date: 2017-02-23 23:22:02
 tags: [life, reflection]
 category: Reflection
+visible: hide
 ---
 As one of the individual life in the great nature, as a person like everyone else, I have dreams, I dreamed. I have interests, wishes and things I love as well. However, some of them conflict with the others. For you, how would you make your own decision?
 <!-- more -->
