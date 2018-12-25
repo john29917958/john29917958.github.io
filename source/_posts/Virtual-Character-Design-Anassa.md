@@ -9,7 +9,7 @@ Yeah~ This is my first try of virtual character design!
 <!--more-->
 
 ## Motivation
-Why the character was born was that, I wanted to make an assistant who can help me schedule my life, give me reminders, provide me suggestions immediately so I can never miss important life events or fail to handle critical accidents at once. However, I found [Google Assistant](https://assistant.google.com/) is yet powerful enough and... It's pretty clear that competing against Google Assistant is a stupid choice. Whatever, just for fun~ Time for retargeting the goal for Anassa project (so I can have the differency from the Google Assistant ;)!
+Why the character was born was that, I wanted to make an assistant who can help me schedule my life, give me reminders, provide me suggestions immediately so I can never miss important life events or fail to handle critical accidents at once. However, I found [Google Assistant](https://assistant.google.com/) is yet powerful enough and... It's pretty clear that competing against Google Assistant is a stupid choice. Whatever, just for fun~ Time for retargeting the goal of Anassa project (so I can have the differency from the Google Assistant ;)!
 
 ## Character Evolution
 Yeah I admit... I take UI and art very seriously ^^". Since the origin customer of the project is me, so a beautiful character **must** be included into the Anassa App (devil face). Be careful, here is the first version of Anassa...
