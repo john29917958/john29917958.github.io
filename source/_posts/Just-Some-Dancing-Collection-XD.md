@@ -29,3 +29,6 @@ Playing King Tut
 
 Playing King Tut again!
 {% youtube 4L-v4tGENKc %}
+
+Freestyle after work
+{% youtube 98ZAhO2LHVI %}
