@@ -12,6 +12,16 @@ Chinese name: 汪子超
 Birthday: 2<sup>10</sup> (October 24)
 Constellation: Scorpio
 
+## Contact Information
+- E-mail: john29917958ATgmailDOTcom
+- [ArtStation](https://www.artstation.com/tzuchaowang)
+- [Pixiv](https://www.pixiv.net/member_illust.php?id=24328892&type=illust)
+- [LinkedIn](https://www.linkedin.com/in/john29917958)
+- [Facebook](https://www.facebook.com/tzuchaowang)
+- [Instagram](https://www.instagram.com/john29917958/)
+- [Twitter](https://twitter.com/john29917958)
+- [Tumblr](https://www.tumblr.com/blog/john29917958)
+
 ## Work Experience
 
 ### Taiwan Semiconductor Manufacturing Company Limited
@@ -106,16 +116,6 @@ English: TOEIC 690, better at reading and writing
 2. Programming (especially web)
 3. Drawing
 4. Watch movies or Animes
-
-## Contact Information
-- E-mail: john29917958ATgmailDOTcom
-- [ArtStation](https://www.artstation.com/tzuchaowang)
-- [Pixiv](https://www.pixiv.net/member_illust.php?id=24328892&type=illust)
-- [LinkedIn](https://www.linkedin.com/in/john29917958)
-- [Facebook](https://www.facebook.com/tzuchaowang)
-- [Instagram](https://www.instagram.com/john29917958/)
-- [Twitter](https://twitter.com/john29917958)
-- [Tumblr](https://www.tumblr.com/blog/john29917958)
 
 ## Education
 - [國立中央大學](http://www.ncu.edu.tw/) [資訊工程學系](http://www.csie.ncu.edu.tw/) [Object-Oriented Lab](http://oolab.csie.ncu.edu.tw/wiki/index.php/OO_Lab) (currently studying in)
