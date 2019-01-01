@@ -109,6 +109,8 @@ English: TOEIC 690, better at reading and writing
 
 ## Contact Information
 - E-mail: john29917958ATgmailDOTcom
+- [ArtStation](https://www.artstation.com/tzuchaowang)
+- [Pixiv](https://www.pixiv.net/member_illust.php?id=24328892&type=illust)
 - [LinkedIn](https://www.linkedin.com/in/john29917958)
 - [Facebook](https://www.facebook.com/tzuchaowang)
 - [Instagram](https://www.instagram.com/john29917958/)
