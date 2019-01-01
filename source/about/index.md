@@ -56,7 +56,7 @@ Challenges and Contributions:
 
 ### NCU Computer Center Service Desk
 Chungli, Taoyuan
-2014/07 ~ now
+2014/08 ~ 2017/08
 
 #### Service Desk Customer Service Web System
 A platform for students in NCU to propose questions and find solutions for their daily life in NCU: [https://sd.cc.ncu.edu.tw/](https://sd.cc.ncu.edu.tw/)
@@ -73,7 +73,7 @@ Challenges and Contributions:
 
 ### NCU CHST College
 Chungli, Taoyuan
-2014/07 ~ 2015/07
+2014/08 ~ 2015/07
 
 ### Network Administrator
 Contributions and Challenges:
