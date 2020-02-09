@@ -94,7 +94,7 @@ I think next steps for programming are:
 2. Becomes good at UI / UX design
 
 ## Conclusion
-Alright here are some growth review of my self after I started working in TSMC about two and half year. Actually I'm not very satisfied by the speed of my growth. I spent too much time for relaxing, playing games, and so on. The next year, my goals are to:
+Alright here are some growth review of myself after I started working in TSMC about two and half year. Actually I'm not very satisfied by the speed of my growth. I spent too much time for relaxing, playing games, and so on. The next year, my goals are to:
 - Be able to perform freestyle solo with Popping just like I'm doing it with Hip-Hop
 - Be good at coloring, shading, and perspective art skills. Create an artwork that represents my capability of art
 - Be good at Live2D and Unity game design. Make a complete game
