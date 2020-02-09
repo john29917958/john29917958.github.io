@@ -16,7 +16,7 @@ And here is another freestyle record at 2020/01/02. After two and half year, the
 {% youtube PWomaFtf6Sw %}
 
 And my next step is...... Popping!
-{% youtube PWomaFtf6Sw %}
+{% youtube wx4B4io7zCY %}
 
 ## Art
 Humm... Illustration, originated character design, and animation are covered under this section.
