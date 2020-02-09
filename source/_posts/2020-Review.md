@@ -22,7 +22,7 @@ And my next step is...... Popping!
 Humm... Illustration, originated character design, and animation are covered under this section.
 
 ### Illustration
-Actually... the very first illustration made by me is much more terrible than this one.
+First publie illustration. But actually... the very first illustration made by me is much more terrible than this one.
 [Award @ 2017/07/08](https://tzuchaowang.artstation.com/projects/VW2Eg)
 ![Award](https://cdna.artstation.com/p/assets/images/images/006/727/390/large/tzu-chao-wang-award.jpg?1500823234)
 
