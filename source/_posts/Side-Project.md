@@ -1,8 +1,0 @@
-title: Side Project
-visible: show
-date: 2019-09-14 23:07:47
-tags: [design, graphic, life, programming]
-category: Programming
----
-Recently making a game called "Anassa". I think I can now understand why "perseverance is required for making side project" mentioned in many articles. Even I'm single, even my parents give me a lot of space for developing what I want, I still feel that, I'm almost unable to handle the huge burden of game development. Passion is the key to making side projects. However, the light of passion can be cast out by numbers of reasons. Some say time, some say difficulty of tool / skill. For me, it should be the slow development progress.
-At very first, I have a strong enthusiasm to show the world what I can do. I set main topic and background, wrote down the basic architecture of story line, designed how player interacts with characters... Then I deleted four of five chapters. Even though, the passion in my heart still shining cause I know what I've done is to ensure the success come out of final product. After that is the core hard work phase such as character art and animation design, as well as converting these idea into real C# code in Unity. I had great game art and animation design progress of the final boss. Things changed after I started the implementation phase with Unity. Unity is exactly a powerful tool but, I'm a zero-experienced game developer. Learning Unity is fun. Game object, collision, gravity, states, animation events, there're many many cool stuffs for us to create Unity games. The point is... I had zero-progress during the exploring phase! This made me a little uneasy, although the learnign process is necessary.
