@@ -12,7 +12,7 @@ Records summary and next steps of my growth in 2020. Three aspects are covered: 
 This is the freestyle record when I just entered [TSMC](https://www.tsmc.com/english/default.htm) (2017/10/08):
 {% youtube VqpeZmIPDcI %}
 
-And here is another freestyle record at 2020/01/02. After two and half year, the groove is more fluent (be wafer my friend XD) and more creative. Thank to my favorite dancer Henry Link, I learned a lot from him. Not just the skills, but the core concept to dance. Music changed, dance changed. No bad step or move, Locking and Popping somehow invented because of a mistake. Hip - Hop is not just a dance style or MC, DJ or graffiti, it represents a culture. How Bronx New York evolves, is all Hip - Hop. Also learned much from Mr. Wiggles, respect!
+And here is another freestyle record at 2020/01/02. After two and half years, the groove is more fluent (be wafer my friend XD) and more creative. Thank to my favorite dancer Henry Link, I learned a lot from him. Not just the skills, but the core concept to dance. Music changed, dance changed. No bad step or move, Locking and Popping somehow invented because of a mistake. Hip - Hop is not just a dance style or MC, DJ or graffiti, it represents a culture. How Bronx New York evolves, is all Hip - Hop. Also learned much from Mr. Wiggles, respect!
 {% youtube PWomaFtf6Sw %}
 
 And my next step is...... Popping!
@@ -94,7 +94,7 @@ I think next steps for programming are:
 2. Becomes good at UI / UX design
 
 ## Conclusion
-Alright here are some growth review of myself after I started working in TSMC about two and half year. Actually I'm not very satisfied by the speed of my growth. I spent too much time for relaxing, playing games, and so on. The next year, my goals are to:
+Alright here are some growth review of myself after I started working in TSMC about two and half years. Actually I'm not very satisfied by the speed of my growth. I spent too much time for relaxing, playing games, and so on. The next year, my goals are to:
 - Be able to perform freestyle solo with Popping just like I'm doing it with Hip-Hop
 - Be good at coloring, shading, and perspective art skills. Create an artwork that represents my capability of art
 - Be good at Live2D and Unity game design. Make a complete game
