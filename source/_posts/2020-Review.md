@@ -99,5 +99,4 @@ Alright here are some growth review of myself after I started working in TSMC ab
 - Be good at coloring, shading, and perspective art skills. Create an artwork that represents my capability of art
 - Be good at Live2D and Unity game design. Make a complete game
 
-Dance X Art X Programming composes the real me - A fanatic of bringing tech and art into Things.
 These are my targets, what's yours?
