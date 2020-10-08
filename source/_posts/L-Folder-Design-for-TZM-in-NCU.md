@@ -1,7 +1,7 @@
 title: L Folder Design for TZM in NCU
 date: 2016-02-14 11:59:13
-tags: [design, graphic]
-category: Graphic design
+tags: [design, graphic, art]
+category: Art
 ---
 Preview:
 {% asset_img TZM-L-folder.jpg TZM L folder design %}

@@ -1,7 +1,7 @@
 title: Playbill Design for Pop Dance Club in NCU
 date: 2016-02-23 14:02:37
-tags: [design, graphic, dance]
-category: Graphic design
+tags: [design, graphic, dance, art]
+category: Art
 ---
 Preview:
 {% asset_img NCUPD-playbill-front-cover.jpg NCU Pop Dance Club playbill design %}

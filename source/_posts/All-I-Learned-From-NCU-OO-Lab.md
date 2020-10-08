@@ -1,6 +1,6 @@
 title: All I Learned From NCU OO Lab
 date: 2016-11-28 23:28:12
-tags: [life, project management, programming, reflection]
+tags: [life, management, programming, reflection]
 category: Programming
 ---
 {% asset_img Intro-to-software-engineering.png Introduction to software engineering design %}

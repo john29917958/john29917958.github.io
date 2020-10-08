@@ -1,7 +1,7 @@
 title: Lecture of CHST Poster Design
 date: 2016-02-26 15:19:49
-tags: [graphic, design]
-category: Graphic design
+tags: [graphic, design, art]
+category: Art
 ---
 Preview:
 {% asset_img CHST-poster-Lecture-of-CHST.jpg Lecture of CHST poster design %}
