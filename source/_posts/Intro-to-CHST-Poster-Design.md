@@ -1,7 +1,7 @@
 title: Intro to CHST Poster Design
 date: 2016-02-24 14:39:09
-tags: [design, graphic]
-category: Graphic design
+tags: [design, graphic, art]
+category: Art
 ---
 Preview:
 {% asset_img CHST-poster-Introduction-to-CHST.jpg Introduction to CHST poster design %}

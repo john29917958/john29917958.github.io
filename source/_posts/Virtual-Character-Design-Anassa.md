@@ -1,7 +1,7 @@
 title: Virtual Character Design - Anassa
 date: 2018-12-23 20:16:57
-tags: [graphic, design]
-category: Graphic design
+tags: [graphic, design, art]
+category: Art
 ---
 
 {% asset_img last_anassa_design.jpg Virtual character design - Anassa %}

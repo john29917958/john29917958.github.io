@@ -1,7 +1,7 @@
 title: First Poster Design for TZM in NCU
 date: 2016-02-15 12:47:21
-tags: [design, graphic]
-category: Graphic design
+tags: [design, graphic, art]
+category: Art
 ---
 Preview:
 {% asset_img TZM-poster.jpg TZM poster design %}

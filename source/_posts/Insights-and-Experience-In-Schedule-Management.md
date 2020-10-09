@@ -1,7 +1,7 @@
 title: Insights and Experience In Schedule Management
 date: 2016-05-21 22:15:59
-tags: [project management]
-category: Software engineering
+tags: [management]
+category: Programming
 ---
 {% asset_img deadline.png Wait me my dear deadline~~~ %}
 I believe you should have read a lot of diaries or articles that mention about working overtime, staying at office until 11, 12 PM., even 3, 4 AM. You may notice that lots of people complained about they're suddenly assigned many extra works which result in that they needed to spend extra time to finish it. They may get a unreasonable due date. They may need to complete bunch of tasks in a extremely tight schedule.

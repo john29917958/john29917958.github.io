@@ -1,7 +1,7 @@
 title: Open House Day Poster Design for CHST
 date: 2016-02-26 14:06:41
-tags: [design, graphic]
-category: Graphic design
+tags: [design, graphic, art]
+category: Art
 ---
 Preview:
 {% asset_img CHST-poster-Open-house-day.jpg Open House Day poster design %}
