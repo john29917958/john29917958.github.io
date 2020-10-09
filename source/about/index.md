@@ -31,7 +31,7 @@ comments: false
 ## Interests
 1. Dancing and listen to music
 2. Programming
-3. Drawing
+3. Digital painting
 
 ## Work Experience
 
