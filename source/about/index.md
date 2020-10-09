@@ -16,7 +16,7 @@ comments: false
 ## Professional Skills
 - C#, JavaScript, CSS3, HTML5, PHP, Java, Node.js, 2D anime style art
 - Unity, Bootstrap, Material Design, Laravel, ReactJS (a little)
-- ClipStudioPaint, PhotoShop, Illustrator, Premiere Pro, Audition
+- [ClipStudioPaint](https://www.clipstudio.net/en/), [PhotoShop](https://www.adobe.com/products/photoshop.html), [Illustrator](https://www.adobe.com/products/illustrator.html), [Premiere Pro](https://www.adobe.com/products/premiere.html), [Audition](https://www.adobe.com/products/audition.html)
 
 ## Contact Information
 - E-mail: john29917958@gmail.com
@@ -40,7 +40,7 @@ Daya, Taichung
 2017/08 ~ now
 Position: Computer Integrated Manufacturing Engineer
 Major contributions:
-- Integrates separate system versions into single one and publishes to all TSMC fabs from single Git repository, two systems in total are integrated (very very old systems...)
+- Integrates separate system versions into single one and publishes to all TSMC fabs from single Git repository. Two systems in total are integrated (very very old systems...)
 ---
 
 ### NCU Object-Oriented Lab
