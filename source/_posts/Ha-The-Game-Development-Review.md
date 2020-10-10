@@ -22,6 +22,15 @@ With the terrible experience, I won't challenge the general market again. After 
 
 > Niche market place when lack of resources
 
+# Capability Analysis
+Capability and resources decides schedule. For me I have terrible digital art ability, good object-oriented programming concept and C# coding skill. Zero screenwriting ability, **zero game making experience** (I think...). However... Humm.. I have Live2D modeling and animating experience. So the game style was set to:
+- Voice control
+- Silhouette art style
+- Live2D as modeling and animating technique (it's well integrated with Unity)
+- No online battle
+- No database and account system
+- One time gameplay
+
 # Defines Milestones
 
 
