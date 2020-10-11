@@ -53,7 +53,10 @@ The very number one task is core technique research since we don't want after a 
 After high-level milestones are set, here's the detail implementation flow.
 
 ## Minimum Valuable Prototype
-The most important concept here is: DO NOT PUT MUCH RESOURCE HERE! We should keep the entire project as simple as possible and only focuses on the core technique research. Nothing gonna work if the research doesn't succeed. So do not put unnecessary effort or resource on other tasks. Focus, and break through the core technique.
+
+> Don't waste your time! Only focus on core technique research!
+
+The most important concept here is: Do not waste resource other then the core technique research! We should keep the entire project as simple as possible and only focuses on the core technique research. Nothing gonna work if the research doesn't succeed. So do not put unnecessary effort or resource on other tasks. Focus, and break through the core technique. DON'T WASTE TIME! PERIOD!
 
 Implementation flow:
 1. Researches voice volume and pitch recognition
@@ -75,7 +78,9 @@ Technical research with "very very very" simple GUI
 Minimum valuable prototype
 {% youtube tMrjWXiKsAU %}
 
+## Character Implementation Loop
 
+> Continuous integration, small iteration
 
 區塊實作 (loop)
 	1. 美術設計
