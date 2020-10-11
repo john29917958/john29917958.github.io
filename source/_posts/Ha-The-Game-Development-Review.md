@@ -66,11 +66,12 @@ Implementation flow:
 5. Designs the skill set of main character
 6. Paints and produces every parts of the main character with Clip Studio Paint (head, hair, eyes, arms, legs, etc)
 7. Models the main character with Live 2D
-8. Integrates the Live 2D module with Unity
-9. Creates animation flow and implements the entity C# class
-10. Performs integration test on Unity, making sure the idea of voice control can be realized
-11. Creates a simple monster
-12. Minimum valuable prototype completed
+8. Creates character animations with Live 2D
+9. Integrates the Live 2D model with Unity
+10. Creates animation flow and implements the entity C# class
+11. Performs integration test in Unity, making sure the idea of voice control can be realized
+12. Creates a simple monster
+13. Minimum valuable prototype completed
 
 Technical research with "very very very" simple GUI
 {% youtube ISUFTAOT7Sk %}
@@ -82,12 +83,25 @@ Minimum valuable prototype
 
 > Continuous integration, small iteration
 
-區塊實作 (loop)
-	1. 美術設計
-	2. 技能設計
-		1. 美術實作
-		2. 程式實作
-		3. 整合測試
+For major implementation task, we'd better divides codes into individual components:
+1. Good for task dispatching and assigning (no need in single-person-team)
+2. Better quality, less bug
+3. Fast integration, fast for result review
+
+{% asset_img component-code.png %}
+
+Once project is divided into small pieces of components, it's easy to be integrated one after another. But why? Can't I just keep writing all the functions and hit Play button at release phase? We never what to do that. Programming is a very abstract and unintuitive task. The complexity of project can be exponential rising as it grows bigger. Small piece of complete function, small piece of implementation, and integrates, tests it iteratively can ensure entire product working all the time. If we have customer, it's also good for iterative function demonstration, good for wining customer's trust. The steps of each iteration loop goes here:
+1. Designs 2D character art
+2. Designs skill set of character
+3. Paints and produces every parts of the main character with Clip Studio Paint
+4. Models the main character with Live 2D
+5. Creates character animations with Live 2D
+6. Integrates the Live 2D model with Unity
+7. Creates animation flow and implements the entity C# class
+8. Performs integration test in Unity
+
+
+
 背景設計
 背景實作
 選單實作
