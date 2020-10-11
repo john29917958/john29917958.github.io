@@ -187,7 +187,47 @@ Things that I'm proud of:
 3. Integrates Live 2D with Unity successfully
 4. I don't know it's good or not. I completed entire game making process by my own. Now I have complete vision of game making process
 
-# Future Work Expectation
+# Future Work and Expectation
 1. Founds a team
 2. Makes a game with online interaction and account system ability. Learns Unity shader editor.
 3. Player chant (cast) spell to phone for character skill activation
+
+# Other Demonstrations
+
+Main character Live 2D freestyle demonstration
+{% youtube D7jhqH044vE %}
+
+Main character Live 2D animation demonstration
+{% youtube Me3KP61PfUI %}
+
+Main character Live 2D animation demonstration 2
+{% youtube LPdh_tdZlS8 %}
+
+Live 2D modeling process demonstration
+{% youtube qMDQkPJ2XUw %}
+
+# Old Project Resources and Demonstrations
+
+Main character Live 2D demonstration
+{% youtube gMJR1fGN6ew %}
+
+Trailer demonstration
+{% youtube Q4IFpbpMRoU %}
+
+Control action demonstration
+{% youtube lYvbDJauJbo %}
+
+Monster action demonstration
+{% youtube qPbCSr0PCco %}
+
+Main character three-view
+{% asset_img old-game-project-character-three-view.png %}
+
+Main character standing pose demonstration
+{% youtube hll-U6VkCas %}
+
+Main character attack animiation demonstration
+{% youtube K-t1wbHi3IM %}
+
+Animation poses design
+{% asset_img old-game-animation-design.png %}
