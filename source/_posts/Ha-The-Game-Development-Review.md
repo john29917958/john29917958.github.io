@@ -45,13 +45,38 @@ First, break down the tasks in very high-level point of view:
 2. Character implementation loop of three monsters and two bosses: Two months. Lots of major implementation tasks
 3. Game completeness implementation and integration + market test: Two months and more. Longest phase. The terrible "accidents" always happen when it comes to integration and deployment
 
-Project was started on 2020/05/14, due date was set on 2020/10/24.
+Project was started on 2020/05/14, formal release date was set on 2020/10/24, five months in total.
+
+The very number one task is core technique research since we don't want after a bunch of game art and game function implementation, the entire project fails in the end just because the most critical, most difficult core technique is impossible to be realized. Just like a Chinese proverb says: 頭過身就過.
+
+# Implementation Process in Detail
+After high-level milestones are set, here's the detail implementation flow.
+
+## Minimum Valuable Prototype
+The most important concept here is: DO NOT PUT MUCH RESOURCE HERE! We should keep the entire project as simple as possible and only focuses on the core technique research. Nothing gonna work if the research doesn't succeed. So do not put unnecessary effort or resource on other tasks. Focus, and break through the core technique.
+
+Implementation flow:
+1. Researches voice volume and pitch recognition
+2. Implements voice recognition function with very simple UI
+3. Makes voice recognition a class (a simple module)
+4. Designs main character 2D art
+5. Designs the skill set of main character
+6. Paints and produces every parts of the main character with Clip Studio Paint (head, hair, eyes, arms, legs, etc)
+7. Models the main character with Live 2D
+8. Integrates the Live 2D module with Unity
+9. Creates animation flow and implements the entity C# class
+10. Performs integration test on Unity, making sure the idea of voice control can be realized
+11. Creates a simple monster
+12. Minimum valuable prototype completed
+
+Technical research with "very very very" simple GUI
+{% youtube ISUFTAOT7Sk %}
+
+Minimum valuable prototype
+{% youtube tMrjWXiKsAU %}
 
 
 
-設定可使現目標+預計上市時程估算
-切分大塊 milestones
-技術實驗
 區塊實作 (loop)
 	1. 美術設計
 	2. 技能設計
