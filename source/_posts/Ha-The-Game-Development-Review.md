@@ -102,7 +102,7 @@ Once project is divided into small pieces of components, it's easy to be integra
 
 {% youtube wDWf70g8BTk %}
 
-# Game Completeness Implementation and Difficulties in Market Test
+# Difficulties When Brings to Market Test
 
 > Things can always go wrong in market, don't afraid of second best
 
@@ -110,10 +110,10 @@ First here's final result with background and menu system
 
 {% youtube 0HG2p7xPahU %}
 
-Let's skip the background implementation flow and focus on the production market related problems. The first nightmare I've faced is the microphone privilege request in Android and IOS, and latency delay in iPhone. Oh! and the boss-like accident is pitch recognition accuracy.
+Let's skip the background implementation flow and focus on the production market related problems. The nightmares I've faced with was the microphone privilege request in Android + IOS, and latency delay in iPhone. Oh! and the boss-like accident was pitch recognition accuracy.
 
 ## Microphone Privilege Request
-Unity does great job on cross platform code generation. However, privilege request still differs on different platform. Here's the sample code for both IOS and Android, it took me lots of time building and testing in both operation systems:
+Unity does great job at cross platform code generation. However, privilege request still differs on different platform. Here's the sample code for both IOS and Android, it took me lots of time building and testing in both operation systems:
 ```csharp
 // Requests for microphone priviledge.
 if (Application.platform == RuntimePlatform.Android)
@@ -133,9 +133,9 @@ else
 ```
 
 ## Latency Delay
-> If technique not popular, careful abount lacking of online information
+> If technique not popular, careful about lacking of online information
 
-"Ha" is a real-time voice control action game. So instant playback of what microphone has recorded is a must-have function. I don't know why the playback speed always sync on PC and Android. But when tested on IOS, there exists a BIG LAG between player say "Ha" to phone, and the character actually fires or jumps. I searched through the internet, tried everything I counld, kept building and deploying to Android and IOS... No luck. Lot's of time spent, still no luck. Finally found a post [here](https://programmer.help/blogs/unity-sound-and-recording-and-real-time-microphone-play.html), the key point is to sync the playback position with the microphone recording position like this, so we can collect real-time voice information from player:
+"Ha" is a real-time voice control action game, so instant playback of what microphone has recorded is a must-have function. I don't know why the playback speed always sync on PC and Android. But when tested on IOS, there existed a BIG LAG between player say "Ha" to phone, and the character actually fires or jumps. I searched through the internet, tried everything I counld, kept building and deploying to Android and IOS... No luck. Lot's of time spent, still no luck. Finally found a post [here](https://programmer.help/blogs/unity-sound-and-recording-and-real-time-microphone-play.html), the key point is to sync the playback position with the microphone recording position like this, so we can collect real-time voice information from player:
 ```csharp
 if (Application.platform == RuntimePlatform.IPhonePlayer)
 {
@@ -143,24 +143,24 @@ if (Application.platform == RuntimePlatform.IPhonePlayer)
 }
 ```
 
-One lesson learned is that, when the technique we use is not popular, be careful about lacking of online information.
+One lesson learned was that, when the technique we use is not popular, be careful about lacking of online information.
 
 ## Pitch recognition accuracy
 
 > Don’t be afraid of second best solution
 
-Pitch recognition accuracy problem happened when I delivered the production App to specific player's phone. No matter how the player says "Ha" in high or low pitch voice, the recognition can always go wrong that the judge result jumped to extraodinary high frequency - 600 Hz while the avarage human voice pitch is around 80 to 1000 Hz.
+Pitch recognition accuracy problem happened when I delivered the production App to specific player's phone. No matter how the player said "Ha" in high or low pitch voice, the recognition could always go wrong that the judge result jumped to extraodinary high frequency - 600 Hz while the avarage human voice pitch is around 80 to 1000 Hz.
 
 First, I used an [online tone generation service](https://www.szynalski.com/tone-generator/) to test if I did anything wrong. Amazingly, the result was very beautiful and accurate. My system counld almost 100% recognize the pitch value sent out by the service.
 
-The problem was that when we're talking, various frequency voice are sent out with different enery level. Thing can go wrong if all frequency enery are close, that is, no solo frequency is given. My system was almost 100% accurate because the ton generation service only sent out "single" frequency voice. Originally the game was designed to use high pitch voice for attack, low pitch voice for jump. Now, what would you do if the publish time is close?
-Just abandon the pitch recognition. One friend reminded me of touch control, the plan B I've thought of in very early stage of design time but totally forgot it then. The input control was changed from: high pitch voice for attack, low pitch voice for jump to: voice for attack, touch input for jump. Did I resolve the problem? No, I took another path and kept the "voice control" characteristic of the game at the same time.
+The problem was that when we're talking, various frequency voice are sent out with different enery level. Thing can go wrong if all frequency enery are close, that is, no "solo frequency" is given. My system was almost 100% accurate because the ton generation service only sent out "single" frequency voice. Originally the game was designed to use high pitch voice for attack, low pitch voice for jump. Now, what would you do if the publish time is close?
+Just abandon the pitch recognition. One friend reminded me of touch control, the plan B I've thought of in very early stage of design time but totally forgot it afterward. The input control was changed from: high pitch voice for attack, low pitch voice for jump to: voice for attack, touch input for jump. Did I resolve the problem? No, I took another path and preserved the "voice control" characteristic of the game at the same time.
 Sometimes thing just go wrong. In real situation, never afraid of letting go, pick the second best solution. We can be stubborn only when our skill reaches beyond top professional level. And the last words: Pushes yourself one step further when you feel desperate.
 
 Steps in detail goes here:
 1. Background design
 2. Paints background objects (stones, flying buildings, fog, snow)
-3. Uses particle system in Unity and writes a background object generator class
+3. Uses particle system in Unity and writes a background object generator class for background objects generation
 4. Implements menu system
 5. Produces publishing related resources like banner, trailer video, in different mobile sizes, in both Chinese and English. Fills game title, subtitle, and all other information that Google Play Console, App Store Connect requires 
 5. Integration test on Android and IOS
@@ -175,11 +175,11 @@ Official trailer
 {% youtube o4nCgV5WUHA %}
 
 # Reflection and Review
-Things that I didn't do well and improvements:
+Things that I didn't do well and designed adjustments:
 1. Keeps the scale balanced between resource and business goal. Maximizes the quality of game under the capability cap of team
-2. Puts phone integration test into iteration loop early with Unity cloud build so problem can be discovered in early stage. Unity cloud build for minimizing effort of switching between platforms and build time
-3. Never reveal developing process to users. They don't know what you're doing in most cases. No need for them to laugh on you or losing the confidence of customers. Only reveal them to experts
-4. Generates less inheritance. Encapsulates motion, action, animation control related codes into something like controller class and attach both entity class and controller class to Unity game object.
+2. Puts phone integration test into iteration loop early on with Unity cloud build so problem can be discovered in early stage. Unity cloud build for minimizing effort of switching between platforms and build time
+3. Never reveal developing process to users. They don't know what you're doing in most cases. No need for them to laugh on you or losing the confidence of customers. Only reveal development process to experts
+4. Generates less inheritance. Encapsulates motion, action, animation control related codes into something like controller class and attach both entity class and controller class to Unity game object
 
 Things that I'm proud of:
 1. Appropriately design the flow of work, takes scrum discipline into praticle product implementation
@@ -188,6 +188,6 @@ Things that I'm proud of:
 4. I don't know it's good or not. I completed entire game making process by my own. Now I have complete vision of game making process
 
 # Future Work Expectation
-1. Creates a team
-2. Makes a game with online interaction and account system ability
+1. Founds a team
+2. Makes a game with online interaction and account system ability. Learns Unity shader editor.
 3. Player chant (cast) spell to phone for character skill activation
