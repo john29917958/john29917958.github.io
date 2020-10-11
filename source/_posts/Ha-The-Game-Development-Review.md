@@ -193,7 +193,7 @@ Things that I'm proud of:
 2. Makes a game with online interaction and account system ability. Learns Unity shader editor.
 3. Player chant (cast) spell to phone for character skill activation
 
-Finally, an office worker, I put my first step in and successfully published a production game App to Google Play and App Store. Now, it's your turn. Creating product after work can be very very hard. However, if you don't start, you're the same person after one year, five years, even ten years. **Never too late! Action, now!** To the "better you" in the future, the better you that you deserve!
+Finally, an office worker, I put my first step in and successfully published a production game App to Google Play and App Store. Now, it's your turn. Creating product after work can be very very hard. I've experienced way more difficulties than the things described above, even thinking of giving up. However, if you don't start, you're the same person after one year, five years, even ten years. **Never too late! Action, now!** To the "better you" in the future, the better you that you deserve!
 
 # Other Demonstrations
 
