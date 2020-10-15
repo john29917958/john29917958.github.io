@@ -5,11 +5,9 @@ tags: programming, management, reflection
 category: Programming
 ---
 Have you ever dreamed of building a product by yourself, selling it to the world? Here's my first experience of publishing a voice control mobile action game. Including a huge mistake I've made, did some adjustments, then succeeded in the end.
-As an office worker, I put my first step in and successfully published a production game App to Google Play and App Store. Now, it's your turn. Creating product after work can be very very tough. However, if you never start, you're the same person after one year, five years, even ten years. **Never too late! Action, now!** To the "better you" in the future, the better you that you deserve!
+As an office worker, I've put my first step in and successfully published a production game App to Google Play and App Store. Now, it's your turn. Hustling after work can be very very tough. However, if you never start, you're the same person after one year, five years, even ten years. **Never too late! Action, now!** To the "better you" in the future, the better you that you deserve!
 {% asset_img banner.png %}
 <!-- more -->
-When it comes to business, multiple factors needs to be taken into account. Our time, our resources, our skill set, our competitors... Resource and business goal are the both ends of the scale. We never want to put tremendous effort into small project, or the goal is so big that our resources are yet unable to support. For me, I ran into a disaster of the second situation.
-
 1. [Defines Business Goal](#Defines-Business-Goal)
 2. [Capability Analysis](#Capability-Analysis)
 3. [Defines Milestones](#Defines-Milestones)
@@ -25,15 +23,16 @@ When it comes to business, multiple factors needs to be taken into account. Our 
 
 > Goes niche market place when lacking of resources
 
+When it comes to business, multiple factors needs to be taken into account. Our time, our resources, our skill set, our competitors... Resource and business goal are the both ends of the scale. We never want to put tremendous effort into small project, or the goal is so big that our resources are yet unable to support. For me, I ran into a disaster of the second situation.
 At first, without any game making experience, me, an office worker, as a young fellow, started as a single-person-team, planed to create a 2D scrolling mobile game with complex fighting animation, flexible and rich touch control, complete story line, and beautiful character designs. I even planned to include voice control there! Do you see any problem there? Just ask some questions to the "young fellow":
 1. How can a single-person-team competes against a formal company with five, ten, even hundreds of professional employees from different field in speed and quality?
 2. What value your product delivers that makes you rising from the huge general market place?
 
 The result was: It took me months to build an incomplete prototype. And then, my entire idea was realized by a mature company.
 
-I failed. It hurt. Fortunately, only my resource was wasted. Had been sllent a period of time. No hustle. No self-learning. Later one day, in a playground, someone reminded me of the idea of voice control game making again.
+I failed. It hurt. Fortunately, only my resource was wasted. After the failure, no hustle, no self-learning activity. Later one day, in a playground, someone reminded me of the idea of voice control game making again.
 
-With the terrible experience, I won't challenge the general market again. After doing some research, the target was set to "voice control action game" that's rarely seen on mobile market. And it's very convenient, I can take advantage of the built-in microphone provided by mobile phones!
+With the terrible experience, I won't challenge the general market again. After doing some research, the target was set to "voice control action game" that's rarely seen on mobile market. And it's very convenient, I can take advantage of the built-in microphone provided by mobile phones directly!
 
 # Capability Analysis
 
@@ -66,7 +65,7 @@ After high-level milestones are set, here's the detail implementation flow.
 
 ## Minimum Valuable Prototype
 
-> Don't waste your time! Only focus on core technique research related tasks!
+> Don't waste time! Only focus on core technique research task!
 
 The most important concept here is: Do not waste resource other then the core technique research related tasks! We should keep the entire project as simple as possible and only focuses on the core technique research. Nothing gonna work if the research doesn't succeed. So do not put unnecessary effort or resource on other tasks. Focus, and break through the core technique.
 
@@ -157,7 +156,7 @@ else
 `Permission.RequestUserPermission(Permission.Microphone);` for Android and `Microphone.Start` for IOS. The tricky point is, `Permission.RequestUserPermission(Permission.Microphone);` pops privilege request dialog to user only when player first opens the App. And such piece of code is unnecessary for IOS. In IOS, just call `Microphone.Start` then the request dialog should appear. However once player rejects the request, pop-out dialog will never appear again.
 
 ## Latency Delay
-> Unpopular technique lacks information
+> Unpopular technique lacks documentation
 
 "Ha" is a real-time voice control action game, so instant playback of what microphone has recorded is a must-have feature. I don't know why the playback speed always sync on PC and Android. But when tested on IOS, there existed a BIG LAG between player say "Ha" to phone, and the character actually fires or jumps. I searched through the internet, tried everything I counld, kept building and tested in Android and IOS... No luck. Lot's of time spent, still no luck. Finally found a post [here](https://programmer.help/blogs/unity-sound-and-recording-and-real-time-microphone-play.html), the key point is to sync the playback position with the microphone recording position like this, so we can collect real-time voice information from player:
 ```csharp
@@ -215,12 +214,12 @@ Things that I'm proud of:
 1. Founds a team
 2. Makes a game with online interaction, account system, and cash flow ability
 3. Learns Unity shader editor, HDR and universal pipeline techniques, cross platform responsive UI techniques, mobile optimization techniques
-4. Optional: Learns voice volumn and pitch related knowledge and figure out why latency issue only happens on IOS
+4. Optional: Learns voice volumn and pitch related knowledge. Figures out why latency issue only happens on IOS
 
 # To Readers
-Finally, as an office worker, I put my first step in and successfully published a production game App to Google Play and App Store. Now, it's your turn. Creating product after work can be very very tough. I've experienced way more difficulties than the article documents. Even more, I've been thought of giving up such voice recognition project. However, if you never start, you're the same person after one year, five years, even ten years. **Never too late! Action, now!** To the "better you" in the future, the better you that you deserve.
+Finally, as an office worker, I've put my first step in and successfully published a game application to Google Play and App Store. Now, it's your turn. Hustling after work can be very very tough. I've experienced way more difficulties than the article documents. Even more, I've been thought of giving up such voice recognition project. However, if you never start, you're the same person after one year, five years, even ten years. **Never too late! Action, now!** To the "better you" in the future, the better you that you deserve!
 
-> Ha is not a great App. It's a beginning to my success
+> Ha is not a great App. It's the beginning to my success
 
 Time for your start, to YOUR success.
 
