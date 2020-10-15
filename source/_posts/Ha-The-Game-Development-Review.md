@@ -5,7 +5,7 @@ tags: programming, management, reflection
 category: Programming
 ---
 Have you ever dreamed of building a product by yourself, selling it to the world? Here's my first experience of publishing a voice control mobile action game. Including a huge mistake I've made, did some adjustments, then succeeded in the end.
-As an office worker, I put my first step in and successfully published a production game App to Google Play and App Store. Now, it's your turn. Creating product after work can be very very hard. However, if you don't start, you're the same person after one year, five years, even ten years. **Never too late! Action, now!** To the "better you" in the future, the better you that you deserve!
+As an office worker, I put my first step in and successfully published a production game App to Google Play and App Store. Now, it's your turn. Creating product after work can be very very tough. However, if you never start, you're the same person after one year, five years, even ten years. **Never too late! Action, now!** To the "better you" in the future, the better you that you deserve!
 {% asset_img banner.png %}
 <!-- more -->
 When it comes to business, multiple factors needs to be taken into account. Our time, our resources, our skill set, our competitors... Resource and business goal are the both ends of the scale. We never want to put tremendous effort into small project, or the goal is so big that our resources are yet unable to support. For me, I ran into a disaster of the second situation.
@@ -20,49 +20,49 @@ At first, without any game making experience, me, an office worker, as a young f
 
 The result was: It took me months to build an incomplete prototype. And then, my entire idea was realized by a mature company.
 
-I failed. It hurt. Fortunately, only my resource was wasted by such impractical project. Been standing still a period of time. Later one day, in a playground, someone reminded me of the voice control game making again.
+I failed. It hurt. Fortunately, only my resource was wasted. Had been sllent a period of time. No hustle. No self-learning. Later one day, in a playground, someone reminded me of the idea of voice control game making again.
 
 With the terrible experience, I won't challenge the general market again. After doing some research, the target was set to "voice control action game" that's rarely seen on mobile market. And it's very convenient, I can take advantage of the built-in microphone provided by mobile phones!
 
 # Capability Analysis
 
-> Analysis strength and weakness, design strategy to match goal and schedule
+> Strength v.s. weakness, design strategy to match goal and schedule
 
 Capability and resources significantly influence schedule. For me I have terrible digital art ability, good object-oriented programming concept and C# coding skill. Zero screenwriting ability, **zero game making experience** (I think...). However... Humm.. I have Live2D modeling and animating experience. Oh! never forget I'm an office worker without much time! So the technical scopes were set to:
 - Voice control: Requires programming related skills - my strength. The core technique and most challenge part of game
 - Silhouette art style: Character design requires 2D digital art related skills - my weakness, so I made art style simple
-- Live2D as modeling and animating technique: Strength, I have Live2D experience, and it's well integrated with Unity
+- Live2D as modeling and animating technique: Strength, I have Live2D experience, and it's well-integrated with Unity
 - No online battle: For lack of time resource
 - No database and account system: For lack of time resource
-- One time gameplay: For lack of time resource
+- One-time gameplay: For lack of time resource
 
 # Defines Milestones
 
-> Integration and deployment are always tough, taking half of entire product release life time
+> Integration and deployment are always tough, taking half of entire product life time
 
-Schedule estimation of programming related projects are always difficult. Accidents can always happen. I cannot clearly remember how I did the schedule estimation in detail, here's my way.
+Schedule estimation of programming related projects are always difficult. Accidents can always hit you anytime. I cannot clearly remember how I did the schedule estimation in detail, here's my way.
 First, break down the tasks in very high-level point of view:
 1. Core technical research and minimum prototype implementation: One month. Prototype and design level code are always fast
 2. Character implementation loop of three monsters and two bosses: Two months. Lots of major implementation tasks
 3. Game completeness implementation and integration + market test: Two months and more. Longest phase. The terrible "accidents" always happen when it comes to integration and deployment
 
-Project was started on 2020/05/14, formal release date was set on 2020/10/24, five months in total.
+Project was started on 2020/05/14, formal release date was set on 2020/10/24, five months in total, ready for publishing at 2020/10/16.
 
-The very number one task is core technique research since we don't want after a bunch of game art and game function implementation, the entire project fails in the end just because the most critical, most difficult core technique is impossible to be realized. Just like a Chinese proverb says: 頭過身就過.
+The very number-one task is core technique research since we don't want entire project fails after a bunch of game art and game function implementation, just because the most critical, most difficult core technique is impossible to be realized. Just like a Chinese proverb says: 頭過身就過.
 
 # Implementation Process in Detail
 After high-level milestones are set, here's the detail implementation flow.
 
 ## Minimum Valuable Prototype
 
-> Don't waste your time! Only focus on core technique research!
+> Don't waste your time! Only focus on core technique research related tasks!
 
-The most important concept here is: Do not waste resource other then the core technique research! We should keep the entire project as simple as possible and only focuses on the core technique research. Nothing gonna work if the research doesn't succeed. So do not put unnecessary effort or resource on other tasks. Focus, and break through the core technique. DON'T WASTE TIME! PERIOD!
+The most important concept here is: Do not waste resource other then the core technique research related tasks! We should keep the entire project as simple as possible and only focuses on the core technique research. Nothing gonna work if the research doesn't succeed. So do not put unnecessary effort or resource on other tasks. Focus, and break through the core technique.
 
 Implementation flow:
 1. Researches voice volume and pitch recognition
 2. Implements voice recognition function with very simple UI
-3. Makes voice recognition a class (a simple module)
+3. Encapsulates voice recognition into a class (a simple module)
 4. Designs main character 2D art
 5. Designs the skill set of main character
 6. Paints and produces every parts of the main character with Clip Studio Paint (head, hair, eyes, arms, legs, etc)
@@ -70,7 +70,7 @@ Implementation flow:
 8. Creates character animations with Live 2D
 9. Integrates the Live 2D model with Unity
 10. Creates animation flow and implements the entity C# class
-11. Performs integration test in Unity, making sure the idea of voice control can be realized
+11. Does integration test in Unity, making sure the idea of voice control can be realized
 12. Creates a simple monster
 13. Minimum valuable prototype completed
 
@@ -85,38 +85,49 @@ Minimum valuable prototype
 > Continuous integration, small iteration
 
 For major implementation task, we'd better divides codes into individual components:
-1. Good for task dispatching and assigning (no need in single-person-team)
+1. Good for task dispatching and assigning
 2. Better quality, less bug
 3. Fast integration, fast for result review
 
 {% asset_img component-code.png %}
 
-Once project is divided into small pieces of components, it's easy to be integrated one after another. But why? Can't I just keep writing all the functions and hit Play button at release phase? We never what to do that. Programming is a very abstract and unintuitive task. The complexity of project can be exponential rising as it grows bigger. Small piece of complete function, small piece of implementation, and integrates, tests it iteratively can ensure entire product working all the time. If we have customer, it's also good for iterative function demonstration, good for wining customer's trust. The steps of each iteration loop goes here:
+Once project is divided into small pieces of components, it's easy to be integrated one after another. But why? Can't I just keep writing all the functions and hit Play button at release phase? We never what to do that. Programming is very abstract and unintuitive task. Project complexity can be exponential rising as it grows bigger. So small piece of complete function, small piece of implementation, and integrates, tests it iteratively to ensure entire product working all the time. If we do have customers, it's also good for iterative function demonstration, good for wining customers' trust. The steps of each iteration loop goes here:
 1. Designs 2D character art
 2. Designs skill set of character
-3. Paints and produces every parts of the main character with Clip Studio Paint
-4. Models the main character with Live 2D
+3. Paints and produces every parts of character with Clip Studio Paint
+4. Models character with Live 2D
 5. Creates character animations with Live 2D
-6. Integrates the Live 2D model with Unity
+6. Integrates Live 2D model with Unity
 7. Creates animation flow and implements the entity C# class
-8. Performs integration test in Unity
+8. Does integration test in Unity
 
 {% youtube wDWf70g8BTk %}
 
-# Difficulties When Brings to Market Test
+# Tragedies in Market Test
 
-> Things can always go wrong in market, don't afraid of second best
+> Accidents can happen in release, bravely takes the second best
 
 First here's final result with background and menu system
 
 {% youtube 0HG2p7xPahU %}
 
-Let's skip the background implementation flow and focus on the production market related problems. The nightmares I've faced with was the microphone privilege request in Android + IOS, and latency delay in iPhone. Oh! and the boss-like accident was pitch recognition accuracy.
+Let's skip the background implementation flow and focus on the production market related problems. The nightmares I've faced with was the microphone privilege request in Android + IOS, and latency delay in iPhone. Oh! and the god-like accident was pitch recognition accuracy.
 
 ## Microphone Privilege Request
-Unity does great job at cross platform code generation. However, privilege request still differs on different platform. Here's the sample code for both IOS and Android, it took me lots of time building and testing in both operation systems:
+Unity does great job at cross platform code generation. However, privilege request still differs on different platform. First of all, I tested Unity official solution of checking if the App is granted with microphone privilege:
 ```csharp
-// Requests for microphone priviledge.
+if (Application.HasUserAuthorization(UserAuthorization.Microphone))
+{
+	// Microphone granted.
+}
+else
+{
+	Permission.RequestUserPermission(Permission.Microphone);
+}
+```
+But the `Application.HasUserAuthorization(UserAuthorization.Microphone)` always gave me `true`! Been taking me lots of time building and testing in both operation systems, then finally came out with the final solution for both IOS and Android:
+```csharp
+// Requests for microphone privilege.
 if (Application.platform == RuntimePlatform.Android)
 {
 	Permission.RequestUserPermission(Permission.Microphone);
@@ -132,11 +143,12 @@ else
 	Microphone.End(null);
 }
 ```
+`Permission.RequestUserPermission(Permission.Microphone);` for Android and `Microphone.Start` for IOS. The tricky point is, `Permission.RequestUserPermission(Permission.Microphone);` pops privilege request dialog to user only when player first opens the App. And such piece of code is unnecessary for IOS. In IOS, just call `Microphone.Start` then the request dialog should appear. However once player rejects the request, pop-out dialog will never appear again.
 
 ## Latency Delay
-> If technique not popular, careful about lacking of online information
+> Unpopular technique lacks information
 
-"Ha" is a real-time voice control action game, so instant playback of what microphone has recorded is a must-have function. I don't know why the playback speed always sync on PC and Android. But when tested on IOS, there existed a BIG LAG between player say "Ha" to phone, and the character actually fires or jumps. I searched through the internet, tried everything I counld, kept building and deploying to Android and IOS... No luck. Lot's of time spent, still no luck. Finally found a post [here](https://programmer.help/blogs/unity-sound-and-recording-and-real-time-microphone-play.html), the key point is to sync the playback position with the microphone recording position like this, so we can collect real-time voice information from player:
+"Ha" is a real-time voice control action game, so instant playback of what microphone has recorded is a must-have feature. I don't know why the playback speed always sync on PC and Android. But when tested on IOS, there existed a BIG LAG between player say "Ha" to phone, and the character actually fires or jumps. I searched through the internet, tried everything I counld, kept building and tested in Android and IOS... No luck. Lot's of time spent, still no luck. Finally found a post [here](https://programmer.help/blogs/unity-sound-and-recording-and-real-time-microphone-play.html), the key point is to sync the playback position with the microphone recording position like this, so we can collect real-time voice information from player:
 ```csharp
 if (Application.platform == RuntimePlatform.IPhonePlayer)
 {
@@ -144,26 +156,26 @@ if (Application.platform == RuntimePlatform.IPhonePlayer)
 }
 ```
 
-One lesson learned was that, when the technique we use is not popular, be careful about lacking of online information.
+One lesson learned was that, when the technique we use is unpopular, be careful about lacking of online information.
 
 ## Pitch recognition accuracy
 
-> Don’t be afraid of second best solution
+> Don’t be afraid of taking second best solution
 
-Pitch recognition accuracy problem happened when I delivered the production App to specific player's phone. No matter how the player said "Ha" in high or low pitch voice, the recognition could always go wrong that the judge result jumped to extraodinary high frequency - 600 Hz while the avarage human voice pitch is around 80 to 1000 Hz.
+Pitch recognition accuracy problem happened when I delivered the production App to specific player's phone. No matter how the player said "Ha" in high or low pitch voice, the recognition could always go wrong, jumping to extraodinary high frequency - 600 Hz while the avarage human voice pitch is around 80 to 1000 Hz.
 
 First, I used an [online tone generation service](https://www.szynalski.com/tone-generator/) to test if I did anything wrong. Amazingly, the result was very beautiful and accurate. My system counld almost 100% recognize the pitch value sent out by the service.
 
-The problem was that when we're talking, various frequency voice are sent out with different enery level. Thing can go wrong if all frequency enery are close, that is, no "solo frequency" is given. My system was almost 100% accurate because the ton generation service only sent out "single" frequency voice. Originally the game was designed to use high pitch voice for attack, low pitch voice for jump. Now, what would you do if the publish time is close?
-Just abandon the pitch recognition. One friend reminded me of touch control, the plan B I've thought of in very early stage of design time but totally forgot it afterward. The input control was changed from: high pitch voice for attack, low pitch voice for jump to: voice for attack, touch input for jump. Did I resolve the problem? No, I took another path and preserved the "voice control" characteristic of the game at the same time.
-Sometimes thing just go wrong. In real situation, never afraid of letting go, pick the second best solution. We can be stubborn only when our skill reaches beyond top professional level. And the last words: Pushes yourself one step further when you feel desperate.
+The problem was that when we're talking, voice with various frequency are sent with different enery level at the same time. Thing can go wrong if all frequency enery are close, that is, no "solo frequency" is given. My system was almost 100% accurate because the ton generation service only sent out "single" frequency voice. At first, the game was designed to use high pitch voice for attack, low pitch voice for jump. Now, what would you do if the publish time is close?
+Just abandon the pitch recognition. One friend reminded me of touch control, the plan B I've thought of in very early stage of design time but totally forgot it afterward. The input control was changed from "high pitch voice for attack, low pitch voice for jump" to "voice for attack, touch input for jump". Did I resolve the problem? Absolutely no, I took another path and preserved the "voice control" characteristic of the game at the same time.
+Sometimes thing just go wrong. In real situation, never afraid of letting go, pick the second best solution. And the last words: Pushes yourself one step further when you feel desperate, there's always another way.
 
 Steps in detail goes here:
 1. Background design
 2. Paints background objects (stones, flying buildings, fog, snow)
-3. Uses particle system in Unity and writes a background object generator class for background objects generation
+3. Uses particle system to generate gravels. Writes a background object generator class for other background elements generation
 4. Implements menu system
-5. Produces publishing related resources like banner, trailer video, in different mobile sizes, in both Chinese and English. Fills game title, subtitle, and all other information that Google Play Console, App Store Connect requires 
+5. Makes publishing related resources like banner, trailer video, in different mobile sizes, in both Chinese and English. Fills game title, subtitle, and all other information that Google Play Console, App Store Connect requires 
 5. Integration test on Android and IOS
 6. Encounters problems described above
 7. Resolves them one after another
@@ -176,26 +188,28 @@ Official trailer
 {% youtube o4nCgV5WUHA %}
 
 # Reflection and Review
-Things that I didn't do well and designed adjustments:
+Mistakes and improvements:
 1. Keeps the scale balanced between resource and business goal. Maximizes the quality of game under the capability cap of team
-2. Puts phone integration test into iteration loop early on with Unity cloud build so problem can be discovered in early stage. Unity cloud build for minimizing effort of switching between platforms and build time
-3. Never reveal developing process to users. They don't know what you're doing in most cases. No need for them to laugh on you or losing the confidence of customers. Only reveal development process to experts
+2. Puts phone integration test into iteration loop early on so problem can be discovered in early stage
+3. Never reveal developing process to users. They don't know what you're doing in most cases. Only reveal development process to experts or those who can provide accurate advices
 4. Generates less inheritance. Encapsulates motion, action, animation control related codes into something like controller class and attach both entity class and controller class to Unity game object
 
 Things that I'm proud of:
-1. Appropriately design the flow of work, takes scrum discipline into praticle product implementation
+1. Takes scrum discipline, designed the flow-of-work that matches my situation
 2. Accurate schedule estimation
 3. Integrates Live 2D with Unity successfully
-4. I don't know it's good or not. I completed entire game making process by my own. Now I have complete vision of game making process
+4. I don't know it's good or not. I completed entire game making process by my own, made all artworks with my own hands.
 
 # Future Work and Expectation
 1. Founds a team
-2. Makes a game with online interaction and account system ability. Learns Unity shader editor.
-3. Player chant (cast) spell to phone for character skill activation
+2. Makes a game with online interaction, account system, and cash flow ability
+3. Learns Unity shader editor, HDR and universal pipeline techniques, cross platform responsive UI techniques, mobile optimization techniques
+4. Optional: Learns voice volumn and pitch related knowledge and figure out why latency issue only happens on IOS
 
-Finally, an office worker, I put my first step in and successfully published a production game App to Google Play and App Store. Now, it's your turn. Creating product after work can be very very hard. I've experienced way more difficulties than the things described above, even thinking of giving up. However, if you don't start, you're the same person after one year, five years, even ten years. **Never too late! Action, now!** To the "better you" in the future, the better you that you deserve!
+# To Readers
+Finally, as an office worker, I put my first step in and successfully published a production game App to Google Play and App Store. Now, it's your turn. Creating product after work can be very very tough. I've experienced way more difficulties than the article documents. Even more, I've been thought of giving up such voice recognition project. However, if you never start, you're the same person after one year, five years, even ten years. **Never too late! Action, now!** To the "better you" in the future, the better you that you deserve! Can't wait to see your improvements :)
 
-# Other Demonstrations
+# Game Making Records and Demonstrations
 
 Main character Live 2D freestyle demonstration
 {% youtube D7jhqH044vE %}
