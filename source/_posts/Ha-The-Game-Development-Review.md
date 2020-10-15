@@ -10,6 +10,17 @@ As an office worker, I put my first step in and successfully published a product
 <!-- more -->
 When it comes to business, multiple factors needs to be taken into account. Our time, our resources, our skill set, our competitors... Resource and business goal are the both ends of the scale. We never want to put tremendous effort into small project, or the goal is so big that our resources are yet unable to support. For me, I ran into a disaster of the second situation.
 
+1. [Defines Business Goal](#Defines-Business-Goal)
+2. [Capability Analysis](#Capability-Analysis)
+3. [Defines Milestones](#Defines-Milestones)
+4. [Implementation Process in Detail](#Implementation-Process-in-Detail)
+5. [Tragedies in Market Test](#Tragedies-in-Market-Test)
+6. [Reflection and Review](#Reflection-and-Review)
+7. [Future Work and Expectation](#Future-Work-and-Expectation)
+8. [To Readers](#To-Readers)
+9. [Game Making Records and Demonstrations](#Game-Making-Records-and-Demonstrations)
+10. [Resources and Demonstrations of Failed Project](#Resources-and-Demonstrations-of-Failed-Project)
+
 # Defines Business Goal
 
 > Goes niche market place when lacking of resources
@@ -207,7 +218,11 @@ Things that I'm proud of:
 4. Optional: Learns voice volumn and pitch related knowledge and figure out why latency issue only happens on IOS
 
 # To Readers
-Finally, as an office worker, I put my first step in and successfully published a production game App to Google Play and App Store. Now, it's your turn. Creating product after work can be very very tough. I've experienced way more difficulties than the article documents. Even more, I've been thought of giving up such voice recognition project. However, if you never start, you're the same person after one year, five years, even ten years. **Never too late! Action, now!** To the "better you" in the future, the better you that you deserve! Can't wait to see your improvements :)
+Finally, as an office worker, I put my first step in and successfully published a production game App to Google Play and App Store. Now, it's your turn. Creating product after work can be very very tough. I've experienced way more difficulties than the article documents. Even more, I've been thought of giving up such voice recognition project. However, if you never start, you're the same person after one year, five years, even ten years. **Never too late! Action, now!** To the "better you" in the future, the better you that you deserve.
+
+> Ha is not a great App. It's a beginning to my success
+
+Time for your start, to YOUR success.
 
 # Game Making Records and Demonstrations
 
@@ -223,7 +238,7 @@ Main character Live 2D animation demonstration 2
 Live 2D modeling process demonstration
 {% youtube qMDQkPJ2XUw %}
 
-# Old Project Resources and Demonstrations
+# Resources and Demonstrations of Failed Project
 
 Main character Live 2D demonstration
 {% youtube gMJR1fGN6ew %}
