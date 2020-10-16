@@ -205,15 +205,14 @@ Mistakes and improvements:
 4. Generates less inheritance. Encapsulates motion, action, animation control related codes into something like controller class and attach both entity class and controller class to Unity game object
 
 Things that I'm proud of:
-1. Takes scrum discipline, designed the flow-of-work that matches my situation
-2. Accurate schedule estimation
-3. Integrates Live 2D with Unity successfully
+1. Management: Accurate schedule estimation, iterative integration in real practice
+3. Skill: Integrates Live 2D with Unity successfully. Combines my skills of art and programming together
 4. I don't know it's good or not. I completed entire game making process by my own, made all artworks with my own hands.
 
 # Future Work and Expectation
 1. Founds a team
-2. Makes a game with online interaction, account system, and cash flow ability
-3. Learns Unity shader editor, HDR and universal pipeline techniques, cross platform responsive UI techniques, mobile optimization techniques
+2. Makes a game with online interaction, account system, and cash flow abilities
+3. Learns Unity shader editor, HDR and universal pipeline techniques, cross platform responsive UI techniques, mobile optimization techniques. Improves my foundation of digital art including perspective, structure, coloring, value, shading, and kinetic
 4. Optional: Learns voice volumn and pitch related knowledge. Figures out why latency issue only happens on IOS
 
 # To Readers
