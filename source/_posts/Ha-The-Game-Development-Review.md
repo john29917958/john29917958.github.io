@@ -5,7 +5,7 @@ tags: programming, management, reflection
 category: Programming
 ---
 Have you ever dreamed of building a product yourself, selling it to the world? Here's my first experience of publishing a voice control mobile action game to App Store and Google Play. Including a huge mistake I've made, did some adjustments, then succeeded in the end.
-As an office worker, I've successfully put my first step in. Now, it's your turn. Hustling after work can be very very tough. However, if you never start, you're the same person after one year, five years, even ten years. **Never too late! Action, now!** To the "better you" in the future, the better you that you deserve!
+As an office worker, I've successfully put my first step in. Now, it's your turn. Hustling after work can be extremely tough. However, if you never start, you're the same person after one year, five years, even ten years. **Never too late! Action, now!** To the "better you" in the future, the better you that you deserve!
 {% asset_img banner.png %}
 <!-- more -->
 Outline:
