@@ -4,8 +4,8 @@ date: 2020-10-09 18:06:20
 tags: programming, management, reflection
 category: Programming
 ---
-Have you ever dreamed of building a product by yourself, selling it to the world? Here's my first experience of publishing a voice control mobile action game. Including a huge mistake I've made, did some adjustments, then succeeded in the end.
-As an office worker, I've put my first step in and successfully published a production game App to Google Play and App Store. Now, it's your turn. Hustling after work can be very very tough. However, if you never start, you're the same person after one year, five years, even ten years. **Never too late! Action, now!** To the "better you" in the future, the better you that you deserve!
+Have you ever dreamed of building a product yourself, selling it to the world? Here's my first experience of publishing a voice control mobile action game to App Store and Google Play. Including a huge mistake I've made, did some adjustments, then succeeded in the end.
+As an office worker, I've successfully put my first step in. Now, it's your turn. Hustling after work can be very very tough. However, if you never start, you're the same person after one year, five years, even ten years. **Never too late! Action, now!** To the "better you" in the future, the better you that you deserve!
 {% asset_img banner.png %}
 <!-- more -->
 1. [Defines Business Goal](#Defines-Business-Goal)
@@ -21,60 +21,60 @@ As an office worker, I've put my first step in and successfully published a prod
 
 # Defines Business Goal
 
-> Goes niche market place when lacking of resources
+> Goes niche market when lacking of resources
 
-When it comes to business, multiple factors needs to be taken into account. Our time, our resources, our skill set, our competitors... Resource and business goal are the both ends of the scale. We never want to put tremendous effort into small project, or the goal is so big that our resources are yet unable to support. For me, I ran into a disaster of the second situation.
-At first, without any game making experience, me, an office worker, as a young fellow, started as a single-person-team, planed to create a 2D scrolling mobile game with complex fighting animation, flexible and rich touch control, complete story line, and beautiful character designs. I even planned to include voice control there! Do you see any problem there? Just ask some questions to the "young fellow":
-1. How can a single-person-team competes against a formal company with five, ten, even hundreds of professional employees from different field in speed and quality?
+When it comes to business, multiple factors must be taken into account: Our time, our resources, our skill set, our competitors... Resource and business goal are the both ends of the scale. We never want to put tremendous effort into small project, or set a BIG goal that we are yet unable to afford. For me, I ran into a disaster of the second situation.
+At first, without any game making experience, me, an office worker, as a young fellow, started as a single-person-team, planned to create a 2D scrolling mobile game with complex fighting animation, flexible and rich touch control, complete story line, and beautiful character designs. I even planned to include voice control there! Do you see any problem? Just ask these questions to the "young fellow":
+1. How can a single-person-team competes against a formal company with five, ten, even hundreds of professional employees from different fields in speed and quality?
 2. What value your product delivers that makes you rising from the huge general market place?
 
 The result was: It took me months to build an incomplete prototype. And then, my entire idea was realized by a mature company.
 
-I failed. It hurt. Fortunately, only my resource was wasted. After the failure, no hustle, no self-learning activity. Later one day, in a playground, someone reminded me of the idea of voice control game making again.
+I failed. It hurt. Fortunately, only my resource was wasted. Been stopped for a long time. Later one day, in a playground, someone reminded me of the idea of voice control game again.
 
-With the terrible experience, I won't challenge the general market again. After doing some research, the target was set to "voice control action game" that's rarely seen on mobile market. And it's very convenient, I can take advantage of the built-in microphone provided by mobile phones directly!
+With the terrible experience, I won't challenge the general market again. After some research done, the target was set to "voice control action game" that's rarely seen on mobile market. With mobile phones, I can take advantage of the built-in microphone directly!
 
 # Capability Analysis
 
-> Strength v.s. weakness, design strategy to match goal and schedule
+> Strength v.s. weakness, leverages the scale
 
-Capability and resources significantly influence schedule. For me I have terrible digital art ability, good object-oriented programming concept and C# coding skill. Zero screenwriting ability, **zero game making experience** (I think...). However... Humm.. I have Live2D modeling and animating experience. Oh! never forget I'm an office worker without much time! So the technical scopes were set to:
-- Voice control: Requires programming related skills - my strength. The core technique and most challenge part of game
-- Silhouette art style: Character design requires 2D digital art related skills - my weakness, so I made art style simple
-- Live2D as modeling and animating technique: Strength, I have Live2D experience, and it's well-integrated with Unity
+Schedule significantly affected by capability and resource. For me I have terrible digital art ability, good object-oriented programming concept and C# coding skill. Zero screenwriting ability, **zero game making experience** (I think...). However... Humm.. I have Live 2D modeling and animating experience. Oh! never forget I'm an office worker without much time! So the technical scopes were set to:
+- Voice control: Requires programming related skills - my strength. The core technique and most challenge part
+- Silhouette art style: 2D digital art ability is required for character design. That is, where my weakness exists. So I made art style simple
+- Live 2D as modeling and animating technique: My strength. I have Live 2D experience, and it's well-integrated with Unity
 - No online battle: For lack of time resource
 - No database and account system: For lack of time resource
 - One-time gameplay: For lack of time resource
 
 # Defines Milestones
 
-> Integration and deployment are always tough, taking half of entire product life time
+> Alwyas preserves much time for integration and deployment
 
-Schedule estimation of programming related projects are always difficult. Accidents can always hit you anytime. I cannot clearly remember how I did the schedule estimation in detail, here's my way.
+Schedule estimation of programming related projects are always difficult. Accidents can always happen. Cannot clearly remember how I did the schedule estimation in detail, here's the way.
 First, break down the tasks in very high-level point of view:
 1. Core technical research and minimum prototype implementation: One month. Prototype and design level code are always fast
 2. Character implementation loop of three monsters and two bosses: Two months. Lots of major implementation tasks
-3. Game completeness implementation and integration + market test: Two months and more. Longest phase. The terrible "accidents" always happen when it comes to integration and deployment
+3. Integration and market test: Two months and more. Longest phase. The terrible "accidents" always happen when it comes to integration and deployment
 
-Project was started on 2020/05/14, formal release date was set on 2020/10/24, five months in total, ready for publishing at 2020/10/16.
+Project was started on 2020/05/14, formal release date was set on 2020/10/24, five months in total. App was ready for publishing at 2020/10/16.
 
-The very number-one task is core technique research since we don't want entire project fails after a bunch of game art and game function implementation, just because the most critical, most difficult core technique is impossible to be realized. Just like a Chinese proverb says: 頭過身就過.
+The very number-one task is technical research since we don't want entire project fails after a bunch of artworks and function implementations done, just because the most critical, most difficult core function cannot be realized.
 
 # Implementation Process in Detail
 After high-level milestones are set, here's the detail implementation flow.
 
 ## Minimum Valuable Prototype
 
-> Don't waste time! Only focus on core technique research task!
+> Don't waste time! Focus on most difficult core function!
 
-The most important concept here is: Do not waste resource other then the core technique research related tasks! We should keep the entire project as simple as possible and only focuses on the core technique research. Nothing gonna work if the research doesn't succeed. So do not put unnecessary effort or resource on other tasks. Focus, and break through the core technique.
+The most important concept here is: Do not waste any resource other then the research of most difficult core function! We should keep the entire project as simple as possible and only focuses on the core technique research. Breaks through the bottle neck, proves it works, then start the major implementation process. Nothing gonna work if the hardest part of project fails. So do not put unnecessary effort or resource on other tasks. So focus, breaks through the most critical product function.
 
 Implementation flow:
 1. Researches voice volume and pitch recognition
 2. Implements voice recognition function with very simple UI
-3. Encapsulates voice recognition into a class (a simple module)
+3. Encapsulates voice recognition functions into a class (a simple module)
 4. Designs main character 2D art
-5. Designs the skill set of main character
+5. Designs skill set of main character
 6. Paints and produces every parts of the main character with Clip Studio Paint (head, hair, eyes, arms, legs, etc)
 7. Models the main character with Live 2D
 8. Creates character animations with Live 2D
@@ -94,7 +94,7 @@ Minimum valuable prototype
 
 > Continuous integration, small iteration
 
-For major implementation task, we'd better divides codes into individual components:
+Before major implementation process, we'd better divide codes or functions into individual component units:
 1. Good for task dispatching and assigning
 2. Better quality, less bug
 3. Fast integration, fast for result review
