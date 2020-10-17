@@ -9,7 +9,7 @@ As an office worker, I've successfully put my first step in. Now, it's your turn
 {% asset_img banner.png %}
 <!-- more -->
 Outline:
-1. [Defines Business Goal](#Defines-Business-Goal)
+1. [Set Business Target](#Set-Business-Target)
 2. [Capability Analysis](#Capability-Analysis)
 3. [Defines Milestones](#Defines-Milestones)
 4. [Implementation Process in Detail](#Implementation-Process-in-Detail)
@@ -22,13 +22,13 @@ Others:
 - [Game Making Records and Demonstrations](#Game-Making-Records-and-Demonstrations)
 - [Records of 1st. Failed Project](#Records-of-1st-Failed-Project)
 
-# Defines Business Goal
+# Set Business Target
 
 > Goes niche market when lacking of resources
 
-When it comes to business, multiple factors must be taken into account: Our time, our resources, our skill set, our competitors... Resource and business goal are the both ends of the scale. We never want to put tremendous effort into small project, or set a BIG goal that we are yet unable to afford. For me, I ran into a disaster of the second situation.
-At first, without any game making experience, me, an office worker, as a young fellow, started as a single-person-team, planned to create a 2D scrolling mobile game with complex fighting animation, flexible and rich touch control, complete story line, and beautiful character designs. I even planned to include voice control there! Do you see any problem? Just ask these questions to the "young fellow":
-1. How can a single-person-team competes against a formal company with five, ten, even hundreds of professional employees from different fields in speed and quality?
+When it comes to business, multiple factors must be taken into account: Our time, our resources, our skill set, our competitors... Resource and business target are the both ends of the scale. We never want to put tremendous effort into small project, or set a BIG goal that we are yet unable to afford. For me, I ran into a disaster of the second situation.
+At first, without any game making experience, me, an office worker, as a young fellow, started as a single-person-team, planned to create a 2D scrolling mobile game with complex fighting animation, flexible, rich and SIMPLE touch control, complete story line, and beautiful character designs. I even planned to include voice control there! Do you see any problem? Just ask these questions to the "young fellow":
+1. How can a single-person-team competes against formal companies with five, ten, even hundreds of professional employees from different fields in speed and quality?
 2. What value your product delivers that makes you rising from the huge general market place?
 
 The result was: It took me months to build an incomplete prototype. And then, my entire idea was realized by a mature company.
@@ -41,10 +41,18 @@ With the terrible experience, I won't challenge the general market again. After 
 
 > Strength v.s. weakness, leverages the scale
 
-Schedule significantly affected by capability and resource. For me I have terrible digital art ability, good object-oriented programming concept and C# coding skill. Zero screenwriting ability, **zero game making experience** (I think...). However... Humm.. I have Live 2D modeling and animating experience. Oh! never forget I'm an office worker without much time! So the technical scopes were set to:
+Schedule significantly affected by capability and resource. Here's the case study of mine abilities:
+- Good object-oriented programming concept and C# coding skill
+- Has Live 2D modeling and animating experience
+- Terrible digital art ability
+- **Zero game making experience** (I think...)
+- Zero screenwriting ability
+- Never forget I'm an office worker without much time!
+
+So the technical scopes were set to:
 - Voice control: Requires programming related skills - my strength. The core technique and most challenge part
-- Silhouette art style: 2D digital art ability is required for character design. That is, where my weakness exists. So I made art style simple
 - Live 2D as modeling and animating technique: My strength. I have Live 2D experience, and it's well-integrated with Unity
+- Silhouette art style: 2D digital art ability is required for character design. That is, where my weakness exists. So I made art style simple
 - No online battle: For lack of time resource
 - No database and account system: For lack of time resource
 - One-time gameplay: For lack of time resource
