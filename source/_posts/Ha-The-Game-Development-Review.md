@@ -175,10 +175,11 @@ else
 }
 ```
 In Android, invokes `Permission.RequestUserPermission(Permission.Microphone);` so Android do prompt microphone request dialog to player, then uses `Microphone.Start()` to record player voice; While in IOS, just invokes `Microphone.Start()`, IOS do prompts the request dialog directly.
-For both methods, privilege request dialog only prompts when player first opens the App. Once player rejects the request, pop-out dialog will never appear again.
+For both methods, privilege request dialog only prompts when player first opens the App. Once player rejects the request, pop-out dialog will never appear again. And last, remember to provide request message to player
+{% asset_img microphone-request-message-setting.png %}
 
 ## Latency Delay
-"Ha" is a real-time voice control action game, so instant playback of what microphone has recorded is a must-have feature. I don't know why the playback speed always sync on PC and Android. But when tested on IOS, a BIG LAG exists between the time player says "Ha" to phone, and the character actually fires or jumps. I searched through the internet, tried everything I counld, kept building and testing in Android and IOS... No luck. Lots of time spent, still no luck. Finally found a post [here](https://programmer.help/blogs/unity-sound-and-recording-and-real-time-microphone-play.html), the key point is to sync the playback position with the microphone recording position like this, so we can collect real-time voice information from player:
+"Ha" is a real-time voice control action game, so instant playback of what microphone has recorded is a must-have feature. I don't know why the playback speed always sync on PC and Android. But while testing in IOS, a BIG LAG exists between the time player says "Ha" to phone, and the character actually fires or jumps. I first checks the FPS and make sure it's not game performance related issue. Then I searched through the internet, tried everything I counld, kept building and testing in Android and IOS... No luck. Lots of time spent, still no luck. Finally found a post [here](https://programmer.help/blogs/unity-sound-and-recording-and-real-time-microphone-play.html), the key point is to sync the playback position with the microphone recording position like this, so we can collect real-time voice information from player:
 ```csharp
 if (Application.platform == RuntimePlatform.IPhonePlayer)
 {
@@ -195,7 +196,7 @@ First, I used an [online tone generation service](https://www.szynalski.com/tone
 
 The problem was that when we're talking, voice is sent out with various frequencies in which contains it's own enery level at the same time. Thing can go wrong if all frequency energies are close, that is, no "solo frequency" is given. My system was almost 100% accurate because the ton generation service only sent out "single" frequency voice. At first, the game was designed to use high pitch voice for attack, low pitch voice for jump. Now, what would you do if the publish date is close?
 Just abandon the pitch recognition. One friend reminded me of touch control, the plan B I've thought of in very early stage of design time but totally forgot it afterward. The input control was changed from "high pitch voice for attack, low pitch voice for jump" to "voice for attack, touch input for jump". Did I resolve the problem? Absolutely no, I took another path, avoided the problem, and preserved the "voice control" characteristic of the game at the same time.
-Sometimes thing just go wrong. In real situation, never afraid of letting go, pick the second best solution. Alwyas knowing what's the most important goal. And the last words: Pushes yourself one step further when you feel desperate, there's always another way. Sounds easy, hard to apply and keep in mind.
+Sometimes thing just go wrong. In real situation, never afraid of letting go, pick the second best solution. Alwyas knowing which the most important goal is. And the last words: Pushes yourself one step further when you feel desperate, there's always another way. Sounds easy, hard to implement and keep in mind.
 
 Implementation process goes here:
 1. Background design
