@@ -10,7 +10,7 @@ As an office worker, I've successfully put my first step in. Now, it's your turn
 <!-- more -->
 Outline:
 1. [Set Business Target](#Set-Business-Target)
-2. [Capability Analysis](#Capability-Analysis)
+2. [Analizes Capability](#Analizes-Capability)
 3. [Defines Milestones](#Defines-Milestones)
 4. [Implementation Process in Detail](#Implementation-Process-in-Detail)
 5. [Tragedies in Production Environment Test](#Tragedies-in-Production-Environment-Test)
@@ -37,7 +37,7 @@ I failed. It hurt. Fortunately, only my resource was wasted. Been stopped for a 
 
 With the terrible experience, I won't challenge the general market again. After some research done, the target was set to "voice control action game" that's rarely seen on mobile market. With mobile phones, I can take advantage of the built-in microphone directly!
 
-# Capability Analysis
+# Analizes Capability
 
 > Strength v.s. weakness, leverages the scale
 
