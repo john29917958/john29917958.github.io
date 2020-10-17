@@ -71,16 +71,16 @@ First, break down the tasks in very high-level point of view:
 - Formal release date was set on 2020/10/24 (five months in total)
 - App was ready for publishing on 2020/10/17
 
-The very number-one task is technical research since we don't want entire project fails after a bunch of artworks and function implementations done, just because the most critical, most difficult core function cannot be realized.
+The very number-one task is the break-through of critical technical research since we don't want entire project fails after bunch of artworks and function implementations done, just because the most critical, most difficult core function cannot be realized. It's like squandering, wasting bunch of money. Never do that.
 
 # Implementation Process in Detail
 After high-level milestones are set, here's the detail implementation flow.
 
 ## Minimum Valuable Prototype
 
-> Don't waste time! Focus on most difficult core function!
+> Find bottleneck and focus!
 
-The most important concept here is: Do not waste any resource other then the research of most difficult core function! We should keep the entire project as simple as possible and only focuses on the core technique research. Breaks through the bottle neck, proves it works, then start the major implementation process. Nothing gonna work if the hardest part of project fails. So do not put unnecessary effort or resource on other tasks. So focus, breaks through the most critical product function.
+The most important concept here is: Do not waste any resource before the bottleneck is eliminated! We should keep the entire project as simple as possible and only focuses on the most critical technique research. Breaks through the bottleneck, proves it works, then start the major implementation process. Everything works only after the bottleneck eliminated, so do not put unnecessary effort or resource on other tasks. Focus, breaks through the most critical product function.
 
 Implementation flow:
 1. Researches voice volume and pitch recognition
