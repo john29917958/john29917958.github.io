@@ -11,7 +11,7 @@ As an office worker, I've successfully put my first step in. Now, it's your turn
 Outline:
 1. [Set Business Target](#Set-Business-Target)
 2. [Analizes Capability](#Analizes-Capability)
-3. [Defines Milestones](#Defines-Milestones)
+3. [Define Milestones](#Define-Milestones)
 4. [Implementation Process in Detail](#Implementation-Process-in-Detail)
 5. [Tragedies in Production Environment Test](#Tragedies-in-Production-Environment-Test)
 6. [Reflection and Review](#Reflection-and-Review)
@@ -57,7 +57,7 @@ So the technical scopes were set to:
 - No database and account system: For lack of time resource
 - One-time gameplay: For lack of time resource
 
-# Defines Milestones
+# Define Milestones
 
 > Alwyas preserves much time for integration and deployment
 
