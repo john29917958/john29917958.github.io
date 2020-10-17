@@ -109,12 +109,19 @@ Minimum valuable prototype
 
 Before we start the major implementation process, we'd better divide codes or functions into individual component units:
 1. Good for task dispatching and assigning
-2. Better quality, less bug, easy for testing
+2. Better quality, less bug, easy for composition and testing
 3. Fast integration, fast for result review
 
 {% asset_img component-code.png %}
 
-But why? Can't I just keep writing all the functions and hit Play button at the end of release phase? We never what to do that. Programming is very abstract and unintuitive task. Project complexity can be exponential rising as it grows bigger. So small piece of complete function, small piece of implementation, and integrates, tests it iteratively to ensure entire product working all the time. If we do have customers, it's also good for iterative function demonstration, good for wining customers' trust. Steps of each iteration loop goes here:
+But why? Can't I just keep writing all the functions and hit Play button at the end of release phase? We never what to do that. Programming is very abstract and unintuitive task. Project complexity and implementation effort can be exponential rising as it grows bigger.
+When project features are divided into components, like USBs, we can regards milestones, assignees, or game objects as USB slots. Just plugs the USB into any of the slots in need. Component concept can provide flexibility for rapid project task adjustment.
+
+In addition, component concept encapsulates related functions together without exposing unnecessary information out. When we're developing, it's easy for locating target code; While debugging, it's easy for locating where potential error is. Also, with encapsulation, the data, that is, properties are hidden from outside the module. Data should be hard to be modified by whom not supposed to do that, thus controls the complexity of project.
+
+With pluggable components, it means features can be integrated very fast. So small piece of complete function, small piece of implementation, and integrates, tests it iteratively to ensure entire product working all the time. If we do have customers, it's also good for iterative function demonstration, good for wining customers' trust.
+
+Steps of each iteration loop goes here:
 1. Designs 2D character art
 2. Designs skill set of character
 3. Paints and produces every parts of character with Clip Studio Paint
@@ -123,7 +130,7 @@ But why? Can't I just keep writing all the functions and hit Play button at the 
 6. Integrates Live 2D model with Unity
 7. Creates animation flow and implements the entity C# class
 8. Does integration test in Unity
-9. Loops 5 ~ 8 untill all skills of character completed
+9. Loops 5 ~ 8 untill all skills of character completed, then restarts from 1. for another character implementation process
 
 {% youtube wDWf70g8BTk %}
 
