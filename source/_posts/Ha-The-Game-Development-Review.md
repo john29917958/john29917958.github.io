@@ -82,11 +82,11 @@ After high-level milestones are set, here's the detail implementation flow.
 
 The most important concept here is: Do not waste any resource! Everything only works after the bottleneck is eliminated. We should keep the entire project as simple as possible and only focuses on the most critical technique research. Finds bottleneck, breaks through, proves it works, then starts the major implementation process.
 
-Implementation flow:
-1. Researches voice volume and pitch recognition (bottleneck break-through)
-2. Implements voice recognition function with very simple UI
-3. Encapsulates voice recognition functions into a class (a simple module)
-4. Designs main character 2D art
+Work flow step by step:
+1. Researches voice volume and pitch recognition technique (bottleneck break-through)
+2. Implements voice recognition function with very simple UI (keeps project as simple as possible)
+3. Encapsulates voice recognition functions into a class (minimum workable function module)
+4. Designs main character 2D art (then starts major implementation flow)
 5. Designs skill set of main character
 6. Paints and produces every parts of the main character with Clip Studio Paint (head, hair, eyes, arms, legs, etc)
 7. Models the main character with Live 2D
