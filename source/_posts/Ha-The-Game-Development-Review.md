@@ -65,9 +65,11 @@ Programming is a high-level and difficult skill in market place. Softwear engine
 First, break down the tasks in very high-level point of view:
 1. Core technical research and minimum prototype implementation: One month. Prototype and design level code are always fast
 2. Character implementation loop of three monsters and two bosses: Two months. Lots of major implementation tasks. Integrates and tests each character one after another once small piece of function completed
-3. Production environment test: Two months and more. Longest phase. The terrible "accidents" always happen when it comes to integration and deployment
+3. Production environment test: Two months and more. Longest phase. The terrible "accidents" always happen when it comes to production environment test
 
-Project was started on 2020/05/14, formal release date was set on 2020/10/24, five months in total. App was ready for publishing at 2020/10/16.
+- Project was started on 2020/05/14
+- Formal release date was set on 2020/10/24 (five months in total)
+- App was ready for publishing on 2020/10/17
 
 The very number-one task is technical research since we don't want entire project fails after a bunch of artworks and function implementations done, just because the most critical, most difficult core function cannot be realized.
 
