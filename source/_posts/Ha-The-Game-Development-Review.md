@@ -217,14 +217,14 @@ Official trailer
 
 # Reflection and Review
 Mistakes and improvements:
-1. Keeps the scale balanced between resource and business goal. Maximizes the quality of game under the capability cap of team
-2. Puts phone integration test into iteration loop early on so problem can be discovered in early stage
-3. Never reveal developing process to users. They don't know what you're doing in most cases. Only reveal it to experts or those who can provide accurate advices
-4. Generates less inheritance. Encapsulates motion, action, animation control related codes into something like controller class and attach both entity class (data) and controller class (performans) to Unity game object
+1. To keep the scale balanced between resource and business goal. Maximizes the quality of game under the capability cap of team
+2. To put phone integration test into iteration loop early on so problems can be discovered in early stage
+3. To never reveal developing process to users. They don't know what you're doing in most cases. Only reveal it to experts or those who can provide accurate advices
+4. To make less inheritance. Encapsulates motion, action, animation control related codes into something like controller class and attach both entity class (data) and controller class (character performans) to Unity game object
 
 Things that I'm proud of:
 1. Management: Accurate schedule estimation, iterative integration in real practice
-3. Skill: Integrates Live 2D with Unity successfully. Combines my skills of art and programming together
+3. Skill: Integrates Live 2D with Unity successfully. Combines my skills of digital art and programming together
 4. I don't know it's good or not. I completed entire game making process by my own. Now I have basic understanding of entire game making process at client side
 
 # Future Work and Expectation
@@ -234,7 +234,7 @@ Things that I'm proud of:
 4. Optional: Learns voice volumn and pitch related knowledge. Figures out why latency issue only happens on IOS. Last, learn natural language processing
 
 # To Readers
-Finally, as an office worker, I've put my first step in and successfully published a game application to Google Play and App Store. Now, it's your turn. Hustling after work can be extremely tough. I've experienced way more difficulties than the article documents. Even more, I've been thought of giving up such voice recognition project. However, if you never start, you're the same person after one year, five years, even ten years. **Never too late! Action, now!** To the "better you" in the future, the better you that you deserve!
+Finally, as an office worker, I've put my first step in and successfully published a game application to Google Play and App Store. Now, it's your turn. Hustling after work can be extremely tough. I've experienced way more difficulties than the article documents. I'd even been thought of giving up such voice recognition project. However, if you never start, you're the same person after one year, five years, even ten years. **Never too late! Action, now!** To the "better you" in the future, the better you that you deserve!
 
 Ha is not a great App. It's the beginning to my success.
 Time for your to start, to YOUR SUCCESS.
