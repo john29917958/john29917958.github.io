@@ -61,11 +61,11 @@ So the technical scopes were set to:
 
 > Alwyas preserves much time for integration and deployment
 
-Schedule estimation of programming related projects are always difficult. Accidents can always happen. Cannot clearly remember how I did the schedule estimation in detail, here's the way.
+Programming is a high-level and difficult skill in market place. Softwear engineering process changed from time to time. We have high communication effort of abstract code concepts. Accidents can always happen, obstacles can always come out. So that's why we programmers take DESIGN seriously, testing seriously, and small iteration and integration seriously. And I believe that's why in general cases, programmers are way more expensive than other job positions. Without doubte, schedule estimation of such projects are difficult as well. Here's mine way of figuring out the milestones of entire project:
 First, break down the tasks in very high-level point of view:
 1. Core technical research and minimum prototype implementation: One month. Prototype and design level code are always fast
-2. Character implementation loop of three monsters and two bosses: Two months. Lots of major implementation tasks
-3. Integration and market test: Two months and more. Longest phase. The terrible "accidents" always happen when it comes to integration and deployment
+2. Character implementation loop of three monsters and two bosses: Two months. Lots of major implementation tasks. Integrates and tests each character one after another once small piece of function completed
+3. Production environment test: Two months and more. Longest phase. The terrible "accidents" always happen when it comes to integration and deployment
 
 Project was started on 2020/05/14, formal release date was set on 2020/10/24, five months in total. App was ready for publishing at 2020/10/16.
 
