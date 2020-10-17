@@ -78,12 +78,12 @@ After high-level milestones are set, here's the detail implementation flow.
 
 ## Minimum Valuable Prototype
 
-> Find bottleneck and focus!
+> Find bottleneck first and focus!
 
-The most important concept here is: Do not waste any resource before the bottleneck is eliminated! We should keep the entire project as simple as possible and only focuses on the most critical technique research. Breaks through the bottleneck, proves it works, then start the major implementation process. Everything works only after the bottleneck eliminated, so do not put unnecessary effort or resource on other tasks. Focus, breaks through the most critical product function.
+The most important concept here is: Do not waste any resource! Everything only works after the bottleneck is eliminated. We should keep the entire project as simple as possible and only focuses on the most critical technique research. Finds bottleneck, breaks through, proves it works, then starts the major implementation process.
 
 Implementation flow:
-1. Researches voice volume and pitch recognition
+1. Researches voice volume and pitch recognition (bottleneck break-through)
 2. Implements voice recognition function with very simple UI
 3. Encapsulates voice recognition functions into a class (a simple module)
 4. Designs main character 2D art
