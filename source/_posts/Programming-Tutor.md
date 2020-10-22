@@ -36,7 +36,7 @@ category: Programming
 帶入程式設計的世界與安裝必要工具
 - 實作我的第一支小程式：Hello World
 - 簡易 program counter 概念
-- 良好工程師應具備的特質
+- {% post_link 6-Characteristics-of-High-Value-Programmer 良好工程師應具備的特質 %}
 - 整合開發環境安裝與帳號申請：Visual Studio
 
 ### 第二周：基礎程式邏輯與資料型態介紹
