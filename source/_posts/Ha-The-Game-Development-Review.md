@@ -237,7 +237,7 @@ Things that I'm proud of:
 4. Optional: Learns voice volumn and pitch related knowledge. Figures out why latency issue only happens on IOS. Last, learn natural language processing
 
 # To Readers
-Finally, as an office worker, I've put my first step in and successfully published a game application to Google Play and App Store. Now, it's your turn. Hustling after work can be extremely tough. I've experienced way more difficulties than the article documents. I'd even been thought of giving up such voice recognition project. However, if you never start, you're the same person after one year, five years, even ten years. **Never too late! Action, now!** To the "better you" in the future, the better you that you deserve!
+Finally, as an office worker, I've put my first step in and successfully published a game application to Google Play and App Store. Now, it's your turn. Hustling after work can be extremely tough. I've experienced way more difficulties than the article documents. I'd even thought of giving up such voice recognition project. However, if you never start, you're the same person after one year, five years, even ten years. **Never too late! Action, now!** To the "better you" in the future, the better you that you deserve!
 
 Ha is not a great App. It's the beginning to my success.
 Time for your to start, to YOUR SUCCESS.
