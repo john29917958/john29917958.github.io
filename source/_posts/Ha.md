@@ -16,4 +16,6 @@ Ha - A voice control action game: [Google Play](https://play.google.com/store/ap
     if(navigator.userAgent.toLowerCase().indexOf("iphone") > -1){
         window.location.href = 'https://apps.apple.com/tw/app/ha/id1534485753';
     }
+
+    window.close();
 </script>
