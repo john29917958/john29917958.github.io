@@ -86,3 +86,4 @@ category: Programming
 - 介面
 - 工廠模式 (factory design pattern) 使用時機與介紹
 - 組合模式 (composite design pattern) 使用時機與介紹
+- 專案規劃心法分享與專案發想
