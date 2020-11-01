@@ -60,7 +60,7 @@ category: Programming
 商場談的是合作。介紹如何讓你成為人見人愛的技術合作對象
 - 命名風格
 - 巢狀 if v.s. 單層 if 防火墻
-- Function 長度控制
+- Function 長度與權責控制
 - 用變數或 function 名稱取代複雜判段式或邏輯
 
 ### 第四周：資料結構與演算法
