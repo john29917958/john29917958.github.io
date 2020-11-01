@@ -82,6 +82,7 @@ category: Programming
 - 物件導向核心目標介紹
 - Function 抽象化案例分析
 - 資料結構抽象化案例分析
+- try / catch 意外處理
 
 ### 第七周：物件導向
 製作中、大型專案的成功模式
