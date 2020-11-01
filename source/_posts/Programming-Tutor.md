@@ -30,7 +30,12 @@ category: Programming
 我們將一起學習的，不是考高分的技巧，也不是特定專業領域的知識
 是一組高收入技能與思維，是讓你可以將夢想落實為**產品**的核心能力！
 
-[關於我與聯絡方式](/about)
+[關於我與聯絡方式](/about)，或可透直接透過以下方式聯絡：
+- E-mail: john29917958@gmail.com
+- [Facebook](https://www.facebook.com/tzuchaowang)
+- [LinkedIn](https://www.linkedin.com/in/john29917958)
+- [Instagram](https://www.instagram.com/john29917958/)
+- [Twitter](https://twitter.com/john29917958)
 
 ## 課綱
 
