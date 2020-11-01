@@ -41,6 +41,8 @@ category: Programming
 
 程式語言：C#
 
+<!-- 貫穿 project 預設為猜數字遊戲 -->
+
 ### 第一周：我的第一支小程式
 帶入程式設計的世界與安裝必要工具
 - 實作我的第一支小程式：Hello World
