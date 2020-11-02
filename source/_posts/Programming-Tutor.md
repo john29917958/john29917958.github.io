@@ -52,7 +52,7 @@ category: Programming
   2. 整合開發環境安裝與帳號申請：Visual Studio
   3. 簡易 program counter 概念
 - 主題分享：{% post_link 6-Characteristics-of-High-Value-Programmer 良好工程師應具備的特質 %}
-- 作業：實作一次 Hello World
+- 作業：用 C# 再實作一次 Hello World
 
 ### 第二周：基礎程式邏輯與資料型態介紹
 介紹常用的邏輯相關寫法，並培養於商場上自我偵錯的能力跟技巧
@@ -84,7 +84,9 @@ category: Programming
   2. Stack 堆疊及其應用時機實例參考 - 找食物回家的螞蟻 (?)
   3. Bubble sort 演算法介紹
   4. Linked list 演算法介紹
-- 主題分享：Windows 的使用者介面系統 - Windows Forms
+- 主題分享：
+  - Windows 的使用者介面系統 - Windows Forms
+  - 專案製作流程配置實例參考
 - 作業：
   1. Bubble sort 與 linked list 實作
   2. 替猜數字遊戲加上使用者介面與步驟紀錄功能 (猜多少，當前數字範圍)
@@ -99,6 +101,7 @@ category: Programming
   4. Namespace
 - 主題分享：
   - 直接更改物件內容 v.s. 製造新物件並 return
+  - 敏捷開發的精神分享
 - 作業：將猜數字遊戲的步驟紀錄功能改為物件
 
 ### 第六周：抽象化
