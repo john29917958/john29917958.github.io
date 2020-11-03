@@ -4,7 +4,7 @@ date: 2020-10-22 22:06:16
 tags: programming
 category: Programming
 ---
-高價值程式設計很容易合作，但遇上自我要求低的工程師，則是災難的開始
+高價值程式設計很容易合作，能為團隊帶極高的來效率與貢獻
 來看看 6 個高價值工程師的特質，你中了幾個？
 
 {% asset_img banner.png %}
