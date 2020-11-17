@@ -37,9 +37,7 @@ category: Programming
 - [Instagram](https://www.instagram.com/john29917958/)
 - [Twitter](https://twitter.com/john29917958)
 
-計價：共八堂，前四堂中止不收費，後四堂中止僅收前四堂費用
-  - 前四堂課上完給付 14000
-  - 後四堂完結再給付 10000
+計價：一小時 1000
 
 ## 課綱
 
