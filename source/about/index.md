@@ -40,7 +40,7 @@ Daya, Taichung
 2017/08 ~ now
 Position: Computer Integrated Manufacturing Engineer
 Major contributions:
-- Integrates separate versions of a system into single one and publishes to three TSMC fabs from single Git repository. One for LIT and one for for CMP process. Two aged systems are integrated into single version in total.
+- Applied "feature toggle" concept, integrated divergent-versioned old system into single distribution and published to three TSMC fabs. Two aged systems were successfully integrated in total.
 
 ---
 
