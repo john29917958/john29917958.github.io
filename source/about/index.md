@@ -40,7 +40,7 @@ Daya, Taichung
 2017/08 ~ now
 Position: Computer Integrated Manufacturing Engineer
 Major contributions:
-- Used "feature toggle" concept for integrating divergent-versioned old system into single distribution and published to three TSMC fabs. Two aged systems were successfully integrated in total.
+- Being the first TSMC engineer who used "feature toggle" concept for integrating divergent-versioned old system into single distribution and published to three TSMC fabs. Two aged systems were successfully integrated in total.
 
 ---
 
