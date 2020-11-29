@@ -15,9 +15,10 @@ Outline:
 3. [Define Milestones](#Define-Milestones)
 4. [Implementation Process in Detail](#Implementation-Process-in-Detail)
 5. [Tragedies in Production Environment Test](#Tragedies-in-Production-Environment-Test)
-6. [Reflection and Review](#Reflection-and-Review)
-7. [Future Work and Expectation](#Future-Work-and-Expectation)
-8. [To Readers](#To-Readers)
+6. [Advertisement](#Advertisement)
+7. [Reflection and Review](#Reflection-and-Review)
+8. [Future Work and Expectation](#Future-Work-and-Expectation)
+9. [To Readers](#To-Readers)
 
 Others:
 - [Game Making Records and Demonstrations](#Game-Making-Records-and-Demonstrations)
@@ -215,6 +216,42 @@ Implementation process goes here:
 
 Official trailer
 {% youtube o4nCgV5WUHA %}
+
+# Advertisement
+I'm not an advertisement specialty so I'll keep this chapter clear and simple:
+1. Choose Google Display Network, that is, App Promotion solution if you use Google AD
+2. Promots Android for more impressions and download count; promots IOS for revenue
+
+At first, I don't even know Google Display Network solution exists XD. I uploaded the advertisement in text and picture mode, redirected it to a simple page with both Google Play and App Store links. What I didn't know was, customers should be pissed off and just leaved the page. They never want to click that god damn link by themselves!!! Later I enhanced the page, wrote some JavaScript to detect visiters' platform, then redirect the page to Google Play or AppStore automatically, so there's no need for visiters to "click" the links manually.
+Still not work...
+Again, when you think there's no way out, push yourself one step further. For me I just thought of the Youtube channel advertisement, then searched how it can be done... All I needed was to [switch from Smart Mode to Expert Mode](https://support.google.com/google-ads/answer/9520605?hl=en)!!!
+{% asset_img switch-to-expert-mode.jpg %}
+THEN I could create App Promotion advertisement...
+{% asset_img app-promotion-ad.jpg %}
+After App Promotion advertisement created, guess what? BOOM!! The impressions, clicks, and actual download count greatly improved with less time and money! Here're the actual analysis charts:
+
+Inefficient text and picture advertisement: No actual download count influences, wasted lots of money...
+{% asset_img advertisement-1.jpg inefficient text and picture advertisement %}
+
+App Promotion advertisement for Android (from 11/04), improved Android download count immediately:
+Impression and click count
+{% asset_img advertisement-click-and-download-android.jpg %}
+Actual download count
+{% asset_img actual-download-count-android.jpg %}
+
+App Promotion advertisement for IOS (from 11/04), improved IOS download count immediately:
+Impression and click count
+{% asset_img advertisement-click-and-download-ios.jpg %}
+Actual download count
+{% asset_img actual-download-count-ios.jpg %}
+
+Extra interesting discovery: IOS users are general richer, more tablet usage than Android XD
+
+IOS distribution:
+{% asset_img ratio-ios.jpg %}
+
+Android distribution:
+{% asset_img ratio-android.jpg %}
 
 # Reflection and Review
 Mistakes and improvements:
