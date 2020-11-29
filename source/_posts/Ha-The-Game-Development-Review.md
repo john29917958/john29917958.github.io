@@ -229,9 +229,17 @@ Things that I'm proud of:
 4. I don't know it's good or not. I completed entire game making process by my own. Now I have basic understanding of entire game making process at client side
 
 # Future Work and Expectation
+Game product related:
 1. Founds or joins a team
-2. Makes a game with online interaction, account system, and cash flow abilities
-3. Learns Unity shader editor, HDR and universal pipeline techniques, cross platform responsive UI techniques, mobile optimization techniques. Improves my foundation of digital art including perspective, structure, coloring, value, shading, and body kinetic
+2. Game art improvement
+3. New game stage
+4. New player character
+5. Implements online interaction, account system, and cash flow abilities
+
+Self-learning:
+1. Learns Unity shader editor, HDR and universal pipeline techniques
+2. Learns Unity cross platform responsive UI techniques, mobile optimization techniques
+3. Improves my foundation of digital art including perspective, structure, coloring, value, shading, and body kinetic
 4. Optional: Learns voice volumn and pitch related knowledge. Figures out why latency issue only happens on IOS. Last, learn natural language processing
 
 # To Readers
