@@ -219,7 +219,7 @@ Official trailer
 {% youtube o4nCgV5WUHA %}
 
 # Advertisement
-I'm not an advertisement specialty so I'll keep this chapter clear and simple:
+I'm not an advertisement specialty so I'll keep it simple and clear:
 1. Choose Google Display Network, that is, App Promotion solution if you use Google AD
 2. Promots Android for more impressions and download count; promots IOS for revenue
 
