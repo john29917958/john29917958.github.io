@@ -19,6 +19,7 @@ Outline:
 7. [Reflection and Review](#Reflection-and-Review)
 8. [Future Work and Expectation](#Future-Work-and-Expectation)
 9. [To Readers](#To-Readers)
+10. [Capital](#Capital)
 
 Others:
 - [Game Making Records and Demonstrations](#Game-Making-Records-and-Demonstrations)
@@ -286,6 +287,29 @@ Ha is not a great App. It's the beginning to my success.
 Time for your to start, to YOUR SUCCESS.
 
 The end - Tzu-Chao, Wang (TC), 2020/10/09.
+
+# Capital
+Here're complete tools I used for creating such game application. If you want to start your project, here's the summary from a single-person-team without salary. Just for your reference.
+
+| Tool                                                                                                                            | Purpose                                                            | Cost                                                                         |
+|---------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|------------------------------------------------------------------------------|
+| [NoteBook QX-350 GX from CJSCOPE](https://www.cjscope.com.tw/cht/product_detail.php?serial=151)                                 | Personal Notebook.                                                 | $34,900 (one-time buyout with discount -$2,000 from PChome).                 |
+| iPhone 8                                                                                                                        | For game integration test. Personal mobile phone.                  | $25,500 (one-time buyout).                                                   |
+| [Wacom Intous Pro](https://www.wacom.com/en-us/products/pen-tablets/wacom-intuos-pro)                                           | Graphic tablet for digital painting.                               | $12,900 (one-time buyout with discount -$1290 from PChome).                  |
+| [Adobe Creative Cloud](https://www.adobe.com/creativecloud.html)                                                                | Icon, graphic design, audio engineering, video editing, and so on. | $11,520 (yearly pre-paid plan).                                              |
+| [Live2D Cubism](https://www.live2d.com/en/)                                                                                     | Game animation modeling tool.                                      | $4,000 (yearly pre-paid plan).                                               |
+| Apple Developer account                                                                                                         | For publishing IOS Apps to App Store.                              | $2,827 ($99 USD for individual account).                                     |
+| [Clip Studio Paint](https://www.clipstudio.net/en/)                                                                             | 2D digital art creation tool.                                      | $2,500 (one-time buyout).                                                    |
+| Google AD                                                                                                                       | For advertisement.                                                 | $1,624 (only $443 significantly improves App impression and download count). |
+| [Logitech G402 mouse](https://www.logitechg.com/zh-tw/products/gaming-mice/g402-hyperion-fury-fps-gaming-mouse.910-004071.html) | Mouse.                                                             | $799 (one-time buyout from PChome).                                          |
+| Google Developer account                                                                                                        | For publishing Android Apps to Google Play.                        | $715 ($25 USD).                                                              |
+| [Unity](https://unity.com/)                                                                                                     | Game engine for product development.                               | $0 (less than $100,000 in gross revenue, so it's free).                      |
+| [Visual Studio Community 2017](https://visualstudio.microsoft.com/)                                                             | Code IDE which greatly integrated with Unity.                      | $0                                                                           |
+| Total                                                                                                                           | Total cost                                                         | $97,285                                                                      |
+
+Price not included (they're already existed when I was in college XD):
+- Keyboard
+- Monitor
 
 # Game Making Records and Demonstrations
 
