@@ -289,7 +289,7 @@ Time for your to start, to YOUR SUCCESS.
 The end - Tzu-Chao, Wang (TC), 2020/10/09.
 
 # Capital
-Here're complete tools I used for creating such game application. If you want to start your project, here's the summary from a single-person-team without salary. Just for your reference.
+Here're complete tools I used for creating such game application. If you want to start your project, here's the REAL summary from a single-person-team, no salary. Just for your reference.
 
 | Tool                                                                                                                            | Purpose                                                            | Cost                                                                         |
 |---------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|------------------------------------------------------------------------------|
@@ -310,6 +310,8 @@ Here're complete tools I used for creating such game application. If you want to
 Price not included (they're already existed when I was in college XD):
 - Keyboard
 - Monitor
+
+A hundred thousand is too expensive? Try to simulate and calculate the price if you hire one programmer or an artist, don't remember to pay yourself, then you will get the answer. I believe that's one of the reason why 95% of a starting business fails. You put tremendous time, effort, and money into it. You cultivate it as best as you could. However, the "success" is not defined by all factors described above. It's all about market acceptance. Like what Dan Lok says: Most entrepreneurs "think" they are entrepreneurs. They don't know aside from idea, it's WAY MORE about skillset, execution, persistence, and methodologies. Whatever, I still have a long way to go. Such summary is free for you~
 
 # Game Making Records and Demonstrations
 
