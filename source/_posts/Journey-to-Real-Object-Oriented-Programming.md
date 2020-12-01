@@ -39,7 +39,7 @@ First let's have a brief view of new architecture:
 There're three major extension points in such architecture.
 
 ## InputAdapter
-Compared to the old `InputController`, the adapter design pattern is implemented. The key concept is to create appropriate user input listener on different platforms. In `MobileInputAdapter`, it listens screen touch events; While in `PcInputAdapter`, it listens keyboard event. All events are dispatched through C# delegation. So `InputAdapters` never cares who catches the event, thus reaching the goal of decoupling. Furthermore, I can easily include new platform like XBOX by just creating a new `XBoxAdapter` and writes XBOX related I/O event, without modifying codes for other platforms.
+Compared to the old `InputController`, the adapter design pattern is implemented. The key concept is to create appropriate user input listener on different platforms. In `MobileInputAdapter`, it listens screen touch events; While in `PcInputAdapter`, it listens keyboard event. All events are dispatched through C# delegation. So `InputAdapters` never cares who catches the event, thus reaching the goal of decoupling. Furthermore, I can easily include new platform like XBOX by just creating a new `XBoxAdapter` and writes XBOX related I/O event, without modifying codes of other platforms.
 {% asset_img input-adapter.jpg %}
 
 ## Controllers and Entity Class
@@ -55,6 +55,10 @@ if (damageable != null)
 	damageable.TakeDamage(power);
 }
 ```
+
+# Refactoring Process
+Never does all refactoring then test it. You'll put yourself in an unnecessary disaster. Just like product development cycle, split the entire refactoring task into small pieces of works. For example: Refactors one character then do integration and testing immediately. One after another. So we can control the debugging complexity by our own.
+{% asset_img refactoring-process.jpg %}
 
 ## Conclusion
 So the major refactoring purposes are to deal with platform I/O difference, simplifies how character extension is done, and "installs" interfaces to character in need to give them specific abilities.
