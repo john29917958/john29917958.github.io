@@ -23,7 +23,7 @@ It can be summarized into three key ideas:
 There're two problems there.
 
 ## Hard for Development Debugging
-There's only one `InputController` that holds every I/O logics. Yes we can write `if` / `else` statements to switch between **each** platforms for **each** input events like tap, swing, press and hold, lower pitch voice, and higher pitch voice. The problem is the `if` / `else` statements can be spread everywhere. Once some of the logics need to be modified, let's search through all the `if` / `else` statements... Never do that... For me I did not write `if` / `else` statements. But I needed to comment out the PC specific codes before publishing it to mobile phone, and retains them back if I want to develop and test on PC.
+There's only one `InputController` that holds every I/O logics. Yes we can write `if` / `else` statements to switch between **each** platforms for **each** input events like tap, swing, press and hold, lower pitch voice, higher pitch voice, keyboard input... The problem is the `if` / `else` statements can be spread everywhere. Once some of the logics need to be modified, let's search through all the `if` / `else` statements... Never do that... For me I did not write `if` / `else` statements. But I needed to comment out the PC specific codes before publishing it to mobile phone, and retains them back if I want to develop and test on PC.
 There's a design pattern called "adapter". See the new architecture later. It's also easy for platform extension if I need it someday.
 
 ## Unflexible, Unnecessary and Buggy Inheritance Chain
