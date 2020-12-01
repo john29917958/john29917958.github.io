@@ -246,7 +246,7 @@ Impression and click count
 Actual download count
 {% asset_img actual-download-count-ios.jpg %}
 
-Extra interesting discovery: IOS users are general richer, more tablet usage than Android XD
+Extra interesting discovery: IOS users are generally richer, more tablet usage than Android XD
 
 IOS distribution:
 {% asset_img ratio-ios.jpg %}
@@ -311,7 +311,9 @@ Price not included (they're already existed when I was in college XD):
 - Keyboard
 - Monitor
 
-A hundred thousand is too expensive? Try to simulate and calculate the price if you hire one programmer or an artist, don't remember to pay yourself, then you will get the answer. I believe that's one of the reason why 95% of a starting business fails. You put tremendous time, effort, and money into it. You cultivate it as best as you could. However, the "success" is not defined by all factors described above. It's all about market acceptance. Like what Dan Lok says: Most entrepreneurs "think" they are entrepreneurs. They don't know aside from idea, it's WAY MORE about skillset, execution, persistence, and methodologies. Whatever, I still have a long way to go. Such summary is free for you~
+A hundred thousand is too expensive? Try to simulate and calculate the price if you hire one programmer or an artist, don't remember to pay yourself, then you will get the answer.
+I believe that's one of the reasons why 95% of a starting business fails. Like what Dan Lok says: Most entrepreneurs "think" they are entrepreneurs. They don't know aside from idea, it's WAY MORE about skillset, execution, persistence (money), and methodologies.
+And last, the ruthless fact is, even you put tremendous time, effort, and money into it. You cultivate it as best as you could. The "success" is not defined by all factors described above. It's all about market acceptance. Whatever, I still have a long way to go. Such summary is free for you~
 
 # Game Making Records and Demonstrations
 
