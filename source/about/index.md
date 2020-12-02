@@ -6,6 +6,11 @@ comments: false
 ![Hi! it's me!](/images/profile-picture.jpg)
 </span>
 
+I love and be great in software architecture design. As a three-year TSMC engineer, I used "feature toggle" concept for integrating divergent-versioned old systems into single distribution and published to three TSMC fabs twice.
+Aside from TSMC software engineer, I'm fanatic of [beautiful art designs](https://www.artstation.com/tzuchaowang). I did publish a voice-control-action game on [Google Play](https://play.google.com/store/apps/details?id=com.TzuChaoWang.Ha) and [App Store](https://apps.apple.com/tw/app/ha/id1534485753) as single-person-team (a start up game with 130 download count).
+
+I'm positively looking for Unity client game engineer position. If the integration of software architecture and digital art abilities is what you need, I'm looking forward to joining your team!
+
 ## Basic Information
 - English Name: Tzu-Chao, Wang
 - Chinese name: 汪子超
