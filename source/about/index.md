@@ -14,7 +14,7 @@ I have strong self-driven and independent programming / [2D digital art](https:/
 
 I take communication and collaboration seriously, efficiency and progress report seriously. I adhere to product quality but not a perfectionism. I'm willing to devote myself into product integration. I'm willing to fight for the goal of TEAM.
 
-I'm positively looking for Unity client game engineer position. If the integration of software architecture and digital art abilities is what you are looking for, I can't wait to contact with you!
+I'm positively looking for Unity client game engineer position. If the integration of object-oriented programming and digital art abilities is what you are looking for, I can't wait to contact with you!
 
 ## Basic Information
 - English Name: Tzu-Chao, Wang
