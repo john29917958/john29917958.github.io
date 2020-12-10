@@ -7,7 +7,7 @@ comments: false
 </span>
 
 About me
-{% youtube hDkqx_TKzTk %}
+{% youtube TTJCvAbPXiM %}
 
 I love and be great in software architecture design. As a three-year TSMC engineer, I used "feature toggle" concept for integrating divergent-versioned old systems into single distribution and published to three TSMC fabs twice.
 I have strong self-driven and independent programming / [2D digital art](https://www.artstation.com/tzuchaowang) implementation abilities. I took continuous integration mindset, published a voice-controlled mobile game on [Google Play](https://play.google.com/store/apps/details?id=com.TzuChaoWang.Ha) and [App Store](https://apps.apple.com/tw/app/ha/id1534485753) in spare time as single-person-team (a start-up game with 130 download count).
