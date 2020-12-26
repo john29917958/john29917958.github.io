@@ -1,102 +1,58 @@
 title: 2020 Review
 visible: show
-date: 2020-02-09 21:25:18
+date: 2020-12-26 18:24:54
 tags: life, reflection
 category: Reflection
 ---
-![Frank Frazetta - Blood Stone study by Tzu-Chao, Wang](https://cdna.artstation.com/p/assets/images/images/011/736/474/large/tzu-chao-wang-2018-07-07-frank-frazetta-bloodstone-study.jpg?1531148278)
-Records summary and next steps of my growth in 2020. Three aspects are covered: Dance, art and programming.
+{% asset_img composition-ring.png %}
+2020/12/26, almost the end of the year. I've reached all goals I set in 2019. Do you have any personal or career goals? Here're mine, for your inspiration.
+
 <!--more-->
 
-## Dance
-This is the freestyle record when I just entered [TSMC](https://www.tsmc.com/english/default.htm) (2017/10/08):
-{% youtube VqpeZmIPDcI %}
+In 2019, I set {% post_link 2019-Review three expectations to myself %}:
+1. Programming: Make a complete game with Unity and Live2D
+2. Art: Improve abilities in coloring, shading, and perspective. Make an artwork that demonstrates my level of digital painting
+3. Dance: Be able to perform freestyle solo in Popping
 
-And here is another freestyle record at 2020/01/02. After two and half years, the groove is more fluent (be wafer my friend XD) and more creative. Thank to my favorite dancer Henry Link, I learned a lot from him. Not just the skills, but the core concept to dance. Music changed, dance changed. No bad step or move, Locking and Popping somehow invented because of a mistake. Hip - Hop is not just a dance style or MC, DJ or graffiti, it represents a culture. How Bronx New York evolves, is all Hip - Hop. Also learned much from Mr. Wiggles, respect!
-{% youtube PWomaFtf6Sw %}
+Such post is pretty short, here comes the results.
 
-And my next step is...... Popping!
-{% youtube wx4B4io7zCY %}
+## Make a complete game with Unity and Live2D
+{% youtube TTJCvAbPXiM %}
 
-## Art
-Humm... Illustration, originated character design, and animation are covered under this section.
+This is a simple voice controlled mobile action game named "Ha". I think the major difficulty to me is that, it was made by a single person without much game making experience, and was done in spare time. With a {% post_link Ha-The-Game-Development-Review failed experience %}, I took resource management very seriously this time, cut off many many features, abandoned high quality art, and set milestones very carefully. Galdly, it was completed and successfully published on [Google Play](https://play.google.com/store/apps/details?id=com.TzuChaoWang.Ha) and [App Store](https://apps.apple.com/tw/app/ha/id1534485753), with all the artwork, animation, and program functionalities done by myself.
 
-### Illustration
-First public illustration. But actually... the very first illustration made by me is much more terrible than this one.
-[Award @ 2017/07/08](https://tzuchaowang.artstation.com/projects/VW2Eg)
-![Award](https://cdna.artstation.com/p/assets/images/images/006/727/390/large/tzu-chao-wang-award.jpg?1500823234)
+## Improve abilities in coloring, shading, and perspective. Make an artwork that demonstrates my level of digital painting
+[Programmer @ 2020-10-31](https://tzuchaowang.artstation.com/projects/xJNwzE)
+![Programmer](https://cdna.artstation.com/p/assets/images/images/031/623/154/large/tzu-chao-wang-2020-10-31-programmer.jpg?1604145461)
 
-Sadly, I do not have a piece of artwork that combines all skills I've learned. Here are some, including coloring, light / shading, and perspective.
+This piece of work was started from one-point perspective, than rotates objects like notebook and character's shoulder to make two-point perspective in the same system. And it's the first time I applied the concept of oil painting in digital anime style art. Got richer color, got more information effect in such work. Following is the demonstration of perspective lines.
 
-[Frank Frazetta - Bloodstone Study](https://tzuchaowang.artstation.com/projects/9WLOy)
-![Frank Frazetta - Bloodstone Study](https://cdna.artstation.com/p/assets/images/images/011/736/474/large/tzu-chao-wang-2018-07-07-frank-frazetta-bloodstone-study.jpg?1531148278)
+![One-point perspective](https://cdna.artstation.com/p/assets/images/images/031/620/712/medium/tzu-chao-wang-line-art.jpg?1604137868)
 
-[Wish](https://tzuchaowang.artstation.com/projects/3KLyv)
-![Wish](https://cdna.artstation.com/p/assets/images/images/012/023/854/medium/tzu-chao-wang-2018-07-21-wish.jpg?1532619449)
+## Be able to perform freestyle solo in Popping
+{% youtube fNXXLrAAWS8 %}
 
-[Asleep](https://tzuchaowang.artstation.com/projects/W2Jxm2)
-![Asleep](https://cdnb.artstation.com/p/assets/images/images/017/404/321/medium/tzu-chao-wang-2019-04-21-krenz-perspective-hw3-1-detailed.jpg?1555859004)
+It's the last performance done my me in 2020/12/26. In fact I've been stop dancing a while for the sake of game development. In the performance, I mixed Hip - Hop with Popping in single freestyle show. Originally, I could dance Hip - Hop, but couldn't do the same with Popping. After the 30 days Popping challenge, till now, I can finally control my ability of hitting, and use it in my freestyle performance as I wish.
 
-[Master K Town (Revised)](https://tzuchaowang.artstation.com/projects/Z5YYgZ)
-![Master K Town (Revised)](https://cdna.artstation.com/p/assets/images/images/022/372/550/medium/tzu-chao-wang-2019-12-01-krenz-perspective-hw4-1.jpg?1575211344)
+Here's the latest practice video:
 
-### Originated Character Design
-Character's name is Anassa. Here are four versions of the character.
+{% youtube LQilMl7z-nk %}
 
-[1st. version](https://tzuchaowang.artstation.com/projects/PA0b8)
-Very...terrible...
-![1st. version](https://cdnb.artstation.com/p/assets/images/images/012/066/211/large/tzu-chao-wang-2018-07-29-anassa.jpg?1532874789)
+And the following is the 30th. day performance in 30 days challenge series:
 
-[2nd. version](https://tzuchaowang.artstation.com/projects/xzDABO)
-Body shape is not well designed.
-![2nd. version](https://cdna.artstation.com/p/assets/images/images/015/975/470/large/tzu-chao-wang-anassa.jpg?1550422417)
+{% youtube rFFWVCt392g %}
 
-[3rd. version](https://tzuchaowang.artstation.com/projects/4bVLJk)
-Future and hi-tech version. However it doesn't match my game story, so it was abandoned.
-![3rd. version](https://cdnb.artstation.com/p/assets/images/images/021/090/509/large/tzu-chao-wang-2019-10-06-anassa.jpg?1570372283)
+## Expectations 2021
+As usual, expectations next year are designed under three talents of myself: Programming (abstract thinking), art, and dancing:
+1. Programming: Be good at design pattern and master Unity client engineering. It's time to dig in and dig deep, mastering all Unity client abilities. For example: texture management and optimization concepts, asset bundle, cross platform sizing, animation techniques, animation timeline technique, performance optimization, shader, and so on...
+2. Art: Learn "動態構成" concepts, master perspective and coloring skillsets.
+3. Dance: Win at least one battle with my integrated abilities of Hip - Hop and Popping
 
-[4th. version](https://tzuchaowang.artstation.com/projects/v1qVJx)
-The final version with sailor suit, a high-school girl.
-![4th. version](https://cdnb.artstation.com/p/assets/images/images/023/536/237/large/tzu-chao-wang-anassa-three-view.jpg?1579537457)
+Optional:
+1. Learn martial art. Maybe Jet-Kun-Do or Muay Thai
+2. Learn about muscle massage so I can keep high level energy life long
 
-### Animation
-About animation, I first tried and created a Live2D model. Now is working on hand-drawn animation.
+There're way more things I planned to do that can last to 30 years. Here're the very first steps I set for the next year.
 
-Live2D animation demonstrations
-
-Hello World
-{% youtube _7xW2HVFbX0 %}
-Game making plan announcement
-{% youtube nqArCbXgBjk %}
-And here are plain hand-drawn animations
-{% asset_img "Anassa - idle.gif" Idle %}
-{% asset_img "Anassa - flick punch.gif" Flick punch %}
-I think the next steps of my art skill growth are...
-1. Creates a Live2D model of 4th. version Anassa character.
-2. Keeps practicing and creates an illustration that represents my capability of art
-
-## Programming
-Programming is hard to explain by pictures. The main growth of my programming skills are the followings I think:
-1. Able to quickly understands the system not owned by me and takes actions immediately
-2. Integrates major functionalities that seperated in each Fab's own copy of the very very old system. Brings feature toggle ability to the central version so it can be adapted to each Fabs' need
-3. Able to learn new framework, programming language in short-time then starts contributing my team
-
-About my self-study, I also learned React.js + Electron, and Unity game engine. Here are the results~
-
-React.js + Electron + Material design: [Swincher project](https://github.com/john29917958/Swincher)
-![Swincher](https://github.com/john29917958/Swincher/raw/develop/resources/preview.gif)
-
-Unity: Anassa game concept demonstration
-{% youtube zECGMHpMNtU %}
-
-I think next steps for programming are:
-1. Makes stunning Unity game home animiation with Live2D
-2. Becomes good at UI / UX design
-
-## Conclusion
-Alright here are some growth review of myself after I started working in TSMC about two and half years. Actually I'm not very satisfied with the speed of my growth. I spent too much time for relaxing, playing games, and so on. The next year, my goals are to:
-- Be able to perform freestyle solo with Popping just like I'm doing it with Hip-Hop
-- Be good at coloring, shading, and perspective art skills. Create an artwork that represents my capability of art
-- Be good at Live2D and Unity game design. Make a complete game
-
-These are my targets, what's yours?
+## Final words
+What's your expectations to yourself? Never late, action, NOW! We can be the same person after one year, two year, even ten years. Or we can increase the value we provide to such world. Here's my point of view and belief: Income is just the result based on how significant we can add value to the world. I'm about to do experiment on myself. You can wait, you can keep your life as usual, or you can join the exciting journey with me. Are you ready?
