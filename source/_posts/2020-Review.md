@@ -52,7 +52,7 @@ Optional:
 1. Learn martial art. Maybe Jet-Kun-Do or Muay Thai
 2. Learn about muscle massage so I can keep high level energy life long
 
-There're way more things I planned to do that can last to 30 years. Here're the very first steps I set for the next year.
+There're way more things I planned to do that can last for 30 years. Here're the very first steps I set for the next year.
 
 ## Final words
 What's your expectations to yourself? Never late, action, NOW! We can be the same person after one year, two year, even ten years. Or we can increase the value we provide to such world. Here's my point of view and belief: Income is just the result based on how significant we can add value to the world. I'm about to do experiment on myself. You can wait, you can keep your life as usual, or you can join the exciting journey with me. Are you ready?
