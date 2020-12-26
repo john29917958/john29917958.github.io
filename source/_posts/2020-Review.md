@@ -16,12 +16,12 @@ In 2019, I set {% post_link 2019-Review three expectations to myself %}:
 
 Such post is pretty short, here comes the results.
 
-## Make a complete game with Unity and Live2D
+## Make a Complete Game with Unity and Live2D
 {% youtube TTJCvAbPXiM %}
 
 This is a simple voice controlled mobile action game named "Ha". I think the major difficulty to me is that, it was made by a single person without much game making experience, and was done in spare time. With a {% post_link Ha-The-Game-Development-Review failed experience %}, I took resource management very seriously this time, cut off many many features, abandoned high quality art, and set milestones very carefully. Galdly, it was completed and successfully published on [Google Play](https://play.google.com/store/apps/details?id=com.TzuChaoWang.Ha) and [App Store](https://apps.apple.com/tw/app/ha/id1534485753), with all the artwork, animation, and program functionalities done by myself.
 
-## Improve abilities in coloring, shading, and perspective. Make an artwork that demonstrates my level of digital painting
+## Improve Abilities in Coloring, Shading, and Perspective. Make An Artwork that Demonstrates My Level of Digital Painting
 [Programmer @ 2020-10-31](https://tzuchaowang.artstation.com/projects/xJNwzE)
 ![Programmer](https://cdna.artstation.com/p/assets/images/images/031/623/154/large/tzu-chao-wang-2020-10-31-programmer.jpg?1604145461)
 
@@ -29,7 +29,7 @@ This piece of work was started from one-point perspective, than rotates objects 
 
 ![One-point perspective](https://cdna.artstation.com/p/assets/images/images/031/620/712/medium/tzu-chao-wang-line-art.jpg?1604137868)
 
-## Be able to perform freestyle solo in Popping
+## Be Able to Perform Freestyle Solo in Popping
 {% youtube fNXXLrAAWS8 %}
 
 It's the last performance done my me in 2020/12/26. In fact I've been stop dancing a while for the sake of game development. In the performance, I mixed Hip - Hop with Popping in single freestyle show. Originally, I could dance Hip - Hop, but couldn't do the same with Popping. After the 30 days Popping challenge, till now, I can finally control my ability of hitting, and use it in my freestyle performance as I wish.
