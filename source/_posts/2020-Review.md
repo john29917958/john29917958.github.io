@@ -19,7 +19,7 @@ Such post is pretty short, here comes the results.
 ## Make a Complete Game with Unity and Live2D
 {% youtube TTJCvAbPXiM %}
 
-This is a simple voice controlled mobile action game named "Ha". I think the major difficulty to me is that, it was made by a single person without much game making experience, and was done in spare time. With a {% post_link Ha-The-Game-Development-Review failed experience %}, I took resource management very seriously this time, cut off many many features, abandoned high quality art, and set milestones very carefully. Galdly, it was completed and successfully published on [Google Play](https://play.google.com/store/apps/details?id=com.TzuChaoWang.Ha) and [App Store](https://apps.apple.com/tw/app/ha/id1534485753), with all the artwork, animation, and program functionalities done by myself.
+This is a simple voice controlled mobile action game named "Ha". I think the major difficulty to me is that, it was made by a single person without much game making experience, and was done in spare time. With a {% post_link Ha-The-Game-Development-Review failed experience %}, I took resource management very seriously this time, cut off many many features, abandoned high quality art, and set milestones very carefully. Gladly, it was completed and successfully published on [Google Play](https://play.google.com/store/apps/details?id=com.TzuChaoWang.Ha) and [App Store](https://apps.apple.com/tw/app/ha/id1534485753), with all the artwork, animation, and program functionalities done by myself.
 
 ## Improve Abilities in Coloring, Shading, and Perspective. Make An Artwork that Demonstrates My Level of Digital Painting
 [Programmer @ 2020-10-31](https://tzuchaowang.artstation.com/projects/xJNwzE)
