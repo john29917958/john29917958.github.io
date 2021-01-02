@@ -18,7 +18,7 @@ Thank you. You're the person I can never forget. The most powerful manager in TS
 Marshall Huang and Jeremy Huang, thank you for giving me the chance to be the chief illustrator of the department story book to the leave of Mr. Morris Chang - Founder, ex. CEO of TSMC. You gave me four-time chances of contributing company or department level projects. I'm willing, and enjoyed these high-degree missions. We did a great job with high quality output. Without your trust, I could never get the chance to help my department, my company build a positive image. You satisfied my eagerness for challenges. You colored my life with memorable achievements.
 
 ## Person Who Lead Me and Cultivated Me
-Yun-Ju Chen, my all time leader. You're the person who cared me the most, helped me the most, teached me knowledge the most, fought for me the most. You built my factory knowledge step by step. Without you, I can never centralize the Recovery Photo system with my software engineering techniques. I can never integrate functionalities in all distributed versions of RP systems into a single one with "feature toggle" concept. If there're more supports, I even have the confidence to centralize all TSMC fabs with this Delphi (Pascale) version of RP system, not the "start from scratch" C# one.
+Yun-Ju Chen, my all time leader. You're the person who cared me the most, helped me the most, teached me knowledge the most, fought for me the most. You built my factory knowledge step by step. Without you, I can never centralize the Recovery Photo system with my software engineering techniques. I can never integrate functionalities in all divergent versions of RP systems into a single one with "feature toggle" concept. If there're more supports, I even have the confidence to centralize all TSMC fabs with this Delphi (Pascale) version of RP system, not the "start from scratch" C# one.
 
 ## Person Who Let Me Collaborate the Re-engineering Task
 And last, thanks to Kevin Chen for giving me the chance of leading the re-engineering project of the Recovery Photo system, so I could finally summarize all functions in all RP versions, and drew the complete, integrated system flow. This is ultimately valuable to the next generation of RP system owners.
@@ -27,7 +27,7 @@ And last, thanks to Kevin Chen for giving me the chance of leading the re-engine
 - Chief illustrator of a story book to the leave of Mr. Morris Chang. Build of department image.
 - Chief illustrator of CSR event at "嘉義縣水上基督教浸信宣道會". Build of company image.
 - Illustrator of a story book to Mr. J.K. Wang. Build of department image.
-- Integrates distributed versions of RP and RM system into a single one, published in three TSMC fabs, potentially for four TSMC fabs.
+- Integrates divergent versions of RP and RM systems into a single one, published in three TSMC fabs, potentially for four TSMC fabs.
 - Open the door to software engineering and Object-Oriented design in TSMC. Open the door for NCU students to enter TSMC
 
 ## Reason I Leave
