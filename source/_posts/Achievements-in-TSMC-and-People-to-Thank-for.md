@@ -1,5 +1,5 @@
 title: Achievements in TSMC and People to Thank for
-visible: show
+visible: hide
 date: 2021-01-01 20:40:46
 tags: life, reflection
 category: Reflection
