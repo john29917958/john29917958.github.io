@@ -1,5 +1,5 @@
 title: 3 Steps to Understand Software Industry
-visible: show
+visible: hide
 date: 2021-01-17 21:30:33
 tags: [programming]
 category: Programming
