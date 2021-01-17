@@ -11,7 +11,6 @@ About me
 
 I'm good at software engineering. There are two projects that I did refactoring to integrate several divergent-versioned systems into single one with "feature toggle" concept, and published to three TSMC fabs, contributing to reducing half of the maintenance effort.
 I'm passionate about game making. In my spare time I published a "voice-controlled" mobile game with Unity and Live 2D, in which got 100+ downloads in the U.S. and Taiwan.
-I take communication and collaboration seriously, efficiency and progress report seriously. I adhere to product quality but not a perfectionism. I'm willing to devote myself into product integration. I'm willing to fight for the goal of TEAM.
 I pursue challenge and excellence, I pursue originality in Taiwan. I'm also kind and caring. I'm looking for Unity client position. Are my pursuit, skill set, and personality what you looking for? I can't wait to contact with you! 
 
 ## Basic Information
