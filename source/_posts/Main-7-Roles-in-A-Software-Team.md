@@ -1,4 +1,4 @@
-title: 3 Steps to Understand Programming Jobs
+title: 3 Steps to Understand Software Industry
 visible: show
 date: 2021-01-17 21:30:33
 tags: [programming]
