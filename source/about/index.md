@@ -9,12 +9,10 @@ comments: false
 About me
 {% youtube TTJCvAbPXiM %}
 
-I love and be great in software architecture design. As a three-year TSMC engineer, I used "feature toggle" concept for integrating divergent-versioned old systems into single distribution and published to three TSMC fabs twice.
-I have strong self-driven and independent programming / [2D digital art](https://www.artstation.com/tzuchaowang) implementation abilities. I took continuous integration mindset, published a voice-controlled mobile game on [Google Play](https://play.google.com/store/apps/details?id=com.TzuChaoWang.Ha) and [App Store](https://apps.apple.com/tw/app/ha/id1534485753) in spare time as single-person-team (a start-up game with 130 download count).
-
+I'm good at software engineering. There are two projects that I did refactoring to integrate several divergent-versioned systems into single one with "feature toggle" concept, and published to three TSMC fabs, contributing to reducing half of the maintenance effort.
+I'm passionate about game making. In my spare time I published a "voice-controlled" mobile game with Unity and Live 2D, in which got 100+ downloads in the U.S. and Taiwan.
 I take communication and collaboration seriously, efficiency and progress report seriously. I adhere to product quality but not a perfectionism. I'm willing to devote myself into product integration. I'm willing to fight for the goal of TEAM.
-
-I'm positively looking for Unity client game engineer position. If the integration of object-oriented programming and digital art abilities is what you are looking for, I can't wait to contact with you!
+I pursue challenge and excellence, I pursue originality in Taiwan. I'm also kind and caring. I'm looking for Unity client position. Are my pursuit, skill set, and personality what you looking for? I can't wait to contact with you! 
 
 ## Basic Information
 - English Name: Tzu-Chao, Wang
