@@ -4,7 +4,7 @@ tags: [design, graphic, art]
 category: Art
 ---
 Preview:
-{% asset_img TZM-poster.jpg TZM poster design %}
+{% asset_img TZM-poster.jpg "TZM poster design'TZM poster design'" %}
 <!-- more -->
 After completed my first artwork for TZM (the L folder cover design), here came another chance for me to hone my ability of graphic designing.
 
@@ -16,4 +16,4 @@ By following the main idea of my previous artwork, I still used book to represen
 
 ## Result
 So this is the final production version of the poster. This time I remembered to adjust the color format to CMYK instead of RGB before my implementation stage, cheers!
-{% asset_img TZM-poster.jpg TZM poster design %}
+{% asset_img TZM-poster.jpg "TZM poster design'TZM poster design'" %}

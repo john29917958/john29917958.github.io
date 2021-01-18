@@ -4,7 +4,7 @@ tags: [design, graphic, art]
 category: Art
 ---
 Preview:
-{% asset_img TZM-L-folder.jpg TZM L folder design %}
+{% asset_img TZM-L-folder.jpg "TZM L folder design'TZM L folder design'" %}
 <!-- more -->
 Ah~~ so yearning~ This is my first formal graphic design work. The formal graphic design work means that --> the product I design will be actually used by my customer! In other words, there will be a lot of L folders with the cover I design :)
 
@@ -28,6 +28,6 @@ This experience gave me a lesson about designing graphic for physical products. 
 
 ## Result
 Alright, the origin RGB PhotoShop source file is missed. So the following are the transformed CMYK version of my design with darken color. It's my first try of designing product for real use. Check it out yo!
-{% asset_img TZM-L-folder.jpg L folder front %}
-{% asset_img TZM-L-folder-with-paper.jpg L folder front (with paper inside) %}
-{% asset_img TZM-L-folder-back.jpg L folder back %}
+{% asset_img TZM-L-folder.jpg "L folder front'L folder front'" %}
+{% asset_img TZM-L-folder-with-paper.jpg "L folder front (with paper inside)'L folder front (with paper inside)'" %}
+{% asset_img TZM-L-folder-back.jpg "L folder back'L folder back'" %}

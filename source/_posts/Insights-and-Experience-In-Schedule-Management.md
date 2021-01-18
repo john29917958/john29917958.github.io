@@ -3,7 +3,7 @@ date: 2016-05-21 22:15:59
 tags: [management]
 category: Programming
 ---
-{% asset_img deadline.png Wait me my dear deadline~~~ %}
+{% asset_img deadline.png "Wait me my dear deadline~~~'Wait me my dear deadline~~~'" %}
 I believe you should have read a lot of diaries or articles that mention about working overtime, staying at office until 11, 12 PM., even 3, 4 AM. You may notice that lots of people complained about they're suddenly assigned many extra works which result in that they needed to spend extra time to finish it. They may get a unreasonable due date. They may need to complete bunch of tasks in a extremely tight schedule.
 <!--more-->
 In general, if the schedule is tight with lots of tasks to be completed, put additional staff should be a good choice. However, this may be a bad idea in software industries. The book [The Mythical Man-Month: Essays on Software Engineering](https://en.wikipedia.org/wiki/The_Mythical_Man-Month) by [Fred Brooks](https://en.wikipedia.org/wiki/Fred_Brooks) describes and explains it very well.

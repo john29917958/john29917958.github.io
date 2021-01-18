@@ -7,7 +7,7 @@ category: Programming
 Have you ever dreamed of building a product yourself and selling it to the world? Here's my first experience of publishing a voice control action game to [Google Play](https://play.google.com/store/apps/details?id=com.TzuChaoWang.Ha) and [App Store](https://apps.apple.com/tw/app/ha/id1534485753), including a huge mistake I've made, did some adjustments, then succeeded with 131 download count in the end.
 As an office worker, I've successfully put my first step in. Now, it's your turn. Hustling after work can be extremely tough. However, if you never start, you're the same person after one year, five years, even ten years. **Never too late! Action, now!** To the "better you" in the future, the better you that you deserve!
 
-{% asset_img banner.png %}
+{% asset_img banner.png "Ha - Lead me with your voice'Ha - Lead me with your voice'" %}
 <!-- more -->
 Outline:
 1. [Set Business Target](#Set-Business-Target)
@@ -232,27 +232,27 @@ THEN I could create App Promotion advertisement...
 After App Promotion advertisement created, guess what? BOOM!! The impressions, clicks, and actual download count greatly improved with less time and money! Here're the actual analysis charts:
 
 Inefficient text and picture advertisement: No actual download count influences, wasted lots of money...
-{% asset_img advertisement-1.jpg inefficient text and picture advertisement %}
+{% asset_img advertisement-1.jpg "Inefficient advertisement in text and picture'Inefficient advertisement in text and picture'" %}
 
 App Promotion advertisement for Android (from 11/04), improved Android download count immediately:
 Impression and click count
-{% asset_img advertisement-click-and-download-android.jpg %}
+{% asset_img advertisement-click-and-download-android.jpg "App promotion mode - Android click count'App promotion mode - Android click count'" %}
 Actual download count
-{% asset_img actual-download-count-android.jpg %}
+{% asset_img actual-download-count-android.jpg "Android download count'Android download count'" %}
 
 App Promotion advertisement for IOS (from 11/04), improved IOS download count immediately:
 Impression and click count
-{% asset_img advertisement-click-and-download-ios.jpg %}
+{% asset_img advertisement-click-and-download-ios.jpg "App promotion mode - IOS click count'App promotion mode - IOS click count'" %}
 Actual download count
-{% asset_img actual-download-count-ios.jpg %}
+{% asset_img actual-download-count-ios.jpg "IOS downlaod count'IOS downlaod count'" %}
 
 Extra interesting discovery: IOS users are generally richer, more tablet usage than Android XD
 
 IOS distribution:
-{% asset_img ratio-ios.jpg %}
+{% asset_img ratio-ios.jpg "IOS device distribution'IOS device distribution'" %}
 
 Android distribution:
-{% asset_img ratio-android.jpg %}
+{% asset_img ratio-android.jpg "Android device distribution'Android device distribution'" %}
 
 # Reflection and Review
 Mistakes and improvements:
