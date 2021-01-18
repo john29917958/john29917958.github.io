@@ -69,8 +69,8 @@ Hello World
 Game making plan announcement
 {% youtube nqArCbXgBjk %}
 And here are plain hand-drawn animations
-{% asset_img "Anassa - idle.gif" Idle %}
-{% asset_img "Anassa - flick punch.gif" Flick punch %}
+{% asset_img "Anassa - idle.gif" "Idle'Idle'" %}
+{% asset_img "Anassa - flick punch.gif" "Flick punch'Flick punch'" %}
 I think the next steps of my art skill growth are...
 1. Creates a Live2D model of 4th. version Anassa character.
 2. Keeps practicing and creates an illustration that represents my capability of art

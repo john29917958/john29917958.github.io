@@ -4,7 +4,7 @@ tags: [design, graphic, dance, art]
 category: Art
 ---
 Preview:
-{% asset_img NCUPD-playbill-front-cover.jpg NCU Pop Dance Club playbill design %}
+{% asset_img NCUPD-playbill-front-cover.jpg "NCU Pop Dance Club playbill design'NCU Pop Dance Club playbill design'" %}
 <!-- more -->
 This is my last artwork, also the most successful one for pop dance club in NCU.
 
@@ -20,6 +20,6 @@ So! A little vicissitudes but with strong, clear target. Color tan with some noi
 
 ## Result
 Front cover:
-{% asset_img NCUPD-playbill-front-cover.jpg NCU Pop Dance Club playbill design (front cover) %}
+{% asset_img NCUPD-playbill-front-cover.jpg "NCU Pop Dance Club playbill design (front cover)'NCU Pop Dance Club playbill design (front cover)'" %}
 Back cover:
-{% asset_img NCUPD-playbill-back-cover.jpg NCU Pop Dance Club playbill design (back cover) %}
+{% asset_img NCUPD-playbill-back-cover.jpg "NCU Pop Dance Club playbill design (back cover)'NCU Pop Dance Club playbill design (back cover)'" %}
