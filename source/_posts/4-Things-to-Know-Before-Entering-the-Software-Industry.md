@@ -1,4 +1,4 @@
-title: 4 Things to Know to Enter the Software Industry
+title: 4 Things to Know Before Entering the Software Industry
 visible: show
 date: 2021-01-17 21:30:33
 tags: [programming]
