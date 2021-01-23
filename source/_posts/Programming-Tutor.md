@@ -37,8 +37,6 @@ category: Programming
 - [Instagram](https://www.instagram.com/john29917958/)
 - [Twitter](https://twitter.com/john29917958)
 
-計價：一小時 850
-
 ## 課綱
 
 程式語言：C#
