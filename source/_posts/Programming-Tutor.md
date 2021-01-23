@@ -135,6 +135,7 @@ category: Programming
 - 課程：
   - 工廠模式 (factory design pattern) 使用時機與介紹
   - 組合模式 (composite design pattern) 使用時機與介紹
+  - 觀察者模式 (observer design pattern) 使用時機與介紹
 - 主題分享：
   - 製作專案前須認清的事情：資源、能力、競爭對手與市場
 - 作業：[檔案總管系統](https://github.com/john29917958/Tutor/tree/master/FileExplorer)
