@@ -127,7 +127,7 @@ category: Programming
 - 主題分享：
   - 遊戲專案實際案例分析 -> 繼承與介面
   - 單人業餘遊戲製作資本分享
-- 作業：分析並重構雙人猜數字遊戲
+- 作業：簡易[電影租借系統](https://github.com/john29917958/Tutor/tree/master/MovieStore)
 
 ### 第八周：設計模式
 帶入物件導向實戰，讓您輕易對付八成商場需求
@@ -137,4 +137,4 @@ category: Programming
   - 組合模式 (composite design pattern) 使用時機與介紹
 - 主題分享：
   - 製作專案前須認清的事情：資源、能力、競爭對手與市場
-- 作業：專案發想
+- 作業：[檔案總管系統](https://github.com/john29917958/Tutor/tree/master/FileExplorer)
