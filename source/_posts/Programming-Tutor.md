@@ -47,7 +47,7 @@ category: Programming
 帶入程式設計的世界與安裝必要工具
 
 - 課程：
-  1. 實作我的第一支小程式：Hello World
+  1. 實作我的第一支小程式：[Hello World](https://github.com/john29917958/Tutor/tree/master/HelloWorld/Web)
   2. 整合開發環境安裝與帳號申請：Visual Studio
   3. 簡易 program counter 概念
 - 主題分享：{% post_link 6-Characteristics-of-High-Value-Programmer 良好工程師應具備的特質 %}
