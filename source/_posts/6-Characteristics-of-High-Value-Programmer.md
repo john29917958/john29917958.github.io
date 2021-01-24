@@ -54,7 +54,7 @@ private void BuildFamilyNodes(Node node)
 }
 ```
 
-## 2. 善於自我優化工作效率
+## 2. 善於優化工作效率
 「工程師的美德，就是懶」
 為了創造更高的價值，厲害的工程師會想盡辦法「自動化」繁雜的流程
 或將不必要的內容排出腦外，用知識庫或文件等儲存起來
@@ -114,7 +114,7 @@ private void BuildFamilyNodes(Node node)
 不需要每次手動重作每個部件
 程式碼，會藉由「藍圖範本」來簡化複雜度，並增加未來維護的效率
 
-## 6. 快速適應任何新舊技術的能力
+## 6. 快速適應任何技術的能力
 程式的進化速度比傳統產業快很多
 高價值工程師具備的，是紮實的基礎知識，如 call stack、pass-by-value 或 pass-by-reference、pointer、function pointer，甚至是 process 記憶體結構
 有了這些不變的內功，無論技術怎麼變，高價值工程師都具備快速上手的能力，進而不失競爭力
