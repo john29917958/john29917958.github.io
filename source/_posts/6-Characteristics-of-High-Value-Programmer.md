@@ -28,29 +28,20 @@ category: Programming
 這裡是一段範例程式碼。你說，像天書嗎？ XD
 ```csharp
 /// <summary>
-/// Builds all nodes in same family chain (upwards).
+/// Gets the distance between two points in 2-dimensional system.
 /// </summary>
-/// <param name="node">
-/// The node to be built.
-/// </param>
-private void BuildFamilyNodes(Node node)
+/// <param name="x1">The x-axis value of first point.</param>
+/// <param name="y1">The y-axis value of first point.</param>
+/// <param name="x2">The x-axis value of second point.</param>
+/// <param name="y2">The y-axis value of second point.</param>
+/// <returns>
+/// Returns the distance between two points.
+/// </returns>
+public double GetDistance2D(double x1, double y1, double x2, double y2)
 {
-    string parentPath = Path.GetDirectoryName(node.Path);
-    if (string.IsNullOrWhiteSpace(parentPath)) return;
-
-    Node parentNode = SearchAllNodes(parentPath);
-
-    if (parentNode == null)
-    {
-        parentNode = FileSystemFactory.Make(parentPath);
-        parentNode.ConnectChild(node);
-        Subscribe(parentNode);
-        BuildFamilyNodes(parentNode);
-    }
-    else
-    {
-        parentNode.ConnectChild(node);
-    }
+    double distance = Math.Sqrt(Math.Pow(x1 - x2, 2) + Math.Pow(y1 - y2, 2));
+    distance = Math.Abs(distance);
+    return distance;
 }
 ```
 
