@@ -83,7 +83,7 @@ category: Programming
 - 主題分享：
   1. Git 工具安裝，GitHub 帳號申請
   2. Git 版本控制系統介紹，將自己的程式推上版控系統！
-- 作業： 猜數字遊戲
+- 作業：[猜數字遊戲](https://github.com/john29917958/Tutor/tree/master/BullsAndCows)
 - 價格：
   - 課程：兩小時共 1500
   - 輔導：一小時 850
@@ -96,7 +96,7 @@ category: Programming
   2. 巢狀 if v.s. 單層 if 防火墻
   3. Function 長度與權責控制
   4. 用變數或 function 名稱取代複雜判段式或邏輯
-- 主題分享：Prototype
+- 主題分享：[Prototype](https://invis.io/JR102PWDVM2S)
 - 作業：重構與優化猜數字遊戲
 - 價格：
   - 課程：兩小時共 1600
@@ -112,7 +112,7 @@ category: Programming
   4. Linked list 演算法介紹
 - 主題分享：
   - Windows 的使用者介面系統 - Windows Forms
-  - 專案製作流程配置實例參考
+  - 專案製作流程配置參考
 - 作業：
   1. Bubble sort 與 linked list 實作
   2. 替猜數字遊戲加上使用者介面與步驟紀錄功能 (玩家猜多少？該次數字範圍提醒是多少？)
@@ -129,7 +129,7 @@ category: Programming
   3. 指標、pass by value、pass by reference
   4. Namespace
 - 主題分享：
-  - 直接更改物件內容 v.s. 製造新物件並 return
+  - 程式碼風格：直接更改物件內容 v.s. 製造新物件並 return
   - 敏捷開發的精神分享
 - 作業：將猜數字遊戲的步驟紀錄功能改為物件
 - 價格：
