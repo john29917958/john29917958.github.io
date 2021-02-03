@@ -50,7 +50,7 @@ category: Programming
 
 - 課程：
   1. 實作我的第一支小程式：[Hello World](https://github.com/john29917958/Tutor/tree/master/HelloWorld/Web)
-  2. 程式語言應用簡介
+  2. 程式語言應用簡介，以及[五種語言的比較](https://github.com/john29917958/Tutor/tree/master/HelloWorld/LanguageComparison)
   3. Program counter 概念介紹
   4. 整合開發環境安裝與帳號申請：Visual Studio
   5. 如何用 Visual Studio 建立專案？
