@@ -34,6 +34,7 @@ category: Programming
 
 [關於我與聯絡方式](/about)，或可透直接透過以下方式聯絡：
 - E-mail: john29917958@gmail.com
+- Phone: 0921-613-978
 - [Facebook](https://www.facebook.com/tzuchaowang)
 - [LinkedIn](https://www.linkedin.com/in/john29917958)
 - [Instagram](https://www.instagram.com/john29917958/)
