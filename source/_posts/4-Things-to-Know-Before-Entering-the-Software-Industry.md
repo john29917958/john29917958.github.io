@@ -26,7 +26,7 @@ category: Programming
 	<img src="https://cdn.pixabay.com/photo/2016/11/24/20/30/architecture-1857175_960_720.jpg" alt="Image by Lorenzo Cafaro from Pixabay">
 </a>
 <a href="https://en.wikipedia.org/wiki/Unified_Modeling_Language">
-	軟體工程設計示意圖
+	軟體工程架構示意圖
 	<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/UML_diagrams_overview.svg/2560px-UML_diagrams_overview.svg.png" alt="Image by Wikipedia">
 </a>
 他困難，他抽象，因此他昂貴，可取代性也相對較低。甚至有「厲害的工程師，生產力差距可達 10 倍」之說。
