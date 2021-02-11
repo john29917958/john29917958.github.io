@@ -21,6 +21,8 @@ category: Programming
 {% asset_img supply-and-demand-game-engineer-2021-01-18.jpg "104 遊戲程式設計師供需趨勢 - 2021/01/18'104 遊戲程式設計師供需趨勢 - 2021/01/18'" %}
 
 程式技術門檻較普遍產業高。舉例來說，建築工程有建築圖，不會差真實房屋結構太遠，人腦可以輕易聯想成品的樣貌。但來到軟體工程，即便有 [UML diagram](https://en.wikipedia.org/wiki/Unified_Modeling_Language) 來圖解軟體架構，要「直覺」反映出程式碼結構，還有很長一段距離。
+他困難，他抽象，因此他昂貴，可取代性也相對較低。甚至有「厲害的工程師，生產力差距可達 10 倍」之說。
+程式職缺一直無法被滿足，程式設計是一項高收入技能。決定挑戰「程式技能」的你，在未來發展方面，可以先給自己掌聲鼓勵 XD
 <a href="https://pixabay.com/images/id-1857175/">
 	建築工程設計示意圖
 	<img src="https://cdn.pixabay.com/photo/2016/11/24/20/30/architecture-1857175_960_720.jpg" alt="Image by Lorenzo Cafaro from Pixabay">
@@ -29,8 +31,6 @@ category: Programming
 	軟體工程架構示意圖
 	<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/UML_diagrams_overview.svg/2560px-UML_diagrams_overview.svg.png" alt="Image by Wikipedia">
 </a>
-他困難，他抽象，因此他昂貴，可取代性也相對較低。甚至有「厲害的工程師，生產力差距可達 10 倍」之說。
-程式職缺一直無法被滿足，程式設計是一項高收入技能。決定挑戰「程式技能」的你，在未來發展方面，可以先給自己掌聲鼓勵 XD
 
 # 程式簡介與製作流程
 {% asset_img program-sample.jpg "程式碼範例'程式碼範例'" %} 
