@@ -26,10 +26,8 @@ category: Programming
 	建築工程設計示意圖
 	<img src="https://cdn.pixabay.com/photo/2016/11/24/20/30/architecture-1857175_960_720.jpg" alt="Image by Lorenzo Cafaro from Pixabay">
 </a>
-<a href="https://en.wikipedia.org/wiki/Unified_Modeling_Language">
-	軟體工程架構示意圖
-	<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/UML_diagrams_overview.svg/2560px-UML_diagrams_overview.svg.png" alt="Image by Wikipedia">
-</a>
+軟體工程架構示意圖
+{% asset_img uml.jpg "軟體工程架構示意圖'軟體工程架構示意圖'" %}
 
 # 程式簡介與製作流程
 {% asset_img program-sample.jpg "程式碼範例'程式碼範例'" %} 
