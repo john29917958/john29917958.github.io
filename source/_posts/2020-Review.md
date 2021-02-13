@@ -44,15 +44,9 @@ And the following is the 30th. day performance in 30 days challenge series:
 
 ## Expectations 2021
 As usual, expectations next year are designed under three talents of myself: Programming (abstract thinking), art, and dancing:
-1. Programming: Be good at design pattern and master Unity client engineering. It's time to dig in and dig deep, mastering all Unity client abilities. For example: texture management and optimization concepts, asset bundle, cross platform sizing, animation techniques, animation timeline technique, performance optimization, shader, and so on...
-2. Art: Learn "動態構成" concepts, master perspective and coloring skillsets.
+1. Programming: Be good at design pattern and learn all basic Unity client engineering techniques. Produce another game in 2021 with Live2D again
+2. Art: Learn "動態構成" concepts, master perspective and coloring skillsets. Produce an artwork combining these skills
 3. Dance: Win at least one battle with my integrated abilities of Hip - Hop and Popping
-
-Optional:
-1. Learn martial art. Maybe Jet-Kun-Do or Muay Thai
-2. Learn about muscle massage so I can keep high level energy life long
-
-There're way more things I planned to do that can last for 30 years. Here're the very first steps I set for the next year.
 
 ## Final Words
 What's your expectations to yourself? Never late, action, NOW! We can be the same person after one year, two year, even ten years. Or we can increase the value we provide to such world. Here's my point of view and belief: Income is just the result based on how significant we can add value to the world. I'm about to do experiment on myself. You can wait, you can keep your life as usual, or you can join the exciting journey with me. Are you ready?
