@@ -3,6 +3,7 @@ visible: show
 date: 2020-10-17 16:25:47
 tags: programming
 category: Programming
+keywords: 轉職, 程式, 家教, code, program, 軟體, 工程
 ---
 
 > C# 程式與軟體工程，打造你的即戰力
