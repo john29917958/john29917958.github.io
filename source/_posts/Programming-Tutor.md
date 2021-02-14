@@ -50,8 +50,8 @@ keywords: 轉職, 程式, 家教, code, program, 軟體, 工程, C#
 帶入程式設計的世界與安裝必要工具
 
 - 課程：
-  1. 實作我的第一支小程式：[Hello World](https://github.com/john29917958/Tutor/tree/master/HelloWorld/Web)
-  2. 程式語言應用簡介，以及[五種語言的比較](https://github.com/john29917958/Tutor/tree/master/HelloWorld/LanguageComparison)
+  1. 實作我的第一支小程式：Hello World
+  2. 程式語言應用簡介，以及五種語言的比較
   3. Program counter 概念介紹
   4. 整合開發環境安裝與帳號申請：Visual Studio
   5. 如何用 Visual Studio 建立專案？
@@ -70,7 +70,7 @@ keywords: 轉職, 程式, 家教, code, program, 軟體, 工程, C#
   3. 運算式介紹
   4. 註解
 - 主題分享：神奇快捷鍵，以光速撰寫程式碼
-- 作業：填填看，做個簡單的[計算機](https://github.com/john29917958/Tutor/tree/master/Calculator)
+- 作業：填填看，做個簡單的計算機
 - 價格：
   - 課程：兩小時共 1400
   - 輔導：一小時 700
@@ -97,7 +97,7 @@ keywords: 轉職, 程式, 家教, code, program, 軟體, 工程, C#
 - 主題分享：
   1. Git 工具安裝，GitHub 帳號申請
   2. Git 版本控制系統介紹，將自己的程式推上版控系統！
-作業：[猜數字遊戲](https://github.com/john29917958/Tutor/tree/master/BullsAndCows)
+作業：猜數字遊戲
 - 價格：
   - 課程：兩小時共 1500
   - 輔導：一小時 750
@@ -174,7 +174,7 @@ keywords: 轉職, 程式, 家教, code, program, 軟體, 工程, C#
   3. 介面
 - 主題分享：
   - 遊戲專案實際案例分析 -> 繼承與介面
-- 作業：簡易[電影租借系統](https://github.com/john29917958/Tutor/tree/master/MovieStore)
+- 作業：簡易電影租借系統
 - 價格：
   - 課程：兩小時共 1900
   - 輔導：一小時 950
@@ -188,7 +188,7 @@ keywords: 轉職, 程式, 家教, code, program, 軟體, 工程, C#
   - 觀察者模式 (observer design pattern) 使用時機與介紹
 - 主題分享：
   - 製作專案前須認清的事情：資源、能力、競爭對手與市場
-- 作業：[檔案總管系統](https://github.com/john29917958/Tutor/tree/master/FileExplorer)
+- 作業：檔案總管系統
 - 價格：
   - 課程：兩小時共 2000
   - 輔導：一小時 1000
