@@ -39,8 +39,6 @@ keywords: 轉職, 程式, 家教, code, program, 軟體, 工程, C#
 - Phone: 0921-613-978
 - [Facebook](https://www.facebook.com/tzuchaowang)
 - [LinkedIn](https://www.linkedin.com/in/john29917958)
-- [Instagram](https://www.instagram.com/john29917958/)
-- [Twitter](https://twitter.com/john29917958)
 
 # 課綱
 
