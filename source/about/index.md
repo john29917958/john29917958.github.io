@@ -36,7 +36,7 @@ I pursue challenge and excellence, I pursue originality in Taiwan. I'm also kind
 - [Tumblr](https://www.tumblr.com/blog/john29917958)
 
 ## Interests
-1. Dancing and listen to music
+1. Dancing and listening to music
 2. Programming
 3. Digital painting
 
