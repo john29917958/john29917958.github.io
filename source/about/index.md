@@ -45,7 +45,7 @@ I pursue challenge and excellence, I pursue originality in Taiwan. I'm also kind
 
 ### Taiwan Semiconductor Manufacturing Company Limited
 Daya, Taichung
-2017/08 ~ now
+2017/08 ~ 2021/03
 Position: Computer Integrated Manufacturing Engineer
 Major contributions:
 - Used "feature toggle" concept for integrating divergent-versioned old systems into single distribution and published to three TSMC fabs twice.
