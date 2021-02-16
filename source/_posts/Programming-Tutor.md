@@ -3,7 +3,7 @@ visible: show
 date: 2020-10-17 16:25:47
 tags: programming
 category: Programming
-keywords: 遊戲, 程式, 轉職, game, Unity, 家教, code, program, 軟體, 工程, C#
+keywords: 遊戲, 程式, 轉職, game, Unity, 家教, code, program, 軟體, 工程, C#, 資訊
 ---
 
 > C# 遊戲程式語言與軟體工程，打造你的即戰力
