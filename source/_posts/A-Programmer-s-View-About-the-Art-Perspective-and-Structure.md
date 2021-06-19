@@ -10,7 +10,7 @@ category: Art
 
 這是一幅由軟體工程師繪製的線搞插畫，你相信嗎 (還不快去報名 [Krenz Cushart 的課程](https://www.krenzartwork.com/) XDD)?
 這份結業作業，總結了 4 個月的業餘訓練。在台積高壓的工作之餘，仍堅持努力，高度自律的結晶。
-在美術插畫方面跟著 Krenz 老師走到這步，是時候做個階段性總結了
+在美術插畫方面跟著 Krenz 老師走到這步，是時候做個階段性總結了 (雖然還很菜)
 單看成果沒啥感受，下面就來個超級比一比吧！(由上往下的~~黑歷史~~進化史)
 
 {% asset_img digital-painting-evolution.jpg "Digital painting evolution - by T.C.'Digital painting evolution - by T.C.'" %}
@@ -44,11 +44,11 @@ category: Art
 我是從色彩與光影課進入。沒有為什麼，只因為那時 Krenz 剛好開色彩課。
 這時的我像一隻懵懂的小白兔，就此踏入專業美術的叢林
 還記得色彩課的前幾堂，Krenz 老師 (簡稱 K 大) 主講切光與負形。將人或物的亮暗面簡化成一條線，用色彩或黑白灰隔開
-這是我第一次被震撼到，感受到叢林的可怕、感受到我的手完全跟不上這堂課
+這是我第一次被震撼到，感受到我的手完全跟不上這堂課...
 
 {% asset_img 2018-07-07-Frank-Frazetta-Bloodstone-Study.png "2018/07/07 Frank Frazetta Bloodstone Study - by T.C.'2018/07/07 Frank Frazetta Bloodstone Study - by T.C.'" %}
 
-到了這堂課，我基本上已經放棄了... 我對色彩的觀察力完全不行，甚至連畫出「對的形狀」都有問題
+到這階段，我基本上已經放棄了... 我對色彩的觀察力完全不行，甚至連畫出「對的形狀」都有問題
 後面基本上都是看看課程影片，寫寫筆記，直到課程結束...
 
 {% asset_img 2018-07-21-Wish.png "2018/07/21 Wish - by T.C.'2018/07/21 Wish - by T.C.'" %}
@@ -61,33 +61,34 @@ category: Art
 
 {% asset_img 2018-09-16-The-Things-From-The-Unknown.png "2018/09/16 The Things From The Unknown - by T.C.'2018/09/16 The Things From The Unknown - by T.C.'" %}
 
-在這之後，我一直在研究 K 大說的切光
+在這之後，我一直持續研究 K 大說的切光
 但其實讓我最在意的，是課程中講到一些跟「切形」、「比例控制」、「斜率」有關的知識點
-總覺得這些才是我現階段應該突破的關卡 (身為一位連羔羊都不如的初心者 T_T)
+總覺得這些才是我現階段應該突破的關卡
 但這時，K 大的透視課開課啦! 不信邪的我，再一次踏入血腥的叢林...
 
 {% asset_img 2019-03-03-Krenz-Perspective-HW1.png "2019/03/03 Krenz Perspective Homework 1 - Angles - by T.C.'2019/03/03 Krenz Perspective Homework 1 - Angles - by T.C.'" %}
 {% asset_img 2019-03-31-Krenz-Perspective-HW2.png "2019/03/31 Krenz Perspective Homework 2 - Interio Scene and Proportion Calculation - by T.C.'Interio Scene and Proportion Calculation - by T.C.'" %}
 
 我的媽呀! 原來畫圖還要做 3D 計算!? 這到底是什麼鬼 T_T
-無知的小白兔，再次在叢林裡迷路、跌倒
+無知的我，再次在叢林裡迷路、跌倒
 
 {% asset_img 2019-04-21-Krenz-Perspective-HW3-1-detailed.png "2019/04/21 Krenz Perspective Homework 3 - 1 - Scene and Rotation - by T.C.'2019/04/21 Krenz Perspective Homework 3 - 1 - Scene and Rotation - by T.C.'" %}
 {% asset_img 2019-12-01-Krenz-Perspective-HW4-1.png "2019/12/01 Krenz Perspective Homework 4 - 1 - Distance and Depth - by T.C.'2019/12/01 Krenz Perspective Homework 4 - 1 - Distance and Depth - by T.C.'" %}
 
-到了這個階段，我再次在 K 大的課程裡放棄。這次是透視與結構
+到了這個階段，我再次在 K 大的課程裡放棄，而這次是透視與結構......
 K 大提到的知識點都非常實用且珍貴，我很努力紀在筆記本中
 但我的雙手，沒有畫線穩定度的雙手，沒有斜率控制能力的雙手，沒有比例控制能力的雙手，加上一附沒有抓形能力的雙眼，根本負荷不了這麼專業的訓練
 
 {% asset_img 2019-06-09-UPPERCUT.png "2019/06/09 UPPERCUT - by T.C.'2019/06/09 UPPERCUT - by T.C.'" %}
 
-這時喚醒我的，是這些進入美術領域最基礎的能力
+這時喚醒我的，是進入美術領域最基礎的能力
 2019 我初識透視與結構，2020 展開的，是進入美術真正需要的基礎功: 臨摹、比例、斜度與抓形
-2020/02/11，30 天的抓形挑戰，啟動了進入專業領域的開關
+2020/02/11，30 天的抓形挑戰，終於啟動我進入專業領域的開關
 
 {% asset_img 2020-02-11-Shape-Copy-30-Days-Day-1-Kizuna-AI.png %}
 {% asset_img 2020-02-12-Shape-Copy-30-Days-Day-2-Inori-Yuzuriha.png %}
 {% asset_img 2020-02-13-Shape-Copy-30-Days-Day-3-Honma-Meiko.png %}
+頭頂的光圈這是什麼夭壽鬼縣......
 {% asset_img 2020-02-23-Shape-Copy-30-Days-Day-4_8-Shuvi.png %}
 {% asset_img 2020-03-01-Shape-Copy-30-Days-Day-9_11-Alice-Zuberg.png %}
 {% asset_img 2020-03-08-Shape-Copy-30-Days-Day-13_14-Yuuki-Asuna.png %}
@@ -106,7 +107,7 @@ K 大提到的知識點都非常實用且珍貴，我很努力紀在筆記本中
 單看這張圖是失敗的，但其實，我的寫輪眼已在不知不覺中打開
 還記得那時候，我開始可以看出一些市面上的畫作透視不太對、比例不太對等等
 這些抓型挑戰看似沒什麼創作作品，卻已打開我進入專業電繪的大門
-一切還是要感謝 K 大在課程中展示傳統美術抓形切形的技巧~
+一切還是要感謝 K 大在課程中展示傳統美術抓形切形的技巧，進而提點到我 ^^"
 
 後來因為購買遊戲設計套課的關係，獲得了一期 2D 電繪的課程
 
@@ -128,7 +129,7 @@ K 大提到的知識點都非常實用且珍貴，我很努力紀在筆記本中
 其實我畫線的能力還是很差，也很難快速抓出「好看」的形狀，對微妙的 CSI 線段掌握度也是 0
 
 2021 的 3 月，我再次與 K 大相遇
-這是一樣是基礎透視與結構
+這次一樣是基礎透視與結構
 不同的是，這次完全沒有戰死，甚至每次作業幾乎都一次過關!
 從第一次修 K 大透視課死亡的地方開始看自己復活、突破的作業清單
 
