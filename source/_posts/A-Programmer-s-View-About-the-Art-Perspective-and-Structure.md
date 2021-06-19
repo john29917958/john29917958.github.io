@@ -15,6 +15,11 @@ category: Art
 
 {% asset_img digital-painting-evolution.jpg "Digital painting evolution - by T.C.'Digital painting evolution - by T.C.'" %}
 
+# Outline
+1. [A Glance of My Digital Painting History ](#A-Glance-of-My-Digital-Painting-History)
+2. [Summary of Krenz's Perspective and Structure Course](#Summary-of-Krenz’s-Perspective-and-Structure-Course)
+3. [Conclusion and Plans](#Conclusion-and-Plans)
+
 # A Glance of My Digital Painting History
 
 2017 年 6 月剛買繪圖板時，對電繪懵懵懂懂，四處摸索查資料
@@ -200,7 +205,7 @@ K 大提到的知識點都非常實用且珍貴，我很努力紀在筆記本中
 
 以上就是課程相關的知識點與收穫啦~
 
-# Conclusion
+# Conclusion and Plans
 在做完結業作業後，收穫最多的是對線段的掌握、對「造型」的啟蒙，還有將旋轉、自由方塊等整合應用的經驗
 
 修這門課之前，我對線的掌握度極差。沒辦法做出微妙的角度控制，沒辦法畫出軌跡清晰、直截了當的線段、沒辦法輕易地讓線段照著腦中的想法走
