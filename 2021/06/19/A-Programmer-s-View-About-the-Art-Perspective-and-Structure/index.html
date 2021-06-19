@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>A Programmer&#39;s View About the Art (Perspective and Structure) | TC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="article">
+<meta property="og:title" content="A Programmer&#39;s View About the Art (Perspective and Structure)">
+<meta property="og:url" content="http://john29917958.github.io/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/index.html">
+<meta property="og:site_name" content="TC">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="http://john29917958.github.io/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/Krenz-Perspective-L8.png">
+<meta property="og:image" content="http://john29917958.github.io/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/digital-painting-evolution.jpg">
+<meta property="og:image" content="http://john29917958.github.io/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2017-10-15-Practicing-Series-3.png">
+<meta property="og:image" content="http://john29917958.github.io/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2018-03-04-Viva.png">
+<meta property="og:image" content="http://john29917958.github.io/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2018-04-07-Elven-Girl.png">
+<meta property="og:image" content="http://john29917958.github.io/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2018-05-27-Madoka-Kaname.png">
+<meta property="og:image" content="http://john29917958.github.io/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2018-06-02-Dragon.png">
+<meta property="og:image" content="http://john29917958.github.io/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2018-07-07-Frank-Frazetta-Bloodstone-Study.png">
+<meta property="og:image" content="http://john29917958.github.io/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2018-07-21-Wish.png">
+<meta property="og:image" content="http://john29917958.github.io/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2018-09-16-The-Things-From-The-Unknown.png">
+<meta property="og:image" content="http://john29917958.github.io/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2019-03-03-Krenz-Perspective-HW1.png">
+<meta property="og:image" content="http://john29917958.github.io/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2019-03-31-Krenz-Perspective-HW2.png">
+<meta property="og:image" content="http://john29917958.github.io/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2019-04-21-Krenz-Perspective-HW3-1-detailed.png">
+<meta property="og:image" content="http://john29917958.github.io/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2019-12-01-Krenz-Perspective-HW4-1.png">
+<meta property="og:image" content="http://john29917958.github.io/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2019-06-09-UPPERCUT.png">
+<meta property="og:image" content="http://john29917958.github.io/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2020-02-11-Shape-Copy-30-Days-Day-1-Kizuna-AI.png">
+<meta property="og:image" content="http://john29917958.github.io/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2020-02-12-Shape-Copy-30-Days-Day-2-Inori-Yuzuriha.png">
+<meta property="og:image" content="http://john29917958.github.io/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2020-02-13-Shape-Copy-30-Days-Day-3-Honma-Meiko.png">
+<meta property="og:image" content="http://john29917958.github.io/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2020-02-23-Shape-Copy-30-Days-Day-4_8-Shuvi.png">
+<meta property="og:image" content="http://john29917958.github.io/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2020-03-01-Shape-Copy-30-Days-Day-9_11-Alice-Zuberg.png">
+<meta property="og:image" content="http://john29917958.github.io/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2020-03-08-Shape-Copy-30-Days-Day-13_14-Yuuki-Asuna.png">
+<meta property="og:image" content="http://john29917958.github.io/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2020-03-15-Shape-Copy-30-Days-Day-15_17-Shinobu-Kocho.png">
+<meta property="og:image" content="http://john29917958.github.io/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2020-03-29-Shape-Copy-30-Days-Day-18_20-Kiana-Kaslana.png">
+<meta property="og:image" content="http://john29917958.github.io/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2020-04-26-Shape-Copy-30-Days-Day-28-Inori-Yuzuriha.png">
+<meta property="og:image" content="http://john29917958.github.io/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2020-05-10-Shape-Copy-30-Days-Day-Day-29_30-Anassa.png">
+<meta property="og:image" content="http://john29917958.github.io/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2020-08-15-Nero.png">
+<meta property="og:image" content="http://john29917958.github.io/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2020-09-12-Kocho-Shinobu.png">
+<meta property="og:image" content="http://john29917958.github.io/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2020-10-31-Programmer.png">
+<meta property="og:image" content="http://john29917958.github.io/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2021-05-02-Anime-Shape-Copy.png">
+<meta property="og:image" content="http://john29917958.github.io/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2021-04-21-Krenz-Perspective-L4.png">
+<meta property="og:image" content="http://john29917958.github.io/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2021-05-02-Krenz-Perspective-L5.png">
+<meta property="og:image" content="http://john29917958.github.io/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2021-05-22-Krenz-Perspective-L6.png">
+<meta property="og:image" content="http://john29917958.github.io/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2021-06-02-Krenz-Perspective-L7.png">
+<meta property="og:image" content="http://john29917958.github.io/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2021-06-18-Krenz-Perspective-L8.png">
+<meta property="og:image" content="http://john29917958.github.io/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/process.gif">
+<meta property="og:image" content="http://john29917958.github.io/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/perspective-core-concept-by-tc.jpg">
+<meta property="og:image" content="http://john29917958.github.io/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2021-06-12-Viva.png">
+<meta property="article:published_time" content="2021-06-19T04:46:21.000Z">
+<meta property="article:modified_time" content="2021-06-19T11:09:01.948Z">
+<meta property="article:author" content="汪子超">
+<meta property="article:tag" content="art">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://john29917958.github.io/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/Krenz-Perspective-L8.png">
+<meta name="twitter:creator" content="@john29917958">
+<link rel="publisher" href="+%E6%B1%AA%E5%AD%90%E8%B6%85">
+<meta property="fb:admins" content="100002225898735">
+<meta property="fb:app_id" content="284882215">
+  
+    <link rel="alternative" href="/atom.xml" title="TC" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-80121293-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  <script data-ad-client="ca-pub-8315401057994110" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">TC</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://john29917958.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-A-Programmer-s-View-About-the-Art-Perspective-and-Structure" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/" class="article-date">
+  <time datetime="2021-06-19T04:46:21.000Z" itemprop="datePublished">2021-06-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Art/">Art</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      
+        <header class="article-header">
+      
+      
+  
+    <h1 class="article-title" itemprop="name">
+      A Programmer&#39;s View About the Art (Perspective and Structure)
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <img src="/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/Krenz-Perspective-L8.png" class="" title="Krenz Perspective and Structure - Final Assignment" alt="Krenz Perspective and Structure - Final Assignment">
+
+<span id="more"></span>
+
+<p>這是一幅由軟體工程師繪製的線搞插畫，你相信嗎 (還不快去報名 <a target="_blank" rel="noopener" href="https://www.krenzartwork.com/">Krenz Cushart 的課程</a> XDD)?<br>這份結業作業，總結了 4 個月的業餘訓練。在台積高壓的工作之餘，仍堅持努力，高度自律的結晶。<br>在美術插畫方面跟著 Krenz 老師走到這步，是時候做個階段性總結了 (雖然還很菜)<br>單看成果沒啥感受，下面就來個超級比一比吧！(由上往下的<del>黑歷史</del>進化史)</p>
+<img src="/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/digital-painting-evolution.jpg" class="" title="Digital painting evolution - by T.C." alt="Digital painting evolution - by T.C.">
+
+<h1 id="Outline"><a href="#Outline" class="headerlink" title="Outline"></a>Outline</h1><ol>
+<li><a href="#A-Glance-of-My-Digital-Painting-History">A Glance of My Digital Painting History </a></li>
+<li><a href="#Summary-of-Krenz%E2%80%99s-Perspective-and-Structure-Course">Summary of Krenz’s Perspective and Structure Course</a></li>
+<li><a href="#Conclusion-and-Plans">Conclusion and Plans</a></li>
+</ol>
+<h1 id="A-Glance-of-My-Digital-Painting-History"><a href="#A-Glance-of-My-Digital-Painting-History" class="headerlink" title="A Glance of My Digital Painting History"></a>A Glance of My Digital Painting History</h1><p>2017 年 6 月剛買繪圖板時，對電繪懵懵懂懂，四處摸索查資料<br>光要畫出一張簡單的角色簡圖，就花了一堆時間<br>這時的我發現，電繪跟手繪有著極大的差距。我稱他「畫不準原理」XD<br>線條從紙上到了電繪版上，會變得非常不受控，甚至還會有「手抖」問題<br>有種無論再怎麼努力，線就是不直、不聽話的感覺</p>
+<img src="/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2017-10-15-Practicing-Series-3.png" class="" title="2017&#x2F;10&#x2F;15 Practicing Series 3 - by T.C." alt="2017&#x2F;10&#x2F;15 Practicing Series 3 - by T.C.">
+<img src="/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2018-03-04-Viva.png" class="" title="2018&#x2F;03&#x2F;04 Viva - by T.C." alt="2018&#x2F;03&#x2F;04 Viva - by T.C.">
+<img src="/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2018-04-07-Elven-Girl.png" class="" title="2018&#x2F;04&#x2F;07 Elven Girl - by T.C." alt="2018&#x2F;04&#x2F;07 Elven Girl - by T.C.">
+
+<p>經過超過半年的遊盪後 (好久!!!)，開始會加一些非常簡易的場景進去，也開始會搜尋參考<br>但這個時後都還不曉得線條、抓型還有比例控制等等名詞<br>大概可以用「盲人摸象」這句話來描述當時的自己吧?<br>來到了 2018 年，就是我遇上 Krenz 老師，開始理解專業美術的起點</p>
+<img src="/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2018-05-27-Madoka-Kaname.png" class="" title="2018&#x2F;05&#x2F;27 Rella Madoka Kaname Study - by T.C." alt="2018&#x2F;05&#x2F;27 Rella Madoka Kaname Study - by T.C.">
+<img src="/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2018-06-02-Dragon.png" class="" title="2018&#x2F;06&#x2F;02 Dragon - by T.C." alt="2018&#x2F;06&#x2F;02 Dragon - by T.C.">
+
+<p>離專業美術還差很長一段距離，但效果馬上出來了對吧 XD<br>我是從色彩與光影課進入。沒有為什麼，只因為那時 Krenz 剛好開色彩課。<br>這時的我像一隻懵懂的小白兔，就此踏入專業美術的叢林<br>還記得色彩課的前幾堂，Krenz 老師 (簡稱 K 大) 主講切光與負形。將人或物的亮暗面簡化成一條線，用色彩或黑白灰隔開<br>這是我第一次被震撼到，感受到我的手完全跟不上這堂課…</p>
+<img src="/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2018-07-07-Frank-Frazetta-Bloodstone-Study.png" class="" title="2018&#x2F;07&#x2F;07 Frank Frazetta Bloodstone Study - by T.C." alt="2018&#x2F;07&#x2F;07 Frank Frazetta Bloodstone Study - by T.C.">
+
+<p>到這階段，我基本上已經放棄了… 我對色彩的觀察力完全不行，甚至連畫出「對的形狀」都有問題<br>後面基本上都是看看課程影片，寫寫筆記，直到課程結束…</p>
+<img src="/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2018-07-21-Wish.png" class="" title="2018&#x2F;07&#x2F;21 Wish - by T.C." alt="2018&#x2F;07&#x2F;21 Wish - by T.C.">
+
+<p>課程結束後，我實驗性地創作一張圖。將有練到的部分 (切光、透光、漫反射等等)，結合在一起呈現出來<br>可以發現，其實還是有效果的。跟以往的製圖質量，是完全不同的級別<br>由此可見，K 大的課有多麼強大 XDD 可以把一位連羔羊都不如的軟體工程師明顯往上帶一個層級，只是還是很初學就是了……</p>
+<p>2018，是我在電繪的第一個人生紀錄點</p>
+<img src="/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2018-09-16-The-Things-From-The-Unknown.png" class="" title="2018&#x2F;09&#x2F;16 The Things From The Unknown - by T.C." alt="2018&#x2F;09&#x2F;16 The Things From The Unknown - by T.C.">
+
+<p>在這之後，我一直持續研究 K 大說的切光<br>但其實讓我最在意的，是課程中講到一些跟「切形」、「比例控制」、「斜率」有關的知識點<br>總覺得這些才是我現階段應該突破的關卡<br>但這時，K 大的透視課開課啦! 不信邪的我，再一次踏入血腥的叢林…</p>
+<img src="/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2019-03-03-Krenz-Perspective-HW1.png" class="" title="2019&#x2F;03&#x2F;03 Krenz Perspective Homework 1 - Angles - by T.C." alt="2019&#x2F;03&#x2F;03 Krenz Perspective Homework 1 - Angles - by T.C.">
+<img src="/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2019-03-31-Krenz-Perspective-HW2.png" class="" title="2019&#x2F;03&#x2F;31 Krenz Perspective Homework 2 - Interio Scene and Proportion Calculation - by T.C." alt="Interio Scene and Proportion Calculation - by T.C.">
+
+<p>我的媽呀! 原來畫圖還要做 3D 計算!? 這到底是什麼鬼 T_T<br>無知的我，再次在叢林裡迷路、跌倒</p>
+<img src="/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2019-04-21-Krenz-Perspective-HW3-1-detailed.png" class="" title="2019&#x2F;04&#x2F;21 Krenz Perspective Homework 3 - 1 - Scene and Rotation - by T.C." alt="2019&#x2F;04&#x2F;21 Krenz Perspective Homework 3 - 1 - Scene and Rotation - by T.C.">
+<img src="/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2019-12-01-Krenz-Perspective-HW4-1.png" class="" title="2019&#x2F;12&#x2F;01 Krenz Perspective Homework 4 - 1 - Distance and Depth - by T.C." alt="2019&#x2F;12&#x2F;01 Krenz Perspective Homework 4 - 1 - Distance and Depth - by T.C.">
+
+<p>到了這個階段，我再次在 K 大的課程裡放棄，而這次是透視與結構……<br>K 大提到的知識點都非常實用且珍貴，我很努力紀在筆記本中<br>但我的雙手，沒有畫線穩定度的雙手，沒有斜率控制能力的雙手，沒有比例控制能力的雙手，加上一附沒有抓形能力的雙眼，根本負荷不了這麼專業的訓練</p>
+<img src="/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2019-06-09-UPPERCUT.png" class="" title="2019&#x2F;06&#x2F;09 UPPERCUT - by T.C." alt="2019&#x2F;06&#x2F;09 UPPERCUT - by T.C.">
+
+<p>這時喚醒我的，是進入美術領域最基礎的能力<br>2019 我初識透視與結構，2020 展開的，是進入美術真正需要的基礎功: 臨摹、比例、斜度與抓形<br>2020/02/11，30 天的抓形挑戰，終於啟動我進入專業領域的開關</p>
+<img src="/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2020-02-11-Shape-Copy-30-Days-Day-1-Kizuna-AI.png" class="">
+<img src="/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2020-02-12-Shape-Copy-30-Days-Day-2-Inori-Yuzuriha.png" class="">
+<img src="/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2020-02-13-Shape-Copy-30-Days-Day-3-Honma-Meiko.png" class="">
+<p>頭頂的光圈這是什麼夭壽鬼縣……</p>
+<img src="/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2020-02-23-Shape-Copy-30-Days-Day-4_8-Shuvi.png" class="">
+<img src="/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2020-03-01-Shape-Copy-30-Days-Day-9_11-Alice-Zuberg.png" class="">
+<img src="/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2020-03-08-Shape-Copy-30-Days-Day-13_14-Yuuki-Asuna.png" class="">
+<img src="/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2020-03-15-Shape-Copy-30-Days-Day-15_17-Shinobu-Kocho.png" class="">
+<img src="/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2020-03-29-Shape-Copy-30-Days-Day-18_20-Kiana-Kaslana.png" class="">
+
+<p>省略中間亂畫的部分…</p>
+<img src="/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2020-04-26-Shape-Copy-30-Days-Day-28-Inori-Yuzuriha.png" class="">
+
+<p>最後嘗試創作一張圖，看看效果</p>
+<img src="/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2020-05-10-Shape-Copy-30-Days-Day-Day-29_30-Anassa.png" class="">
+
+<p>答案是: 毀滅 XDD<br>單看這張圖是失敗的，但其實，我的寫輪眼已在不知不覺中打開<br>還記得那時候，我開始可以看出一些市面上的畫作透視不太對、比例不太對等等<br>這些抓型挑戰看似沒什麼創作作品，卻已打開我進入專業電繪的大門<br>一切還是要感謝 K 大在課程中展示傳統美術抓形切形的技巧，進而提點到我 ^^”</p>
+<p>後來因為購買遊戲設計套課的關係，獲得了一期 2D 電繪的課程</p>
+<img src="/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2020-08-15-Nero.png" class="" title="2020&#x2F;08&#x2F;15 Nero - by T.C." alt="2020&#x2F;08&#x2F;15 Nero - by T.C.">
+<img src="/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2020-09-12-Kocho-Shinobu.png" class="" title="2020&#x2F;09&#x2F;12 Kochō Shinobu - by T.C." alt="2020&#x2F;09&#x2F;12 Kochō Shinobu - by T.C.">
+
+<p>在寫輪眼與抓形、斜度控制的基礎下，我已經有能力負荷快速打形這項工作<br>感覺就像鎖鏈被解開一樣，開始可以快速臨摹老師的其他技巧<br>這套課，是由午零老師指導<br>對我最大的幫助，是開啟我厚塗的大門<br>讓我不再畏懼大膽混色、自由享受用色彩摳形狀的快感</p>
+<img src="/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2020-10-31-Programmer.png" class="" title="2020&#x2F;10&#x2F;31 Programmer - by T.C." alt="2020&#x2F;10&#x2F;31 Programmer - by T.C.">
+<img src="/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2021-05-02-Anime-Shape-Copy.png" class="" title="2021&#x2F;05&#x2F;02 Anime Shape Copy - by T.C." alt="2020&#x2F;09&#x2F;12 Kochō Shinobu - by T.C.">
+
+<p>但可以發現到此為止，我在創作上頂多只能畫單一物品，或是臨摹別人的圖<br>場景也沒辦法畫到很豐富<br>而且這些圖是因為有色彩包庇<br>其實我畫線的能力還是很差，也很難快速抓出「好看」的形狀，對微妙的 CSI 線段掌握度也是 0</p>
+<p>2021 的 3 月，我再次與 K 大相遇<br>這次一樣是基礎透視與結構<br>不同的是，這次完全沒有戰死，甚至每次作業幾乎都一次過關!<br>從第一次修 K 大透視課死亡的地方開始看自己復活、突破的作業清單</p>
+<img src="/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2021-04-21-Krenz-Perspective-L4.png" class="" title="2021&#x2F;04&#x2F;21 Krenz Perspective Homework 4 - Distance and Depth - by T.C." alt="2021&#x2F;04&#x2F;21 Krenz Perspective Homework 4 - Distance and Depth - by T.C.">
+<img src="/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2021-05-02-Krenz-Perspective-L5.png" class="" title="2021&#x2F;05&#x2F;02 Krenz Perspective Homework 5 - Body Shape - The Feet on the Ground - by T.C." alt="2021&#x2F;05&#x2F;02 Krenz Perspective Homework 5 - Body Shape - The Feet on the Ground - by T.C.">
+<img src="/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2021-05-22-Krenz-Perspective-L6.png" class="" title="2021&#x2F;05&#x2F;22 Krenz Perspective Homework 6 - Human Three Views - by T.C." alt="2021&#x2F;05&#x2F;22 Krenz Perspective Homework 6 - Human Three Views - by T.C.">
+
+<p>這期透視課最開心的是，在作業 7 之前我一直不敢徒手畫 CSI 線段<br>來到作業 7 後心想不行，這關必須得過，便強迫自己一次又一次得徒手畫直線<br>很神奇的，作業完成度到一半，魔法也開始生效<br>我對直線的掌握度開始提升，一筆成形，筆直且乾脆，少有顫抖等情形發生，甚至對 C 字形曲線的掌握度也開始進步</p>
+<img src="/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2021-06-02-Krenz-Perspective-L7.png" class="" title="2021&#x2F;06&#x2F;02 Krenz Perspective Homework 7 - Component Rotation and Integration of Human Body
+ - by T.C." alt="2021&#x2F;06&#x2F;02 Krenz Perspective Homework 7 - Component Rotation and Integration of Human Body
+ - by T.C.">
+
+<p>來到結業作業，K 大很貼心地給出創作的建議<br>從主題設定、攝影機角度設定、到尋找參考資料、製圖流程等等，都做了仔細地介紹~<br>我的作業 8，主題是:「清新、單純，打開精靈門，準備出門探索的精靈公主」<br>元素有: 翅膀、羽翼、黃冠、絲綢、蝴蝶、植物、薔薇花、花瓣、螢火蟲、水流、召喚獸……</p>
+<img src="/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2021-06-18-Krenz-Perspective-L8.png" class="" title="2021&#x2F;06&#x2F;18 Krenz Perspective Homework 8 - by T.C." alt="2021&#x2F;06&#x2F;18 Krenz Perspective Homework 8 - by T.C.">
+
+<p>其實以一個非專科的業餘學生來說，我算是很落後的了<br>這幅作品跟其他人擺在一起，就是有落差<br>不過怎麼說呢? 不怕起步晚<br>我有能力同時耐高壓賺取高薪，同時可以用超人的速度精進自己<br>我想信我的雙手與潛力，可以帶我到我理想的那個地方</p>
+<img src="/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/process.gif" class="" title="Making process - by T.C." alt="Making process - by T.C.">
+
+<h1 id="Summary-of-Krenz’s-Perspective-and-Structure-Course"><a href="#Summary-of-Krenz’s-Perspective-and-Structure-Course" class="headerlink" title="Summary of Krenz’s Perspective and Structure Course"></a>Summary of Krenz’s Perspective and Structure Course</h1><p>首先先用一句話概括「透視」這件事 (理工科上身 XD): 透視會發生，是因為空間中「向量軸」與「攝影機平面」的角度關係從「平行」變成「非平行」導致由景深造成的「進大遠小」現象</p>
+<img src="/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/perspective-core-concept-by-tc.jpg" class="" title="Perspective Core Concept - by T.C." alt="Perspective Core Concept - by T.C.">
+
+<p>在這套基礎理論下，要繪製出具備透視的插畫，有幾項計算用的技巧:</p>
+<ul>
+<li>地平線或消失點的收束</li>
+<li>打交叉求中線</li>
+<li>用倍增法往外做擴充</li>
+<li>用 N 字法求對稱點</li>
+<li>用三視圖做物品在空間中的比例與定位</li>
+<li>旋轉</li>
+<li>工業設計精確定點後，再將點連接的曲面計算方式</li>
+<li>16 格自由方塊</li>
+</ul>
+<p>表現技法上有:</p>
+<ul>
+<li>主視覺與攝影機的相對關係，在四象限中的何處?</li>
+<li>用不斷重複出現、形狀相似的物品來營造景深感</li>
+<li>一邊透視壓縮嚴重，一邊和緩，為的是逼迫觀眾去閱讀壓縮和緩的區域。這裡就是我們的展示橫幅</li>
+<li>壓縮嚴重的地方、難以計算的地方、出現長直線的硬區，可以用鳥、樹葉、花瓣、霧氣等元素來施展「破」XD，破除這種難以處裡的地方</li>
+<li>切出近、中、遠景，中間用柵欄、牆或是河流隔開。遠景通常因為壓縮太嚴重，可以幾乎用紙片來理解該區的物品</li>
+</ul>
+<p>其實歸納起來，K 大透視與結構課程的核心，是 16 格自由旋轉方塊<br>一旦 16 格方塊練熟了，我們可以自由研究各種物品在各種角度下，應該怎麼畫<br>甚至用拼貼的方式，組出一幅畫<br>即便是架房間空間、地板透視等等，也都逃不過 16 格自由旋轉方塊<br>在 K 大系統中，16 格自由旋轉方塊，是一切的根基</p>
+<p>了解 16 格方塊基礎後，我最欣賞的是 K 大提出的製圖流程:</p>
+<ol>
+<li>設定主題，如「魔女的工作桌」</li>
+<li>設定元素 (視覺關鍵字)，如書本、骷髏頭、試管、水晶球、符咒、燒杯、藥草</li>
+<li>網路上蒐集可用元素，同時豐富元素庫 (30% 時間)</li>
+<li>找技法參考 (漫畫裡很多)，或看其他畫家如何表現類似主題</li>
+<li>找透視參考 (困難的透視角度，可以到線上 3D 模型網站找參考)</li>
+<li>設定鏡頭</li>
+<li>先不做精確計算，用速寫大致畫一遍畫面</li>
+<li>拉出精確的消失點與地平線</li>
+<li>架出地板</li>
+<li>架出大結構的精準透視</li>
+<li>推出細結構的精準透視</li>
+<li>將硬方塊轉圓角方塊 (選用)</li>
+<li>速寫細化</li>
+</ol>
+<p>以上就是課程相關的知識點與收穫啦~</p>
+<h1 id="Conclusion-and-Plans"><a href="#Conclusion-and-Plans" class="headerlink" title="Conclusion and Plans"></a>Conclusion and Plans</h1><p>在做完結業作業後，收穫最多的是對線段的掌握、對「造型」的啟蒙，還有將旋轉、自由方塊等整合應用的經驗</p>
+<p>修這門課之前，我對線的掌握度極差。沒辦法做出微妙的角度控制，沒辦法畫出軌跡清晰、直截了當的線段、沒辦法輕易地讓線段照著腦中的想法走<br>從作業 7 開始到結業作業 8 強迫自己徒手畫線後，嚴密的線段控制能力已經開始發酵 (歡呼)</p>
+<p>也因為這堂課 K 大指點找參考這件事，開始讓我擺脫只能畫單一物品的限制。藉由觀察不同物品該有的造型後，在腦中重新編譯並於創作中畫出來。這是一個突破的開始。往後的圖會一步一步，慢慢豐富腦中的資料庫。不是藉由別的，而是「找參考」這件事，把各類物品的造型提煉出來收入腦中，並於創作裡揮灑出來</p>
+<p>不過，雖然有了第一次整合應用經驗，感覺這些技巧還沒「內化」到身體裡<br>接下來就是師父領進門，修行在個人的歷程啦</p>
+<p>感謝 K 大，give you a Viva!</p>
+<img src="/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/2021-06-12-Viva.png" class="">
+
+<p>其他自我缺點整理:</p>
+<ol>
+<li>線條缺乏節奏</li>
+<li>造型能力不足</li>
+<li>材質表現差</li>
+<li>插畫中缺乏焦點</li>
+</ol>
+<p>技法收穫:</p>
+<ol>
+<li>大塊留白，中間點綴些許雜點，清楚外框，周圍複雜，也是塑造焦點的一種方式</li>
+<li>什麼地方線都密，會變得沒重點</li>
+</ol>
+<p>未來精進方向:</p>
+<ol>
+<li>結業作業再刷一次，增進造型資料庫與用線方法</li>
+<li>走一遍課程所有的 DLC 作業。在架方塊時，先練一遍目標角度方塊，再自己默寫出來，然後用入作業中 (同時也是在豐富造型資料庫)</li>
+<li>用 16 格方塊算一遍人體的胸、臀、腳、手與頭 (人體造型資料庫)</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://john29917958.github.io/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/" data-id="ckq3ncxzy000b8k7k9y081fbs" class="article-share-link">Share</a>
+      
+        <a href="http://john29917958.github.io/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/art/" rel="tag">art</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2021/05/08/Object-Oriented-Practical-Application/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Object-Oriented Practical Application</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Art/">Art</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Dance/">Dance</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Miscellany/">Miscellany</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Reflection/">Reflection</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Work/">Work</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/art/" rel="tag">art</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dance/" rel="tag">dance</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/design/" rel="tag">design</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/graphic/" rel="tag">graphic</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/" rel="tag">life</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life-reflection/" rel="tag">life, reflection</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life-reflection-work/" rel="tag">life, reflection, work</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/management/" rel="tag">management</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/music/" rel="tag">music</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/programming/" rel="tag">programming</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/programming-management-reflection/" rel="tag">programming, management, reflection</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reflection/" rel="tag">reflection</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/research/" rel="tag">research</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/art/" style="font-size: 20px;">art</a> <a href="/tags/dance/" style="font-size: 15px;">dance</a> <a href="/tags/design/" style="font-size: 17.5px;">design</a> <a href="/tags/graphic/" style="font-size: 17.5px;">graphic</a> <a href="/tags/life/" style="font-size: 15px;">life</a> <a href="/tags/life-reflection/" style="font-size: 15px;">life, reflection</a> <a href="/tags/life-reflection-work/" style="font-size: 10px;">life, reflection, work</a> <a href="/tags/management/" style="font-size: 12.5px;">management</a> <a href="/tags/music/" style="font-size: 10px;">music</a> <a href="/tags/programming/" style="font-size: 17.5px;">programming</a> <a href="/tags/programming-management-reflection/" style="font-size: 10px;">programming, management, reflection</a> <a href="/tags/reflection/" style="font-size: 15px;">reflection</a> <a href="/tags/research/" style="font-size: 10px;">research</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">六月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">五月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">一月 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">十二月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">十一月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">十月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">十二月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a><span class="archive-list-count">7</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/">A Programmer&#39;s View About the Art (Perspective and Structure)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/08/Object-Oriented-Practical-Application/">Object-Oriented Practical Application</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/17/4-Things-to-Know-Before-Entering-the-Software-Industry/">進入程式產業需了解的 4 件事</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/01/Achievements-in-TSMC-and-People-to-Thank-for/">Achievements in TSMC and People to Thank for</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/26/2020-Review/">2020 Review</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 汪子超<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'john29917958-github';
+  
+  var disqus_url = 'http://john29917958.github.io/2021/06/19/A-Programmer-s-View-About-the-Art-Perspective-and-Structure/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+  </div>
+</body>
+</html>
