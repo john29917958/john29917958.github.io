@@ -204,7 +204,7 @@ Krenz 的理念與我不謀而合，不一定與你相同
 但這時，K 大的透視課開課啦! 不信邪的我，再一次踏入血腥的叢林...
 
 {% asset_img 2019-03-03-Krenz-Perspective-HW1.png "2019/03/03 Krenz Perspective Homework 1 - Angles - by T.C.'2019/03/03 Krenz Perspective Homework 1 - Angles - by T.C.'" %}
-{% asset_img 2019-03-31-Krenz-Perspective-HW2.png "2019/03/31 Krenz Perspective Homework 2 - Interio Scene and Proportion Calculation - by T.C.'Interio Scene and Proportion Calculation - by T.C.'" %}
+{% asset_img 2019-03-31-Krenz-Perspective-HW2.png "2019/03/31 Krenz Perspective Homework 2 - Interio Scene and Proportion Calculation - by T.C.'2019/03/31 Krenz Perspective Homework 2 - Interio Scene and Proportion Calculation - by T.C.'" %}
 
 我的媽呀! 原來畫圖還要做 3D 計算!? 這到底是什麼鬼 T_T
 無知的我，再次在叢林裡迷路、跌倒
@@ -226,15 +226,13 @@ K 大在影片中講到的傳統美術切形、線段斜率掌握、比例控制
 {% asset_img 2020-02-11-Shape-Copy-30-Days-Day-1-Kizuna-AI.png %}
 {% asset_img 2020-02-12-Shape-Copy-30-Days-Day-2-Inori-Yuzuriha.png %}
 {% asset_img 2020-02-13-Shape-Copy-30-Days-Day-3-Honma-Meiko.png %}
-下圖頭頂的光圈這是什麼夭壽鬼線......
+(下圖頭頂的光圈這是什麼夭壽鬼線......)
 {% asset_img 2020-02-23-Shape-Copy-30-Days-Day-4_8-Shuvi.png %}
 {% asset_img 2020-03-01-Shape-Copy-30-Days-Day-9_11-Alice-Zuberg.png %}
 {% asset_img 2020-03-08-Shape-Copy-30-Days-Day-13_14-Yuuki-Asuna.png %}
 {% asset_img 2020-03-15-Shape-Copy-30-Days-Day-15_17-Shinobu-Kocho.png %}
 {% asset_img 2020-03-29-Shape-Copy-30-Days-Day-18_20-Kiana-Kaslana.png %}
-
-省略中間亂畫的部分...
-
+(省略中間亂畫的部分...)
 {% asset_img 2020-04-26-Shape-Copy-30-Days-Day-28-Inori-Yuzuriha.png %}
 
 最後嘗試創作一張圖，看看效果
@@ -259,7 +257,7 @@ K 大在影片中講到的傳統美術切形、線段斜率掌握、比例控制
 讓我不再畏懼大膽混色、自由享受用色彩摳形狀的快感
 
 {% asset_img 2020-10-31-Programmer.png "2020/10/31 Programmer - by T.C.'2020/10/31 Programmer - by T.C.'" %}
-{% asset_img 2021-05-02-Anime-Shape-Copy.png "2021/05/02 Anime Shape Copy - by T.C.'2020/09/12 Kochō Shinobu - by T.C.'" %}
+{% asset_img 2021-05-02-Anime-Shape-Copy.png "2021/05/02 Anime Shape Copy - by T.C.'2021/05/02 Anime Shape Copy - by T.C.'" %}
 
 但可以發現到此為止，我在創作上頂多只能畫單一物品，或是臨摹別人的圖，比例也常不小心失衡，或是畫出很奇怪的結構
 場景也沒辦法畫到很豐富
@@ -293,7 +291,7 @@ K 大在影片中講到的傳統美術切形、線段斜率掌握、比例控制
 {% asset_img 2021-06-18-Krenz-Perspective-L8.png "2021/06/18 Krenz Perspective Homework 8 - by T.C.'2021/06/18 Krenz Perspective Homework 8 - by T.C.'" %}
 
 其實以一個非專科的業餘學生來說，我算是很落後的了
-這幅作品跟其他人擺在一起，就是有落差
+這幅作品跟其他專科的人擺在一起，就是有落差
 不過怎麼說呢? 不怕起步晚
 我有能力同時耐高壓賺取不錯的收入，同時可以用超人的速度精進自己
 我看過、聽過許多繪畫人說，要想辦法挑一個養得活你的繪畫方向
@@ -303,4 +301,5 @@ K 大在影片中講到的傳統美術切形、線段斜率掌握、比例控制
 
 {% asset_img process.gif "Making process - by T.C.'Making process - by T.C.'" %}
 
-我想信我的雙手與潛力，可以帶我到我理想的那個地方
+我相信我的雙手與潛力，可以帶我到我理想的那個地方
+你呢? 你的熱情、你的理想，在哪裡?
