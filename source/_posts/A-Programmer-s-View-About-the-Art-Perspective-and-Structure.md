@@ -317,7 +317,7 @@ K 大在影片中講到的傳統美術切形、線段斜率掌握、比例控制
 我的作業 8，主題是:「清新、單純，打開精靈門，準備出門探索的精靈公主」
 元素有: 翅膀、絲綢、蝴蝶、植物、薔薇花 (結果畫成別的花...)、花瓣、螢火蟲、水流、召喚獸......
 
-{% asset_img 2021-06-18-Krenz-Perspective-L8.png "2021/06/18 Krenz Perspective Homework 8 - by T.C.'2021/06/18 Krenz Perspective Homework 8 - by T.C.'" %}
+{% asset_img 2021-06-18-Krenz-Perspective-L8.jpg "2021/06/18 Krenz Perspective Homework 8 - by T.C.'2021/06/18 Krenz Perspective Homework 8 - by T.C.'" %}
 
 其實以一個非專科的業餘學生來說，我算是很落後的了
 這幅作品跟其他專科的人擺在一起，就是有落差
