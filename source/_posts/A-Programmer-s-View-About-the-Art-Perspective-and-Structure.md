@@ -142,6 +142,15 @@ Krenz 的理念與我不謀而合，不一定與你相同
 對我來說可以寫出這些成功經驗，就是可行性的證明
 願你可以找到適合你的良師與方法，在你熱愛的領域大放光彩!
 
+Here comes Krenz XD
+![Commission (from Krenz's ArtStation)](https://cdnb.artstation.com/p/assets/images/images/004/986/523/large/krenz-cushart-villa7.jpg?1487682604)
+![Castle (from Krenz's ArtStation)](https://cdnb.artstation.com/p/assets/images/images/009/327/073/large/krenz-cushart-castle2.jpg?1518367323)
+![解神者 (from Krenz's ArtStation)](https://cdnb.artstation.com/p/assets/images/images/024/375/407/large/krenz-cushart-9.jpg?1582207121)
+
+{% youtube kbKqIJcIUCw %}
+
+[Krenz's Artwork 課程連結](https://www.krenzartwork.com/)
+
 # My Conclusions and Plans
 在自己做完結業作業後，收穫最多的是對線段的掌握、對「造型」的啟蒙，還有將旋轉、自由方塊等整合到兩點透視場景的應用經驗
 
