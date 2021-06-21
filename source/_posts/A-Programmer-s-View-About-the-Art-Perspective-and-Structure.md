@@ -31,7 +31,7 @@ category: Art
 裡面不僅有透視的知識點，還有如何加速學習的心法呢~
 
 首先身為一位理工人，而且又是技術精密的軟體工程師，當然要很中二的先用一句話來概括「透視」這件事 XD:
-> 透視會發生，是因為空間中「向量軸」與「攝影機平面」的角度關係從「平行」變成「非平行」導致由景深造成的「進大遠小」現象
+> 透視會發生，是因為空間中「向量軸」與「攝影機平面」的角度關係從「平行」變成「非平行」導致由景深造成的「近大遠小」現象
 >> T.C. (Tzu-Chao Wang) - 2021/06/19
 
 {% asset_img perspective-core-concept-by-tc.jpg "Perspective Core Concept - by T.C.'Perspective Core Concept - by T.C.'" %}
