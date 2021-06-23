@@ -30,7 +30,7 @@ category: Art
 這邊就來談談 Krenz (簡稱 K 大) 老師的課程，有什麼魔力吧!
 裡面不僅有透視知識點，還包含高效學習心法呢~
 
-首先身為體工人，還是要~~很中二~~很理性地探討一下透視的真因
+首先身為理工人，還是要~~很中二~~很理性地探討一下透視的真因
 {% asset_img the-real-cause-of-perspective.jpg "The real cause of perspective - by T.C.'The real cause of perspective - by T.C.'" %}
 
 人的眼睛就是個全自動對焦精密相機，類似凸透鏡原理，讓影像在視網膜上成像
