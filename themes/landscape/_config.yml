@@ -1,0 +1,27 @@
+# Header
+menu:
+  Home: /
+  Archives: /archives
+  About: /about
+rss: /atom.xml
+
+# Content
+excerpt_link: Read More
+fancybox: true
+
+# Sidebar
+sidebar: right
+widgets:
+- category
+- tag
+- tagcloud
+- archive
+- recent_posts
+
+# Miscellaneous
+google_analytics: UA-80121293-1
+favicon: /favicon.ico
+twitter: john29917958
+google_plus: +汪子超
+fb_admins: 100002225898735
+fb_app_id: 284882215
