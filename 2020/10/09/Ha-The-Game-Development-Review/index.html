@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Ha - The Game Development Review | TC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Have you ever dreamed of building a product yourself and selling it to the world? Here’s my first experience of publishing a voice control action game to Google Play and App Store, including a huge mi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ha - The Game Development Review">
+<meta property="og:url" content="http://john29917958.github.io/2020/10/09/Ha-The-Game-Development-Review/index.html">
+<meta property="og:site_name" content="TC">
+<meta property="og:description" content="Have you ever dreamed of building a product yourself and selling it to the world? Here’s my first experience of publishing a voice control action game to Google Play and App Store, including a huge mi">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="http://john29917958.github.io/2020/10/09/Ha-The-Game-Development-Review/banner.png">
+<meta property="og:image" content="http://john29917958.github.io/2020/10/09/Ha-The-Game-Development-Review/component-code.png">
+<meta property="og:image" content="http://john29917958.github.io/2020/10/09/Ha-The-Game-Development-Review/microphone-request-message-setting.png">
+<meta property="og:image" content="http://john29917958.github.io/2020/10/09/Ha-The-Game-Development-Review/switch-to-expert-mode.jpg">
+<meta property="og:image" content="http://john29917958.github.io/2020/10/09/Ha-The-Game-Development-Review/app-promotion-ad.jpg">
+<meta property="og:image" content="http://john29917958.github.io/2020/10/09/Ha-The-Game-Development-Review/advertisement-1.jpg">
+<meta property="og:image" content="http://john29917958.github.io/2020/10/09/Ha-The-Game-Development-Review/advertisement-click-and-download-android.jpg">
+<meta property="og:image" content="http://john29917958.github.io/2020/10/09/Ha-The-Game-Development-Review/actual-download-count-android.jpg">
+<meta property="og:image" content="http://john29917958.github.io/2020/10/09/Ha-The-Game-Development-Review/advertisement-click-and-download-ios.jpg">
+<meta property="og:image" content="http://john29917958.github.io/2020/10/09/Ha-The-Game-Development-Review/actual-download-count-ios.jpg">
+<meta property="og:image" content="http://john29917958.github.io/2020/10/09/Ha-The-Game-Development-Review/ratio-ios.jpg">
+<meta property="og:image" content="http://john29917958.github.io/2020/10/09/Ha-The-Game-Development-Review/ratio-android.jpg">
+<meta property="og:image" content="http://john29917958.github.io/2020/10/09/Ha-The-Game-Development-Review/old-game-project-character-three-view.png">
+<meta property="og:image" content="http://john29917958.github.io/2020/10/09/Ha-The-Game-Development-Review/old-game-animation-design.png">
+<meta property="article:published_time" content="2020-10-09T10:06:20.000Z">
+<meta property="article:modified_time" content="2021-09-12T03:37:51.734Z">
+<meta property="article:author" content="汪子超">
+<meta property="article:tag" content="programming">
+<meta property="article:tag" content="management">
+<meta property="article:tag" content="reflection">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://john29917958.github.io/2020/10/09/Ha-The-Game-Development-Review/banner.png">
+<meta name="twitter:creator" content="@john29917958">
+<link rel="publisher" href="+%E6%B1%AA%E5%AD%90%E8%B6%85">
+<meta property="fb:admins" content="100002225898735">
+<meta property="fb:app_id" content="284882215">
+  
+    <link rel="alternative" href="/atom.xml" title="TC" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-80121293-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  <script data-ad-client="ca-pub-8315401057994110" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">TC</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://john29917958.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Ha-The-Game-Development-Review" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/09/Ha-The-Game-Development-Review/" class="article-date">
+  <time datetime="2020-10-09T10:06:20.000Z" itemprop="datePublished">2020-10-09</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Programming/">Programming</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      
+        <header class="article-header">
+      
+      
+  
+    <h1 class="article-title" itemprop="name">
+      Ha - The Game Development Review
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Have you ever dreamed of building a product yourself and selling it to the world? Here’s my first experience of publishing a voice control action game to <a target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.TzuChaoWang.Ha">Google Play</a> and <a target="_blank" rel="noopener" href="https://apps.apple.com/tw/app/ha/id1534485753">App Store</a>, including a huge mistake I’ve made, did some adjustments, then succeeded with 131 download count in the end.<br>As an office worker, I’ve successfully put my first step in. Now, it’s your turn. Hustling after work can be extremely tough. However, if you never start, you’re the same person after one year, five years, even ten years. <strong>Never too late! Action, now!</strong> To the “better you” in the future, the better you that you deserve!</p>
+<img src="/2020/10/09/Ha-The-Game-Development-Review/banner.png" class="" title="Ha - Lead me with your voice" alt="Ha - Lead me with your voice">
+<span id="more"></span>
+<p>Outline:</p>
+<ol>
+<li><a href="#Set-Business-Target">Set Business Target</a></li>
+<li><a href="#Analizes-Capability">Analizes Capability</a></li>
+<li><a href="#Define-Milestones">Define Milestones</a></li>
+<li><a href="#Implementation-Process-in-Detail">Implementation Process in Detail</a></li>
+<li><a href="#Tragedies-in-Production-Environment-Test">Tragedies in Production Environment Test</a></li>
+<li><a href="#Advertisement">Advertisement</a></li>
+<li><a href="#Reflection-and-Review">Reflection and Review</a></li>
+<li><a href="#Future-Work-and-Expectation">Future Work and Expectation</a></li>
+<li><a href="#To-Readers">To Readers</a></li>
+<li><a href="#Capital">Capital</a></li>
+</ol>
+<p>Others:</p>
+<ul>
+<li><a href="#Game-Making-Records-and-Demonstrations">Game Making Records and Demonstrations</a></li>
+<li><a href="#Records-of-1st-Failed-Project">Records of 1st. Failed Project</a></li>
+</ul>
+<h1 id="Set-Business-Target"><a href="#Set-Business-Target" class="headerlink" title="Set Business Target"></a>Set Business Target</h1><blockquote>
+<p>Goes niche market when lacking of resources</p>
+</blockquote>
+<p>When it comes to business, multiple factors must be taken into account: Our time, our resources, our skill set, our competitors… Resource and business target are the both ends of the scale. We never want to put tremendous effort into small project, or set a BIG goal that we are yet unable to afford. For me, I ran into a disaster of the second situation.<br>At first, without any game making experience, me, an office worker, as a young fellow, started as a single-person-team, planned to create a 2D scrolling mobile game with complex fighting animation, flexible, rich and SIMPLE touch control, complete story line, and beautiful character designs. I even planned to include voice control there! Do you see any problem? Just ask these questions to the “young fellow”:</p>
+<ol>
+<li>How can a single-person-team competes against formal companies with five, ten, even hundreds of professional employees from different fields in speed and quality?</li>
+<li>What value your product delivers that makes you rising from the huge general market place?</li>
+</ol>
+<p>The result was: It took me months to build an incomplete prototype. And then, my entire idea was realized by a mature company.</p>
+<p>I failed. It hurt. Fortunately, only my resource was wasted. Been stopped for a long time. Later one day, in a playground, someone reminded me of the idea of voice control game again.</p>
+<p>With the terrible experience, I won’t challenge the general market again. After some research done, the target was set to “voice control action game” that’s rarely seen on mobile market. With mobile phones, I can take advantage of the built-in microphone directly!</p>
+<h1 id="Analizes-Capability"><a href="#Analizes-Capability" class="headerlink" title="Analizes Capability"></a>Analizes Capability</h1><blockquote>
+<p>Strength v.s. weakness, leverages the scale</p>
+</blockquote>
+<p>Schedule significantly affected by capability and resource. Here’s the case study of mine abilities:</p>
+<ul>
+<li>Good object-oriented programming concept and C# coding skill</li>
+<li>Has Live 2D modeling and animating experience</li>
+<li>Terrible digital art ability</li>
+<li><strong>Zero game making experience</strong> (I think…)</li>
+<li>Zero screenwriting ability</li>
+<li>Never forget I’m an office worker without much time!</li>
+</ul>
+<p>So the technical scopes were set to:</p>
+<ul>
+<li>Voice control: Requires programming related skills - my strength. The core technique and most challenge part</li>
+<li>Live 2D as modeling and animating technique: My strength. I have Live 2D experience, and it’s well-integrated with Unity</li>
+<li>Silhouette art style: 2D digital art ability is required for character design. That is, where my weakness exists. So I made art style simple</li>
+<li>No online battle: For lack of time resource</li>
+<li>No database and account system: For lack of time resource</li>
+<li>One-time gameplay: For lack of time resource</li>
+</ul>
+<h1 id="Define-Milestones"><a href="#Define-Milestones" class="headerlink" title="Define Milestones"></a>Define Milestones</h1><blockquote>
+<p>Alwyas preserves much time for integration and deployment</p>
+</blockquote>
+<p>Programming is a high-level and difficult skill in market place. Softwear engineering process changed from time to time. We have high communication effort of abstract code concepts. Accidents can always happen, obstacles can always come out. So that’s why we programmers take DESIGN seriously, testing seriously, and small iteration and integration seriously. And I believe that’s why in general cases, programmers are way more expensive than other job positions. Without doubte, schedule estimation of such projects are difficult as well. Here’s mine way of figuring out the milestones of entire project:<br>First, break down the tasks in very high-level point of view:</p>
+<ol>
+<li>Core technical research and minimum prototype implementation: One month. Prototype and design level code are always fast</li>
+<li>Character implementation loop of three monsters and two bosses: Two months. Lots of major implementation tasks. Integrates and tests each character one after another once small piece of function completed</li>
+<li>Production environment test: Two months and more. Longest phase. The terrible “accidents” always happen when it comes to production environment test</li>
+</ol>
+<ul>
+<li>Project was started on 2020/05/14</li>
+<li>Formal release date was set on 2020/10/24 (five months in total)</li>
+<li>App was ready for publishing on 2020/10/17</li>
+</ul>
+<p>The very number-one task is the break-through of critical technical research since we don’t want entire project fails after bunch of artworks and function implementations done, just because the most critical, most difficult core function cannot be realized. It’s like squandering, wasting bunch of money. Never do that.</p>
+<h1 id="Implementation-Process-in-Detail"><a href="#Implementation-Process-in-Detail" class="headerlink" title="Implementation Process in Detail"></a>Implementation Process in Detail</h1><p>After high-level milestones are set, here’s the detail implementation flow.</p>
+<h2 id="Minimum-Valuable-Prototype"><a href="#Minimum-Valuable-Prototype" class="headerlink" title="Minimum Valuable Prototype"></a>Minimum Valuable Prototype</h2><blockquote>
+<p>Find bottleneck first and focus!</p>
+</blockquote>
+<p>The most important concept here is: Do not waste any resource! Everything only works after the bottleneck is eliminated. We should keep the entire project as simple as possible and only focuses on the most critical technique research. Finds bottleneck, breaks through, proves it works, then starts the major implementation process.</p>
+<p>Work flow step by step:</p>
+<ol>
+<li>Researches voice volume and pitch recognition technique (bottleneck break-through)</li>
+<li>Implements voice recognition function with very simple UI (keeps project as simple as possible)</li>
+<li>Encapsulates voice recognition functions into a class (minimum workable function module)</li>
+<li>Designs main character 2D art (then starts major implementation flow)</li>
+<li>Designs skill set of main character</li>
+<li>Paints and produces every parts of the main character with Clip Studio Paint (head, hair, eyes, arms, legs, etc)</li>
+<li>Models the main character with Live 2D</li>
+<li>Creates character animations with Live 2D</li>
+<li>Integrates the Live 2D model with Unity</li>
+<li>Creates animation flow and implements the entity C# class</li>
+<li>Does integration test in Unity, making sure the idea of voice control can be realized</li>
+<li>Creates a simple monster</li>
+<li>Minimum valuable prototype completed</li>
+</ol>
+<p>Technical research with “very very very” simple GUI</p>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/ISUFTAOT7Sk" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+
+<p>Minimum valuable prototype</p>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/tMrjWXiKsAU" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+
+<h2 id="Character-Implementation-Loop"><a href="#Character-Implementation-Loop" class="headerlink" title="Character Implementation Loop"></a>Character Implementation Loop</h2><blockquote>
+<p>Continuous integration, small iteration</p>
+</blockquote>
+<p>Before we start the major implementation process, we’d better divide codes or functions into individual component units:</p>
+<ol>
+<li>Good for task dispatching and assigning</li>
+<li>Better quality, less bug, easy for composition and testing</li>
+<li>Fast integration, fast for result review</li>
+</ol>
+<img src="/2020/10/09/Ha-The-Game-Development-Review/component-code.png" class="">
+
+<p>But why? Can’t I just keep writing all the functions and hit Play button at the end of release phase? We never what to do that. Programming is very abstract and unintuitive task. Project complexity and implementation effort can be exponential rising as it grows bigger.<br>When project features are divided into components, like USBs, we can regards milestones, assignees, or game objects as USB slots. Just plugs the USB into any of the slots in need. Component concept can provide flexibility for rapid project task adjustment.</p>
+<p>In addition, component concept encapsulates related functions together without exposing unnecessary information out. When we’re developing, it’s easy for locating target code; While debugging, it’s easy for locating where potential error is. Also, with encapsulation, the data, that is, properties are hidden from outside the module. Data should be hard to be modified by whom not supposed to do that, thus controls the complexity of project.</p>
+<p>With pluggable components, it means features can be integrated very fast. So small piece of complete function, small piece of implementation, and integrates, tests it iteratively to ensure entire product working all the time. If we do have customers, it’s also good for iterative function demonstration, good for wining customers’ trust.</p>
+<p>Steps of each iteration loop goes here:</p>
+<ol>
+<li>Designs 2D character art</li>
+<li>Designs skill set of character</li>
+<li>Paints and produces every parts of character with Clip Studio Paint</li>
+<li>Models character with Live 2D</li>
+<li>Creates character animations with Live 2D</li>
+<li>Integrates Live 2D model with Unity</li>
+<li>Creates animation flow and implements the entity C# class</li>
+<li>Does integration test in Unity</li>
+<li>Loops 5 ~ 8 untill all skills of character completed, then restarts from 1. for another character implementation process</li>
+</ol>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/wDWf70g8BTk" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+
+<h1 id="Tragedies-in-Production-Environment-Test"><a href="#Tragedies-in-Production-Environment-Test" class="headerlink" title="Tragedies in Production Environment Test"></a>Tragedies in Production Environment Test</h1><blockquote>
+<p>Accidents always happen. Takes second best solution confidently</p>
+</blockquote>
+<p>First here’s final result with background and menu system</p>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/0HG2p7xPahU" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+
+<p>Let’s skip the background implementation flow and focus on the production environment related problems. The nightmares I’ve faced with was the microphone privilege request in Android + IOS, latency delay in iPhone, and the “god-like” accident - pitch recognition accuracy.</p>
+<h2 id="Microphone-Privilege-Request"><a href="#Microphone-Privilege-Request" class="headerlink" title="Microphone Privilege Request"></a>Microphone Privilege Request</h2><p>Unity does great job at cross platform code generation. However, privilege request still differs on different platform. First of all, I tested Unity official solution of checking if the App is granted with microphone privilege:</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (Application.HasUserAuthorization(UserAuthorization.Microphone))</span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">// Microphone granted.</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">	Permission.RequestUserPermission(Permission.Microphone);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>But… beyond my imagination, the <code>Application.HasUserAuthorization(UserAuthorization.Microphone)</code> always gave me <code>true</code>! Been taking me lots of time building and testing in both operation systems… The final solution goes as follows for both IOS and Android:</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Requests for microphone privilege.</span></span><br><span class="line"><span class="keyword">if</span> (Application.platform == RuntimePlatform.Android)</span><br><span class="line">&#123;</span><br><span class="line">	Permission.RequestUserPermission(Permission.Microphone);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">// Directly starts microphone once for iPhone players. IOS would prompt microphone privilege request dialog directly.</span></span><br><span class="line">	<span class="built_in">int</span> sampleRate = AudioSettings.outputSampleRate;</span><br><span class="line">	Microphone.Start(<span class="literal">null</span>, <span class="literal">true</span>, <span class="number">10</span>, sampleRate);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span> (Microphone.GetPosition(<span class="literal">null</span>) &lt;= <span class="number">0</span>) &#123; &#125;</span><br><span class="line"></span><br><span class="line">	Microphone.End(<span class="literal">null</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>In Android, invokes <code>Permission.RequestUserPermission(Permission.Microphone);</code> so Android do prompt microphone request dialog to player, then uses <code>Microphone.Start()</code> to record player voice; While in IOS, just invokes <code>Microphone.Start()</code>, IOS do prompts the request dialog directly.<br>For both methods, privilege request dialog only prompts when player first opens the App. Once player rejects the request, pop-out dialog will never appear again. And last, remember to provide request message to player</p>
+<img src="/2020/10/09/Ha-The-Game-Development-Review/microphone-request-message-setting.png" class="">
+
+<h2 id="Latency-Delay"><a href="#Latency-Delay" class="headerlink" title="Latency Delay"></a>Latency Delay</h2><p>“Ha” is a real-time voice control action game, so instant playback of what microphone has recorded is a must-have feature. I don’t know why the playback speed always sync on PC and Android. But while testing in IOS, a BIG LAG exists between the time player says “Ha” to phone, and the character actually fires or jumps. I first checks the FPS and make sure it’s not game performance related issue. Then I searched through the internet, tried everything I counld, kept building and testing in Android and IOS… No luck. Lots of time spent, still no luck. Finally found a post <a target="_blank" rel="noopener" href="https://programmer.help/blogs/unity-sound-and-recording-and-real-time-microphone-play.html">here</a>, the key point is to sync the playback position with the microphone recording position like this, so we can collect real-time voice information from player:</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (Application.platform == RuntimePlatform.IPhonePlayer)</span><br><span class="line">&#123;</span><br><span class="line">	_audio.timeSamples = Microphone.GetPosition(<span class="literal">null</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>One lesson learned was that, when the technique we use is unpopular, be careful about the lack of online information.</p>
+<h2 id="Pitch-Recognition-Accuracy"><a href="#Pitch-Recognition-Accuracy" class="headerlink" title="Pitch Recognition Accuracy"></a>Pitch Recognition Accuracy</h2><p>Pitch recognition accuracy problem happened when I delivered the production App to specific player’s phone. No matter how the player said “Ha” in high or low pitch voice, the recognition could always go wrong, jumping to extraodinary high frequency around 600 Hz, while the avarage pitch of human voice is around 80 to 1000 Hz.</p>
+<p>First, I used an <a target="_blank" rel="noopener" href="https://www.szynalski.com/tone-generator/">online tone generation service</a> to test if I did anything wrong. Amazingly, the result was very beautiful and accurate. My system counld almost 100% recognize the pitch value sent out by the service.</p>
+<p>The problem was that when we’re talking, voice is sent out with various frequencies in which contains it’s own enery level at the same time. Thing can go wrong if all frequency energies are close, that is, no “solo frequency” is given. My system was almost 100% accurate because the ton generation service only sent out “single” frequency voice. At first, the game was designed to use high pitch voice for attack, low pitch voice for jump. Now, what would you do if the publish date is close?<br>Just abandon the pitch recognition. One friend reminded me of touch control, the plan B I’ve thought of in very early stage of design time but totally forgot it afterward. The input control was changed from “high pitch voice for attack, low pitch voice for jump” to “voice for attack, touch input for jump”. Did I resolve the problem? Absolutely no, I took another path, avoided the problem, and preserved the “voice control” characteristic of the game at the same time.<br>Sometimes thing just go wrong. In real situation, never afraid of letting go, pick the second best solution. Alwyas knowing which the most important goal is. And the last words: Pushes yourself one step further when you feel desperate, there’s always another way. Sounds easy, hard to implement and keep in mind.</p>
+<p>Implementation process goes here:</p>
+<ol>
+<li>Background design</li>
+<li>Paints background objects (stones, flying buildings, fog, snow)</li>
+<li>Uses particle system to generate gravels. Writes a background object generator class for random generation of other background elements</li>
+<li>Implements menu system</li>
+<li>Makes publishing related resources like banner, trailer video, in different mobile sizes, in both Chinese and English. Fills game title, subtitle, and all other information that Google Play Console, App Store Connect requires </li>
+<li>Integration test on Android and IOS</li>
+<li>Encounters problems described above</li>
+<li>Resolves them one after another</li>
+<li>Publish for internal test</li>
+<li>Publish for alpha test</li>
+<li>Publish for beta test</li>
+<li>Formal release</li>
+</ol>
+<p>Official trailer</p>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/o4nCgV5WUHA" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+
+<h1 id="Advertisement"><a href="#Advertisement" class="headerlink" title="Advertisement"></a>Advertisement</h1><p>I’m not an advertisement specialty so I’ll keep it simple and clear:</p>
+<ol>
+<li>Choose Google Display Network, that is, App Promotion solution if you use Google AD</li>
+<li>Promots Android for more impressions and download count; promots IOS for revenue</li>
+</ol>
+<p>At first, I don’t even know Google Display Network solution exists XD. I uploaded the advertisement in text and picture mode, redirected it to a simple page with both Google Play and App Store links. What I didn’t know was, customers should be pissed off and just leaved the page. They never want to click that god damn link by themselves!!! Later I enhanced the page, wrote some JavaScript to detect visiters’ platform, then redirect the page to Google Play or AppStore automatically, so there’s no need for visiters to “click” the links manually.<br>Still not work…<br>Again, when you think there’s no way out, push yourself one step further. For me I just thought of the Youtube channel advertisement, then searched how it can be done… All I needed was to <a target="_blank" rel="noopener" href="https://support.google.com/google-ads/answer/9520605?hl=en">switch from Smart Mode to Expert Mode</a>!!!</p>
+<img src="/2020/10/09/Ha-The-Game-Development-Review/switch-to-expert-mode.jpg" class="">
+<p>THEN I could create App Promotion advertisement…</p>
+<img src="/2020/10/09/Ha-The-Game-Development-Review/app-promotion-ad.jpg" class="">
+<p>After App Promotion advertisement created, guess what? BOOM!! The impressions, clicks, and actual download count greatly improved with less time and money! Here’re the actual analysis charts:</p>
+<p>Inefficient text and picture advertisement: No actual download count influences, wasted lots of money…</p>
+<img src="/2020/10/09/Ha-The-Game-Development-Review/advertisement-1.jpg" class="" title="Inefficient advertisement in text and picture" alt="Inefficient advertisement in text and picture">
+
+<p>App Promotion advertisement for Android (from 11/04), improved Android download count immediately:<br>Impression and click count</p>
+<img src="/2020/10/09/Ha-The-Game-Development-Review/advertisement-click-and-download-android.jpg" class="" title="App promotion mode - Android click count" alt="App promotion mode - Android click count">
+<p>Actual download count</p>
+<img src="/2020/10/09/Ha-The-Game-Development-Review/actual-download-count-android.jpg" class="" title="Android download count" alt="Android download count">
+
+<p>App Promotion advertisement for IOS (from 11/04), improved IOS download count immediately:<br>Impression and click count</p>
+<img src="/2020/10/09/Ha-The-Game-Development-Review/advertisement-click-and-download-ios.jpg" class="" title="App promotion mode - IOS click count" alt="App promotion mode - IOS click count">
+<p>Actual download count</p>
+<img src="/2020/10/09/Ha-The-Game-Development-Review/actual-download-count-ios.jpg" class="" title="IOS downlaod count" alt="IOS downlaod count">
+
+<p>Extra interesting discovery: IOS users are generally richer, more tablet usage than Android XD</p>
+<p>IOS distribution:</p>
+<img src="/2020/10/09/Ha-The-Game-Development-Review/ratio-ios.jpg" class="" title="IOS device distribution" alt="IOS device distribution">
+
+<p>Android distribution:</p>
+<img src="/2020/10/09/Ha-The-Game-Development-Review/ratio-android.jpg" class="" title="Android device distribution" alt="Android device distribution">
+
+<h1 id="Reflection-and-Review"><a href="#Reflection-and-Review" class="headerlink" title="Reflection and Review"></a>Reflection and Review</h1><p>Mistakes and improvements:</p>
+<ol>
+<li>To keep the scale balanced between resource and business goal. Maximizes the quality of game under the capability cap of team</li>
+<li>To put phone integration test into iteration loop early on so problems can be discovered in early stage</li>
+<li>To never reveal developing process to users. They don’t know what you’re doing in most cases. Only reveal it to experts or those who can provide accurate advices</li>
+<li>To make less inheritance. Encapsulates motion, action, animation control related codes into something like controller class and attach both entity class (data) and controller class (character performans) to Unity game object</li>
+</ol>
+<p>Things that I’m proud of:</p>
+<ol>
+<li>Management: Accurate schedule estimation, iterative integration in real practice</li>
+<li>Skill: Integrates Live 2D with Unity successfully. Combines my skills of digital art and programming together</li>
+<li>I don’t know it’s good or not. I completed entire game making process by my own. Now I have basic understanding of entire game making process at client side</li>
+</ol>
+<h1 id="Future-Work-and-Expectation"><a href="#Future-Work-and-Expectation" class="headerlink" title="Future Work and Expectation"></a>Future Work and Expectation</h1><p>Game product related:</p>
+<ol>
+<li>Founds or joins a team</li>
+<li>Game art improvement</li>
+<li>New game stage</li>
+<li>New player character</li>
+<li>Implements online interaction, account system, and cash flow abilities</li>
+</ol>
+<p>Self-learning:</p>
+<ol>
+<li>Learns Unity shader editor, HDR and universal pipeline techniques</li>
+<li>Learns Unity cross platform responsive UI techniques, mobile optimization techniques</li>
+<li>Improves my foundation of digital art including perspective, structure, coloring, value, shading, and body kinetic</li>
+<li>Optional: Learns voice volumn and pitch related knowledge. Figures out why latency issue only happens on IOS. Last, learn natural language processing</li>
+</ol>
+<h1 id="To-Readers"><a href="#To-Readers" class="headerlink" title="To Readers"></a>To Readers</h1><p>Finally, as an office worker, I’ve put my first step in and successfully published a game application to Google Play and App Store. Now, it’s your turn. Hustling after work can be extremely tough. I’ve experienced way more difficulties than the article documents. I’d even thought of giving up such voice recognition project. However, if you never start, you’re the same person after one year, five years, even ten years. <strong>Never too late! Action, now!</strong> To the “better you” in the future, the better you that you deserve!</p>
+<p>Ha is not a great App. It’s the beginning to my success.<br>Time for your to start, to YOUR SUCCESS.</p>
+<p>The end - Tzu-Chao, Wang (TC), 2020/10/09.</p>
+<h1 id="Capital"><a href="#Capital" class="headerlink" title="Capital"></a>Capital</h1><p>Here’re complete tools I used for creating such game application. If you want to start your project, here’s the REAL summary from a single-person-team, no salary. Just for your reference.</p>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Purpose</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://www.cjscope.com.tw/cht/product_detail.php?serial=151">NoteBook QX-350 GX from CJSCOPE</a></td>
+<td>Personal Notebook.</td>
+<td>$34,900 (one-time buyout with discount -$2,000 from PChome).</td>
+</tr>
+<tr>
+<td>iPhone 8</td>
+<td>For game integration test. Personal mobile phone.</td>
+<td>$25,500 (one-time buyout).</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.wacom.com/en-us/products/pen-tablets/wacom-intuos-pro">Wacom Intous Pro</a></td>
+<td>Graphic tablet for digital painting.</td>
+<td>$12,900 (one-time buyout with discount -$1290 from PChome).</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.adobe.com/creativecloud.html">Adobe Creative Cloud</a></td>
+<td>Icon, graphic design, audio engineering, video editing, and so on.</td>
+<td>$11,520 (yearly pre-paid plan).</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.live2d.com/en/">Live2D Cubism</a></td>
+<td>Game animation modeling tool.</td>
+<td>$4,000 (yearly pre-paid plan).</td>
+</tr>
+<tr>
+<td>Apple Developer account</td>
+<td>For publishing IOS Apps to App Store.</td>
+<td>$2,827 ($99 USD for individual account).</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.clipstudio.net/en/">Clip Studio Paint</a></td>
+<td>2D digital art creation tool.</td>
+<td>$2,500 (one-time buyout).</td>
+</tr>
+<tr>
+<td>Network</td>
+<td>To collect every resources in need</td>
+<td>$2,495 (499 per month).</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://assetstore.unity.com/packages/tools/utilities/ios-project-builder-for-windows-15522">iOS Project Builder for Windows</a></td>
+<td>For easily building IOS App on Windows.</td>
+<td>$1,713 (one-time buyout).</td>
+</tr>
+<tr>
+<td>Google AD</td>
+<td>For advertisement.</td>
+<td>$1,624 (only $443 significantly improves App impression and download count).</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.logitechg.com/zh-tw/products/gaming-mice/g402-hyperion-fury-fps-gaming-mouse.910-004071.html">Logitech G402 mouse</a></td>
+<td>Mouse.</td>
+<td>$799 (one-time buyout from PChome).</td>
+</tr>
+<tr>
+<td>Google Developer account</td>
+<td>For publishing Android Apps to Google Play.</td>
+<td>$715 ($25 USD).</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://unity.com/">Unity</a></td>
+<td>Game engine for product development.</td>
+<td>$0 (less than $100,000 in gross revenue, so it’s free).</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://visualstudio.microsoft.com/">Visual Studio Community 2017</a></td>
+<td>Code IDE which greatly integrated with Unity.</td>
+<td>$0</td>
+</tr>
+<tr>
+<td>Total</td>
+<td>Total cost</td>
+<td>$101,493</td>
+</tr>
+</tbody></table>
+<p>Price not included (they’re already existed when I was in college XD):</p>
+<ul>
+<li>Keyboard</li>
+<li>Monitor</li>
+</ul>
+<p>A hundred thousand is too expensive? Try to simulate and calculate the price if you hire one programmer or an artist, don’t remember to pay yourself, then you will get the answer.<br>I believe that’s one of the reasons why 95% of a starting business fails. Like what Dan Lok says: Most entrepreneurs “think” they are entrepreneurs. They don’t know aside from idea, it’s WAY MORE about skillset, execution, persistence (money), and methodologies.<br>And last, the ruthless fact is, even you put tremendous time, effort, and money into it. You cultivate it as best as you could. The “success” is not defined by all factors described above. It’s all about market acceptance. Whatever, I still have a long way to go. Such summary is free for you~</p>
+<h1 id="Game-Making-Records-and-Demonstrations"><a href="#Game-Making-Records-and-Demonstrations" class="headerlink" title="Game Making Records and Demonstrations"></a>Game Making Records and Demonstrations</h1><p>Live 2D freestyle demonstration of main character</p>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/D7jhqH044vE" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+
+<p>Live 2D animation demonstration of main character</p>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/Me3KP61PfUI" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+
+<p>Live 2D animation demonstration of main character (2)</p>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/LPdh_tdZlS8" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+
+<p>Demonstration of Live 2D modeling process</p>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/qMDQkPJ2XUw" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+
+<h1 id="Records-of-1st-Failed-Project"><a href="#Records-of-1st-Failed-Project" class="headerlink" title="Records of 1st. Failed Project"></a>Records of 1st. Failed Project</h1><p>Main character Live 2D demonstration</p>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/gMJR1fGN6ew" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+
+<p>Trailer demonstration</p>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/Q4IFpbpMRoU" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+
+<p>Control action demonstration</p>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/lYvbDJauJbo" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+
+<p>Monster action demonstration</p>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/qPbCSr0PCco" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+
+<p>Main character three-view</p>
+<img src="/2020/10/09/Ha-The-Game-Development-Review/old-game-project-character-three-view.png" class="">
+
+<p>Main character standing pose demonstration</p>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/hll-U6VkCas" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+
+<p>Main character attack animiation demonstration</p>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/K-t1wbHi3IM" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+
+<p>Animation poses design</p>
+<img src="/2020/10/09/Ha-The-Game-Development-Review/old-game-animation-design.png" class="">
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://john29917958.github.io/2020/10/09/Ha-The-Game-Development-Review/" data-id="ckq3ncy1d003i8k7key8p62re" class="article-share-link">Share</a>
+      
+        <a href="http://john29917958.github.io/2020/10/09/Ha-The-Game-Development-Review/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/management/" rel="tag">management</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/programming/" rel="tag">programming</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/reflection/" rel="tag">reflection</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/10/17/Programming-Tutor/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          成為前 20% 的 C# 遊戲語言高手
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/02/09/2019-Review/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">2019 Review</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Art/">Art</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Dance/">Dance</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Miscellany/">Miscellany</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Reflection/">Reflection</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Work/">Work</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/architecture/" rel="tag">architecture</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/art/" rel="tag">art</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dance/" rel="tag">dance</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/design/" rel="tag">design</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/engineer/" rel="tag">engineer</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/graphic/" rel="tag">graphic</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/" rel="tag">life</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life-reflection-work/" rel="tag">life, reflection, work</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/management/" rel="tag">management</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/music/" rel="tag">music</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/program/" rel="tag">program</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/programming/" rel="tag">programming</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reflection/" rel="tag">reflection</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/research/" rel="tag">research</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/software/" rel="tag">software</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/system/" rel="tag">system</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/architecture/" style="font-size: 10px;">architecture</a> <a href="/tags/art/" style="font-size: 17.5px;">art</a> <a href="/tags/dance/" style="font-size: 12.5px;">dance</a> <a href="/tags/design/" style="font-size: 20px;">design</a> <a href="/tags/engineer/" style="font-size: 10px;">engineer</a> <a href="/tags/graphic/" style="font-size: 17.5px;">graphic</a> <a href="/tags/life/" style="font-size: 15px;">life</a> <a href="/tags/life-reflection-work/" style="font-size: 10px;">life, reflection, work</a> <a href="/tags/management/" style="font-size: 12.5px;">management</a> <a href="/tags/music/" style="font-size: 10px;">music</a> <a href="/tags/program/" style="font-size: 10px;">program</a> <a href="/tags/programming/" style="font-size: 17.5px;">programming</a> <a href="/tags/reflection/" style="font-size: 17.5px;">reflection</a> <a href="/tags/research/" style="font-size: 10px;">research</a> <a href="/tags/software/" style="font-size: 10px;">software</a> <a href="/tags/system/" style="font-size: 10px;">system</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">七月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">一月 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">十二月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">十一月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">十月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">十二月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a><span class="archive-list-count">7</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/07/14/Design-Pattern/">Design Pattern</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/17/4-Things-to-Know-Before-Entering-the-Software-Industry/">進入程式產業需了解的 4 件事</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/01/Achievements-in-TSMC-and-People-to-Thank-for/">Achievements in TSMC and People to Thank for</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/26/2020-Review/">2020 Review</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/24/Work-Mentality/">Work Mentality</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 汪子超<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'john29917958-github';
+  
+  var disqus_url = 'http://john29917958.github.io/2020/10/09/Ha-The-Game-Development-Review/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+  </div>
+</body>
+</html>

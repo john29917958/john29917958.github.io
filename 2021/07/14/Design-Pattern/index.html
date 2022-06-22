@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Design Pattern | TC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="「他X的這糞 code 誰寫的!? 被我知道一定做掉他!!」「快不行了……一個功能我要捲 10 頁看…我好像迷路了 QAQ」「改一下很簡單!? 他X的你怎麼不自己改? 啊啊啊啊啊啊啊~~」 上面這些對話，你說過幾種?亦或是……你身邊的工程師朋友，講過幾句呢? 系統像難以掌控的猛獸他小時候非常聽話，而且非常好養!! 兩三下就幫你征戰無數物資回來但隨著小獸一天一天成長，你卻發現，牠越來越「夭獸」，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Design Pattern">
+<meta property="og:url" content="http://john29917958.github.io/2021/07/14/Design-Pattern/index.html">
+<meta property="og:site_name" content="TC">
+<meta property="og:description" content="「他X的這糞 code 誰寫的!? 被我知道一定做掉他!!」「快不行了……一個功能我要捲 10 頁看…我好像迷路了 QAQ」「改一下很簡單!? 他X的你怎麼不自己改? 啊啊啊啊啊啊啊~~」 上面這些對話，你說過幾種?亦或是……你身邊的工程師朋友，講過幾句呢? 系統像難以掌控的猛獸他小時候非常聽話，而且非常好養!! 兩三下就幫你征戰無數物資回來但隨著小獸一天一天成長，你卻發現，牠越來越「夭獸」，">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="http://john29917958.github.io/2021/07/14/Design-Pattern/tactics.jpg">
+<meta property="og:image" content="http://john29917958.github.io/2021/07/14/Design-Pattern/www.png">
+<meta property="og:image" content="http://john29917958.github.io/2021/07/14/Design-Pattern/abstract-thinking.jpg">
+<meta property="og:image" content="http://john29917958.github.io/2021/07/14/Design-Pattern/spaghetti.jpg">
+<meta property="og:image" content="http://john29917958.github.io/2021/07/14/Design-Pattern/flow-editor-system.jpg">
+<meta property="og:image" content="http://john29917958.github.io/2021/07/14/Design-Pattern/victory-night.jpg">
+<meta property="og:image" content="http://john29917958.github.io/2021/07/14/Design-Pattern/despiration.jpg">
+<meta property="og:image" content="http://john29917958.github.io/2021/07/14/Design-Pattern/design-pattern.jpg">
+<meta property="og:image" content="http://john29917958.github.io/2021/07/14/Design-Pattern/gang-of-four-design-patterns.jpg">
+<meta property="og:image" content="http://john29917958.github.io/2021/07/14/Design-Pattern/operators-inheritance-structure.jpg">
+<meta property="og:image" content="http://john29917958.github.io/2021/07/14/Design-Pattern/factory.jpg">
+<meta property="og:image" content="http://john29917958.github.io/2021/07/14/Design-Pattern/extension-of-new-operators.jpg">
+<meta property="og:image" content="http://john29917958.github.io/2021/07/14/Design-Pattern/tactics.jpg">
+<meta property="article:published_time" content="2021-07-14T14:11:19.000Z">
+<meta property="article:modified_time" content="2021-09-12T03:36:49.278Z">
+<meta property="article:author" content="汪子超">
+<meta property="article:tag" content="design">
+<meta property="article:tag" content="program">
+<meta property="article:tag" content="software">
+<meta property="article:tag" content="engineer">
+<meta property="article:tag" content="system">
+<meta property="article:tag" content="architecture">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://john29917958.github.io/2021/07/14/Design-Pattern/tactics.jpg">
+<meta name="twitter:creator" content="@john29917958">
+<link rel="publisher" href="+%E6%B1%AA%E5%AD%90%E8%B6%85">
+<meta property="fb:admins" content="100002225898735">
+<meta property="fb:app_id" content="284882215">
+  
+    <link rel="alternative" href="/atom.xml" title="TC" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-80121293-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  <script data-ad-client="ca-pub-8315401057994110" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">TC</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://john29917958.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Design-Pattern" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/07/14/Design-Pattern/" class="article-date">
+  <time datetime="2021-07-14T14:11:19.000Z" itemprop="datePublished">2021-07-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Programming/">Programming</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      
+        <header class="article-header">
+      
+      
+  
+    <h1 class="article-title" itemprop="name">
+      Design Pattern
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <img src="/2021/07/14/Design-Pattern/tactics.jpg" class="">
+
+<p>「他X的這糞 code 誰寫的!? 被我知道一定做掉他!!」<br>「快不行了……一個功能我要捲 10 頁看…我好像迷路了 QAQ」<br>「改一下很簡單!? 他X的你怎麼不自己改? 啊啊啊啊啊啊啊~~」</p>
+<p>上面這些對話，你說過幾種?<br>亦或是……你身邊的工程師朋友，講過幾句呢?</p>
+<p>系統像難以掌控的猛獸<br>他小時候非常聽話，而且非常好養!! 兩三下就幫你征戰無數物資回來<br>但隨著小獸一天一天成長，你卻發現，牠越來越「夭獸」，還越來越難掌控……<br>你幫牠裝上鞍，牠卻故意倒著走；你叫他，牠裝聾不來；你不動牠沒事，一摸牠就反咬你一口<br>這宛如我們手上的系統，不動沒事，一動便驚滔駭浪，bug 與錯誤排山倒海襲來</p>
+<p>公司的員工，需要透過管理來達到高效合作、高效產出<br>程式系統，更需要透過管理來因應各種變化</p>
+<p>養出「夭獸」有原因，讓系統聽話有方法<br>設計模式在看的，就是識別出「使用情境」，並套入對應的程式結構<br>就像對弈時，觀察對手的一舉一動，根據不同情境使出不同戰法一樣</p>
+<p>接下來，我們將一起看過養出「夭獸」的原因、比較程式的好壞、帶入實戰的設計模式應用，並且……<br>在最後統整 23 種常見情境、帶出對應的設計模式，並給出份範例專案與程式碼</p>
+<p>但願，這些可以協助你，過上更好的工程師生活！<br>準備好手邊的咖啡沒? Let’s dig in!</p>
+<span id="more"></span>
+
+<h1 id="軟體的格局，在全世界-需要的，是「軟體工程」"><a href="#軟體的格局，在全世界-需要的，是「軟體工程」" class="headerlink" title="軟體的格局，在全世界 - 需要的，是「軟體工程」"></a>軟體的格局，在全世界 - 需要的，是「軟體工程」</h1><img src="/2021/07/14/Design-Pattern/www.png" class="">
+
+<p>軟體業與傳產最大的不同在哪?<br>做軟體與做傳產一樣，都要普查客群、研究競爭對手、計算資本、估算損益平衡時間、回本時間……<br>看上去，做軟體與做傳產似乎差不多? 最大的不同，我想是「市場的極限」</p>
+<ul>
+<li>餐廳要拓展市場，可能得用連鎖或加盟等方式實現。否則，就得透過程式或網路的力量</li>
+<li>一個網站或 App 一發佈，可以立刻開放全世界，賺全世界的錢</li>
+</ul>
+<p>軟體的全球化市場，令人垂涎欲滴。軟體的起手資本，讓人熱血沸騰<br>在家裡，一台筆電，一杯咖啡，配上一組不需太好的配備<br>只要你的技術夠強、UI 設計能力夠屌、<del>肝夠健康</del>，便可以開始揮灑創意，甚至上線你的創意</p>
+<p>但這些誘因背後，存在無盡的深淵……</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">RaceHitCountAchievement</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">bool</span> IsAchieved &#123; <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> Races Race &#123; <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">int</span> TargetCount &#123; <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">int</span> CurrentCount &#123; <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">RaceHitCountAchievement</span>(<span class="params">Races race, <span class="built_in">int</span> targetCount</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        Race = race;</span><br><span class="line">        TargetCount = targetCount;</span><br><span class="line">        IsAchieved = <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">OnEnemyHit</span>(<span class="params">HitEnemySubject subject</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (IsAchieved) <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (subject.Victim.Race == Race)</span><br><span class="line">        &#123;</span><br><span class="line">            CurrentCount += <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (CurrentCount &gt;= TargetCount)</span><br><span class="line">        &#123;</span><br><span class="line">            IsAchieved = <span class="literal">true</span>;</span><br><span class="line">            Console.WriteLine(<span class="string">&quot;Achievement reached: RaceHitCountAchievement&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>若要管理幾十萬行的程式，需求、變動還頻頻出現<br>我們該怎麼做?<br>如果我們的系統要服務全世界、要做多國語言、要針對風土民情做客製化<br>我們一步一步的策略與方法，又是什麼?</p>
+<p>做軟體，就像養孩子<br>錯過可塑期、觀念成形後，便很難撼動與扭轉<br>偏偏軟體開始受到關注時，都已成長到一定規模<br>這時後悔，發現災難不斷，想擴充功能也綁手綁腳<br>一切，為時已晚</p>
+<p>軟體工程在談的，是各種方法論，如何讓軟體走向成功的方法論<br>讓艱澀的程式變好懂、讓擴充迅速實現賺取收入、讓專案活久一點，賺久一點、讓一群人高效協作同份產品<br>以上這些，都是軟體工程的一環</p>
+<h1 id="幹蠢事的聰明人"><a href="#幹蠢事的聰明人" class="headerlink" title="幹蠢事的聰明人"></a>幹蠢事的聰明人</h1><img src="/2021/07/14/Design-Pattern/abstract-thinking.jpg" class="">
+
+<p>會寫程式，腦袋一定不差吧? 那為何還需要模組切分、少量迭代開發、回歸測試這些有的沒的管理方法?<br>舉個例子，房子亂蓋鋼筋亂綁，我們可以很輕易聯想到，<del>這房還沒漲價就要倒了</del>這房子住了很容易出人命!!<br>我們連看施工圖的鋼筋數量與綁紮方式都能略知一二<br>但你有聽過程式亂寫會發生什麼事嗎?<br>你有想過，為什麼漆油漆可以說好你我各塗一半，兩三下工作就完成了<br>但來到程式，連講好你寫這邊我寫這邊、要分工，都可以搞很久?</p>
+<p>我們說「programmer」，中文是程式「設計師」<br>寫程式本身是一項「抽象」的「設計工作」<br>我們收到需求時，跟程式碼毫無連結，沒辦法直接聯想解決方案，必須經過抽象的轉換過程<br>轉換出來的產物，也不是動人的插畫、明確的指示，是難以下嚥的數學邏輯與資料關係。Yes! 是「邏輯」與「關係」這種抽象概念!!<br>更何況最後產出的，是如天書般的詭異語法</p>
+<p>發現了嗎? 即便在工業革命提倡「專業分工」後，做同一件事我們都有機會出錯了<br>何況是本質抽象、搞入數學邏輯、產出天書的複合式程式設計工作?<br>更因為本質抽象，你很難預見設計被做出來後，會不會按照自己所想，會不會產生預期的結果<br>讓我們再看一眼程式碼的樣子…</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">OnEnemyHit</span>(<span class="params">HitEnemySubject subject</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (IsAchieved) <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (subject.Victim.Race == Race)</span><br><span class="line">    &#123;</span><br><span class="line">        CurrentCount += <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (CurrentCount &gt;= TargetCount)</span><br><span class="line">    &#123;</span><br><span class="line">        IsAchieved = <span class="literal">true</span>;</span><br><span class="line">        Console.WriteLine(<span class="string">&quot;Achievement reached: RaceHitCountAchievement&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>所以你說，聰明人會不會幹蠢事?<br>既然程式碼這麼難搞<br>有什麼方法或思維模式，可以大幅提升專案 meet the schedule、meet the expectation、meet the measurable KPI 的機率呢?<br>想要改善、想要進化，必須先知道問題所在。知道好與壞，才有衡量進步、衡量品質的方法<br>就像你必須先吃過噁心的黑暗料理，才知道什麼叫「好廚藝」<br>必須先經歷糟糕的健康狀況，才知道一點一滴回復的喜悅</p>
+<h1 id="糞-Code"><a href="#糞-Code" class="headerlink" title="糞 Code"></a>糞 Code</h1><img src="/2021/07/14/Design-Pattern/spaghetti.jpg" class="">
+
+<p>在程式的世界，我們其實不用「糞 code」來形容糟糕的程式碼 XD，而是有些黑話，如「Bad code smell」程式碼壞味道；或「Anti-pattern」反模式<br>Bad code smell 是指程式碼風格很糟糕。例如同樣的程式碼出現多次，一個方法太長、太多參數等等<br>Anti-pattern 則是集合詞彙 (根據 GoF 出版的「Design Pattern」衍伸出來)。包含如「god object」，指一個物件包山包海，做太多事情；或「spaghetti code」，泛指程式碼流程複雜混亂，交雜在一起，難以理解的現象</p>
+<p>那 bad code smell 或 anti-pattern code 到底長什麼樣子呢?</p>
+<img src="/2021/07/14/Design-Pattern/flow-editor-system.jpg" class="" title="The Flow Editor System" alt="The Flow Editor System">
+
+<p>有天，某主管把工程師「筱娍」叫到身邊：「諾，這是最近大老闆很期待的專案。要做出類似 flow chart 的圖形化編輯器。流程圖裡每個節點都有不同功能，使用者拉完流程圖，按下執行按鈕後，系統會跑過每個節點，把功能都順過。」<br>「幫我搞定它，給妳的好處不會少。先幫我實現寄信功能吧！」<br>筱娍是個到職不久，充滿熱忱的小<strong>小程</strong>式設計師<br>她收到需求後非常開心，熱血地拚出第一版程式:「哈! 小菜一碟! 趕快給主管看看!」</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">DoJob</span>(<span class="params">JObject op</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">string</span> title = op[<span class="string">&quot;title&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line">    <span class="built_in">string</span> componentId = op[<span class="string">&quot;componentId&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="built_in">string</span> receivers = op[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;receivers&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line">    <span class="built_in">string</span> mailTitle = op[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;title&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line">    <span class="built_in">string</span> content = op[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;content&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line"></span><br><span class="line">    SmtpClient smtp = <span class="keyword">new</span> SmtpClient(GetSmtpHost());</span><br><span class="line">    MailMessage message = <span class="keyword">new</span> MailMessage();</span><br><span class="line">    message.From = GetSystemMailAccount();</span><br><span class="line">    message.Subject = mailTitle;</span><br><span class="line">    message.Body = content;</span><br><span class="line">    message.IsBodyHtml = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">foreach</span> (<span class="built_in">string</span> address <span class="keyword">in</span> receivers.Split(<span class="string">&#x27;,&#x27;</span>))</span><br><span class="line">    &#123;</span><br><span class="line">        message.To.Add(address);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    smtp.Send(message);</span><br><span class="line"></span><br><span class="line">    WriteLog(componentId, title, <span class="string">&quot;Send mail executed&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>果然主管看了 DEMO 後非常滿意:「真不知該如何感謝妳，發送簡訊也一並幫我實現吧! 晚上請妳吃飯」<br>筱娍為今晚的勝利卯足了勁，用 <code>if</code> / <code>else</code> 擴充，快快完成了工作</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">DoJob</span>(<span class="params">JObject op</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">string</span> title = op[<span class="string">&quot;title&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line">    <span class="built_in">string</span> componentId = op[<span class="string">&quot;componentId&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Executes different types of operator.</span></span><br><span class="line">    <span class="keyword">if</span> (componentId == <span class="string">&quot;SendMail&quot;</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">string</span> receivers = op[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;receivers&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line">        <span class="built_in">string</span> mailTitle = op[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;title&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line">        <span class="built_in">string</span> content = op[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;content&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line"></span><br><span class="line">        SmtpClient smtp = <span class="keyword">new</span> SmtpClient(GetSmtpHost());</span><br><span class="line">        MailMessage message = <span class="keyword">new</span> MailMessage();</span><br><span class="line">        message.From = GetSystemMailAccount();</span><br><span class="line">        message.Subject = mailTitle;</span><br><span class="line">        message.Body = content;</span><br><span class="line">        message.IsBodyHtml = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">foreach</span> (<span class="built_in">string</span> address <span class="keyword">in</span> receivers.Split(<span class="string">&#x27;,&#x27;</span>))</span><br><span class="line">        &#123;</span><br><span class="line">            message.To.Add(address);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        smtp.Send(message);</span><br><span class="line"></span><br><span class="line">        WriteLog(componentId, title, <span class="string">&quot;Send mail executed&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// Feature extension: Send phone message.</span></span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (componentId == <span class="string">&quot;SendSMS&quot;</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">string</span> receivers = op[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;receivers&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line">        <span class="built_in">string</span> smsTitle = op[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;title&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line">        <span class="built_in">string</span> content = op[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;content&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line"></span><br><span class="line">        SendSms(receivers.Split(<span class="string">&#x27;,&#x27;</span>), smsTitle, content);</span><br><span class="line"></span><br><span class="line">        WriteLog(componentId, title, <span class="string">&quot;Send SMS executed&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> UnsupportedOperatorException(<span class="string">&quot;Unsupported operator ID: \&quot;&quot;</span> + componentId + <span class="string">&#x27;&quot;&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>「Good job!」主管說到: 「本來只想請妳吃麵攤的，沒想到這麼快!」<br>「幫我把節點都串起來吧! 這樣才有 flow 的樣子。晚上請妳吃高級牛排好了?」<br>筱娍頓了一下，但為了主管的愛<br>戴</p>
+<p>筱娍咬緊牙答應，並把任務完成<br>這次筱娍幫 DoJob() 多加了兩個參數來取得「連接線」與所有「節點」<br>並在 function 結尾找下一個節點、執行它</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">DoJob</span>(<span class="params">JObject op, JArray allLinks, JArray allOperators</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">string</span> title = op[<span class="string">&quot;title&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line">    <span class="built_in">string</span> componentId = op[<span class="string">&quot;componentId&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Executes different types of operator.</span></span><br><span class="line">    <span class="keyword">if</span> (componentId == <span class="string">&quot;SendMail&quot;</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">string</span> receivers = op[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;receivers&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line">        <span class="built_in">string</span> mailTitle = op[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;title&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line">        <span class="built_in">string</span> content = op[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;content&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line"></span><br><span class="line">        SmtpClient smtp = <span class="keyword">new</span> SmtpClient(GetSmtpHost());</span><br><span class="line">        MailMessage message = <span class="keyword">new</span> MailMessage();</span><br><span class="line">        message.From = GetSystemMailAccount();</span><br><span class="line">        message.Subject = mailTitle;</span><br><span class="line">        message.Body = content;</span><br><span class="line">        message.IsBodyHtml = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">foreach</span> (<span class="built_in">string</span> address <span class="keyword">in</span> receivers.Split(<span class="string">&#x27;,&#x27;</span>))</span><br><span class="line">        &#123;</span><br><span class="line">            message.To.Add(address);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        smtp.Send(message);</span><br><span class="line"></span><br><span class="line">        WriteLog(componentId, title, <span class="string">&quot;Send mail executed&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (componentId == <span class="string">&quot;SendSMS&quot;</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">string</span> receivers = op[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;receivers&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line">        <span class="built_in">string</span> smsTitle = op[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;title&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line">        <span class="built_in">string</span> content = op[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;content&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line"></span><br><span class="line">        SendSms(receivers.Split(<span class="string">&#x27;,&#x27;</span>), smsTitle, content);</span><br><span class="line"></span><br><span class="line">        WriteLog(componentId, title, <span class="string">&quot;Send SMS executed&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> UnsupportedOperatorException(<span class="string">&quot;Unsupported operator ID: \&quot;&quot;</span> + componentId + <span class="string">&#x27;&quot;&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Finds operators to be executed next.</span></span><br><span class="line">    List&lt;JObject&gt; nextOperators = <span class="keyword">new</span> List&lt;JObject&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">foreach</span> (JToken link <span class="keyword">in</span> allLinks)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (link[<span class="string">&quot;fromOpId&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;() == op[<span class="string">&quot;id&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;())</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">foreach</span> (JToken nextOp <span class="keyword">in</span> allOperators)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (nextOp[<span class="string">&quot;id&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;() == link[<span class="string">&quot;toOpId&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;())</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="comment">// Executes next operator.</span></span><br><span class="line">                    DoJob(JObject.FromObject(nextOp), allLinks, allOperators);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>「呼~搞定!」<br>晚上，筱娍與主管度過愉悅的時光 (???)</p>
+<p>這時的筱娍覺得，自己是世界上最快樂的人</p>
+<img src="/2021/07/14/Design-Pattern/victory-night.jpg" class="">
+
+<p>隔天，主管把筱娍叫去：「筱娍阿，妳做得不錯。上面的老闆有其他願望。諾，這裡有 30 種節點。這兩周，就麻煩妳啦!」<br>「Fighting fighting!」筱娍乾脆地答應，興高采烈寫 <code>if</code> / <code>else</code> 擴充去…</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">DoJob</span>(<span class="params">JObject op, JArray allLinks, JArray allOperators</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">string</span> title = op[<span class="string">&quot;title&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line">    <span class="built_in">string</span> componentId = op[<span class="string">&quot;componentId&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (componentId == <span class="string">&quot;SendMail&quot;</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">string</span> receivers = op[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;receivers&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line">        <span class="built_in">string</span> mailTitle = op[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;title&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line">        <span class="built_in">string</span> content = op[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;content&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line"></span><br><span class="line">        SmtpClient smtp = <span class="keyword">new</span> SmtpClient(GetSmtpHost());</span><br><span class="line">        MailMessage message = <span class="keyword">new</span> MailMessage();</span><br><span class="line">        message.From = GetSystemMailAccount();</span><br><span class="line">        message.Subject = mailTitle;</span><br><span class="line">        message.Body = content;</span><br><span class="line">        message.IsBodyHtml = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">foreach</span> (<span class="built_in">string</span> address <span class="keyword">in</span> receivers.Split(<span class="string">&#x27;,&#x27;</span>))</span><br><span class="line">        &#123;</span><br><span class="line">            message.To.Add(address);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        smtp.Send(message);</span><br><span class="line"></span><br><span class="line">        WriteLog(componentId, title, <span class="string">&quot;Send mail executed&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (componentId == <span class="string">&quot;SendSMS&quot;</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">string</span> receivers = op[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;receivers&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line">        <span class="built_in">string</span> smsTitle = op[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;title&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line">        <span class="built_in">string</span> content = op[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;content&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line"></span><br><span class="line">        SendSms(receivers.Split(<span class="string">&#x27;,&#x27;</span>), smsTitle, content);</span><br><span class="line"></span><br><span class="line">        WriteLog(componentId, title, <span class="string">&quot;Send SMS executed&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// Yet another new operator: Queries database...</span></span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (componentId == <span class="string">&quot;QueryDatabase&quot;</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">string</span> sql = op[<span class="string">&quot;sql&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line">        Database database = GetDatabaseService();</span><br><span class="line">        DataTable data = database.Query(sql);</span><br><span class="line">        <span class="comment">// Keep data here first</span></span><br><span class="line"></span><br><span class="line">        WriteLog(componentId, title, <span class="string">&quot;Queried database, data count is &quot;</span> + data.Rows.Count);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> UnsupportedOperatorException(<span class="string">&quot;Unsupported operator ID: \&quot;&quot;</span> + componentId + <span class="string">&#x27;&quot;&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    List&lt;JObject&gt; nextOperators = <span class="keyword">new</span> List&lt;JObject&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">foreach</span> (JToken link <span class="keyword">in</span> allLinks)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (link[<span class="string">&quot;fromOpId&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;() == op[<span class="string">&quot;id&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;())</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">foreach</span> (JToken nextOp <span class="keyword">in</span> allOperators)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (nextOp[<span class="string">&quot;id&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;() == link[<span class="string">&quot;toOpId&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;())</span><br><span class="line">                &#123;</span><br><span class="line">                    DoJob(JObject.FromObject(nextOp), allLinks, allOperators);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>擴充到一半時，筱娍不知為何有點苦惱，但還是硬著頭皮把 30 種節點全塞入 <code>if</code> / <code>else</code> 中……<br>過程中，筱娍常常不小心誤動不相干的程式碼或改錯節點，在 <code>if</code> / <code>else</code> 間翻來覆去<br>好不容易快寫完了，主管卻馬上冒出來: 「筱娍! 讓 flow 可以透過 web API 從外部呼叫，我們要跟其他系統串接。」<br>「阿，別忘了讓每個元件可以被單獨呼叫」<br>筱娍轉了轉又大又圓的眼珠，把整份 <code>if</code> / <code>else</code> 複製一份到 web API function 中<br>並把 <code>if</code> / <code>else</code> 中的節點程式再複製一份，貼到獨立的 web API methods 裡……</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// In origin project.</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">DoJob</span>(<span class="params">JObject op, JArray allLinks, JArray allOperators</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// Duplicate code...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// In web API project.</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="built_in">string</span> <span class="title">Run</span>(<span class="params"><span class="built_in">string</span> systemId, <span class="built_in">string</span> parameters</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    JObject p = JObject.Parse(parameters);</span><br><span class="line">    JObject startingOp = p.Value&lt;JArray&gt;(<span class="string">&quot;startingOp&quot;</span>);</span><br><span class="line">    JArray allLinks = p.Value&lt;JArray&gt;(<span class="string">&quot;links&quot;</span>);</span><br><span class="line">    JArray allOperators = p.Value&lt;JArray&gt;(<span class="string">&quot;operators&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Duplicate code...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Invokes individual operator: &quot;Send e-mail&quot;.</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="built_in">string</span> <span class="title">SendMail</span>(<span class="params"><span class="built_in">string</span> parameters</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// Duplicate...</span></span><br><span class="line">    JObject op = JObject.Parse(parameters);</span><br><span class="line">    <span class="built_in">string</span> receivers = op[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;receivers&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line">    <span class="built_in">string</span> mailTitle = op[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;title&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line">    <span class="built_in">string</span> content = op[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;content&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line"></span><br><span class="line">    SmtpClient smtp = <span class="keyword">new</span> SmtpClient(GetSmtpHost());</span><br><span class="line">    MailMessage message = <span class="keyword">new</span> MailMessage();</span><br><span class="line">    message.From = GetSystemMailAccount();</span><br><span class="line">    message.Subject = mailTitle;</span><br><span class="line">    message.Body = content;</span><br><span class="line">    message.IsBodyHtml = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">foreach</span> (<span class="built_in">string</span> address <span class="keyword">in</span> receivers.Split(<span class="string">&#x27;,&#x27;</span>))</span><br><span class="line">    &#123;</span><br><span class="line">        message.To.Add(address);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    smtp.Send(message);</span><br><span class="line"></span><br><span class="line">    WriteLog(componentId, title, <span class="string">&quot;Send mail executed&quot;</span>);</span><br><span class="line">    <span class="comment">// Code...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Invokes individual operator: &quot;Send phone message&quot;.</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="built_in">string</span> <span class="title">SendSms</span>(<span class="params"><span class="built_in">string</span> parameters</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// Duplicate...</span></span><br><span class="line">    JObject op = JObject.Parse(parameters);</span><br><span class="line">    <span class="built_in">string</span> receivers = op[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;receivers&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line">    <span class="built_in">string</span> smsTitle = op[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;title&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line">    <span class="built_in">string</span> content = op[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;content&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line"></span><br><span class="line">    SendSms(receivers.Split(<span class="string">&#x27;,&#x27;</span>), smsTitle, content);</span><br><span class="line"></span><br><span class="line">    WriteLog(componentId, title, <span class="string">&quot;Send SMS executed&quot;</span>);</span><br><span class="line">    <span class="comment">// Code...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// A lot of individual methods...</span></span><br><span class="line"><span class="comment">// Duplicate code paradise...</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>接下來的日子裡，主管頻頻要筱娍加新節點、改特定節點的參數<br>筱娍則頻頻改了這忘了那，加了這邊忘了加那邊，節點種類已經來到 100 個……</p>
+<p>這陣子，公司也總是出現老人離職、新血加入等異動<br>筱娍身上掛越來越多系統，但很不巧……大家的程式風格都一樣!<br><code>if</code> / <code>else</code> 滿天飛，重複程式碼四散，公用變數比吃過的飯粒還多…<br>筱娍常常遭受漏改、改錯東西的譴責<br>她花非常多時間在尋找相關程式碼，或釐清變數被誰動過……</p>
+<p>晚上 11 點，筱娍的位置還亮著燈<br>「原來…努力不一定有回報……」<br>今天，筱娍終於再也忍不住，她揉著水汪汪的眼睛低聲啜泣<br>「也許……我不適合這裡，我也不適合作工程師……」<br>她纖細的手顫抖著，慢慢將滑鼠移向「離職」鈕<br>游標離按鈕越來越近，筱娍的心也越來越刺、越來越痛，好像快要裂開了一樣<br>「對不起!」筱娍的食指努力朝滑鼠按下</p>
+<img src="/2021/07/14/Design-Pattern/despiration.jpg" class="">
+
+<p>「啊!!!」一隻手突然搭在筱娍肩上<br>筱娍猛然回頭，一股強大的概念矗立在她面前</p>
+<img src="/2021/07/14/Design-Pattern/design-pattern.jpg" class="">
+
+<h1 id="設計模式實戰案例"><a href="#設計模式實戰案例" class="headerlink" title="設計模式實戰案例"></a>設計模式實戰案例</h1><p>我們的腦袋，不適合處理龐大又複雜的訊息<br>筱娍為了追尋主管認同，不計一切火速達成要求<br>換來的，是:</p>
+<ol>
+<li>冗長、難以閱讀的程式</li>
+<li>四散的初始化片段</li>
+<li>到處都是雷同的功能實作</li>
+</ol>
+<p>當要新增節點時，筱娍得在許多地方修改程式碼<br>當特定節點要修改，筱娍一樣得在多個地方做異動</p>
+<p>隨著需求增加，重複的地方越來越多、功能越來越長、越來越複雜<br>做一項異動所需的時間，慢慢呈指數成長 (出錯的機會亦然)</p>
+<blockquote>
+<p>起初貪快沒做好足量設計，反而拖慢系統成長、締造出寸步難行的「焦油坑」</p>
+</blockquote>
+<p>其實，這一切都可以避免<br>需求千奇百怪，但大多都可歸納成幾種「patterns」，並用適合人腦閱讀、適合理解、適合擴充的方式管理起來<br>這一套心法，叫做「Design Pattern」 - 設計模式</p>
+<img src="/2021/07/14/Design-Pattern/gang-of-four-design-patterns.jpg" class="" title="The Gang of Four - Design Patterns" alt="The Gang of Four - Design Patterns">
+
+<p>以筱娍的「類流程編輯系統」來看，我們可以發現 <code>if</code> / <code>else</code> 無論出現幾種，都可以歸納成同一種概念<br>舉人種來說，有美國人、韓國人、日本人，當然也有台灣人。<br>每種人的行為模式皆不同，但以本質來看，我們都是「人類」，有相同的「介面」。如走路、說話、思考……<br>以流程系統來說，我們有寄信節點、發簡訊節點、讀取資料庫節點……<br>每種節點的 operation (功能) 不盡相同，但以本質來說，都是「Operator」節點<br>為此，我們可以把 operators 收入一個繼承或實作介面中</p>
+<img src="/2021/07/14/Design-Pattern/operators-inheritance-structure.jpg" class="" title="Operators inheritance structure" alt="Operators inheritance structure">
+
+<p>如此一來，無論節點類型怎麼增生，我們的「使用端」程式碼，都可以透過統一介面來呼叫它們</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Operator sendMailOp = <span class="keyword">new</span> SendMailOperator();</span><br><span class="line">Operator sendSmsOp = <span class="keyword">new</span> SendSmsOperator();</span><br><span class="line">Operator databaseOp = <span class="keyword">new</span> DatabaseOperator();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Always uses &quot;Execute()&quot; to invoke operator function without caring who they are.</span></span><br><span class="line">sendMailOp.Execute();</span><br><span class="line">sendSmsOp.Execute();</span><br><span class="line">databaseOp.Execute();</span><br></pre></td></tr></table></figure>
+
+<p>套入原本的實作大約長這樣</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">DoJob</span>(<span class="params">JObject json, JArray allLinks, JArray allOperators</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">string</span> title = json[<span class="string">&quot;title&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line">    <span class="built_in">string</span> componentId = json[<span class="string">&quot;componentId&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line">    Operator op;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (componentId == <span class="string">&quot;SendMail&quot;</span>)</span><br><span class="line">    &#123;     </span><br><span class="line">        SendMailOperator sendMail = <span class="keyword">new</span> SendMailOperator();</span><br><span class="line">        sendMail.SetSubject(json[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;subject&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;());</span><br><span class="line">        sendMail.SetContent(json[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;content&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;());</span><br><span class="line">        sendMail.SetReceivers(json[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;receivers&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;().Split(<span class="string">&#x27;,&#x27;</span>));</span><br><span class="line">        op = sendMail;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (componentId == <span class="string">&quot;SendSMS&quot;</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        SendSmsOperator sendSms = <span class="keyword">new</span> SendSmsOperator();</span><br><span class="line">        sendSms.SetSubject(json[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;subject&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;());</span><br><span class="line">        sendSms.SetContent(json[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;content&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;());</span><br><span class="line">        sendSms.SetReceivers(json[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;receivers&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;().Split(<span class="string">&#x27;,&#x27;</span>));</span><br><span class="line">        op = sendSms;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (componentId == <span class="string">&quot;QueryDatabase&quot;</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        DatabaseOperator database = <span class="keyword">new</span> DatabaseOperator();</span><br><span class="line">        database.SetSql(json[<span class="string">&quot;sql&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;());</span><br><span class="line">        op = database;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> UnsupportedOperatorException(<span class="string">&quot;Unsupported operator ID: \&quot;&quot;</span> + componentId + <span class="string">&#x27;&quot;&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    op.SetTitle(json[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;title&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;());</span><br><span class="line">    Result result = op.Execute();</span><br><span class="line">    WriteLog(op.ComponentId, op.Title, result.Message);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>有發現 <code>if</code> / <code>else</code> 開始變短了嗎?<br>至於 operator 本身的功能，如「寄信」，會怎麼實作呢?<br>首先，先看過抽象的 <code>Operator</code> class</p>
+<h4 id="Operator-cs"><a href="#Operator-cs" class="headerlink" title="Operator.cs"></a>Operator.cs</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">class</span> <span class="title">Operator</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">protected</span> <span class="built_in">string</span> Title;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">abstract</span> <span class="built_in">string</span> ComponentId &#123; <span class="keyword">get</span>; &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">SetTitle</span>(<span class="params"><span class="built_in">string</span> title</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        Title = title;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="title">Operator</span>(<span class="params"></span>)</span></span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> Result <span class="title">Execute</span>(<span class="params"></span>)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>再來，就是「寄信」功能的實作片段</p>
+<h4 id="SendMailOperator-cs"><a href="#SendMailOperator-cs" class="headerlink" title="SendMailOperator.cs"></a>SendMailOperator.cs</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">SendMailOperator</span> : <span class="title">Operator</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">override</span> <span class="built_in">string</span> ComponentId</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">get</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;SendMail&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">string</span> _subject;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">string</span> _content;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> MailAddress[] _receivers;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">SetSubject</span>(<span class="params"><span class="built_in">string</span> subject</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        _subject = subject;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">SetContent</span>(<span class="params"><span class="built_in">string</span> content</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        _content = content;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">SetReceivers</span>(<span class="params"><span class="built_in">string</span>[] receivers</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        List&lt;MailAddress&gt; addresses = <span class="keyword">new</span> List&lt;MailAddress&gt;();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">foreach</span> (<span class="built_in">string</span> receiver <span class="keyword">in</span> receivers)</span><br><span class="line">        &#123;</span><br><span class="line">            addresses.Add(<span class="keyword">new</span> MailAddress(receiver));</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        _receivers = addresses.ToArray();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// The concrete &quot;send mail&quot; implementation.</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> Result <span class="title">Execute</span>(<span class="params"></span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        SmtpClient smtp = <span class="keyword">new</span> SmtpClient(GetSmtpHost());</span><br><span class="line">        MailMessage message = <span class="keyword">new</span> MailMessage();</span><br><span class="line">        message.From = GetSystemMailAccount();</span><br><span class="line">        message.Subject = _subject;</span><br><span class="line">        message.Body = _content;</span><br><span class="line">        message.IsBodyHtml = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">foreach</span> (MailAddress receiver <span class="keyword">in</span> _receivers)</span><br><span class="line">        &#123;</span><br><span class="line">            message.To.Add(receiver);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        smtp.Send(message);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Result(<span class="literal">true</span>, <span class="string">&quot;Mail sent&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>到這邊設計模式還沒出場，不過我們已經改善了 3: 到處都是雷同的功能實作<br>例如「用 web API 呼叫特定 operator」，我們可以這樣寫</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="built_in">string</span> <span class="title">SendMail</span>(<span class="params"><span class="built_in">string</span> parameters</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    JObject op = JObject.Parse(parameters);</span><br><span class="line">    SendMailOperator sendMail = <span class="keyword">new</span> SendMailOperator();</span><br><span class="line">    sendMail.SetTitle(op[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;title&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;());</span><br><span class="line">    sendMail.SetSubject(op[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;subject&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;());</span><br><span class="line">    sendMail.SetContent(op[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;content&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;());</span><br><span class="line">    sendMail.SetReceivers(op[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;receivers&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;().Split(<span class="string">&#x27;,&#x27;</span>));</span><br><span class="line">    Result result = sendMail.Execute(); <span class="comment">// Just invoke the method of SendMail operator!</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> result.Message;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>「實作」的部分，已經被收入「SendMailOperator」裡面。我們可以重複利用它，來避免「到處都是雷同的功能實作」這個問題<br>但目前為止，<code>if</code> / <code>else</code> 仍四處可見，「冗長、難以閱讀的程式」未獲改善<br>而且「四散的初始化片段」一樣困擾著我們</p>
+<p>接下來，就是「Factory Design Pattern」 - 工廠模式出廠的時候啦!<br>當我們的物件會不斷擴充，可以把「生產物件」的地方統一起來管理<br>系統其他部分要用，一律透過這座「工廠」取得，避免物件的初始化片段四散在系統各處:</p>
+<img src="/2021/07/14/Design-Pattern/factory.jpg" class="" title="Factory" alt="Factory">
+
+<p>讓我們先看一眼呼叫端的程式，可以被精簡到什麼程度:</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">DoJob</span>(<span class="params">JObject json, JArray allLinks, JArray allOperators</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    Operator op = opOperatorFactory.Make(json.ToString());</span><br><span class="line">    Result result = op.Execute();</span><br><span class="line">    WriteLog(op.ComponentId, op.Title, result.Message);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>恩…至於 web API 部分呢?</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="built_in">string</span> <span class="title">SendMail</span>(<span class="params"><span class="built_in">string</span> parameters</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    Operator op = OperatorFactory.Make(parameters);</span><br><span class="line">    Result result = op.Execute();</span><br><span class="line">    <span class="keyword">return</span> result.Message;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>很驚人吧? 我們進一步重用 (reuse) 程式碼，重構 (refactor) 了所有「初始化」程式片段<br>到此，「冗長、難以閱讀的程式」以及「四散的初始化片段」全部解決!<br>讓我們看一眼「工廠」的核心程式碼:</p>
+<h4 id="OperatorFactory-cs"><a href="#OperatorFactory-cs" class="headerlink" title="OperatorFactory.cs"></a>OperatorFactory.cs</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class</span> <span class="title">OperatorFactory</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Operator <span class="title">Make</span>(<span class="params"><span class="built_in">string</span> config</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        JObject json = JObject.Parse(config);</span><br><span class="line">        <span class="built_in">string</span> componentId = json[<span class="string">&quot;componentId&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line">        <span class="built_in">string</span> title = json[<span class="string">&quot;title&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line">        Operator op;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">switch</span> (componentId)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&quot;SendMail&quot;</span>:</span><br><span class="line">                SendMailOperator sendMail = <span class="keyword">new</span> SendMailOperator();</span><br><span class="line">                sendMail.SetTitle(json[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;title&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;());</span><br><span class="line">                sendMail.SetSubject(json[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;subject&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;());</span><br><span class="line">                sendMail.SetContent(json[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;content&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;());</span><br><span class="line">                sendMail.SetReceivers(json[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;receivers&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;().Split(<span class="string">&#x27;,&#x27;</span>));</span><br><span class="line">                op = sendMail;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&quot;SendSMS&quot;</span>:</span><br><span class="line">                SendSmsOperator sendSms = <span class="keyword">new</span> SendSmsOperator();</span><br><span class="line">                sendSms.SetSubject(json[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;subject&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;());</span><br><span class="line">                sendSms.SetContent(json[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;content&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;());</span><br><span class="line">                sendSms.SetReceivers(json[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;receivers&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;().Split(<span class="string">&#x27;,&#x27;</span>));</span><br><span class="line">                op = sendSms;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&quot;QueryDatabase&quot;</span>:</span><br><span class="line">                DatabaseOperator database = <span class="keyword">new</span> DatabaseOperator();</span><br><span class="line">                database.SetSql(json[<span class="string">&quot;sql&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;());</span><br><span class="line">                op = database;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="literal">default</span>:</span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> UnsupportedOperatorException(<span class="string">&quot;Unsupported operator ID: \&quot;&quot;</span> + componentId + <span class="string">&#x27;&quot;&#x27;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        op.SetTitle(json[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;title&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;());</span><br><span class="line">        <span class="keyword">return</span> op;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>產出物件的程式片段，現在完全由「工廠」管理<br>更進一步的是，這座工廠只暴露抽象 (abstract) 的介面物件出去<br>這有什麼好處?<br>有了公版介面來控管，形塑了一道「隔離網」<br>隔離網之外，不會再因為節點種類，出現特異化的 <code>if</code> / <code>else</code> 片段，不會再有「改了這邊、漏了那邊」的情境出現<br>即便要擴充新節點，或異動特定節點，也只會收斂在專案中的某處……</p>
+<p>「筱娍!」<br>「呃…恩…?」<br>「幫我多加個邏輯判斷用的節點」</p>
+<p>重構完系統之後，現在的筱娍對擴充胸有成竹<br>第一步，筱娍在專案中「新增」了一個 class，叫做「IfElseOperator.cs」</p>
+<img src="/2021/07/14/Design-Pattern/extension-of-new-operators.jpg" class="" title="Extension of New Operators" alt="Extension of New Operators">
+
+<p>第二步，讓 <code>IfElseOperator</code> 繼承抽象的 <code>Operator</code> 類別<br>並且!! 「只在」 <code>IfElseOperator</code> 中實作相關功能</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">IfElseOperator</span> : <span class="title">Operator</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">string</span> _logicalSqlText;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">override</span> <span class="built_in">string</span> ComponentId</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">get</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;IfElse&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">SetLogic</span>(<span class="params"><span class="built_in">string</span> logicSql</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        _logicalSqlText = logicSql;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> Result <span class="title">Execute</span>(<span class="params"></span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// Implementation goes here.</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Result(<span class="literal">true</span>, <span class="string">&quot;Logical operation executed&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>第三步，在工廠中多加一條 <code>IfElse</code> 類別的產出片段</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class</span> <span class="title">OperatorFactory</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Operator <span class="title">Make</span>(<span class="params"><span class="built_in">string</span> config</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        JObject json = JObject.Parse(config);</span><br><span class="line">        <span class="built_in">string</span> componentId = json[<span class="string">&quot;componentId&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line">        <span class="built_in">string</span> title = json[<span class="string">&quot;title&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line">        Operator op;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">switch</span> (componentId)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&quot;SendMail&quot;</span>:</span><br><span class="line">                SendMailOperator sendMail = <span class="keyword">new</span> SendMailOperator();</span><br><span class="line">                sendMail.SetTitle(json[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;title&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;());</span><br><span class="line">                sendMail.SetSubject(json[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;subject&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;());</span><br><span class="line">                sendMail.SetContent(json[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;content&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;());</span><br><span class="line">                sendMail.SetReceivers(json[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;receivers&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;().Split(<span class="string">&#x27;,&#x27;</span>));</span><br><span class="line">                op = sendMail;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&quot;SendSMS&quot;</span>:</span><br><span class="line">                SendSmsOperator sendSms = <span class="keyword">new</span> SendSmsOperator();</span><br><span class="line">                sendSms.SetSubject(json[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;subject&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;());</span><br><span class="line">                sendSms.SetContent(json[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;content&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;());</span><br><span class="line">                sendSms.SetReceivers(json[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;receivers&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;().Split(<span class="string">&#x27;,&#x27;</span>));</span><br><span class="line">                op = sendSms;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&quot;QueryDatabase&quot;</span>:</span><br><span class="line">                DatabaseOperator database = <span class="keyword">new</span> DatabaseOperator();</span><br><span class="line">                database.SetSql(json[<span class="string">&quot;sql&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;());</span><br><span class="line">                op = database;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="comment">// New &quot;If Else&quot; operator</span></span><br><span class="line">            <span class="keyword">case</span> <span class="string">&quot;IfElse&quot;</span>:</span><br><span class="line">                IfElseOperator ifElse = <span class="keyword">new</span> IfElseOperator();</span><br><span class="line">                ifElse.SetLogic(json[<span class="string">&quot;logic&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;());</span><br><span class="line">                op = ifElse;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="literal">default</span>:</span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> UnsupportedOperatorException(<span class="string">&quot;Unsupported operator ID: \&quot;&quot;</span> + componentId + <span class="string">&#x27;&quot;&#x27;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        op.SetTitle(json[<span class="string">&quot;properties&quot;</span>][<span class="string">&quot;title&quot;</span>].Value&lt;<span class="built_in">string</span>&gt;());</span><br><span class="line">        <span class="keyword">return</span> op;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>簡單三個步驟，筱娍便完成了擴充<br>更甚者，所有用到工廠的地方，都不需要異動<br>這，就是物件導向原則中的「Open-closed principle」:「Open for extension, closed for modification」<br>意指程式碼要:</p>
+<ol>
+<li>夠「開放」，讓「擴充」可以非常容易達成</li>
+<li>夠「封閉」，讓「修改」只異動少量程式碼</li>
+</ol>
+<p>Design Pattern 在筱娍的生命中出現後，同事頻頻被這項概念震驚，甚至帶起了一股「設計風潮」<br>公司內開始追求開發效率，將公司帶入嶄新的世代……</p>
+<p>然而，安逸總是不會持續太久，挑戰總是不斷出現<br>過度熱衷於設系模式，公司的系統開始大量出現「過度設計」這種現象<br>過度去耦合、過度抽象化，搞得程式又開始沒有人看得懂，追溯程式碼也要繞好幾圈，才能找到「實作」到底在哪，就像走迷宮一樣……<br>在成長為真 ● 軟體公司前，公司正面臨可怕的過渡期。已經被封為「架構師」的筱娍，要如何面對嶄新的挑戰呢?</p>
+<img src="/2021/07/14/Design-Pattern/tactics.jpg" class="">
+
+<center>全文完</center>
+
+<hr>
+<p>總結物件導向 / 設計模式的好處:</p>
+<ul>
+<li>提升可讀性。類別若有精準切分，他們就像百科全書的索引般，引導設計師快速進入目標功能開始作業。「類別」本身，就是有助人腦理解的書籤</li>
+<li>提高效率。程式碼大量重用，做異動時只須改一次、改一處，就全面生效。完全不需盤點相關程式碼，也進而避免漏改的情形</li>
+<li>易於擴充。新增功能只需在一個地方「新增類別」並異動一點點程式碼，不需要東加西加，降低 bug 產生的機會</li>
+<li>易於分工。任務的切分可以從 class 類別出發: 你做這個 class、我做那個 class，不再因為任務切分搞得面紅耳赤</li>
+</ul>
+<p>再列下去你頭都要暈了? 到此為止吧! XD</p>
+<h1 id="統整-23-項設計模式"><a href="#統整-23-項設計模式" class="headerlink" title="統整 23 項設計模式"></a>統整 23 項設計模式</h1><p>設計模式最初由「The Gang of Four」四人幫提出<br>他們統整使用情境成 23 種，並提出對應的程式碼結構<br>下面是表列出使用時機、使用範例，並附上範例程式碼供參考</p>
+<p>設計模式，非常看重「使用情境」<br>在不對的情境下套用，只會搞得系統更難維護，就像筱娍在最後碰上的全新挑戰</p>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Scenario</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/john29917958/Design-Patterns/tree/master/StateMachine">State Machine</a></td>
+<td>當系統存在著多種狀態，這些狀態會彼此轉移，且狀態在未來可能會不斷擴充。</td>
+<td>遊戲角色狀態: Idle -&gt; Jump -&gt; Idle -&gt; Attack -&gt; Idle。</td>
+</tr>
+<tr>
+<td>Facade</td>
+<td>某個子系統或 library 由許多子功能組成。要初始化它們非常繁瑣、或使用方式以及使用順序非常複雜。</td>
+<td>有一款多人連線的服務叫做「Photon」。有經驗的人都知道 client - server 多人連線有多麼複雜、多麼麻煩。Photon 這套 library 便將複雜的 library code 用簡單的介面包起來。我們只要使用這簡單的介面，就可以實現強大的多人連線能力。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/john29917958/Design-Patterns/tree/master/Singleton">Singleton</a></td>
+<td>某物件在整個系統只會存在一個。</td>
+<td>一個太陽、一條對伺服器的連線。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/john29917958/Design-Patterns/tree/master/Mediator">Mediator</a></td>
+<td>許多子系統間彼此要交互合作，且子系統有機會在未來被擴充。</td>
+<td>戰略遊戲中的兵營系統使用士兵系統、士兵系統又使用資源系統、資源系統又再使用 UI 狀態頁系統……</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/john29917958/Design-Patterns/tree/master/Bridge">Bridge</a></td>
+<td>存在兩群物件。A 群物件可以使用 B 群裡的任意物件，且這兩群物件在未來會不斷被擴充。</td>
+<td>遊戲中的法師可以使用任一種魔法 (火球術、急凍術、召雷術……)。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/john29917958/Design-Patterns/tree/master/Strategy">Strategy</a></td>
+<td>某段演算邏輯可以被動態替換，且未來有機會不斷擴充。</td>
+<td>遊戲角色的數值計算邏輯，會跟據人物處於不同模式下，有不同的表現。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/john29917958/Design-Patterns/tree/master/TemplateMethod">Template Method</a></td>
+<td>某段邏輯的「步驟順序」非常雷同，而這些步驟的「內容實作」有機會不一樣 (可以被客製化)。</td>
+<td>遊戲人物施放魔法前有一定的檢查順序: 法力是否足夠、冷卻時間是否結束、是否有任何敵人在施放範圍內 &lt;- 施放範圍步驟對於全域系魔法沒有必要，一律回傳 true，進行全場攻擊。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/john29917958/Design-Patterns/tree/master/Factory">Factory</a></td>
+<td>某群物件的種類會不斷擴充，且創建物件的程序挺麻煩、或是創建方式有機會做替換。</td>
+<td>需要建立精靈、蜘蛛、骷髏頭、狼人等怪物，且他們的數值在不同關卡、或不同玩家等級下，會有不同表現。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/john29917958/Design-Patterns/tree/master/Builder">Builder</a></td>
+<td>建立某樣物件的程序非常多，或非常複雜。</td>
+<td>初始化一個遊戲角色需要設定非常多屬性，如基礎數值、數值計算方式、角色 AI 等等。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/john29917958/Design-Patterns/tree/master/Flyweight">Flyweight</a></td>
+<td>存在某些瑣碎的屬性，且這些屬性不會被異動，可以分享給所有物件。</td>
+<td>遊戲角色的基礎數值包含力量、敏捷、智力、幸運……，這些數值可以共用給該角色的所有實例。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/john29917958/Design-Patterns/tree/master/Composite">Composite</a></td>
+<td>系統存在類似樹狀節點結構。</td>
+<td>檔案系統中，包含資料夾與檔案兩種節點，且資料夾底下可以有數個資料夾或檔案節點。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/john29917958/Design-Patterns/tree/master/Command">Command</a></td>
+<td>當動作或操作行為可以被自由排序、佇列等待、取消、復原、重作或記錄等等。</td>
+<td>Adobe PhotoShop 的復原、重作功能以及步驟紀錄器面板。或是 WarCraft III 的兵營系統，可以排入許多生產士兵的命令。當然! 這些命令也可以被取消。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/john29917958/Design-Patterns/tree/master/ChainOfResponsibility">Chain of Responsibility</a></td>
+<td>當一個指令可以被多個處理者決定是否執行、實際執行、是否 pass 給下一位處理者等等。</td>
+<td>公司中的公文傳簽流程、打電話到電信局的轉接專員 (或服務台直接掛你電話?) 等等。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/john29917958/Design-Patterns/tree/master/Observer">Observer</a></td>
+<td>當事件發生時，可以有一個至多個物件被通知。</td>
+<td>社群網站的通知功能，或是遊戲中任何事件發生時，會通知多個「成就系統」檢查成就是否達成。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/john29917958/Design-Patterns/tree/master/Memento">Memento</a></td>
+<td>當我們需要輸出或是載入某個物件的狀態，又不希望暴露該物件太多屬性時。</td>
+<td>現代化的編輯器在災難性閃退後，會在重開時自動載入出錯前的狀態。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/john29917958/Design-Patterns/tree/master/Visitor">Visitor</a></td>
+<td>我們需要順過某群物件來取得資訊做整理，或對每個物件做出操作。這些「操作」與「物件類型」會不斷被擴充。</td>
+<td>在背包中移除所有耐用值歸零的裝備。裝備的種類會不斷被擴充，且未來可能會有其他操作，如取得總負重量、丟掉所有武器並展示每種武器的拋棄特效等等。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/john29917958/Design-Patterns/tree/master/Decorator">Decorator</a></td>
+<td>希望在穩定的系統功能中加入新的優化。</td>
+<td>在一杯奶茶中加入珍珠、蒟蒻、芋頭、仙草等等。每加一種，價格會做相對應的更新。或是遊戲中的角色在帶上一至多個裝備後，會出現字首/字尾標記，角色數值也會跟著做客製化疊加。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/john29917958/Design-Patterns/tree/master/Adapter">Adapter</a></td>
+<td>當介面不一致的情形發生時 (Adapter 的功能就有如轉接頭)。</td>
+<td>有時我們的系統要提供使用者「輸出文字檔」的功能，輸出的格式可以是純文字、JSON、XML 等等。網路上都有找到現存的序列化套件，但這些套件的使用方式 (介面) 全都不一樣。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/john29917958/Design-Patterns/tree/master/Proxy">Proxy</a></td>
+<td>在執行某項既有功能之前，我們希望在不同情況下插入前置處理動作。</td>
+<td>載入遊戲角色未完成時，系統會先套入低階的預設模組給玩家看。在精緻模組載入完成後，角色的外觀會立即被替換成精緻版。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/john29917958/Design-Patterns/tree/master/Iterator">Iterator</a></td>
+<td>當我們需要輕易地遍歷某種物件時。</td>
+<td>支援 <code>foreach</code> 語法的 C# generic <code>List&lt;T&gt;</code> 容器。Iterator 在現代化語言通常都有支援，因此放在表格尾端。</td>
+</tr>
+<tr>
+<td>Prototype</td>
+<td>當我們需要輕易複製，或參考範本建立全新物件時。</td>
+<td>Unity 遊戲開發引擎的 <code>Instantiate</code> 語法，從打包好的「prefab 預置物」創建一份遊戲物件到場景上。</td>
+</tr>
+<tr>
+<td>Interpreter</td>
+<td>當要解析一串符合特定語法的文字時。</td>
+<td>解析文字是否符合定義的 regular expression。或者，程式語言的編譯器 (compiler)、直譯器也都是。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/john29917958/Design-Patterns/tree/master/AbstractFactory">Abstract Factory</a></td>
+<td>當有幾種物件需要根據不同環境，而建立不同實作出來時。</td>
+<td>UI 系統中的 banner、menu 選單、popup 對話框需要根據一般模式、節慶模式等作不同變化。</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://john29917958.github.io/2021/07/14/Design-Pattern/" data-id="ckr3kd4230000e47k4ecb3ryz" class="article-share-link">Share</a>
+      
+        <a href="http://john29917958.github.io/2021/07/14/Design-Pattern/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/architecture/" rel="tag">architecture</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/design/" rel="tag">design</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/engineer/" rel="tag">engineer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/program/" rel="tag">program</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/software/" rel="tag">software</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/system/" rel="tag">system</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2021/01/17/4-Things-to-Know-Before-Entering-the-Software-Industry/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">進入程式產業需了解的 4 件事</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Art/">Art</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Dance/">Dance</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Miscellany/">Miscellany</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Reflection/">Reflection</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Work/">Work</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/architecture/" rel="tag">architecture</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/art/" rel="tag">art</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dance/" rel="tag">dance</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/design/" rel="tag">design</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/engineer/" rel="tag">engineer</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/graphic/" rel="tag">graphic</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/" rel="tag">life</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life-reflection-work/" rel="tag">life, reflection, work</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/management/" rel="tag">management</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/music/" rel="tag">music</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/program/" rel="tag">program</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/programming/" rel="tag">programming</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reflection/" rel="tag">reflection</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/research/" rel="tag">research</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/software/" rel="tag">software</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/system/" rel="tag">system</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/architecture/" style="font-size: 10px;">architecture</a> <a href="/tags/art/" style="font-size: 17.5px;">art</a> <a href="/tags/dance/" style="font-size: 12.5px;">dance</a> <a href="/tags/design/" style="font-size: 20px;">design</a> <a href="/tags/engineer/" style="font-size: 10px;">engineer</a> <a href="/tags/graphic/" style="font-size: 17.5px;">graphic</a> <a href="/tags/life/" style="font-size: 15px;">life</a> <a href="/tags/life-reflection-work/" style="font-size: 10px;">life, reflection, work</a> <a href="/tags/management/" style="font-size: 12.5px;">management</a> <a href="/tags/music/" style="font-size: 10px;">music</a> <a href="/tags/program/" style="font-size: 10px;">program</a> <a href="/tags/programming/" style="font-size: 17.5px;">programming</a> <a href="/tags/reflection/" style="font-size: 17.5px;">reflection</a> <a href="/tags/research/" style="font-size: 10px;">research</a> <a href="/tags/software/" style="font-size: 10px;">software</a> <a href="/tags/system/" style="font-size: 10px;">system</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">七月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">一月 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">十二月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">十一月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">十月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">十二月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a><span class="archive-list-count">7</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/07/14/Design-Pattern/">Design Pattern</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/17/4-Things-to-Know-Before-Entering-the-Software-Industry/">進入程式產業需了解的 4 件事</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/01/Achievements-in-TSMC-and-People-to-Thank-for/">Achievements in TSMC and People to Thank for</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/26/2020-Review/">2020 Review</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/24/Work-Mentality/">Work Mentality</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 汪子超<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'john29917958-github';
+  
+  var disqus_url = 'http://john29917958.github.io/2021/07/14/Design-Pattern/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+  </div>
+</body>
+</html>

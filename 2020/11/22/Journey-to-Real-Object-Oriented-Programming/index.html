@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Journey to Real Object-Oriented Programming | TC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Not long ago, I’ve published the 1st. version of a voice control mobile game on Google Play and App Store, gained 131 download count.At first, I set it as a one-time game project, no maintenance effor">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Journey to Real Object-Oriented Programming">
+<meta property="og:url" content="http://john29917958.github.io/2020/11/22/Journey-to-Real-Object-Oriented-Programming/index.html">
+<meta property="og:site_name" content="TC">
+<meta property="og:description" content="Not long ago, I’ve published the 1st. version of a voice control mobile game on Google Play and App Store, gained 131 download count.At first, I set it as a one-time game project, no maintenance effor">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="http://john29917958.github.io/2020/11/22/Journey-to-Real-Object-Oriented-Programming/origin-architecture.jpg">
+<meta property="og:image" content="http://john29917958.github.io/2020/11/22/Journey-to-Real-Object-Oriented-Programming/new-architecture.jpg">
+<meta property="og:image" content="http://john29917958.github.io/2020/11/22/Journey-to-Real-Object-Oriented-Programming/input-adapter.jpg">
+<meta property="og:image" content="http://john29917958.github.io/2020/11/22/Journey-to-Real-Object-Oriented-Programming/controllers.jpg">
+<meta property="og:image" content="http://john29917958.github.io/2020/11/22/Journey-to-Real-Object-Oriented-Programming/refactoring-process.jpg">
+<meta property="article:published_time" content="2020-11-22T11:58:18.000Z">
+<meta property="article:modified_time" content="2021-05-13T13:01:46.670Z">
+<meta property="article:author" content="汪子超">
+<meta property="article:tag" content="programming">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://john29917958.github.io/2020/11/22/Journey-to-Real-Object-Oriented-Programming/origin-architecture.jpg">
+<meta name="twitter:creator" content="@john29917958">
+<link rel="publisher" href="+%E6%B1%AA%E5%AD%90%E8%B6%85">
+<meta property="fb:admins" content="100002225898735">
+<meta property="fb:app_id" content="284882215">
+  
+    <link rel="alternative" href="/atom.xml" title="TC" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-80121293-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  <script data-ad-client="ca-pub-8315401057994110" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">TC</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://john29917958.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Journey-to-Real-Object-Oriented-Programming" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/22/Journey-to-Real-Object-Oriented-Programming/" class="article-date">
+  <time datetime="2020-11-22T11:58:18.000Z" itemprop="datePublished">2020-11-22</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Programming/">Programming</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      
+        <header class="article-header">
+      
+      
+  
+    <h1 class="article-title" itemprop="name">
+      Journey to Real Object-Oriented Programming
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Not long ago, I’ve published the 1st. version of a voice control mobile game on <a target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.TzuChaoWang.Ha">Google Play</a> and <a target="_blank" rel="noopener" href="https://apps.apple.com/tw/app/ha/id1534485753">App Store</a>, gained 131 download count.<br>At first, I set it as a one-time game project, no maintenance effort will be put into. But after I wrote the post of <a href="/2020/10/09/Ha-The-Game-Development-Review/" title="how I failed and restart, successfully published the game without marketing conflict">how I failed and restart, successfully published the game without marketing conflict</a>, I decided to grow the project into a bigger, richer one. So here comes the refactoring process in real case! I’ve documented the <strong>process</strong> and the <strong>methodology</strong> about how refactoring done. Are you ready? Here we go!</p>
+<span id="more"></span>
+
+<h1 id="Quick-View-of-Origin-Architecture"><a href="#Quick-View-of-Origin-Architecture" class="headerlink" title="Quick View of Origin Architecture"></a>Quick View of Origin Architecture</h1><p>The following diagram shows origin architecture of game application:</p>
+<img src="/2020/11/22/Journey-to-Real-Object-Oriented-Programming/origin-architecture.jpg" class="">
+
+<p>It can be summarized into three key ideas:</p>
+<ul>
+<li><code>InputController</code> listen to player’s voice and touch event, invokes the registered objects that implements <code>IInputAction</code>, including <code>PlayerController</code></li>
+<li><code>PlayerController</code> sends actions to <code>Player</code></li>
+<li><code>Player</code> and each leaf nodes of <code>Character</code> do every calculations and stores data of the related entity game component</li>
+</ul>
+<p>There’re two problems there.</p>
+<h2 id="Hard-for-Development-Debugging"><a href="#Hard-for-Development-Debugging" class="headerlink" title="Hard for Development Debugging"></a>Hard for Development Debugging</h2><p>There’s only one <code>InputController</code> that holds every I/O logics. Yes we can write <code>if</code> / <code>else</code> statements to switch between <strong>each</strong> platforms for <strong>each</strong> input events like tap, swing, press and hold, lower pitch voice, higher pitch voice, keyboard input… The problem is the <code>if</code> / <code>else</code> statements can be spread everywhere. Once some of the logics need to be modified, let’s search through all the <code>if</code> / <code>else</code> statements… Never do that… For me I did not write <code>if</code> / <code>else</code> statements. But I needed to comment out the PC specific codes before publishing it to mobile phone, and retains them back if I want to develop and test on PC.<br>There’s a design pattern called “adapter”. See the new architecture later. It’s also easy for platform extension if I need it someday.</p>
+<h2 id="Unflexible-Unnecessary-and-Buggy-Inheritance-Chain"><a href="#Unflexible-Unnecessary-and-Buggy-Inheritance-Chain" class="headerlink" title="Unflexible, Unnecessary and Buggy Inheritance Chain"></a>Unflexible, Unnecessary and Buggy Inheritance Chain</h2><p>Always prefers composition over inheritance. For me I ran into a situation that, unnecessary function implementation speard through child classes. And I noticed many time that some functions are always overwritten by child classes as well. Sometimes I also ran into the bug that some properties modified by parent class so the children behaves strangely.<br>In fact, Unity have designed the entire game system into “Composite Design Pattern” liked environment. We just “attach” necessary components, abilities, logics, controllers to the game object in need.<br>For me I then combined the Unity component concept with interface to eliminate the long and unnecessary inheritance chain. See the new architecture as well.</p>
+<h1 id="New-Architecture-Component-and-Interface"><a href="#New-Architecture-Component-and-Interface" class="headerlink" title="New Architecture: Component and Interface"></a>New Architecture: Component and Interface</h1><p>First let’s have a brief view of new architecture:</p>
+<img src="/2020/11/22/Journey-to-Real-Object-Oriented-Programming/new-architecture.jpg" class="">
+
+<p>There’re three major extension points in such architecture.</p>
+<h2 id="InputAdapter"><a href="#InputAdapter" class="headerlink" title="InputAdapter"></a>InputAdapter</h2><p>Compared to the old <code>InputController</code>, the adapter design pattern is implemented. The key concept is to create appropriate user input listener on different platforms. In <code>MobileInputAdapter</code>, it listens screen touch events; While in <code>PcInputAdapter</code>, it listens keyboard event. All events are dispatched through C# delegation. So <code>InputAdapters</code> never cares who catches the event, thus reaching the goal of decoupling. Furthermore, I can easily include new platform like XBOX by just creating a new <code>XBoxAdapter</code> and writes XBOX related I/O event, without modifying codes of other platforms.</p>
+<img src="/2020/11/22/Journey-to-Real-Object-Oriented-Programming/input-adapter.jpg" class="">
+
+<h2 id="Controllers-and-Entity-Class"><a href="#Controllers-and-Entity-Class" class="headerlink" title="Controllers and Entity Class"></a>Controllers and Entity Class</h2><p>No more complex inheritance. Instead, I create controllers for each new characters. Attaches the controller and <code>Character</code> class to the game object. So when there’s new character to be created, just add new controller class and attach it to such character.</p>
+<img src="/2020/11/22/Journey-to-Real-Object-Oriented-Programming/controllers.jpg" class="">
+
+<h2 id="Interface-as-Ability"><a href="#Interface-as-Ability" class="headerlink" title="Interface as Ability"></a>Interface as Ability</h2><p>For customized character abilities, I use interface. Character controllers implement it in their need. But how invoker knows if the target game object has specific ability? I take the powerful <code>GetComponent()</code> method of Unity:</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">IDamageable damageable = target.GetComponent&lt;IDamageable&gt;();</span><br><span class="line"><span class="keyword">if</span> (damageable != <span class="literal">null</span>)</span><br><span class="line">&#123;</span><br><span class="line">	damageable.TakeDamage(power);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="Refactoring-Process"><a href="#Refactoring-Process" class="headerlink" title="Refactoring Process"></a>Refactoring Process</h1><p>Never does all refactoring then test it. You’ll put yourself in an unnecessary disaster. Just like product development cycle, split the entire refactoring task into small pieces of works. For example: Refactors one character then do integration and testing immediately. One after another. So we can control the debugging complexity by our own.</p>
+<img src="/2020/11/22/Journey-to-Real-Object-Oriented-Programming/refactoring-process.jpg" class="">
+
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>So the major refactoring purposes are to deal with platform I/O difference, simplifies how character extension is done, and “installs” interfaces to character in need to give them specific abilities.<br>Such architecture will be tested and challanged later I start the extension process. Let’s see~</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://john29917958.github.io/2020/11/22/Journey-to-Real-Object-Oriented-Programming/" data-id="ckq3ncy0d000y8k7kbwr7cht9" class="article-share-link">Share</a>
+      
+        <a href="http://john29917958.github.io/2020/11/22/Journey-to-Real-Object-Oriented-Programming/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/programming/" rel="tag">programming</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/11/24/Work-Mentality/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Work Mentality
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/10/22/6-Characteristics-of-High-Value-Programmer/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">6 Characteristics of High Value Programmer</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Art/">Art</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Dance/">Dance</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Miscellany/">Miscellany</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Reflection/">Reflection</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Work/">Work</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/architecture/" rel="tag">architecture</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/art/" rel="tag">art</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dance/" rel="tag">dance</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/design/" rel="tag">design</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/engineer/" rel="tag">engineer</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/graphic/" rel="tag">graphic</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/" rel="tag">life</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life-reflection-work/" rel="tag">life, reflection, work</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/management/" rel="tag">management</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/music/" rel="tag">music</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/program/" rel="tag">program</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/programming/" rel="tag">programming</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reflection/" rel="tag">reflection</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/research/" rel="tag">research</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/software/" rel="tag">software</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/system/" rel="tag">system</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/architecture/" style="font-size: 10px;">architecture</a> <a href="/tags/art/" style="font-size: 17.5px;">art</a> <a href="/tags/dance/" style="font-size: 12.5px;">dance</a> <a href="/tags/design/" style="font-size: 20px;">design</a> <a href="/tags/engineer/" style="font-size: 10px;">engineer</a> <a href="/tags/graphic/" style="font-size: 17.5px;">graphic</a> <a href="/tags/life/" style="font-size: 15px;">life</a> <a href="/tags/life-reflection-work/" style="font-size: 10px;">life, reflection, work</a> <a href="/tags/management/" style="font-size: 12.5px;">management</a> <a href="/tags/music/" style="font-size: 10px;">music</a> <a href="/tags/program/" style="font-size: 10px;">program</a> <a href="/tags/programming/" style="font-size: 17.5px;">programming</a> <a href="/tags/reflection/" style="font-size: 17.5px;">reflection</a> <a href="/tags/research/" style="font-size: 10px;">research</a> <a href="/tags/software/" style="font-size: 10px;">software</a> <a href="/tags/system/" style="font-size: 10px;">system</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">七月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">一月 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">十二月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">十一月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">十月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">十二月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a><span class="archive-list-count">7</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/07/14/Design-Pattern/">Design Pattern</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/17/4-Things-to-Know-Before-Entering-the-Software-Industry/">進入程式產業需了解的 4 件事</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/01/Achievements-in-TSMC-and-People-to-Thank-for/">Achievements in TSMC and People to Thank for</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/26/2020-Review/">2020 Review</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/24/Work-Mentality/">Work Mentality</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 汪子超<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'john29917958-github';
+  
+  var disqus_url = 'http://john29917958.github.io/2020/11/22/Journey-to-Real-Object-Oriented-Programming/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+  </div>
+</body>
+</html>
