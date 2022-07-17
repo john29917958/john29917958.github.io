@@ -37,7 +37,7 @@ Hope this article can give you some confidence in programming. Looking forward t
 Open the developer console again! Use two variables: one assigns a string, another assigns an integer. We want the browser to print `"I give myself 100 points today!"`
 *Tip: Use addition operator `+` the concatenate two variables.*
 
-# Spacial Topics
+# Special Topics
 ## 3 Good Programming Habits
 1. Googling
 2. Adopt tools to level up efficiency
