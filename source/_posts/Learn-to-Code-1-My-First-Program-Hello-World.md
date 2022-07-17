@@ -1,4 +1,4 @@
-title: 'Class 1 - My First Program: Hello, World!'
+title: 'Learn to Code 1: My First Program - Hello, World!'
 visible: show
 date: 2022-07-17 13:00:34
 tags: [programming, coding, program, code, class, course, education, teaching]
