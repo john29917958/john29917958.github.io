@@ -16,14 +16,19 @@ We must be familiar with McDonald's, right? Suppose we order a meal and the wait
 
 Now let's modify our code a little bit:
 ```javascript
-var number = 10;
-console.log('The value of number is: ' + number);
+var temperature = 10;
+console.log('The temperature should be controlled at: ' + temperature);
 ```
 
 Are you finished? Now press enter key to see what the console prints?
 
 {% asset_img print-variable.jpg %}
 
-It's amazing that the console prints `The value of number is: 10` instead of `'The value of number is: ' + number`. Because at the second line of code, the browser takes the content of the number variable `10`, and concatenate it with the string `"The value of number is: "` before sending it to `console.log()` to ask the browser to print it.
+It's amazing that the console prints `The temperature should be controlled at: 10` instead of `'The temperature should be controlled at: ' + number`. Let's first look at the first line code. This line of code can be split into five parts. First part is the `var` keyword. It's used to declare a variable, like we add a "temperature" controlling factor to the recipe and specify it to be controlled at 10 degree. In some programming languages it also defines the data type, like C:
+```c
+int temperature = 10;
+printf("The value of temperature is: %d", temperature);
+```
+In these two versions of code, the `var` keyword can be mapped to C `int` keyword. In C the `int` keyword also defines which type of value can be stored into the variable, as well as how to access it. The second part is the name of the variable. We can access the value, and change the value of that variable by using the name. The third part is the assignment operator that tells us we must assign a value to the variable. And the fourth part is the integer literal 10, it represents a value. The fifth part is the semicolon, that is, a terminator which tells this is the end of a statement. So the whole statement meas that we declare a variable called temperature in the first line of code, and assign integer literal 10 to this variable then end the statement. As for the assignment operator `=`, it takes two operands, assigning the value on the right-hand-side to the operand on the left-hand-side. And it's because the second line of code, the browser takes the content of the number variable `10`, then concatenate it with the string `"The value of number is: "` before sending it to `console.log()` to ask the browser to print it. As a result, the console output is `The temperature should be controlled at: 10`!
 
 Hope this article can give you some confidence in programming. Looking forward to your next programming journey. Until next time! See you in the next LTC learn-to-code session.
