@@ -14,8 +14,9 @@
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="http://john29917958.github.io/2022/07/17/Learn-to-Code-1-My-First-Program-Hello-World/terminal.jpg">
 <meta property="og:image" content="http://john29917958.github.io/2022/07/17/Learn-to-Code-1-My-First-Program-Hello-World/hello-world.jpg">
+<meta property="og:image" content="http://john29917958.github.io/2022/07/17/Learn-to-Code-1-My-First-Program-Hello-World/print-variable.jpg">
 <meta property="article:published_time" content="2022-07-17T05:00:34.000Z">
-<meta property="article:modified_time" content="2022-07-17T11:36:32.907Z">
+<meta property="article:modified_time" content="2022-07-17T12:01:36.096Z">
 <meta property="article:author" content="汪子超">
 <meta property="article:tag" content="programming">
 <meta property="article:tag" content="program">
@@ -130,6 +131,13 @@ ga('send', 'pageview');
 <img src="/2022/07/17/Learn-to-Code-1-My-First-Program-Hello-World/hello-world.jpg" class="">
 <p>Congratulations! You’ve finished your first program and it’s actually working! Tell me how much time did you spend? It’s less than 10 minutes right? In your first program, you used the JavaScript programming language. You used the <code>console</code> object, and called the <code>log</code> method of it, passing the text “Hello, world!” to the method. After hitting enter, the browser was asked to print it on the terminal window for us. And before start learning how to code, let’s first understand what a program is.</p>
 <p>We must be familiar with McDonald’s, right? Suppose we order a meal and the waiter receives the request and sends it for production. The production unit begins to prepare the ingredients and all the necessary things according to the recipe, going through the production process, controlling many factors such as temperature and time to make a perfect meal. Recipes for producing meals are like programs. Actions in recipes are like statements. Controlling factors such as temperature and time can be considered as variables assigned with appropriate values. So writing a program can be thought of as making a recipe!</p>
+<p>Now let’s modify our code a little bit:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> number = <span class="number">10</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;The value of number is: &#x27;</span> + number);</span><br></pre></td></tr></table></figure>
+
+<p>Are you finished? Now press enter key to see what the console prints?</p>
+<img src="/2022/07/17/Learn-to-Code-1-My-First-Program-Hello-World/print-variable.jpg" class="">
+
+<p>It’s amazing that the console prints <code>The value of number is: 10</code> instead of <code>&#39;The value of number is: &#39; + number</code>. Because at the second line of code, the browser takes the content of the number variable <code>10</code>, and concatenate it with the string <code>&quot;The value of number is: &quot;</code> before sending it to <code>console.log()</code> to ask the browser to print it.</p>
 <p>Hope this article can give you some confidence in programming. Looking forward to your next programming journey. Until next time! See you in the next LTC learn-to-code session.</p>
 
       
