@@ -14,4 +14,16 @@ Congratulations! You've finished your first program and it's actually working! T
 
 We must be familiar with McDonald's, right? Suppose we order a meal and the waiter receives the request and sends it for production. The production unit begins to prepare the ingredients and all the necessary things according to the recipe, going through the production process, controlling many factors such as temperature and time to make a perfect meal. Recipes for producing meals are like programs. Actions in recipes are like statements. Controlling factors such as temperature and time can be considered as variables assigned with appropriate values. So writing a program can be thought of as making a recipe!
 
+Now let's modify our code a little bit:
+```javascript
+var number = 10;
+console.log('The value of number is: ' + number);
+```
+
+Are you finished? Now press enter key to see what the console prints?
+
+{% asset_img print-variable.jpg %}
+
+It's amazing that the console prints `The value of number is: 10` instead of `'The value of number is: ' + number`. Because at the second line of code, the browser takes the content of the number variable `10`, and concatenate it with the string `"The value of number is: "` before sending it to `console.log()` to ask the browser to print it.
+
 Hope this article can give you some confidence in programming. Looking forward to your next programming journey. Until next time! See you in the next LTC learn-to-code session.
