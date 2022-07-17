@@ -4,7 +4,7 @@ date: 2022-07-17 13:00:34
 tags: [programming, coding, program, code, class, course, education, teaching]
 category: Programming
 ---
-Have you ever dreamed of writing excellent codes? or like a "hacker" in a movie? 10 minutes, just 10 minutes, you can write your first program by yourself! Enter this article and start today's coding session!
+Have you ever dreamed of writing excellent codes? or like a "hacker" in a movie? Just 10 minutes, you can write your first program by yourself! Enter this article and start today's coding session!
 <!--more-->
 Let's do this, open your most commonly used browser and press the key combination "Ctrl + Shift + I" to open the developer tools, then navigate to the developer console.
 {% asset_img terminal.jpg %}
