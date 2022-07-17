@@ -47,7 +47,63 @@ Open the developer console again! Use two variables: one assigns a string, anoth
 Like the example shown in the previous article, the code is full of special symbols and special statements. What's more, programmers not only need to convert the functions described in spoken language into these symbols and sentences, but make sure it runs without error to serve customers! Programmers spend most of their days designing and debugging, and the problems they encounter are even more bizarre and hard to explain. But we can't always ask a colleague once we encounter a problem. While the problems programmers face may seem clueless, in most cases, there are always others who have encountered them. So Google ability is critical for programmers!
 
 ### Adopt Tools to Level Up Efficiency
-In order to cope with these special statements and symbols, and to write higher quality code in less time. Programmers who are willing to use tools to improve their work efficiency are more valuable! For example, rather than typing code word by word, it is better to install some useful packages to automatically generate some code snippets, and even automatically check whether statements have potential mistakes. There are examples of using tools to improve efficiency, also the ways that we can improve ourselves!
+In order to cope with these special statements and symbols, and to write higher quality code in less time. Programmers who are willing to use tools to improve their work efficiency are more valuable! For example, rather than typing code word by word, it is better to install some useful extensions to automatically generate some code snippets, and even automatically check whether statements have potential mistakes. There are examples of using tools to improve efficiency, also the ways that we can improve ourselves!
 
 ### Be Prepared to Join A Project
 Most of the time, programmers who have entered the workplace have little chance of joining new projects. Most of them would join an existing project and trace the code, cooperate with team members to fix bugs or add / enhance features. So it's also very important for programmers to have a right attitude to be ready to join existing projects at any time!
+
+## Meet A Powerful Editor: Visual Studio Code
+![Visual Studio Code](https://code.visualstudio.com/assets/home/home-screenshot-win.png)
+
+Programmers love great tools, and Visual Studio Code is one of them. It's a code editor for programmers to complete daily tasks. It not only supports every languages, but can be installed with many powerful extensions that make coding easier. It's highly recommended for both beginners and experienced programmers. Now it's time to [install it](https://code.visualstudio.com/) on your computer and start coding!
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.js"
+></script>
+<div style="text-align: center;">
+    <a class="btn btn-primary" href="https://code.visualstudio.com/" style="color: white; text-decoration: none;">
+        <i class="fa-solid fa-download me-2"></i>
+        Get Latest Visual Studio Code
+    </a>
+</div>
+
+After installed the Visual Studio Code (let's say VSCode), run the editor and hit "Ctrl + N" to open a new file, then click the language name in the bottom right corner, type JavaScript and select it.
+![Visual Studio Code change language mode](https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/change_syntax.gif)
+
+Everything's ready now! Type `console.log('Hello, world!');` again, and you'll see the syntax highlighting effect.
+
+{% asset_img vs-code-hello-world.jpg %}
+
+And we can also hit "Ctrl + Shift + X" to bring up the Extensions view.
+
+![Visual Studio Code Extensions view](https://code.visualstudio.com/assets/docs/editor/extension-marketplace/extensions-popular.png)
+
+There're rich extensions there, let's type "JavaScript (ES6) code snippets" to the search bar and install it.
+
+{% asset_img vs-code-javascript-es6-extension.jpg %}
+
+Then we can test the feature provided by the extension. Try input code as follows:
+```javascript
+class HelloWorld {
+
+}
+```
+Then move the cursor to second line and type `con`
+
+{% asset_img es6-suggestion.jpg %}
+
+Now let's select 1st. option, then the extension would automatically write some code for us
+
+{% asset_img es6-constructor-code-snippet.jpg %}
+
+This is an example of using a powerful extension. Visual Studio Code is very versatile, and has a rich extension library. If you haven't installed it yet, click the link to start the installation now!
+
+<div style="text-align: center;">
+    <a class="btn btn-primary" href="https://code.visualstudio.com/" style="color: white; text-decoration: none;">
+        <i class="fa-solid fa-download me-2"></i>
+        Get Latest Visual Studio Code
+    </a>
+</div>
+
+What about you? What is your favorite programming language and editor? Please leave a comment below to share what they are good at with me!
