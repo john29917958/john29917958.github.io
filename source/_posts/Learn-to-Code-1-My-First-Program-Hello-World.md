@@ -46,8 +46,8 @@ Open the developer console again! Use two variables: one assigns a string, anoth
 ### Googling
 Like the example shown in the previous article, the code is full of special symbols and special statements. What's more, programmers not only need to convert the functions described in spoken language into these symbols and sentences, but make sure it runs without error to serve customers! Programmers spend most of their days designing and debugging, and the problems they encounter are even more bizarre and hard to explain. But we can't always ask a colleague once we encounter a problem. While the problems programmers face may seem clueless, in most cases, there are always others who have encountered them. So Google ability is critical for programmers!
 
-### Adopt tools to level up efficiency
+### Adopt Tools to Level Up Efficiency
 In order to cope with these special statements and symbols, and to write higher quality code in less time. Programmers who are willing to use tools to improve their work efficiency are more valuable! For example, rather than typing code word by word, it is better to install some useful packages to automatically generate some code snippets, and even automatically check whether statements have potential mistakes. There are examples of using tools to improve efficiency, also the ways that we can improve ourselves!
 
-### Be prepared to join a project
+### Be Prepared to Join A Project
 Most of the time, programmers who have entered the workplace have little chance of joining new projects. Most of them would join an existing project and trace the code, cooperate with team members to fix bugs or add / enhance features. So it's also very important for programmers to have a right attitude to be ready to join existing projects at any time!
