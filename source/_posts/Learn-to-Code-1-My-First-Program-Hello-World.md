@@ -22,7 +22,7 @@ And actually, in addition to the JavaScript we've wrote, there're a lot more pro
 | Computer graphics and high-performance systems | C, C++                                                        | Adobe Photoshop                                            |
 | Games                                          | C# (Unity), C++ (Unreal)                                      | Fall Guys: Ultimate Knockout, Hellblade: Senua’s Sacrifice |
 
-Does this help? Hope this can help you set ideal goal and the language to learn. Now before we dive into the code, let's first understand what a program is.
+Does this help? Why don't try to think about which job do you like? What programming language can you start with? Hope this can help you set ideal goal and the language to learn. Now before we dive into the code, let's first understand what a program is.
 
 We must be familiar with McDonald's, right? Suppose we order a meal and the waiter receives the request and sends it for production. The production unit begins to prepare the ingredients and all the necessary things according to the recipe, going through the production process, controlling many factors such as temperature and time to make a perfect meal. Recipes for producing meals are like programs. Actions in recipes are like statements. Controlling factors such as temperature and time can be considered as variables assigned with appropriate values. So writing a program can be thought of as making a recipe! Computer follows the instructions of the program is like we cook according to the recipe. When we specify temperature in a recipe should be adjusted to 10 degree, it's like declare a variable and assign 10 to it.
 
