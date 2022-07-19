@@ -10,7 +10,19 @@ Let's do this, open your most commonly used browser and press "Ctrl + Shift + I"
 {% asset_img terminal.jpg %}
 See the right-angle icon on the screen? The console looks like a terminal from a hacker movie, right? Now, you're like an excellent programmer facing a console. Attention! Do not copy any text in this article! Let's type something into the magical terminal: `console.log('Hello, world!');`. Have you finished inputing the code? Now, hit the enter key, and see what happens.
 {% asset_img hello-world.jpg %}
-Congratulations! You've finished your first program and it's actually working! Tell me how much time did you spend? It's less than 10 minutes right? In your first program, you used the JavaScript programming language. You used the `console` object, called its `log` method, that is, a function, and passed the text "Hello, world!" to it. After hitting enter, the browser was asked to print it on the terminal window for us. Before start learning how to code, let's first understand what a program is.
+Congratulations! You've finished your first program and it's actually working! Tell me how much time did you spend? It's less than 10 minutes right? In your first program, you used the JavaScript programming language. You used the `console` object, called its `log` method, that is, a function, and passed the text "Hello, world!" to it. After hitting enter, the browser was asked to print it on the terminal window for us.
+And actually, in addition to the JavaScript we've wrote, there're a lot more programming languages! Let's take a look at five uses of them:
+
+
+| Purpose                                        | Language                                                      | Example                                                    |
+| ---------------------------------------------- | ------------------------------------------------------------- | ---------------------------------------------------------- |
+| AI and machine learning, data analytics        | Python                                                        | Spotify uses Python and Hadoop to give user suggestions    |
+| Web development                                | JavaScript, Java, Ruby, PHP, C#, Node.js (JavaScript), Python | Facebook written in PHP, LinkedIn written in Node.js       |
+| Mobile app                                     | Java (Android), Swift (IOS), Kotlin, React Native, Python     | Telegram                                                   |
+| Computer graphics and high-performance systems | C, C++                                                        | Adobe Photoshop                                            |
+| Games                                          | C# (Unity), C++ (Unreal)                                      | Fall Guys: Ultimate Knockout, Hellblade: Senua’s Sacrifice |
+
+Does this help? Hope this can help you set ideal goal and the language to learn. Now before we dive into the code, let's first understand what a program is.
 
 We must be familiar with McDonald's, right? Suppose we order a meal and the waiter receives the request and sends it for production. The production unit begins to prepare the ingredients and all the necessary things according to the recipe, going through the production process, controlling many factors such as temperature and time to make a perfect meal. Recipes for producing meals are like programs. Actions in recipes are like statements. Controlling factors such as temperature and time can be considered as variables assigned with appropriate values. So writing a program can be thought of as making a recipe! Computer follows the instructions of the program is like we cook according to the recipe. When we specify temperature in a recipe should be adjusted to 10 degree, it's like declare a variable and assign 10 to it.
 
