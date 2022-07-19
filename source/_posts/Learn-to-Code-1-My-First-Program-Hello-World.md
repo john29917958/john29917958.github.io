@@ -11,7 +11,7 @@ Let's do this, open your most commonly used browser and press "Ctrl + Shift + I"
 See the right-angle icon on the screen? The console looks like a terminal from a hacker movie, right? Now, you're like an excellent programmer facing a console. Attention! Do not copy any text in this article! Let's type something into the magical terminal: `console.log('Hello, world!');`. Have you finished inputing the code? Now, hit the enter key, and see what happens.
 {% asset_img hello-world.jpg %}
 Congratulations! You've finished your first program and it's actually working! Tell me how much time did you spend? It's less than 10 minutes right? In your first program, you used the JavaScript programming language. You used the `console` object, called its `log` method, that is, a function, and passed the text "Hello, world!" to it. After hitting enter, the browser was asked to print it on the terminal window for us.
-And actually, in addition to the JavaScript we've wrote, there're a lot more programming languages! Let's take a look at five uses of them:
+And actually, in addition to the JavaScript we've wrote, there're a lot more programming languages! Let's take a look at five real-world applications and uses of them:
 
 
 | Purpose                                        | Language                                                      | Example                                                    |
