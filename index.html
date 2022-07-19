@@ -113,7 +113,7 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Languages Required for A Particular Job<br>Primitive data types</p>
+        <p>Primitive data types</p>
 <ul>
 <li>int</li>
 <li>double</li>
@@ -122,12 +122,28 @@ ga('send', 'pageview');
 <li>Arithmetic operators</li>
 <li>Assignment operators</li>
 <li>Comparison operators</li>
-<li>Logical operators<br>Condition</li>
+<li>Logical operators</li>
+</ul>
+<p>Special topic: Shortcut keys</p>
+<p>Condition</p>
+<ul>
 <li>if</li>
 <li>else</li>
 <li>else if</li>
 </ul>
 <p>How to write a story to include all these concepts…<br>Remember to write outline<br>Remember to teach how to install and use XAMPP</p>
+<ol>
+<li>Install XAMPP</li>
+<li>Install PHP Debug</li>
+<li>Open C:\xampp\htdocs\index.php, type <?php phpinfo(); ?></li>
+<li>Launch <a target="_blank" rel="noopener" href="http://localhost/">http://localhost/</a></li>
+<li>Copy all then go to <a target="_blank" rel="noopener" href="https://xdebug.org/wizard">https://xdebug.org/wizard</a> and paste it</li>
+<li>Click “Analyse my phpinfo() output</li>
+<li>Follow instructions to place and rename the DLL to php_xdebug.dll at C:\xampp\php\ext</li>
+<li>Add settings below to php.ini<br> zend_extension = xdebug<br> [XDebug]<br> xdebug.remote_enable = 1<br> xdebug.remote_autostart = 1</li>
+<li>Add below configurations to user settings<br> “php.validate.executablePath”: “C:\xampp\php\php.exe”,<br> “php.debug.executablePath”: “C:\xampp\php”</li>
+<li> Create a launch.json</li>
+</ol>
 
       
     </div>
