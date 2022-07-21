@@ -11,6 +11,8 @@ The answer lies in today's article on "variable types and operands". Click the m
 
 <!--more-->
 
+Writing...
+
 Primitive data types
 - int
 - double
@@ -48,3 +50,82 @@ Remember to teach how to install and use XAMPP
     "php.validate.executablePath": "C:\\xampp\\php\\php.exe",
     "php.debug.executablePath": "C:\\xampp\\php"
 10.  Create a launch.json
+
+```c
+#include <stdio.h>
+#include <cstdlib>
+#include <string.h>
+#include <stdbool.h>
+#include <time.h>
+
+int main(int argc, char* argv[]) {
+    srand(time(NULL));
+    
+    int num = rand() % 11;
+    char high_low[5];
+    printf("Choose high or low: ");
+    scanf("%4s", high_low);
+
+    int op_num = rand() % 11;
+    bool is_op_choose_high = rand() % 2;
+    char op_high_low[5];
+    if (is_op_choose_high) {
+        strcpy(op_high_low, "high");
+    }
+    else {
+        strcpy(op_high_low, "low");
+    }
+
+    printf("You chose \"%s\" and number is \"%d\"\n", high_low, num);
+    printf("Opponent chose \"%s\" and number is \"%d\"\n", op_high_low, op_num);
+
+    bool is_winning = false;
+    bool is_op_winning = false;
+    
+    if (strcmp(high_low, "high") == 0) {
+        if (num > op_num) {
+            is_winning = true;            
+        }
+        else {
+            is_winning = false;
+        }
+    }
+    else {
+        if (num < op_num) {
+            is_winning = true;        
+        }
+        else {
+            is_winning = false;
+        }
+    }
+
+    if (strcmp(op_high_low, "high") == 0) {
+        if (op_num > num) {
+            is_op_winning = true;
+        }
+        else {
+            is_op_winning = false;
+        }
+    }
+    else {
+        if (op_num < num) {
+            is_op_winning = true;
+        }
+        else {
+            is_op_winning = false;
+        }
+    }
+
+    if (is_winning && !is_op_winning) {
+        printf("You won!");
+    }
+    else if (is_op_winning && !is_winning) {
+        printf("Opponent won.");
+    }
+    else {
+        printf("Draw");
+    }
+
+    return 0;
+}
+```
