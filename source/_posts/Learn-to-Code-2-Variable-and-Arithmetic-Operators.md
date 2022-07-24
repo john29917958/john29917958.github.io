@@ -11,8 +11,31 @@ The answer lies in today's article on "variable types and operands". Click the m
 
 <!--more-->
 
-Writing...
+When it comes to games, what's your favorite ones? Today we gonna make a critical rate calculator with reference to "[Honkai Impact 3](https://honkaiimpact3.hoyoverse.com/global/en-us/fab)"! Let's first take a quick look at the critical rate calculation formula:
 
+
+> critical rate = critical point / (75 + level * 5)
+
+It's the formula for stunning critical hits in the game! Look at the formula again, how many control factors do you see? For example, there's a control factor called "critical point", but there're two more. Can you figure them out? Tada! The others are "critical rate" and "level". So in the Honkai Impact 3 critical rate formula, we have three control factors:
+1. critical rate
+2. critical point
+3. level
+
+And you must have noticed, all these three factors can be different as player continues to play the game. The level can increase, and the critical point can be increased with the level, or by wearing equipments. Finally, the critical rate varies with critical point and level. These "control factors" that can change are almost the same concept as "variables" in programming language. Let's first look at a sample code snippet:
+
+```cpp
+std::string name = "Jack";
+int level = 80;
+int health = 2639;
+int magica = 196;
+int attack = 938;
+int defense = 308;
+int critical_point = 128;
+```
+
+
+
+# Below is my note and will be deleted before publishing the article
 Primitive data types
 - int
 - double
