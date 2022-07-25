@@ -21,19 +21,20 @@ It's the formula for stunning critical hits in the game! Look at the formula aga
 2. critical point
 3. level
 
-And you must have noticed, all these three factors can be different as player continues to play the game. The level can increase, and the critical point can be increased with the level, or by wearing equipments. Finally, the critical rate varies with critical point and level. These "control factors" that can change are almost the same concept as "variables" in programming language. Let's first look at a sample code snippet:
+And you must have noticed, all these three factors can be different as player continues to play the game. The level can increase, and the critical point can be increased with the level, or by wearing equipments. Finally, the critical rate varies with critical point and level. These "control factors" are almost the same as "variables" in programming language. Let's first look at the following sample code:
 
 ```cpp
 std::string name = "Jack";
 int level = 80;
 int health = 2639;
-int magica = 196;
+int mana = 196;
 int attack = 938;
 int defense = 308;
 int critical_point = 128;
 ```
 
-
+Level, health, mana, attack, defense, critical_point... Each variable is related to an attribute of a game character. And the name,
+is related to the character's name - Jack. In the sample code, we can see two data types: a name variable of type `string` and the other variables of type `integer`.
 
 # Below is my note and will be deleted before publishing the article
 Primitive data types
