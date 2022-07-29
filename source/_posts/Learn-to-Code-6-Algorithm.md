@@ -168,4 +168,4 @@ int main(int argc, char* argv[]) {
 }
 ```
 
-下次 Learn to Code 見!
+我們下次 Learn to Code 見!
