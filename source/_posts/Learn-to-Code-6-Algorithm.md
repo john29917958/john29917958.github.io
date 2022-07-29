@@ -77,7 +77,7 @@ n = 5
 如果我們把常數都去掉，可以得到時間複雜度是 n<sup>2</sup> - n
 如果 n 不斷往上增加，我們把 n 看成是可以忽略的因數，只保留 n<sup>2</sup>，結論就是我們得到 bubble sort 演算法的時間複雜度是 O(n<sup>2</sup>)
 
-終於來到寫程式的時候了! 設計好演算法之後，我們當然要把這套算法用程式碼寫出來解決問題。我們先把上面的描述用比較精簡的方法描述出來:
+準備好了嗎? 我們接下來要把上面的描述用比較精簡的方法描述出來:
 
 1. 老師會不斷從隊伍裡的第一位學生開始兩兩檢查學生的身高
 2. 如果前面的學生比後面的學生矮，就請兩位學生交換位置
@@ -112,7 +112,7 @@ algorithm bubble-sort is
     return s
 ```
 
-是不是已經很像程式碼了呢? 上面的演算法有個專有名詞叫做「Mathematical Style Pseudocode」。第一列 `algorithm bubble-sort is` 代表的是定義一個演算法，名字叫做「bubble-sort」。第二列 `input:` 是用來定義這個演算法要接收什麼參數。以 bubble-sort 演算法來看，要接收一個陣列，陣列的長度是 l。第三列 `output:` 是用來描述這個演算法要輸出什麼結果。以這次的演算法來說，要輸出一個排序過的陣列。在 `output:` 之後就是演算法的內容啦! 內容描述的邏輯跟上面的描述很類似，只是比較詳細了些。這邊我們要瞭解的是 pseudo code 常用的一些符號，例如 `<-` 代表把右邊的數值指定到左邊的變數、`=` 代表的是比較左邊跟右邊兩個運算子的數值是不是相等、`for ... to ...` 代表的是要從某個數值開始一直重複做迴圈內定義的事情到某個終止數值為止。這邊有常見的 pseudo code 數學符號:
+是不是已經很像程式碼了呢? 上面的演算法有個專有名詞叫做「Mathematical Style Pseudocode」。第一行 `algorithm bubble-sort is` 代表的是定義一個演算法，名字叫做「bubble-sort」。第二行 `input:` 是用來定義這個演算法要接收什麼參數。以 bubble-sort 演算法來看要接收一個陣列，陣列的長度是 l。第三行 `output:` 是用來描述這個演算法要輸出什麼結果。以這次的演算法來說，要輸出一個排序過的陣列。在 `output:` 之後就是演算法的內容啦! 內容跟前面的描述很類似，只是比較詳細了些。內容裡面有使用 pseudo code 常用的一些符號，例如 `<-` 代表把右邊的數值指定到左邊的變數、`=` 代表的是比較左邊跟右邊兩個運算子的數值是不是相等、`for ... to ...` 代表的是要從某個數值開始一直重複做迴圈內定義的事情，直到某個終止數值為止。這邊有常見的 pseudo code 數學符號:
 
 | 運算種類        | 符號                         |
 | -------------- | ---------------------------- |
@@ -123,7 +123,7 @@ algorithm bubble-sort is
 | Logical        | `and`, `or`                  |
 | Sums, products | `Σ`, `Π`                     |
 
-到這裡我們已經知道演算法的目的跟用途，也知道怎麼把解法用比較口語、比較簡單的方式寫出來。接下來，就是屬於你的挑戰時間啦! 把上面的 pseudo code 用程式碼寫出來吧! 希望今天的內容對您有幫助，有任何建議或想發問的地方歡迎在下面留言，我們下次 Learn to Code 見!
+到這裡我們已經知道演算法的目的，也知道怎麼把解法用比較口語、比較簡單的方式寫出來。接下來，就是屬於你的挑戰時間啦! 把上面的 pseudo code 用程式碼寫出來吧! 希望今天的內容對您有幫助，有任何建議或想發問的地方歡迎在下面留言，我們下次 Learn to Code 見!
 
 ## C++ Implementation
 這裡是把上面只寫了一列的程式碼完成。
@@ -131,7 +131,7 @@ algorithm bubble-sort is
 #include <stdio.h>
 
 void bubble_sort(int array[], int length) {    
-    bool has_swap_op = false;
+    bool has_swapped = false;
 
     for (int i = 0; i < length; i++) {
         array[i] = array[i];
@@ -142,17 +142,17 @@ void bubble_sort(int array[], int length) {
     }
 
     do {
-        has_swap_op = false;
+        has_swapped = false;
 
         for (int i = 0; i < length - 1; i++) {
             if (array[i] < array[i + 1]) {
                 int temp = array[i + 1];
                 array[i + 1] = array[i];
                 array[i] = temp;
-                has_swap_op = true;
+                has_swapped = true;
             }
         }
-    } while (has_swap_op);
+    } while (has_swapped);
 }
 
 int main(int argc, char* argv[]) {
