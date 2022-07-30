@@ -71,11 +71,11 @@ n = 5
 | 第五輪 | n - 1   | n - 5   |
 | Total | 5n - 5  | 5n - 15 |
 
-以檢查動作來看，我們總共會做 n(n - 1) 次
-以交換來看，我們總共會做 (n - 1) + (n - 2) + (n - 3) + ... + (n - n) = n(n - 1) / 2 次
-所以我們總共會做 n(n - 1) + n(n - 1) / 2 = 3n(n - 1) / 2 = 3(n<sup>2</sup> - n) / 2 次
+以檢查來看，我們總共會做 n(n - 1) 次動作
+以交換來看，我們總共會做 (n - 1) + (n - 2) + (n - 3) + ... + (n - n) = n(n - 1) / 2 次動作
+所以我們總共會做 n(n - 1) + n(n - 1) / 2 = 3n(n - 1) / 2 = 3(n<sup>2</sup> - n) / 2 次動作
 如果我們把常數都去掉，可以得到時間複雜度是 n<sup>2</sup> - n
-如果 n 不斷往上增加，我們把 n 看成是可以忽略的因數，只保留 n<sup>2</sup>，結論就是我們得到 bubble sort 演算法的時間複雜度是 O(n<sup>2</sup>)
+如果 n 不斷往上增加，我們把 n 看成是可以忽略的因素，只保留 n<sup>2</sup>，結論就是我們得到 bubble sort 演算法的時間複雜度是 O(n<sup>2</sup>)
 
 準備好了嗎? 我們接下來要把上面的描述用比較精簡的方法描述出來:
 
@@ -123,10 +123,10 @@ algorithm bubble-sort is
 | Logical        | `and`, `or`                  |
 | Sums, products | `Σ`, `Π`                     |
 
-到這裡我們已經知道演算法的目的，也知道怎麼把解法用比較口語、比較簡單的方式寫出來。接下來，就是屬於你的挑戰時間啦! 把上面的 pseudo code 用程式碼寫出來吧! 希望今天的內容對您有幫助，有任何建議或想發問的地方歡迎在下面留言，我們下次 Learn to Code 見!
+到這裡我們已經知道演算法的目的，也知道怎麼把解法用比較口語、比較簡單的方式寫出來。接下來，就是屬於你的挑戰時間啦! 把上面的 pseudo code 用程式碼寫出來吧!
 
-## C++ Implementation
-這裡是把上面只寫了一列的程式碼完成。
+## Implementation
+這裡是把設計好的 bubble sort 演算法用 C++ 程式語言寫出來:
 ```
 #include <stdio.h>
 
@@ -168,4 +168,48 @@ int main(int argc, char* argv[]) {
 }
 ```
 
-我們下次 Learn to Code 見!
+從這份 C++ 程式碼我們可以發現，如果演算法設計的很好，寫出來的程式碼其實不會跟演算法差太多。
+讓我們再來看一份 PHP 程式碼:
+
+```php
+<?php
+    $array = array(149, 151, 152, 153, 156);
+
+    function bubbleSort($array) {
+        $hasSwapped = false;
+        $sortedArray = [];
+
+        foreach ($array as $key => $value) {
+            array_push($sortedArray, $value);
+        }
+
+        do {
+            $hasSwapped = false;
+
+            for ($i = 0; $i < count($sortedArray) - 1; $i++) {
+                if ($sortedArray[$i] < $sortedArray[$i + 1]) {
+                    $temp = $sortedArray[$i + 1];
+                    $sortedArray[$i + 1] = $sortedArray[$i];
+                    $sortedArray[$i] = $temp;
+                    $hasSwapped = true;
+                }
+            }
+        } while ($hasSwapped);
+
+        return $sortedArray;
+    }
+
+    foreach ($array as $key => $value) {
+        echo("<li>Student $key's height is: $value</li>");
+    }
+
+    $array = bubbleSort($array);
+
+    foreach ($array as $key => $value) {
+        echo("<li>Student $key's height is: $value</li>");
+    }
+?>
+```
+
+發現了嗎? 兩份程式碼的寫法幾乎差不多! 用這次的例子我們也可以知道演算法寫好之後，不一定只能用某種語言寫出來。我們可以用演算法來設計跟描述怎麼解決一個問題。等方法設計出來之後，再用任何一種程式語言實作他!
+希望今天的內容對您有幫助，有任何建議或想發問的地方歡迎在下面留言，我們下次 Learn to Code 見!
