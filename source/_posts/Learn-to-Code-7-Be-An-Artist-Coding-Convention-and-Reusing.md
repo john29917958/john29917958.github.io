@@ -29,6 +29,8 @@ int student_height = 156;
 
 這次你有什麼想法呢? 在這段 C++ 程式碼裡面，第二個變數的命名又比第一個變數好。如果是在寫文章，我們會寫「student height」，把兩個單字用空白隔開，但程式碼的變數名稱卻不準有空白出現。為了讓程式碼讀起來更像在讀文章一樣，我們可以用底線「`_`」，把第一個單字跟第二個單字隔開，讓讀者在看「`student_height`」的時候產生有兩個單字的視覺效果，比把兩個單字黏在一起、很難看出有幾個單字的 `studentheight` 好讀多了! 像這類用底線「`_`」把單字隔開的方法有一種統一的命名風格叫「Snake Case - 蛇形命名法」。這種命名風格規定變數名稱可以把單字用底線隔開，而且每個字元都必須以小寫呈現。C、C++ 跟 Python 就都應該遵循 Snake Case 命名風格。
 
+我們有很多種...
+
 Being written...
 
 「Camel Case - 小駝峰式命名法」。Camel case 風格規定變數名稱裡除了第一個字元保持小寫，其他每一個有意義的「單字」都要用大寫開始，例如 `int criticalPoint`、`String firstName`、`double bodyFatPercentage`。Java、C#、JavaScript 的變數就都遵循這種命名法。
