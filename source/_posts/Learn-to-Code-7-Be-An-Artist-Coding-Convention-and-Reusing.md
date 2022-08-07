@@ -46,6 +46,7 @@ void sum(int a, int b)
 {
 return a + b;
 }
+
 ```
 
 這是一段把兩個整數相加後，回傳結果出去的 function。這段程式碼的第三行 `return a + b;` 前面沒有任何縮排。然而，厲害的程式設計師一定都會這樣寫:
@@ -274,24 +275,127 @@ void display_message()
 是不是相對容易很多呢? 之所以是「20」行，就是因為程式設計師使用的解析度普遍都可以讓長度在 20 行以內的程式碼一次全部被顯示在螢幕上! 除此之外，我們在設計 function 的時候還有一個更進階的技巧 -「單一職責原則」，也是跟「物件導向」有關的「抽象思考 - abstract thinking」概念。這是一種頂尖程式設計都奉行的概念，讓我們先看看下面這段程式碼:
 
 ```cpp
-void attack()
+void game_loop()
 {
-    std::vector<character*> characters = collider.get_entered_characters();
-    if (characters->size() > 0)
+    if (input->is_attack_key_pressed())
     {
-        return;
+        std::string key_name = input->get_key();
+
+        if (input->commands.size() > 1)
+        {
+            std::string command_str = "";
+            for (std::string command : commands)
+            {
+                command_str += command;
+            }
+            fire_skill(command_str);
+        }
     }
 
-    for (int i = 0; i < characters->size(); i++)
+    for (game_obj &ui : scene->ui_comps)
     {
-        character ch = characters->at(i);
-        if (ch->team_id != this->team_id)
-        {
-            ch->damage(this->attack_point);            
+        ui.update();
+    }
+
+    for (game_obj &obj : scene->objs)
+    {
+        obj.update();
+    }
+
+    for (character &npc : scene->npcs)
+    {
+        npc.update();
+    }
+
+    for (character &enemy : scene->enemies)
+    {
+        enemy.update();
+    }
+
+    if (!player->is_dead) {
+        if (player->health == 0) {
+            player->die();
+            scene->on_player_die();
+        }
+        else {
+            player.update();
         }
     }
 }
 ```
+
+我們可以發現，這段程式碼裡面做了很多事情: 先處理跟 I/O 輸入有關的事，再處理跟場景還有物件有關的事，最後再處理跟玩家角色有關的事。一份程式可以有一個主要的 function 來一一跑過所有要被執行的步驟。這份範例程式碼是模擬一個遊戲的主迴圈。但在這個主迴圈裡面，我們把每個步驟的細節也都寫了進去。我要你想像一下，如果要被執行的步驟變成 6 步、9 步、甚至是 12 步，這個主迴圈的 function 會變得非常複雜、非常難以維護。那該怎麼辦呢? 這裡有一個你也許完全沒有想過的方法，讓我給你一個例子:
+
+```cpp
+void update_input()
+{
+    if (input->is_attack_key_pressed())
+    {
+        std::string key_name = input->get_key();
+
+        if (input->commands.size() > 1)
+        {
+            std::string command_str = "";
+            for (std::string command : commands)
+            {
+                command_str += command;
+            }
+            fire_skill(command_str);
+        }
+    }
+}
+
+void update_scene()
+{
+    for (game_obj &ui : scene->ui_comps)
+    {
+        ui.update();
+    }
+
+    for (game_obj &obj : scene->objs)
+    {
+        obj.update();
+    }
+
+    for (character &npc : scene->npcs)
+    {
+        npc.update();
+    }
+
+    for (character &enemy : scene->enemies)
+    {
+        enemy.update();
+    }
+}
+
+void update_player()
+{
+    if (!player->is_dead) {
+        if (player->health == 0) {
+            player->die();
+            scene->on_player_die();
+        }
+        else {
+            player.update();
+        }
+    }
+}
+
+void game_loop()
+{
+    update_input();
+
+    update_scene();
+    
+    update_player();
+}
+```
+
+非常好! 三個步驟的細節已經全部被從主迴圈裡面移到三個 functions 裡面。第一個 function 只執行跟輸入有關的邏輯、第二個 function 只執行跟場景有關的邏輯、第三個 function 只執行跟玩家的角色有關的邏輯。每個 function 各司其職，完全不做跟目的沒有關聯的事。把三個 functions 都搬出去以後，主邏輯也變得非常簡單易懂，而且可以一眼就看出這份遊戲主要有幾個步驟，也可以大略知道每個步驟主要在做什麼事情。
+
+# Being Written...
+
+
 
 ## 技巧五: Reusing
 Reusing
@@ -322,3 +426,70 @@ Reusing
 製造範例用:
 - 假設
 - 想像一下
+
+```cpp
+class game_logic
+{
+private:
+    bool _is_playing = false;
+    scene* scene;
+    input* input;
+    character* player;
+public:
+    void game_loop()
+    {    
+        if (input->is_attack_key_pressed())
+        {
+            std::string key_name = input->get_key();
+
+            if (input->commands.size() > 1)
+            {
+                std::string command_str = "";
+                for (std::string command : commands)
+                {
+                    command_str += command;
+                }
+                fire_skill(command_str);
+            }
+        }
+
+        for (game_obj &ui : scene->ui_comps)
+        {
+            ui.update();
+        }
+
+        for (game_obj &obj : scene->objs)
+        {
+            obj.update();
+        }
+
+        for (character &npc : scene->npcs)
+        {
+            npc.update();
+        }
+
+        for (character &enemy : scene->enemies)
+        {
+            enemy.update();
+        }
+
+        if (!player->is_dead) {
+            if (player->health == 0) {
+                player->die();
+                scene->on_player_die();
+            }
+            else {
+                player.update();
+            }
+        }
+    }
+};
+
+int main(int argc, char* argv[])
+{
+    scene s;
+    game_logic g;
+
+    return 0;
+}
+```
