@@ -496,96 +496,48 @@ void sell_merchandise(merchandise* m)
 }
 ```
 
-非常驚人! 在兩版出售商品的邏輯裡面，長度竟然可以有 5 行跟 1 行的差距! 想像一下，如果跟增加金幣有關的 functions 被擴充到 30 個，就相當是省了 120 行程式碼 (一個 function 省 4 行 * 30 個地方用到 = 省了 120 行程式碼)!!
-
-Being Written...
-
-### Techniques
-凝聚注意力用:
-- 我想要你 XX (例如想像)
-- 所有頂尖的人都...
-- 讓我給你一個例子
-- 你知道嗎?
-
-凝聚注意力在問題點用:
-- 問題是... (代表希望你修正某種不好的習慣，或可以提升自己的地方)
-
-凝聚注意力在改進點用:
-- 完全沒有想過 (提起興趣)
-
-承接上下文用: 接著、除此之外、最後、從上到下可以讓描述感覺起來有連貫性
-
-營造感同身受的感覺，或拉近距離:
-- 我可以理解
-- 他們就是不...
-
-製造範例用:
-- 假設
-- 想像一下
+非常驚人! 在兩版出售商品的邏輯裡面，長度竟然可以有 5 行跟 1 行的差距! 想像一下，如果跟增加金幣有關的 functions 被擴充到 30 個，就相當是省了 120 行程式碼 (一個 function 省 4 行 * 30 個地方用到 = 省了 120 行程式碼)!! 這就是今天最進階、價值最高的程式碼抽象化跟 reuse 技巧。但你知道嗎? 最後還有一個更驚人的效果才正要分享讓你知道。今天企劃小組開完會後，竟然決定如果每次增加的金幣數量比 1,000 還多，就進入 10 秒的 fever 狀態來提升人物幸運 2 秒。假設這款遊戲沒有把 30 段跟*增加金幣*有關的程式碼包裝到一個通用的 function 裡面，遊戲的工程師就必須到這 30 個 functions 裡面一個一個做修改。幸運的是，專業的遊戲團隊早就做好了 refactor，在兩天之內完成這項擴充並且進入測試階段。讓我們看看修改完的程式碼:
 
 ```cpp
-class game_logic
+void add_gold(int g)
 {
-private:
-    bool _is_playing = false;
-    scene* scene;
-    input* input;
-    character* player;
-public:
-    void game_loop()
-    {    
-        if (input->is_attack_key_pressed())
-        {
-            std::string key_name = input->get_key();
-
-            if (input->commands.size() > 1)
-            {
-                std::string command_str = "";
-                for (std::string command : commands)
-                {
-                    command_str += command;
-                }
-                fire_skill(command_str);
-            }
-        }
-
-        for (game_obj &ui : scene->ui_comps)
-        {
-            ui.update();
-        }
-
-        for (game_obj &obj : scene->objs)
-        {
-            obj.update();
-        }
-
-        for (character &npc : scene->npcs)
-        {
-            npc.update();
-        }
-
-        for (character &enemy : scene->enemies)
-        {
-            enemy.update();
-        }
-
-        if (!player->is_dead) {
-            if (player->health == 0) {
-                player->die();
-                scene->on_player_die();
-            }
-            else {
-                player.update();
-            }
-        }
+    golds += m->price;
+    golds_label->set_golds(golds);
+    golds_label->play_effects();
+    if (g >= 1000)
+    {
+        game->player->add_buff(game->buff_factory->make("FEVER"));
     }
-};
+    game->notify_change('GOLD', golds);
+    m->reset_owner();
+}
 
-int main(int argc, char* argv[])
+void attack()
 {
-    scene s;
-    game_logic g;
+    // attack logic
+    if (is_target_damaged)
+    {
+        add_gold(get_gold(enemy));
+    }
+}
 
-    return 0;
+void occupy_stronghold(stronghold* s)
+{
+    s->set_team(team_id);
+    add_gold(get_occupy_reward(s));
+}
+
+void take_gold(int g)
+{
+    add_gold(g);
+}
+
+void rescue_hostage(hostage* h)
+{
+    add_gold(get_rescue_reward(h));
 }
 ```
+
+原來! 我們只需要在 `add_gold()` function 裡面做好擴充，其他的 functions 完全不需要修改，功能就完成了! 與其到 30 個 functions 裡面一個一個加上重複的程式碼，refactor 過的版本，是不是聰明多了呢? 今天的 Learn to Code 7 研討會，希望你會喜歡。有任何問題歡迎在下面留言讓我知道，我們下次 Learn to Code 學習園見!
+
+Being written...
