@@ -394,14 +394,111 @@ void game_loop()
 非常好! 三個步驟的細節已經全部被從主迴圈裡面移到三個 functions 裡面。第一個 function 只執行跟輸入有關的邏輯、第二個 function 只執行跟場景有關的邏輯、第三個 function 只執行跟玩家的角色有關的邏輯。每個 function 各司其職，完全不做跟目的沒有關聯的事。把三個 functions 都搬出去以後，主邏輯也變得非常簡單易懂，而且可以一眼就看出這份遊戲主要有幾個步驟，也可以大略知道每個步驟主要在做什麼事情。最後，是今天最進階的主題: Reusing。
 
 ## 技巧五: Reusing
+你知道嗎? 頂尖的軟體工程師都會在適當的時候把「重複程式碼」包裝起來，讓他可以像工具一樣在很多地方被使用。我們都知道趕快把功能寫好可以快快有進度。問題是當程式慢慢成長，重複的程式碼也常跟著出現。一直想把進度快點做完的人完全沒有想過，當類似的程式碼出現了兩三次，在這次需求裡又要用到類似的邏輯時，花點功夫把這些重複出現的程式碼包裝起來重複利用，反而可以提高未來的工作效率、讓程式碼更精簡、更容易被閱讀、更容易被理解。可以用有意義的名稱把一段程式碼封裝起來、可以讓一份程式碼被很多人使用，可以讓一份程式碼在很多地方被使用。甚至在修改程式碼的時候也會更有效率，只要改一兩個地方就好，不用到專案裡的每個地方去改類似的功能。讓我給你一個例子:
 
-Ideate...
-減少重複的程式碼，讓程式碼更精簡、更容易閱讀、更容易被理解
-可以讓一份程式碼被很多人或很多模組使用
-修改程式碼或做擴充的時候會更有效率，只要改一兩個地方就好，不用到專案裡面的各個地方去改類似的功能
-間接可以用有意義的名字把一段程式碼封裝起來
+```cpp
+void attack()
+{
+    // attack logic
+    if (is_target_damaged)
+    {
+        golds += get_gold(target);
+        golds_label->set_golds(golds);
+        golds_label->play_effects();
+        game->notify_change('GOLD', golds);
+    }
+}
 
-# Being Written...
+void occupy_stronghold(stronghold* s)
+{
+    s->set_team(team_id);
+    int reward = get_occupy_reward(s);
+    golds += reward;
+    golds_label->set_golds(golds);
+    golds_label->play_effects();
+    game->notify_change('GOLD', golds);
+}
+
+void take_gold(int g)
+{
+    golds += g;
+    golds_label->set_golds(golds);
+    golds_label->play_effects();
+    game->notify_change('GOLD', golds);
+}
+
+void rescue_hostage(hostage* h)
+{
+    golds += get_rescue_reward(h);
+    golds_label->set_golds(golds);
+    golds_label->play_effects();
+    game->notify_change('GOLD', golds);
+}
+```
+
+這段程式碼模擬一個玩家可以做的某些動作，包含攻擊、佔領據點、撿拾金錢、解救人質等等。雖然是不同的動作，裡面都寫了一段類似的功能: 增加金幣、更新金幣面板的文字、播放得分特效跟通知所有註冊金幣更新事件的物件。如果未來遊戲越寫越大，類似的程式碼片段也會跟著變多。如果，我們把程式改成這樣:
+
+```cpp
+void add_gold(int g)
+{
+    golds += g;
+    golds_label->set_golds(golds);
+    golds_label->play_effects();
+    game->notify_change('GOLD', golds);
+}
+
+void attack()
+{
+    // attack logic
+    if (is_target_damaged)
+    {
+        add_gold(get_gold(enemy));
+    }
+}
+
+void occupy_stronghold(stronghold* s)
+{
+    s->set_team(team_id);
+    add_gold(get_occupy_reward(s));
+}
+
+void take_gold(int g)
+{
+    add_gold(g);
+}
+
+void rescue_hostage(hostage* h)
+{
+    add_gold(get_rescue_reward(h));
+}
+```
+
+用這種方法把可以被*重複使用*的程式碼片段抽成一個 `add_score(int s)` function 之後，原本這四個 functions 的長度都明顯變短，甚至連程式碼行數都縮短了兩行。再給你一個情境: 某天這款遊戲的企劃小組開完會後，團隊要幫遊戲新增交易的功能。玩家可以把商品賣掉，賺取跟商品標價一樣的金幣。如果我們幫程式碼新增一個 `sell_merchandise()` function 來實作這項功能，我們來看看在重構前跟重構後的兩種擴充結果:
+
+Before refactor
+```cpp
+void sell_merchandise(merchandise* m)
+{
+    golds += m->price;
+    golds_label->set_golds(golds);
+    golds_label->play_effects();
+    game->notify_change('GOLD', golds);
+    m->reset_owner();
+}
+```
+
+After refactor
+```cpp
+void sell_merchandise(merchandise* m)
+{
+    add_gold(m->price);
+    m->reset_owner();
+}
+```
+
+非常驚人! 在兩版出售商品的邏輯裡面，長度竟然可以有 5 行跟 1 行的差距! 想像一下，如果跟增加金幣有關的 functions 被擴充到 30 個，就相當是省了 120 行程式碼 (一個 function 省 4 行 * 30 個地方用到 = 省了 120 行程式碼)!!
+
+Being Written...
 
 ### Techniques
 凝聚注意力用:
