@@ -5,11 +5,9 @@ tags:tags: [programming, coding, program, code, class, course, education, teachi
 category: Programming
 ---
 
-我們可以把程式寫得像小說或故事書一樣好讀!? 除了基本語法以外，這五項技巧改變了我的程式碼品質。進階的技巧不只可以讓程式碼像故事書一樣簡單易懂，可以被快快讀完，還可以把程式寫得像萬用工具組一樣，遇到任何螺絲釘都能完美應付! 今天我想跟大家分享五個成為程式藝術匠師的技巧，五個我不斷要求自己在 coding 時做的事。如果你想讓你的程式能力突破到下一個階段，點開這篇文章，免費獲得這五項技巧!
+我們可以把程式寫得像故事書一樣好讀!? 除了掌握基本語法以外，這五項技巧改變了我的程式碼品質。這些進階的技巧不只可以讓程式碼像故事書一樣好讀，還能把程式寫得像萬用的螺絲起子一樣，可以拴緊跟鬆開任何大小相符的螺絲釘! 今天我想跟大家分享五個讓程式更好讀、寫起來更有效率的技巧，也是五個我在 coding 時不斷要求自己做的事。如果你想讓你的程式能力突破到下一個階段，點開這篇文章來免費獲得這五項技巧!
 
 <!--more-->
-
-Why we must learn these knowledge?
 
 ## 技巧一: Coding Convention
 程式碼撰寫風格是讓你的變數名稱、功能名稱、屬性名稱還是任何變數任何物件的名稱，都符合程式語言約定好的格式。大家寫的風格都一樣，可以減少寫出隱含 bug 的程式碼、會讓程式碼更容易閱讀、比較容易一眼看出變數的類型跟特性、比較有段落，專案成員有異動的時候，交接也會更容易
@@ -201,46 +199,46 @@ if (input.is_jump_key_pressed() && !character.is_jumping())
 ```cpp
 void display_message()
 {
-    printf("You cannot let all these codes displayed on the screen at once!");
-    printf("You cannot let all these codes displayed on the screen at once!");
-    printf("You cannot let all these codes displayed on the screen at once!");
-    printf("You cannot let all these codes displayed on the screen at once!");
-    printf("You cannot let all these codes displayed on the screen at once!");
-    printf("You cannot let all these codes displayed on the screen at once!");
-    printf("You cannot let all these codes displayed on the screen at once!");
-    printf("You cannot let all these codes displayed on the screen at once!");
-    printf("You cannot let all these codes displayed on the screen at once!");
-    printf("You cannot let all these codes displayed on the screen at once!");
-    printf("You cannot let all these codes displayed on the screen at once!");
-    printf("You cannot let all these codes displayed on the screen at once!");
-    printf("You cannot let all these codes displayed on the screen at once!");
-    printf("You cannot let all these codes displayed on the screen at once!");
-    printf("You cannot let all these codes displayed on the screen at once!");
-    printf("You cannot let all these codes displayed on the screen at once!");
-    printf("You cannot let all these codes displayed on the screen at once!");
-    printf("You cannot let all these codes displayed on the screen at once!");
-    printf("You cannot let all these codes displayed on the screen at once!");
-    printf("You cannot let all these codes displayed on the screen at once!");
-    printf("You cannot let all these codes displayed on the screen at once!");
-    printf("You cannot let all these codes displayed on the screen at once!");
-    printf("You cannot let all these codes displayed on the screen at once!");
-    printf("You cannot let all these codes displayed on the screen at once!");
-    printf("You cannot let all these codes displayed on the screen at once!");
-    printf("You cannot let all these codes displayed on the screen at once!");
-    printf("You cannot let all these codes displayed on the screen at once!");
-    printf("You cannot let all these codes displayed on the screen at once!");
-    printf("You cannot let all these codes displayed on the screen at once!");
-    printf("You cannot let all these codes displayed on the screen at once!");
-    printf("You cannot let all these codes displayed on the screen at once!");
-    printf("You cannot let all these codes displayed on the screen at once!");
-    printf("You cannot let all these codes displayed on the screen at once!");
-    printf("You cannot let all these codes displayed on the screen at once!");
-    printf("You cannot let all these codes displayed on the screen at once!");
-    printf("You cannot let all these codes displayed on the screen at once!");
-    printf("You cannot let all these codes displayed on the screen at once!");
-    printf("You cannot let all these codes displayed on the screen at once!");
-    printf("You cannot let all these codes displayed on the screen at once!");
-    printf("You cannot let all these codes displayed on the screen at once!");
+    printf("A long function!");
+    printf("A long function!");
+    printf("A long function!");
+    printf("A long function!");
+    printf("A long function!");
+    printf("A long function!");
+    printf("A long function!");
+    printf("A long function!");
+    printf("A long function!");
+    printf("A long function!");
+    printf("A long function!");
+    printf("A long function!");
+    printf("A long function!");
+    printf("A long function!");
+    printf("A long function!");
+    printf("A long function!");
+    printf("A long function!");
+    printf("A long function!");
+    printf("A long function!");
+    printf("A long function!");
+    printf("A long function!");
+    printf("A long function!");
+    printf("A long function!");
+    printf("A long function!");
+    printf("A long function!");
+    printf("A long function!");
+    printf("A long function!");
+    printf("A long function!");
+    printf("A long function!");
+    printf("A long function!");
+    printf("A long function!");
+    printf("A long function!");
+    printf("A long function!");
+    printf("A long function!");
+    printf("A long function!");
+    printf("A long function!");
+    printf("A long function!");
+    printf("A long function!");
+    printf("A long function!");
+    printf("A long function!");
 }
 ```
 
@@ -249,26 +247,26 @@ void display_message()
 ```cpp
 void display_message()
 {
-    printf("These codes can be all displayed on the screen most of the time.");
-    printf("These codes can be all displayed on the screen most of the time.");
-    printf("These codes can be all displayed on the screen most of the time.");
-    printf("These codes can be all displayed on the screen most of the time.");
-    printf("These codes can be all displayed on the screen most of the time.");
-    printf("These codes can be all displayed on the screen most of the time.");
-    printf("These codes can be all displayed on the screen most of the time.");
-    printf("These codes can be all displayed on the screen most of the time.");
-    printf("These codes can be all displayed on the screen most of the time.");
-    printf("These codes can be all displayed on the screen most of the time.");
-    printf("These codes can be all displayed on the screen most of the time.");
-    printf("These codes can be all displayed on the screen most of the time.");
-    printf("These codes can be all displayed on the screen most of the time.");
-    printf("These codes can be all displayed on the screen most of the time.");
-    printf("These codes can be all displayed on the screen most of the time.");
-    printf("These codes can be all displayed on the screen most of the time.");
-    printf("These codes can be all displayed on the screen most of the time.");
-    printf("These codes can be all displayed on the screen most of the time.");
-    printf("These codes can be all displayed on the screen most of the time.");
-    printf("These codes can be all displayed on the screen most of the time.");
+    printf("A function with 20 lines of code.");
+    printf("A function with 20 lines of code.");
+    printf("A function with 20 lines of code.");
+    printf("A function with 20 lines of code.");
+    printf("A function with 20 lines of code.");
+    printf("A function with 20 lines of code.");
+    printf("A function with 20 lines of code.");
+    printf("A function with 20 lines of code.");
+    printf("A function with 20 lines of code.");
+    printf("A function with 20 lines of code.");
+    printf("A function with 20 lines of code.");
+    printf("A function with 20 lines of code.");
+    printf("A function with 20 lines of code.");
+    printf("A function with 20 lines of code.");
+    printf("A function with 20 lines of code.");
+    printf("A function with 20 lines of code.");
+    printf("A function with 20 lines of code.");
+    printf("A function with 20 lines of code.");
+    printf("A function with 20 lines of code.");
+    printf("A function with 20 lines of code.");
 }
 ```
 
