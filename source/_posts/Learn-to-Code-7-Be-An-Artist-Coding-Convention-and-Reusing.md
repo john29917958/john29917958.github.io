@@ -599,6 +599,6 @@ void rescue_hostage(hostage* h)
 }
 ```
 
-原來! 我們只需要在 `add_gold()` function 裡面做好擴充，其他的 functions 完全不需要修改，功能就完成了! 與其到 30 個 functions 裡面一個一個加上重複的程式碼，refactor 過的版本，是不是聰明多了呢? 今天的 Learn to Code 7 研討會，希望你會喜歡。有任何問題歡迎在下面留言讓我知道，拜拜! 我們下次 Learn to Code 學習園見!
+原來! 我們只需要在 `add_gold()` function 裡面做好擴充，其他的 functions 完全不需要修改，功能就完成了! 與其到 30 個 functions 裡面一個一個加上重複的程式碼，refactor 過的版本，是不是聰明多了呢? 今天的 Learn to Code 7 研討會，希望你會喜歡。有任何問題歡迎在下面留言讓我知道，拜拜! 我們下次見!
 
 Being written...
