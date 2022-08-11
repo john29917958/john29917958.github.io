@@ -31,29 +31,84 @@ int student_height = 156;
 | 名稱                                           | 規則                                             | 範例             | 遵循案例                                        |
 |------------------------------------------------|-------------------------------------------------|------------------|------------------------------------------------|
 | Snake Case - 蛇形命名法                         | 用底線「`_`」隔開單字<br>讓所有字元保持小寫      | `student_height` | C, C++, Python                                  |
-| Camel Case - 小駝峰式命名法                     | 用大寫字元隔開單字<br>其它字元保持小寫          | `studentHeight`  | Java, C#, PHP 等許多語言的變數名稱             |
+| Camel Case - 小駝峰式命名法                     | 除了第一個字元以外<br>用大寫字元隔開單字<br>其它字元保持小寫          | `studentHeight`  | Java, C#, PHP 等許多語言的變數名稱             |
 | Pascal Case / Upper Camel Case - 大駝峰式命名法 | 讓每個單字的第一個字元呈現大寫<br>其它字元保持小寫 | `StudentHeight`  | 普遍許多語言的 class 名稱<br>Pascal 跟 C# 的 method 名稱 |
 
 準備好了嗎? 這裡我想要你先看過這段程式碼:
 
 ```cpp
-void sum(int a, int b)
+#include <stdexcept>
+
+void bubble_sort(int arr[], int length)
 {
-return a + b;
+if (length < 0)
+{
+throw std::invalid_argument("Length is set to negative integer");
 }
 
+if (length <= 1)
+{
+return;
+}
+
+bool is_sorted = false;
+
+do
+{
+is_sorted = false;
+
+for (int i = 0; i < length; i++)
+{
+if (arr[i] > arr[i + 1])
+{
+int temp = arr[i + 1];
+arr[i + 1] = arr[i];
+arr[i] = temp;
+is_sorted = true;
+}
+}
+} while (is_sorted);
+}
 ```
 
-這是一段把兩個整數相加後，回傳結果出去的 function。這段 code 的第三行程式碼前面沒有任何縮排。然而，厲害的程式設計師一定都會這樣寫:
+這是一段經典的 bubble sort 演算法 function。這段 code 沒有任何縮排。然而，厲害的程式設計師一定都會這樣寫:
 
 ```cpp
-void sum(int a, int b)
+#include <stdexcept>
+
+void bubble_sort(int arr[], int length)
 {
-    return a + b;
+    if (length < 0)
+    {
+        throw std::invalid_argument("Length is set to negative integer");
+    }
+
+    if (length <= 1)
+    {
+        return;
+    }
+
+    bool is_sorted = false;
+
+    do
+    {
+        is_sorted = false;
+
+        for (int i = 0; i < length; i++)
+        {
+            if (arr[i] > arr[i + 1])
+            {
+                int temp = arr[i + 1];
+                arr[i + 1] = arr[i];
+                arr[i] = temp;
+                is_sorted = true;
+            }
+        }
+    } while (is_sorted);
 }
 ```
 
-在 `return a + b;` 前面插入四個空格讓程式碼看起來更有段落。這就是善用縮排的好處，可以讓讀者一眼看出 function 的邏輯區段在哪裡。接著讓我告訴你另一個秘密: 如何善用進階的技巧，簡潔又精準地總結一段複雜的程式碼。
+在 function 內容區段的行首插入「四個空格」的縮排，讓程式碼看起來更有段落、讓讀者一眼看出 function 的內容區段在哪裡。甚至我們還可以看出每個 `if`、`do` - `while`、`for` 的區段程式碼在哪裡。這才是老練的排版方式。接著讓我告訴你另一個秘密: 如何善用進階的技巧，簡潔又精準地總結一段複雜的程式碼。
 
 ## 技巧二: 用容易閱讀的名字包裝複雜的邏輯
 高手的程式碼除了會用有意義的文字來幫變數命名以外，也會用更進階的技巧來包裝一段複雜的指令。讓我先給你一段範例程式碼:
