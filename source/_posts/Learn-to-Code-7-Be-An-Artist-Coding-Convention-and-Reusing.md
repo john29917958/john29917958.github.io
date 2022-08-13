@@ -142,10 +142,10 @@ if (input.is_key_pressed() &&
 上面的程式是模擬在特定條件下去發動人物的技能。我想要你看看 `if` statement 裡面的邏輯並且跟我說說你的感覺? 實在有點冗長，需要花點力氣去理解它，對吧? 其實我們可以用一個技巧把程式碼包裝起來，讓程式碼變得更好讀:
 
 ```cpp
-bool is_skill_cond_satisfied = input.is_key_pressed() &&
+bool should_fire_skill = input.is_key_pressed() &&
     command.size() > 1 &&
     std::find(attack_keys.begin(), attack_keys.end(), input.pressed_key()) != attack_keys.end();
-if (is_skill_cond_satisfied)
+if (should_fire_skill)
 {
     std::string command_str = "";
     for (std::string key : command)
