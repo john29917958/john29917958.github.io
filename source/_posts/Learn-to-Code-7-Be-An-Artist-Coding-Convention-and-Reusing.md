@@ -551,7 +551,7 @@ void sell_merchandise(merchandise* m)
 }
 ```
 
-如果我們先新增一個 function，把 4 行重複出現的指令包裝到裡面:
+那麼要如何讓這段程式碼更精簡呢? 如果我們先新增一個 function，把 4 行重複出現的 code 包裝到裡面:
 
 ```cpp
 void add_gold(int g)
