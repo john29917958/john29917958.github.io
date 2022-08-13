@@ -6,7 +6,7 @@ category: Programming
 ---
 Have you ever dreamed of writing your own app and publish it on Google Play and App Store in many countries? or writing a website and everyone can browse it through a web browser? Just 10 minutes, you can write your first program by yourself! Enter this article and let's get started!
 <!--more-->
-Let's do this, open the browser and press "Ctrl + Shift + J" on Windows or "Ctrl + Option + J" on Mac to open the developer tools to open the developer console.
+Let's do this, open the browser and press "Ctrl + Shift + J" on Windows or "Ctrl + Option + J" on Mac to open the developer console.
 {% asset_img terminal.jpg %}
 See the right-angle icon on the screen? You are an excellent programmer in front of a console now! Try not to copy any text in this article. Let's type something in the magic terminal then hit the enter key: `console.log('Hello, world!');`
 {% asset_img hello-world.jpg %}
