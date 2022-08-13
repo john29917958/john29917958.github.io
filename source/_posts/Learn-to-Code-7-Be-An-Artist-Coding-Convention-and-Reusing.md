@@ -194,11 +194,11 @@ void fire_skill()
     }
 }
 
-bool is_skill_cond_satisfied = input.is_key_pressed() &&
+bool should_unleash_skill = input.is_key_pressed() &&
 command.size() > 1 &&
 std::find(attack_keys.begin(), attack_keys.end(), input.pressed_key()) != attack_keys.end();
 
-if (is_skill_cond_satisfied)
+if (should_unleash_skill)
 {
     fire_skill();
 }
