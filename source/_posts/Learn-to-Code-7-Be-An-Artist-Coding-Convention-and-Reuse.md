@@ -114,9 +114,9 @@ void bubble_sort(int arr[], int length)
 高手除了會用好讀的文字來幫變數命名，更會把複雜的程式碼包裝起來提升可讀性。讓我先給你一個範例:
 
 ```cpp
-if (input.is_key_pressed() &&
+if (input->is_key_pressed() &&
     command.size() > 1 &&
-    std::find(attack_keys.begin(), attack_keys.end(), input.pressed_key()) != attack_keys.end())
+    std::find(attack_keys.begin(), attack_keys.end(), input->pressed_key()) != attack_keys.end())
 {
     std::string command_str = "";
     for (std::string key : command)
@@ -126,15 +126,15 @@ if (input.is_key_pressed() &&
 
     if (command_str == "DownUpAtk")
     {
-        character.uppercut();
+        character->uppercut();
     }
     else if (command_str == "DownRightAtk" || command_str == "DownLeftAtk")
     {
-        character.superman_punch();
+        character->superman_punch();
     }
     else if (command_str == "RightDownRightAtk" || command_str == "LeftDownLeftAtk")
     {
-        character.dragon_punch();
+        character->dragon_punch();
     }
 }
 ```
@@ -142,9 +142,10 @@ if (input.is_key_pressed() &&
 上面的程式是模擬在特定條件下去發動人物的技能。我想要你看看 `if` statement 裡面的邏輯並且跟我說說你的感覺? 在我認為，這段判斷式有點冗長，需要花比較大的力氣去理解它。其實我們可以用一個技巧把程式碼包裝起來，讓程式碼變得更好讀:
 
 ```cpp
-bool should_unleash_skill = input.is_key_pressed() &&
+bool should_unleash_skill = input->is_key_pressed() &&
     command.size() > 1 &&
-    std::find(attack_keys.begin(), attack_keys.end(), input.pressed_key()) != attack_keys.end();
+    std::find(attack_keys.begin(), attack_keys.end(), input->pressed_key()) != attack_keys.end();
+
 if (should_unleash_skill)
 {
     std::string command_str = "";
@@ -155,15 +156,15 @@ if (should_unleash_skill)
 
     if (command_str == "DownUpAtk")
     {
-        character.uppercut();
+        character->uppercut();
     }
     else if (command_str == "DownRightAtk" || command_str == "DownLeftAtk")
     {
-        character.superman_punch();
+        character->superman_punch();
     }
     else if (command_str == "RightDownRightAtk" || command_str == "LeftDownLeftAtk")
     {
-        character.dragon_punch();
+        character->dragon_punch();
     }
 }
 ```
@@ -182,21 +183,21 @@ void unleash_skill()
 
     if (command_str == "DownUpAtk")
     {
-        character.uppercut();
+        character->uppercut();
     }
     else if (command_str == "DownRightAtk" || command_str == "DownLeftAtk")
     {
-        character.superman_punch();
+        character->superman_punch();
     }
     else if (command_str == "RightDownRightAtk" || command_str == "LeftDownLeftAtk")
     {
-        character.dragon_punch();
+        character->dragon_punch();
     }
 }
 
-bool should_unleash_skill = input.is_key_pressed() &&
-command.size() > 1 &&
-std::find(attack_keys.begin(), attack_keys.end(), input.pressed_key()) != attack_keys.end();
+bool should_unleash_skill = input->is_key_pressed() &&
+    command.size() > 1 &&
+    std::find(attack_keys.begin(), attack_keys.end(), input->pressed_key()) != attack_keys.end();
 
 if (should_unleash_skill)
 {
