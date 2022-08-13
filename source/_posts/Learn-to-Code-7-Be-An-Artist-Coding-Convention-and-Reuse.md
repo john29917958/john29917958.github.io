@@ -465,7 +465,7 @@ void game_loop()
 ```cpp
 void attack()
 {
-    // attack logic
+    // attack logic...
     if (is_target_damaged)
     {
         golds += get_gold(target);
@@ -507,7 +507,7 @@ void rescue_hostage(hostage* h)
 ```cpp
 void attack()
 {
-    // attack logic
+    // attack logic...
     if (is_target_damaged)
     {
         golds += get_gold(target);
@@ -579,7 +579,7 @@ void add_gold(int g)
 
 void attack()
 {
-    // attack logic
+    // attack logic...
     if (is_target_damaged)
     {
         add_gold(get_gold(enemy));
@@ -631,7 +631,7 @@ void add_gold(int g)
 
 void attack()
 {
-    // attack logic
+    // attack logic...
     if (is_target_damaged)
     {
         add_gold(get_gold(enemy));
