@@ -212,21 +212,21 @@ if (should_unleash_skill)
 ```cpp
 if (!is_dead)
 {
-    if (character.hp == 0)
+    if (character->hp == 0)
     {
-        character.dead();
+        character->dead();
     }
     else
     {
-        if (!character.is_attacking)
+        if (!character->is_attacking)
         {
             run_attack_logic();
         }
         else
         {
-            if (input.is_jump_key_pressed() && !character.is_jumping())
+            if (input->is_jump_key_pressed() && !character->is_jumping())
             {
-                character.jump();
+                character->jump();
             }
         }        
     }    
@@ -241,21 +241,21 @@ if (is_dead)
     return;
 }
 
-if (character.hp == 0)
+if (character->hp == 0)
 {
-    character.dead();
+    character->dead();
     return;
 }
 
-if (!character.is_attacking)
+if (!character->is_attacking)
 {
     run_attack_logic();
     return;
 }
 
-if (input.is_jump_key_pressed() && !character.is_jumping())
+if (input->is_jump_key_pressed() && !character->is_jumping())
 {
-    character.jump();
+    character->jump();
 }
 ```
 
@@ -356,19 +356,19 @@ void game_loop()
         }
     }
 
-    for (game_obj &ui : scene->ui_comps)
+    for (int i = 0; i < scene->ui_comps.size(); i++)
     {
-        ui.update();
+        ui_comps.at(i)->update();
     }
 
-    for (game_obj &obj : scene->objs)
+    for (int i = 0; i < scene->objs.size(); i++)
     {
-        obj.update();
+        scene->objs.at(i)->update();
     }
 
-    for (character &npc : scene->npcs)
+    for (int i = 0; i < scene->npcs.size(); i++)
     {
-        npc.update();
+        scene->npcs.at(i)->update();
     }
 
     for (int i = 0; i < scene->enemies.size(); i++)
@@ -382,7 +382,7 @@ void game_loop()
             scene->on_player_die();
         }
         else {
-            player.update();
+            player->update();
         }
     }
 }
@@ -411,19 +411,19 @@ void update_input()
 
 void update_scene()
 {
-    for (game_obj &ui : scene->ui_comps)
+    for (int i = 0; i < scene->ui_comps.size(); i++)
     {
-        ui.update();
+        ui_comps.at(i)->update();
     }
 
-    for (game_obj &obj : scene->objs)
+    for (int i = 0; i < scene->objs.size(); i++)
     {
-        obj.update();
+        scene->objs.at(i)->update();
     }
 
-    for (character &npc : scene->npcs)
+    for (int i = 0; i < scene->npcs.size(); i++)
     {
-        npc.update();
+        scene->npcs.at(i)->update();
     }
 
     for (int i = 0; i < scene->enemies.size(); i++)
@@ -440,7 +440,7 @@ void update_player()
             scene->on_player_die();
         }
         else {
-            player.update();
+            player->update();
         }
     }
 }
@@ -463,7 +463,7 @@ void game_loop()
 要解決這種問題，你需要把重複的程式碼提取成獨立的 function，並給它一個精準的名字。這麼做不只可以讓程式碼更精簡，還可以提高未來的工作效率。想像一下，未來如果需要用到類似的功能，只要寫一行 code 來呼叫這個包裝好的 function 就好，不用再寫一段重複的程式碼。甚至未來如果有需要修改這段程式，也只要去改包裝好的 function，而不用到專案裡把類似的片段全部改一遍。讓我給你一個例子:
 
 ```cpp
-void attack()
+void attack(character* target)
 {
     // attack logic...
     if (is_target_damaged)
@@ -505,7 +505,7 @@ void rescue_hostage(hostage* h)
 這段程式碼在模擬一款遊戲中玩家可以做的四個動作: 攻擊、佔領據點、撿拾金錢跟解救人質。雖然是不同的動作，裡面都寫了一段類似的程式碼: 先增加金幣，再更新金幣面板的文字，接著播放得分特效，最後是通知所有註冊更新金幣事件的物件。很顯然如果未來人物可以做的動作越來越多，例如增加一個 `sell_merchandise()` function 讓玩家可以把商品賣掉賺取金幣，重複的程式碼片段就會跟著變多:
 
 ```cpp
-void attack()
+void attack(character* target)
 {
     // attack logic...
     if (is_target_damaged)
@@ -577,12 +577,12 @@ void add_gold(int g)
     game->notify_change('GOLD', golds);
 }
 
-void attack()
+void attack(character* target)
 {
     // attack logic...
     if (is_target_damaged)
     {
-        add_gold(get_gold(enemy));
+        add_gold(get_gold(target));
     }
 }
 
@@ -629,12 +629,12 @@ void add_gold(int g)
     m->reset_owner();
 }
 
-void attack()
+void attack(character* target)
 {
     // attack logic...
     if (is_target_damaged)
     {
-        add_gold(get_gold(enemy));
+        add_gold(get_gold(target));
     }
 }
 
