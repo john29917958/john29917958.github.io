@@ -563,7 +563,7 @@ void add_gold(int g)
 }
 ```
 
-接著再讓玩家的每個 function 都去呼叫「包裝好」的功能:
+接著再修改玩家的每個 function，讓它們去呼叫「包裝好」的功能:
 
 ```cpp
 void add_gold(int g)
