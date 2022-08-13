@@ -258,10 +258,10 @@ if (input.is_jump_key_pressed() && !character.is_jumping())
 }
 ```
 
-告訴我你看到了些什麼? 很明顯的，在這份 code 裡面一層一層的 `if` statements 已經全部消失，變成一段一段單層的 `if` 判斷式，並且在判斷式裡面的邏輯執行完之後用 `return` 中斷這段 function 回傳出去。這是一種簡化巢狀 `if` statements 的方法，但用這種方法得小心，必須要確定每段 `if` 邏輯執行完後不會因為中斷離開而漏掉後面任何必須被執行的指令。
+告訴我你看到了些什麼? 很明顯的，這份 code 裡面的巢狀判斷式已經全部消失，變成一段一段單層的 `if` 判斷式。我總是想辦法讓 `if` 區段像上面的範例一樣保持簡單，避免讓讀者看過一層又一層的 code。在這次的範例中，判斷式的內容執行完會後用 `return` 中斷這段 function 回傳出去。這是一種簡化巢狀 `if` statements 的方法，但用這種方法得小心，必須要確定每段 `if` 的內容區段執行完後不會因為中斷離開而漏掉後面該被執行的程式碼。
 
-## 技巧四: 控制 function 長度跟職責
-你知道嗎!? 除了命名規則以外，寫程式還有一種 function 長度必須比 20 行還短的文化! 讓 function 長度保持在 20 行以內不只可以花比較少時間來讀一份 function，甚至可以避免寫出潛在的 bug。至於為什麼是 20 行，我想請你試試看，讓下面這段程式碼在螢幕內一次全部顯示出來:
+## 技巧四: 控制 Function 長度跟職責
+你知道嗎? 除了命名規則以外，寫程式還有一種 function 長度必須保持在 25 行的文化! 讓 function 長度保持在 25 行不只可以花比較少時間來讀一份 function，甚至因為功能比較精簡，而可以避免寫出潛在的 bug。至於為什麼是 25 行，我想請你試試看，讓下面這段程式碼在螢幕內一次全部顯示出來:
 ```cpp
 void display_message()
 {
@@ -308,32 +308,37 @@ void display_message()
 }
 ```
 
-是不是很困難呢? 我想請你再試試下面這段只有 20 行的程式碼:
+是不是很困難呢? 我想請你再試試下面這段只有 25 行的程式碼:
 
 ```cpp
 void display_message()
 {
-    printf("A function with 20 lines of code.");
-    printf("A function with 20 lines of code.");
-    printf("A function with 20 lines of code.");
-    printf("A function with 20 lines of code.");
-    printf("A function with 20 lines of code.");
-    printf("A function with 20 lines of code.");
-    printf("A function with 20 lines of code.");
-    printf("A function with 20 lines of code.");
-    printf("A function with 20 lines of code.");
-    printf("A function with 20 lines of code.");
-    printf("A function with 20 lines of code.");
-    printf("A function with 20 lines of code.");
-    printf("A function with 20 lines of code.");
-    printf("A function with 20 lines of code.");
-    printf("A function with 20 lines of code.");
-    printf("A function with 20 lines of code.");
-    printf("A function with 20 lines of code.");
+    printf("A function with 25 lines of code.");
+    printf("A function with 25 lines of code.");
+    printf("A function with 25 lines of code.");
+    printf("A function with 25 lines of code.");
+    printf("A function with 25 lines of code.");
+    printf("A function with 25 lines of code.");
+    printf("A function with 25 lines of code.");
+    printf("A function with 25 lines of code.");
+    printf("A function with 25 lines of code.");
+    printf("A function with 25 lines of code.");
+    printf("A function with 25 lines of code.");
+    printf("A function with 25 lines of code.");
+    printf("A function with 25 lines of code.");
+    printf("A function with 25 lines of code.");
+    printf("A function with 25 lines of code.");
+    printf("A function with 25 lines of code.");
+    printf("A function with 25 lines of code.");
+    printf("A function with 25 lines of code.");
+    printf("A function with 25 lines of code.");
+    printf("A function with 25 lines of code.");
+    printf("A function with 25 lines of code.");
+    printf("A function with 25 lines of code.");
 }
 ```
 
-竟然完全沒有問題! 幾乎所有大家慣用的解析度，都可以讓 20 行以內的 function 全部顯示在畫面上。除此之外，我們在設計 function 的時候還有一個更進階的技巧 -「單一職責原則」，也是跟「物件導向」有關的「抽象思考 - abstract thinking」概念。這是一種頂尖程式設計師都奉行的概念。讓我先給你一個範例:
+竟然完全沒有問題! 幾乎所有大家慣用的解析度，都可以讓 25 行的 function 全部顯示在畫面上。除此之外，我們在設計 function 的時候還有一個更進階的技巧 -「單一職責原則」。這是一種頂尖程式設計師都奉行的概念。讓我先給你一個範例:
 
 ```cpp
 void game_loop()
