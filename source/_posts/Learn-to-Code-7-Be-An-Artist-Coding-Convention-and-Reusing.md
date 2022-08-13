@@ -168,7 +168,7 @@ if (should_unleash_skill)
 }
 ```
 
-`if` statement 裡複雜的條件已經用 `is_skill_cond_satisfied` 取代。跟我說說你的感覺，清楚好懂又可以一眼看出 `if` statement 的目的，對吧! 複雜的判斷邏輯已經被這個變數「包裝」起來，只要看變數名稱就已經幾乎知道判斷式的目的，完全不需要去了解細節。讓我再給你一個例子，如果我們把程式碼改成這樣:
+`if` statement 裡複雜的條件已經用 `should_unleash_skill` 取代。跟我說說你的感覺，`if` statement 裡的判斷式是不是變得清楚又好懂? 在這份程式碼裡面，複雜的判斷邏輯已經被 `should_unleash_skill` 這個 `bool` 變數「包裝」起來，只要看變數名稱就已經大略可以了解判斷式的目的，完全不需要去了解細節。讓我再給你一個例子，如果我們把程式碼改成這樣:
 
 ```cpp
 
