@@ -455,9 +455,9 @@ void game_loop()
 非常好! 三個步驟的細節已經全部被從主迴圈搬到三個 functions 裡面。第一個 function 只執行跟輸入輸出有關的指令、第二個 function 只執行跟場景有關的指令、第三個 function 只執行跟玩家有關的指令。每個 function 各司其職，完全不做跟目的沒關係的事。因為主迴圈只呼叫這三個 functions，變得非常簡單易懂，而且可以藉由 function names 一眼看出每個步驟大略在做什麼事。最後，我們要談的是今天最進階的主題: Reusing。
 
 ## 技巧五: Reusing
-你知道嗎? 頂尖的軟體工程師都會適當得把「重複程式碼」包裝起來，讓它可以像工具一樣被用在很多地方。我完全同意盡快完成功能可以有效得推動專案前進，但人們不一定知道，當我們的系統慢慢長大，重複的程式碼也有機會跟著出現。如果類似的程式片段出現了一兩次，很可能有機會出現第三、第四、甚至第五次。未來如果要做類似的功能，就得再寫一次重複的程式碼片段；如果這段邏輯需要被修改，團隊的工程師就得辛苦地找出所有的程式片段，一個又一個地修改。
+你知道嗎? 頂尖的工程師都會適當得把「重複程式碼」包裝起來，讓它可以像工具一樣被用在很多地方。我完全同意快點完成功能可以快點推動專案前進，但人們不一定知道，當我們的系統慢慢長大，重複的程式碼也有機會跟著出現。如果類似的程式片段出現了一兩次，很可能有機會出現第三、第四、甚至第五次。未來如果要用到類似的功能，就得再寫一次重複的程式碼；如果這段邏輯需要被修改，團隊的工程師就得辛苦地找出所有的程式片段，一個又一個地改過。
 
-用有意義的名稱包裝重複出現的 code，反而可以提高未來的工作效率，也可以讓程式碼更精簡。想像一下，未來如果需要用到類似的功能，只要寫一行 code 來呼叫這個包裝好的 function 就好，不用再寫一次類似的指令。甚至如果未來有需要修改這段指令，也只要修改包裝好的 function，不用到專案裡把類似的功能全部找出來，再一個一個去修改。讓我給你一個例子:
+要解決這種問題，你需要把重複的程式碼提取成獨立的 function，並給它一個好懂的名字。這麼做不只可以讓程式碼更精簡，還可以提高未來的工作效率。想像一下，未來如果需要用到類似的功能，只要寫一行 code 來呼叫這個包裝好的 function 就好，不用再寫一段重複的指令。甚至未來如果有需要修改這段程式，也只要去改包裝好的 function，而不用到專案裡把類似的指令片段全部改一遍。讓我給你一個例子:
 
 ```cpp
 void attack()
@@ -499,7 +499,71 @@ void rescue_hostage(hostage* h)
 }
 ```
 
-這段程式碼在模擬一個玩家可以做的四個動作: 攻擊、佔領據點、撿拾金錢跟解救人質。雖然是不同的動作，裡面都寫了一段類似的指令: 先增加金幣，再更新金幣面板的文字，接著播放得分特效，最後是通知所有註冊金幣更新事件的物件。很顯然如果未來遊戲越寫越大，人物可以做的動作越來越多，重複的程式碼片段也會跟著變多。如果我們把程式改成這樣:
+這段程式碼在模擬一款遊戲中玩家可以做的四個動作: 攻擊、佔領據點、撿拾金錢跟解救人質。雖然是不同的動作，裡面都寫了一段類似的指令: 先增加金幣，再更新金幣面板的文字，接著播放得分特效，最後是通知所有註冊金幣更新事件的物件。很顯然如果未來人物可以做的動作越來越多，例如增加一個用來出售商品的 function「`sell_merchandise()`」讓玩家可以把商品賣掉賺取金幣，重複的程式碼片段就會跟著變多:
+
+```cpp
+void attack()
+{
+    // attack logic
+    if (is_target_damaged)
+    {
+        golds += get_gold(target);
+        golds_label->set_golds(golds);
+        golds_label->play_effects();
+        game->notify_change('GOLD', golds);
+    }
+}
+
+void occupy_stronghold(stronghold* s)
+{
+    s->set_team(team_id);
+    int reward = get_occupy_reward(s);
+    golds += reward;
+    golds_label->set_golds(golds);
+    golds_label->play_effects();
+    game->notify_change('GOLD', golds);
+}
+
+void take_gold(int g)
+{
+    golds += g;
+    golds_label->set_golds(golds);
+    golds_label->play_effects();
+    game->notify_change('GOLD', golds);
+}
+
+void rescue_hostage(hostage* h)
+{
+    golds += get_rescue_reward(h);
+    golds_label->set_golds(golds);
+    golds_label->play_effects();
+    game->notify_change('GOLD', golds);
+}
+
+void sell_merchandise(merchandise* m)
+{
+    golds += m->price;
+    golds_label->set_golds(golds);
+    golds_label->play_effects();
+    game->notify_change('GOLD', golds);
+
+    m->reset_owner();
+}
+```
+
+如果我們先新增一個 function，把 4 行重複出現的指令包裝到裡面:
+
+```cpp
+void add_gold(int g)
+{
+    golds += g;
+    golds_label->set_golds(golds);
+    golds_label->play_effects();
+    game->notify_change('GOLD', golds);
+}
+```
+
+接著再讓玩家的每個 function 都去呼叫「包裝好」的功能:
 
 ```cpp
 void add_gold(int g)
@@ -534,25 +598,7 @@ void rescue_hostage(hostage* h)
 {
     add_gold(get_rescue_reward(h));
 }
-```
 
-恩! 這的確奏效了! 每個 function 裡面的重複程式碼全被簡化成一行 function call。重複的指令則被包裝到一個可以被重複利用的 `add_gold(int s)` function。再給你一個情境: 某天這款遊戲的企劃小組開完會後，團隊要幫遊戲新增交易的功能。玩家可以把商品賣掉，賺取跟商品標價一樣的金幣。如果我們幫程式碼新增一個 `sell_merchandise()` function 來實作這項功能，在包裝程式碼之前，我們得把 4 行重複出現的指令全部寫到 function 裡
-
-```cpp
-void sell_merchandise(merchandise* m)
-{
-    golds += m->price;
-    golds_label->set_golds(golds);
-    golds_label->play_effects();
-    game->notify_change('GOLD', golds);
-
-    m->reset_owner();
-}
-```
-
-那麼，在做完包裝之後只要寫一行 `add_gold(m->price);` 就已經完成跟更新金幣有關的邏輯:
-
-```cpp
 void sell_merchandise(merchandise* m)
 {
     add_gold(m->price);
@@ -560,7 +606,7 @@ void sell_merchandise(merchandise* m)
 }
 ```
 
-而且 `sell_merchandise()` function 竟然只需要兩行程式碼就寫完了! 這兩版 functions 的長度竟然可以有 5 行跟 1 行的差距! 想像一下，如果跟增加金幣有關的 functions 被擴充到 30 個，就相當是省了 120 行程式碼 (一個 function 省 4 行，總共有 30 個地方用到，等於省了 4 * 30 = 120 行程式碼)! 這就是今天最進階、價值最高的 reuse 技巧。但你知道嗎? 最後還有一個更驚人的效果才正要跟你分享。今天企劃小組開完會後，竟然決定如果增加的金幣數量比 1,000 還多，就讓玩家進入 10 秒的 fever 狀態來提升幸運 2 秒。假設這款遊戲沒有把 30 段跟*增加金幣*有關的程式碼包裝到一個通用的 function 裡面，遊戲的工程師就必須到這 30 個 functions 裡面一個一個做修改。幸運的是，專業的遊戲團隊早就包裝好 function，他們在兩天內改好這個 function 並且進入測試階段。讓我們看看修改完的程式碼:
+恩! 這的確奏效了! 每個 function 裡面的重複程式碼都被簡化成一行 function call。以後如果要執行跟增加金幣有關的指令，只要寫一行 `add_gold();` 就好。包裝好重複程式碼之後，玩家的每個 function 都省下了 4 行程式碼，`sell_merchandise()` function 甚至只需要兩行程式碼就寫完了! 想像一下，如果跟增加金幣有關的 functions 被擴充到 30 個，就相當是省了 120 行程式碼 (一個 function 省 4 行，總共有 30 個地方用到，等於省了 4 * 30 = 120 行程式碼)! 這就是今天最進階、價值最高的 reuse 技巧。但你知道嗎? 最後還有一個更驚人的效果才正要跟你分享。今天企劃小組開完會後，竟然決定如果增加的金幣數量比 1,000 還多，就讓玩家進入 10 秒的 fever 狀態來提升幸運 2 秒。假設這款遊戲沒有把 30 段跟「增加金幣」有關的程式碼包裝起來，工程師就必須到這 30 個 functions 裡面一個一個辛苦地修改。幸運的是，專業的遊戲團隊早就包裝好 function，他們在兩天內改好這個功能並且進入測試階段。讓我們看看修改完的程式碼:
 
 ```cpp
 void add_gold(int g)
@@ -600,8 +646,14 @@ void rescue_hostage(hostage* h)
 {
     add_gold(get_rescue_reward(h));
 }
+
+void sell_merchandise(merchandise* m)
+{
+    add_gold(m->price);
+    m->reset_owner();
+}
 ```
 
-根據這次的需求，只有 `add_gold()` function 被異動到，其他的 functions 完全沒有被動到。與其找出這 30 個 functions，一個一個幫他們加上重複的程式碼，第二種改法是不是聰明多了呢? 希望你會喜歡今天的內容。有任何問題歡迎在下面留言讓我知道，拜拜，我們下次見!
+根據這次的需求，只有 `add_gold()` function 被異動到，其他的 functions 完全沒有影響。與其找出這 30 個 functions，一個一個幫他們加上重複的程式碼，第二種改法很顯然聰明多了! 希望你會喜歡今天的內容。有任何問題歡迎在下面留言讓我知道，拜拜，我們下次見!
 
 Being written...
