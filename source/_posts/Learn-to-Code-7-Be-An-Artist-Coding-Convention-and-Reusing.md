@@ -172,7 +172,7 @@ if (should_unleash_skill)
 
 ```cpp
 
-void fire_skill()
+void unleash_skill()
 {
     std::string command_str = "";
     for (std::string key : command)
@@ -200,11 +200,11 @@ std::find(attack_keys.begin(), attack_keys.end(), input.pressed_key()) != attack
 
 if (should_unleash_skill)
 {
-    fire_skill();
+    unleash_skill();
 }
 ```
 
-到這裡我想談談 `if` statement 的內容區段，你有什麼想法呢? 我們只要看到 `fire_skill()` 這個 function name 就幾乎可以知道，當 `if` 條件成立時會去發動角色的技能，根本不用去讀 `fire_skill()` function 裡面的程式碼。至於發動技能的細節就交給 `fire_skill()` function 去煩惱囉! 這是我最喜歡的一種技巧，而且並不像大多數人認為的那樣複雜。適當得幫變數或 function 命名不只可以讓名稱更有意義、更容易讓人的腦袋解讀，甚至可以用來包裝複雜的邏輯，讓程式碼的可讀性更上一層樓! 接下來我想跟你分享一個更進階的技巧...
+到這裡，我們把施放技能的程式碼用 `unleash_skill()` 這個 function 包裝起來。我想要你看看 sample code 的第 30 行。光看 function name 就已經幾乎可以知道: 這是一段跟施展技能有關的程式碼片段，而且完全不用去讀 `unleash_skill()` function 裡面的程式碼。這是我最喜歡的一種技巧，而且並不像大多數人認為的那樣複雜。適當得幫變數或 function 命名不只可以讓名稱更有意義、更容易讓人的腦袋解讀，甚至可以用來包裝複雜的邏輯，讓程式碼的可讀性更上一層樓! 接下來我想跟你分享一個更進階的技巧...
 
 ## 技巧三: 保持單層的 if 判斷邏輯
 
