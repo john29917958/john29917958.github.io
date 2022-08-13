@@ -371,9 +371,9 @@ void game_loop()
         npc.update();
     }
 
-    for (character &enemy : scene->enemies)
+    for (int i = 0; i < scene->enemies.size(); i++)
     {
-        enemy.update();
+        scene->enemies.at(i)->update();
     }
 
     if (!player->is_dead) {
@@ -426,9 +426,9 @@ void update_scene()
         npc.update();
     }
 
-    for (character &enemy : scene->enemies)
+    for (int i = 0; i < scene->enemies.size(); i++)
     {
-        enemy.update();
+        scene->enemies.at(i)->update();
     }
 }
 
