@@ -658,6 +658,6 @@ void sell_merchandise(merchandise* m)
 }
 ```
 
-根據這次的需求，確實只有包裝好的 `add_gold()` function 被異動到，其他的 functions 完全沒有影響。與其找出這 30 個 functions，一個一個幫他們加上重複的程式碼，第二種改法顯然聰明多了! 希望你會喜歡今天的內容。有任何問題歡迎在下面留言讓我知道，拜拜，我們下次見!
+根據這次的需求，確實只有包裝好的 `add_gold()` function 被異動到，其他的 functions 完全沒有影響。與其找出這 30 個 functions，一個一個幫他們加上重複的程式碼，第二種改法顯然聰明多了! 希望你會喜歡今天的內容。歡迎在下面留言跟我說說你的問題或看法，拜拜，我們下次見!
 
 Being written...
