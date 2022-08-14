@@ -125,6 +125,8 @@ ___
 如果我們把常數都去掉，可以得到時間複雜度是 n<sup>2</sup> - n
 如果 n 不斷往上增加，我們把 n 看成是可以忽略的因素，只保留 n<sup>2</sup>，結論就是，我們得到 bubble sort 演算法的時間複雜度是 O(n<sup>2</sup>)
 
+## Mathematical Style Pseudocode
+
 上面是用比較高階、比較口語的方式來描述排學生的邏輯。接著，我們用比較低階的 pseudo code 把演算法寫出來:
 
 ```
