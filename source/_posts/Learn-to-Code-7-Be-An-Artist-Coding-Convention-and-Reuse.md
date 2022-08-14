@@ -627,14 +627,6 @@ void sell_merchandise(merchandise* m)
 ```cpp
 void add_gold(int golds)
 {
-    game->golds += golds;
-    golds_label->set_golds(golds);
-    golds_label->play_effects();
-    game->notify_change("GOLD", golds);
-}
-
-void add_gold(int golds)
-{
     game->golds += m->price;
     golds_label->set_golds(golds);
     golds_label->play_effects();
@@ -651,7 +643,7 @@ void attack(character* target)
     bool is_target_damaged = false;
 
     // attack logic...
-    
+
     if (is_target_damaged)
     {
         add_gold(get_gold(target));
