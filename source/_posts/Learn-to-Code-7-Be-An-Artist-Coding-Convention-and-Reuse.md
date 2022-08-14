@@ -463,101 +463,113 @@ void game_loop()
 要解決這種問題，你需要把重複的程式碼提取成獨立的 function，並給它一個精準的名字。這麼做不只可以讓程式碼更精簡，還可以提高未來的工作效率。想像一下，未來如果需要用到類似的功能，只要寫一行 code 來呼叫這個包裝好的 function 就好，不用再寫一段重複的程式碼。甚至未來如果有需要修改這段程式，也只要去改包裝好的 function，而不用到專案裡把類似的片段全部改一遍。讓我給你一個例子:
 
 ```cpp
-void attack(character* target)
+class character
 {
-    bool is_target_damaged = false;
-
-    // attack logic...
-    
-    if (is_target_damaged)
+private:
+    int _team_id;
+public:
+    void attack(character* target)
     {
-        game->golds += get_gold(target);
+        bool is_target_damaged = false;
+
+        // attack logic...
+        
+        if (is_target_damaged)
+        {
+            game->golds += get_gold(target);
+            golds_label->set_golds(game->golds);
+            golds_label->play_effects();
+            game->notify_change("GOLD", game->golds);
+        }
+    }
+
+    void occupy_stronghold(stronghold* s)
+    {
+        s->set_team(this->_team_id);
+        int reward = get_occupy_reward(s);
+        game->golds += reward;
         golds_label->set_golds(game->golds);
         golds_label->play_effects();
         game->notify_change("GOLD", game->golds);
     }
-}
 
-void occupy_stronghold(stronghold* s)
-{
-    s->set_team(team_id);
-    int reward = get_occupy_reward(s);
-    game->golds += reward;
-    golds_label->set_golds(game->golds);
-    golds_label->play_effects();
-    game->notify_change("GOLD", game->golds);
-}
+    void take_gold(int g)
+    {
+        game->golds += g;
+        golds_label->set_golds(game->golds);
+        golds_label->play_effects();
+        game->notify_change("GOLD", game->golds);
+    }
 
-void take_gold(int g)
-{
-    game->golds += g;
-    golds_label->set_golds(game->golds);
-    golds_label->play_effects();
-    game->notify_change("GOLD", game->golds);
-}
-
-void rescue_hostage(hostage* h)
-{
-    game->golds += get_rescue_reward(h);
-    golds_label->set_golds(game->golds);
-    golds_label->play_effects();
-    game->notify_change("GOLD", game->golds);
+    void rescue_hostage(hostage* h)
+    {
+        game->golds += get_rescue_reward(h);
+        golds_label->set_golds(game->golds);
+        golds_label->play_effects();
+        game->notify_change("GOLD", game->golds);
+    }
 }
 ```
 
 這段程式碼在模擬一款遊戲中玩家可以做的四個動作: 攻擊、佔領據點、撿拾金錢跟解救人質。雖然是不同的動作，裡面都寫了一段類似的程式碼: 先增加金幣，再更新金幣面板的文字，接著播放得分特效，最後是通知所有註冊更新金幣事件的物件。很顯然如果未來人物可以做的動作越來越多，例如增加一個 `sell_merchandise()` function 讓玩家可以把商品賣掉賺取金幣，重複的程式碼片段就會跟著變多:
 
 ```cpp
-void attack(character* target)
+class character
 {
-    bool is_target_damaged = false;
-
-    // attack logic...
-
-    if (is_target_damaged)
+private:
+    int _team_id;
+public:
+    void attack(character* target)
     {
-        game->golds += get_gold(target);
+        bool is_target_damaged = false;
+
+        // attack logic...
+
+        if (is_target_damaged)
+        {
+            game->golds += get_gold(target);
+            golds_label->set_golds(game->golds);
+            golds_label->play_effects();
+            game->notify_change("GOLD", game->golds);
+        }
+    }
+
+    void occupy_stronghold(stronghold* s)
+    {
+        s->set_team(this->_team_id);
+        int reward = get_occupy_reward(s);
+        game->golds += reward;
         golds_label->set_golds(game->golds);
         golds_label->play_effects();
         game->notify_change("GOLD", game->golds);
     }
-}
 
-void occupy_stronghold(stronghold* s)
-{
-    s->set_team(team_id);
-    int reward = get_occupy_reward(s);
-    game->golds += reward;
-    golds_label->set_golds(game->golds);
-    golds_label->play_effects();
-    game->notify_change("GOLD", game->golds);
-}
+    void take_gold(int g)
+    {
+        game->golds += g;
+        golds_label->set_golds(game->golds);
+        golds_label->play_effects();
+        game->notify_change("GOLD", game->golds);
+    }
 
-void take_gold(int g)
-{
-    game->golds += g;
-    golds_label->set_golds(game->golds);
-    golds_label->play_effects();
-    game->notify_change("GOLD", game->golds);
-}
+    void rescue_hostage(hostage* h)
+    {
+        game->golds += get_rescue_reward(h);
+        golds_label->set_golds(game->golds);
+        golds_label->play_effects();
+        game->notify_change("GOLD", game->golds);
+    }
 
-void rescue_hostage(hostage* h)
-{
-    game->golds += get_rescue_reward(h);
-    golds_label->set_golds(game->golds);
-    golds_label->play_effects();
-    game->notify_change("GOLD", game->golds);
-}
+    void sell_merchandise(merchandise* m)
+    {
+        game->golds += m->price;
+        golds_label->set_golds(game->golds);
+        golds_label->play_effects();
+        game->notify_change("GOLD", game->golds);
 
-void sell_merchandise(merchandise* m)
-{
-    game->golds += m->price;
-    golds_label->set_golds(game->golds);
-    golds_label->play_effects();
-    game->notify_change("GOLD", game->golds);
-
-    m->reset_owner();
-}
+        m->reset_owner();
+    }
+};
 ```
 
 那麼要如何讓這段程式碼更精簡呢? 如果我們先新增一個 function，把 4 行重複出現的 code 包裝到裡面:
@@ -583,39 +595,45 @@ void add_gold(int golds)
     game->notify_change("GOLD", golds);
 }
 
-void attack(character* target)
+class character
 {
-    bool is_target_damaged = false;
-
-    // attack logic...
-
-    if (is_target_damaged)
+private:
+    int _team_id;
+public:
+    void attack(character* target)
     {
-        add_gold(get_gold(target));
+        bool is_target_damaged = false;
+
+        // attack logic...
+
+        if (is_target_damaged)
+        {
+            add_gold(get_gold(target));
+        }
     }
-}
 
-void occupy_stronghold(stronghold* s)
-{
-    s->set_team(team_id);
-    add_gold(get_occupy_reward(s));
-}
+    void occupy_stronghold(stronghold* s)
+    {
+        s->set_team(this->team_id);
+        add_gold(get_occupy_reward(s));
+    }
 
-void take_gold(int g)
-{
-    add_gold(g);
-}
+    void take_gold(int g)
+    {
+        add_gold(g);
+    }
 
-void rescue_hostage(hostage* h)
-{
-    add_gold(get_rescue_reward(h));
-}
+    void rescue_hostage(hostage* h)
+    {
+        add_gold(get_rescue_reward(h));
+    }
 
-void sell_merchandise(merchandise* m)
-{
-    add_gold(m->price);
-    m->reset_owner();
-}
+    void sell_merchandise(merchandise* m)
+    {
+        add_gold(m->price);
+        m->reset_owner();
+    }
+};
 ```
 
 告訴我你看到了些什麼? 到這裡，每個 function 內的 4 行重複程式碼都被簡化成了一行。以後如果要執行跟增加金幣有關的功能，只需要寫一行 `add_gold();` 去呼叫包裝好的 function，非常有效率。
@@ -627,7 +645,7 @@ void sell_merchandise(merchandise* m)
 ```cpp
 void add_gold(int golds)
 {
-    game->golds += m->price;
+    game->golds += golds;
     golds_label->set_golds(golds);
     golds_label->play_effects();
     if (g >= 1000)
@@ -635,42 +653,47 @@ void add_gold(int golds)
         game->player->add_buff(buff_factory->make("FEVER"));
     }
     game->notify_change("GOLD", golds);
-    m->reset_owner();
 }
 
-void attack(character* target)
+class character
 {
-    bool is_target_damaged = false;
-
-    // attack logic...
-
-    if (is_target_damaged)
+private:
+    int _team_id;
+public:
+    void attack(character* target)
     {
-        add_gold(get_gold(target));
+        bool is_target_damaged = false;
+
+        // attack logic...
+
+        if (is_target_damaged)
+        {
+            add_gold(get_gold(target));
+        }
     }
-}
 
-void occupy_stronghold(stronghold* s)
-{
-    s->set_team(team_id);
-    add_gold(get_occupy_reward(s));
-}
+    void occupy_stronghold(stronghold* s)
+    {
+        s->set_team(this->_team_id);
+        add_gold(get_occupy_reward(s));
+    }
 
-void take_gold(int g)
-{
-    add_gold(g);
-}
+    void take_gold(int g)
+    {
+        add_gold(g);
+    }
 
-void rescue_hostage(hostage* h)
-{
-    add_gold(get_rescue_reward(h));
-}
+    void rescue_hostage(hostage* h)
+    {
+        add_gold(get_rescue_reward(h));
+    }
 
-void sell_merchandise(merchandise* m)
-{
-    add_gold(m->price);
-    m->reset_owner();
-}
+    void sell_merchandise(merchandise* m)
+    {
+        add_gold(m->price);
+        m->reset_owner();
+    }
+};
 ```
 
 根據這次的需求，確實只有包裝好的 `add_gold()` function 被異動到，其他的 functions 完全沒有影響。與其找出這 30 個 functions，一個一個幫他們加上重複的程式碼，第二種改法顯然聰明多了! 希望你會喜歡今天的內容。歡迎在下面留言跟我說說你的問題或看法，拜拜，我們下次見!
