@@ -465,13 +465,16 @@ void game_loop()
 ```cpp
 void attack(character* target)
 {
+    bool is_target_damaged = false;
+
     // attack logic...
+    
     if (is_target_damaged)
     {
-        golds += get_gold(target);
-        golds_label->set_golds(golds);
+        game->golds += get_gold(target);
+        golds_label->set_golds(game->golds);
         golds_label->play_effects();
-        game->notify_change('GOLD', golds);
+        game->notify_change("GOLD", game->golds);
     }
 }
 
@@ -479,26 +482,26 @@ void occupy_stronghold(stronghold* s)
 {
     s->set_team(team_id);
     int reward = get_occupy_reward(s);
-    golds += reward;
-    golds_label->set_golds(golds);
+    game->golds += reward;
+    golds_label->set_golds(game->golds);
     golds_label->play_effects();
-    game->notify_change('GOLD', golds);
+    game->notify_change("GOLD", game->golds);
 }
 
 void take_gold(int g)
 {
-    golds += g;
-    golds_label->set_golds(golds);
+    game->golds += g;
+    golds_label->set_golds(game->golds);
     golds_label->play_effects();
-    game->notify_change('GOLD', golds);
+    game->notify_change("GOLD", game->golds);
 }
 
 void rescue_hostage(hostage* h)
 {
-    golds += get_rescue_reward(h);
-    golds_label->set_golds(golds);
+    game->golds += get_rescue_reward(h);
+    golds_label->set_golds(game->golds);
     golds_label->play_effects();
-    game->notify_change('GOLD', golds);
+    game->notify_change("GOLD", game->golds);
 }
 ```
 
@@ -507,13 +510,16 @@ void rescue_hostage(hostage* h)
 ```cpp
 void attack(character* target)
 {
+    bool is_target_damaged = false;
+
     // attack logic...
+
     if (is_target_damaged)
     {
-        golds += get_gold(target);
-        golds_label->set_golds(golds);
+        game->golds += get_gold(target);
+        golds_label->set_golds(game->golds);
         golds_label->play_effects();
-        game->notify_change('GOLD', golds);
+        game->notify_change("GOLD", game->golds);
     }
 }
 
@@ -521,34 +527,34 @@ void occupy_stronghold(stronghold* s)
 {
     s->set_team(team_id);
     int reward = get_occupy_reward(s);
-    golds += reward;
-    golds_label->set_golds(golds);
+    game->golds += reward;
+    golds_label->set_golds(game->golds);
     golds_label->play_effects();
-    game->notify_change('GOLD', golds);
+    game->notify_change("GOLD", game->golds);
 }
 
 void take_gold(int g)
 {
-    golds += g;
-    golds_label->set_golds(golds);
+    game->golds += g;
+    golds_label->set_golds(game->golds);
     golds_label->play_effects();
-    game->notify_change('GOLD', golds);
+    game->notify_change("GOLD", game->golds);
 }
 
 void rescue_hostage(hostage* h)
 {
-    golds += get_rescue_reward(h);
-    golds_label->set_golds(golds);
+    game->golds += get_rescue_reward(h);
+    golds_label->set_golds(game->golds);
     golds_label->play_effects();
-    game->notify_change('GOLD', golds);
+    game->notify_change("GOLD", game->golds);
 }
 
 void sell_merchandise(merchandise* m)
 {
-    golds += m->price;
-    golds_label->set_golds(golds);
+    game->golds += m->price;
+    golds_label->set_golds(game->golds);
     golds_label->play_effects();
-    game->notify_change('GOLD', golds);
+    game->notify_change("GOLD", game->golds);
 
     m->reset_owner();
 }
@@ -557,29 +563,32 @@ void sell_merchandise(merchandise* m)
 那麼要如何讓這段程式碼更精簡呢? 如果我們先新增一個 function，把 4 行重複出現的 code 包裝到裡面:
 
 ```cpp
-void add_gold(int g)
+void add_gold(int golds)
 {
-    golds += g;
+    game->golds += golds;
     golds_label->set_golds(golds);
     golds_label->play_effects();
-    game->notify_change('GOLD', golds);
+    game->notify_change("GOLD", golds);
 }
 ```
 
 接著再修改玩家的每個 function，讓它們去呼叫「包裝好」的功能:
 
 ```cpp
-void add_gold(int g)
+void add_gold(int golds)
 {
-    golds += g;
+    game->golds += golds;
     golds_label->set_golds(golds);
     golds_label->play_effects();
-    game->notify_change('GOLD', golds);
+    game->notify_change("GOLD", golds);
 }
 
 void attack(character* target)
 {
+    bool is_target_damaged = false;
+
     // attack logic...
+
     if (is_target_damaged)
     {
         add_gold(get_gold(target));
@@ -616,22 +625,33 @@ void sell_merchandise(merchandise* m)
 最後我想跟你分享一個額外的秘密。如果今天企劃小組開完會後，決定當玩家一次得到超過 1,000 個金幣就要進入 10 秒的 fever 狀態來提升幸運值 2 秒。假設這款遊戲沒有先把重複程式碼包裝起來，工程師就必須到這 30 個 functions 裡面一個一個辛苦地修改。不過，專業的遊戲團隊早就包裝好 function，他們在兩天內完成功能並進入測試階段。我想要你看看這段修改完的程式碼:
 
 ```cpp
-void add_gold(int g)
+void add_gold(int golds)
 {
-    golds += m->price;
+    game->golds += golds;
+    golds_label->set_golds(golds);
+    golds_label->play_effects();
+    game->notify_change("GOLD", golds);
+}
+
+void add_gold(int golds)
+{
+    game->golds += m->price;
     golds_label->set_golds(golds);
     golds_label->play_effects();
     if (g >= 1000)
     {
-        game->player->add_buff(game->buff_factory->make("FEVER"));
+        game->player->add_buff(buff_factory->make("FEVER"));
     }
-    game->notify_change('GOLD', golds);
+    game->notify_change("GOLD", golds);
     m->reset_owner();
 }
 
 void attack(character* target)
 {
+    bool is_target_damaged = false;
+
     // attack logic...
+    
     if (is_target_damaged)
     {
         add_gold(get_gold(target));
