@@ -178,10 +178,6 @@ algorithm bubble-sort is
 void bubble_sort(int array[], int length) {    
     bool has_swapped = false;
 
-    for (int i = 0; i < length; i++) {
-        array[i] = array[i];
-    }
-
     if (length == 1) {
         return;
     }
