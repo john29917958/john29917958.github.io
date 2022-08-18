@@ -39,6 +39,12 @@ while (should_run_update_logic())
 
 <!--more-->
 
+## 主題一: Class 與物件
+
+## 主題二: Pass by Value and Pass by Reference
+
+## 主題三: Namespace and Include
+
 1. ~~程式記憶體配置方式~~
 2. Why use class and object?
 3. Class 與物件概念介紹
