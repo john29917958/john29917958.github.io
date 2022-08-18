@@ -7,12 +7,12 @@ category: Programming
 
 Being written...
 
-人們可能不曾想過，一款遊戲裡面的人物要如何快速擴充? 商品要如何一直更新? 關卡要如何一直增加? 我想要你想像一下，假設你需要幫一款遊戲加一個叫做「Fairy」的人物，你得新增給她用的變數，再擴充一段 `else if` statement，然後把某個人物的 code 複製到這個區段裡，最後再修改複製好的 code 來做特異化:
+人們可能不曾想過，一款遊戲裡面的人物要如何快速擴充? 商品要如何一直更新? 關卡要如何一直增加? 我想要你想像一下，假設你需要幫一款遊戲加一個叫做「Fairy」的角色，你竟然得在同一份文件裡先新增給她用的變數，再擴充一段 `else if` statement，然後把某個角色的 code 複製到這個區段裡，最後再修改複製好的 code 來做特異化:
 ```cpp
 std::string character_name = get_character_name();
 std::string knight_name = get_player_nick_name();
 std::string magician_name = get_player_nick_name();
-std::string fairy_name = get_player_nick_name();  // Added code
+std::string fairy_name = get_player_nick_name(); // Added code
 int knight_health = 100;
 int magician_health = 100;
 int fairy_health = 100; // Added code
@@ -34,6 +34,8 @@ while (should_run_update_logic())
     }
 }
 ```
+
+問題是隨著新角色不斷被擴充到遊戲中，這份文件裡的變數跟 `else if` statement 會愈來愈多。如果角色數量成長到 4 個、5 個、6 個、甚至是 7 個，這份文件會變得非常冗長、很難維護、類似的 code 也不斷出現。修改程式的時候會很容易改錯變數。
 
 1. ~~程式記憶體配置方式~~
 2. Why use class and object?
