@@ -42,7 +42,7 @@ std::string find_taller(student* student1, student* student2)
 }
 ```
 
-我想要你先看這段 code 的第三行，這裡用 `student->get_height()` 取得第一位學生的身高。接著，在第二行取得第二位學生的身高。然後在第 7 到第 14 行比較兩位學生的身高，找出比較高的學生。然後在第 16 行問到這位學生的名字。最後在第 18 行把這個名字給出去。告訴我你看到了些什麼? 在這個例子裡，演算法的描述一行一行轉換成對應的程式碼。這才是應該用來解決複雜問題的流程: 先設計好演算法再把程式寫出來。現在，你已經知道什麼是演算法。接下來你必須學會如何計算一個演算法的「複雜度」。
+我想要你先看這段 code 的第三行，這裡用 `student->get_height()` 取得第一位學生的身高。接著，在第二行取得第二位學生的身高。然後在第 7 到第 14 行比較兩位學生的身高，找出比較高的學生。接下來在第 16 行問到這位學生的名字。最後在第 18 行把這個名字給出去。在這個例子裡，演算法的描述一行一行轉換成對應的程式碼。這才是應該用來解決複雜問題的流程: 先設計好演算法再把程式寫出來。現在，你已經知道什麼是演算法。接下來你必須學會如何計算一個演算法的「複雜度」。
 
 ## 課題二: 複雜度
 我已經寫好找學生的演算法了，但要如何評估它最糟的執行時間呢? 到底什麼是複雜度? 其實說穿了「複雜度」就是指程式跑一段演算法的「最糟狀況」到哪裡。寫好演算法之後你只知道解決問題的步驟，接著你需要計算程式跑這段演算法得花多少時間或多少資源。複雜度會專注在兩種指標: 最多會花多少時間的時間複雜度 (time complexity) 跟花多少資源的空間複雜度 (space complexity)。在計算複雜度的時候，工程師會用世界通用的 big-O 標記 `O(n)` (念作 big-O n) 來用小括弧裡面的方程式描述複雜度會怎麼隨著輸入量變化。例如 `O(n)` 可以看做是 `Complexity = n` 的多項式、`O(2n + 1)` 可以看做是 `Complexity = 2n + 1` 的多項式。複雜度的成長速度大略可以概括成常數、線性、log 跟次方這幾種，讓我解釋這四類複雜度給你知道：
@@ -137,21 +137,21 @@ algorithm bubble-sort is
 
     s <- [] empty array
 
+    for i <- 0 to l - 2 do
+        ith element in s <- ith element in A
+
     if l = 1
         return s
-
-    for i <- 0 to l - 2 do
-        ith element in b <- ith element in A
 
     has_swap_op <- true
 
     while has_swap_op = true
         has_swap_op <- false
         for i <- 0 to l - 1 do
-            if ith element in b < (i+1)th element in b
-                temp <- (i+1)th element in b
-                (i+1)th element in b <- ith element in b
-                ith element in b <- temp
+            if ith element in s < (i+1)th element in s
+                temp <- (i+1)th element in s
+                (i+1)th element in s <- ith element in s
+                ith element in s <- temp
                 has_swap_op <- true
     
     return s
