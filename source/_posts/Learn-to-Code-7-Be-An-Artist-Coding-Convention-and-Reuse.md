@@ -502,8 +502,9 @@ public:
     }
 
     void rescue_hostage(hostage* h)
-    {
+    {        
         game->golds += get_rescue_reward(h);
+        game->destroy(h);
         golds_label->set_golds(game->golds);
         golds_label->play_effects();
         game->notify_change("GOLD", game->golds);
