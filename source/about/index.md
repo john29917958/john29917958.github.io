@@ -31,6 +31,7 @@ I pursue challenge and excellence, I pursue originality in Taiwan. I'm also kind
 ## Contact Information
 - E-mail: john29917958@gmail.com
 - [LinkedIn](https://www.linkedin.com/in/john29917958)
+- Line ID: john29917958
 
 ## Interests
 1. Dancing and listening to music
