@@ -18,12 +18,12 @@ Boom! You've written your first program and it works like a charm! It's as simpl
 Now all you need to do is take a look at five uses of programming languages. I'll explain the concept behind your code after you read it.
 
 | Purpose                                        | Language                                                      | Example                                                    |
-| ---------------------------------------------- | ------------------------------------------------------------- | ---------------------------------------------------------- |
-| AI and machine learning, data analytics        | Python                                                        | Spotify uses Python and Hadoop to give user suggestions    |
-| Web development                                | JavaScript, Java, Ruby, PHP, C#, Node.js (JavaScript), Python | Facebook written in PHP, LinkedIn written in Node.js       |
-| Mobile app                                     | Java (Android), Swift (IOS), Kotlin, React Native, Python     | Telegram                                                   |
-| Computer graphics and high-performance systems | C, C++                                                        | Adobe Photoshop                                            |
-| Games                                          | C# (Unity), C++ (Unreal)                                      | Fall Guys: Ultimate Knockout, Hellblade: Senua’s Sacrifice |
+| ---------------------------------------------- | ------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| AI and machine learning, data analytics        | Python                                                        | Spotify uses Python and Hadoop to implement user recommendation system |
+| Web development                                | JavaScript, Java, Ruby, PHP, C#, Node.js (JavaScript), Python | Facebook is written in PHP, LinkedIn is written in Node.js             |
+| Mobile app                                     | Java (Android), Swift (IOS), Kotlin, React Native, Python     | Telegram mobile                                                        |
+| Computer graphics and high-performance systems | C, C++                                                        | Adobe Photoshop                                                        |
+| Games                                          | C# (Unity), C++ (Unreal)                                      | Fall Guys: Ultimate Knockout, Hellblade: Senua’s Sacrifice             |
 
 Break time is over! Before we dive into the code, let's first understand what a program is.
 
