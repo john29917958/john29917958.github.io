@@ -4,7 +4,10 @@ date: 2022-09-04 10:04:02
 tags: [property]
 category: 
 ---
-很高興跟你們分享我的財產。首先是帳戶總金額:
+很高興跟你們分享我的財產。首先是我 44,400 的 iPhone 12 Pro
+{% asset_img iphone-12-pro.jpg %}
+
+這邊先分享帳戶總金額:
 {% asset_img account.jpg %}
 {% asset_img account-2.jpg %}
 
@@ -13,8 +16,7 @@ category:
 再來是四層樓房子的家具。這是一張 70.000 的床
 {% asset_img bed.jpg %}
 
-接著，我使用的是 44,400 的 iPhone 12 Pro
-{% asset_img iphone-12-pro.jpg %}
+接著，
 
 使用的是英文介面
 {% asset_img iphone-12-pro-apple-id-info.jpg %}
