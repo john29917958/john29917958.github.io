@@ -15,7 +15,7 @@ See the right-angle icon on the screen? I want you to type this magic text after
 {% asset_img hello-world.jpg %}
 Boom! You've written your first program and it works like a charm! It's as simple as doing that and this must have taken you only less than 10 minutes. In your program, the programming language you use is called "JavaScript". You use the `console` object, call its `log` function, and pass the text "Hello, world!" to it. After you hit enter, the browser executed the code you've written, printed the message "Hello, world!" in the terminal.
 
-Take a break! Let's take a look at five uses of programming languages:
+Now all you need to do is take a look at five uses of programming languages. I'll explain the concept behind your code after you read it.
 
 | Purpose                                        | Language                                                      | Example                                                    |
 | ---------------------------------------------- | ------------------------------------------------------------- | ---------------------------------------------------------- |
