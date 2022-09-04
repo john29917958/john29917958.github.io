@@ -9,7 +9,7 @@ This is the question I hear the most: I want to start to learn coding today! But
 
 <!--more-->
 
-Now you got to open the browser. I want you to press "Ctrl + Shift + J" on Windows or "Ctrl + Option + J" on Mac to open the developer console in your browser.
+Now you got to open the browser then press "Ctrl + Shift + J" on Windows or "Ctrl + Option + J" on Mac to open the developer console.
 {% asset_img terminal.jpg %}
 See the right-angle icon on the screen? You are an excellent programmer in front of a console now! Try not to copy any text in this article. Let's type something in the magic terminal then hit the enter key: `console.log('Hello, world!');`
 {% asset_img hello-world.jpg %}
