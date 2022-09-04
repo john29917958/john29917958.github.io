@@ -25,11 +25,11 @@ Now all you need to do is take a look at 5 uses of programming languages. I'll e
 | Computer graphics and high-performance systems | C, C++                                                        | Adobe Photoshop                                                        |
 | Games                                          | C# (Unity), C++ (Unreal)                                      | Fall Guys: Ultimate Knockout, Hellblade: Senua’s Sacrifice             |
 
-Before diving into the code, I think it's incredibly important that you understand what a program is. I swear to you it is going to help you tremendously in the future. Let me give you an example.
+Before diving into the code, I think it's incredibly important that you understand what a program is. I swear to you it is going to help you tremendously in the future. Let me give you a perfect example.
 
-We place an order at McDonald's. The waiter receives the request and sends it for production. The production unit begins to prepare the ingredients and all the necessary things according to the recipe, going through the production process, controlling many factors such as temperature and time to make a perfect meal. Recipes for producing meals are like programs. Actions in recipes are like statements. Controlling factors such as temperature and time can be considered as variables assigned with appropriate values. So writing a program can be thought of as making a recipe! Computer follows the instructions of the program is like we cook according to the recipe. When we specify temperature in a recipe should be adjusted to 10 degree, it's like declare a variable and assign 10 to it.
+When you place an order in a restaurant, the waiter gets the name of the meal you order, then the chef have to follow a set of instructions in a recipe to make the meal. There're many control variables specified in a recipe, like temperature and time. To make a perfect meal, the chef have to control them in the cooking process.
 
-Now let's modify our code a little bit:
+Now I want you to imagine that a program is like a recipe, code is like instructions in a recipe, variables in source code are like temperature and time that can be adjusted while cooking. The chef? is like the computer. Chef "cooks" a meal is like the computer "executes" a program producing outputs. I want you to look at the example below:
 ```javascript
 var temperature = 10;
 console.log('The temperature should be controlled at: ' + temperature);
