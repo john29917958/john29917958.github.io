@@ -7,6 +7,9 @@ category:
 很高興跟你們分享我的財產。首先是我 44,400 的 iPhone 12 Pro
 {% asset_img iphone-12-pro.jpg %}
 
+使用的是英文介面
+{% asset_img iphone-12-pro-apple-id-info.jpg %}
+
 這邊先分享帳戶總金額:
 {% asset_img account.jpg %}
 {% asset_img account-2.jpg %}
@@ -16,12 +19,7 @@ category:
 再來是四層樓房子的家具。這是一張 70.000 的床
 {% asset_img bed.jpg %}
 
-接著，
-
-使用的是英文介面
-{% asset_img iphone-12-pro-apple-id-info.jpg %}
-
-電腦是用 45,600 的 MSI Gaming Laptop
+接著，電腦是用 45,600 的 MSI Gaming Laptop
 {% asset_img gaming-laptop.jpg %}
 
 螢幕是 39,900 的 [EIZO ColorEdge CS2731](https://www.eizo.com.tw/products/coloredge/cs2731/index.html)
