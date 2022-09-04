@@ -4,7 +4,7 @@ date: 2022-09-04 10:04:02
 tags: [property]
 category: 
 ---
-很高興跟你們分享我的財產。首先是我 44,400 的 iPhone 12 Pro
+很高興跟你們分享我的財產。首先我手機用的是 44,400 的 iPhone 12 Pro
 {% asset_img iphone-12-pro.jpg %}
 
 使用的是英文介面
