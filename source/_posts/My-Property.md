@@ -4,16 +4,15 @@ date: 2022-09-04 10:04:02
 tags: [property]
 category: 
 ---
-這邊先分享帳戶總金額:
+很高興跟你們分享我的財產。首先是帳戶總金額:
 {% asset_img account.jpg %}
 {% asset_img account-2.jpg %}
 
-很高興跟你們分享我的財產。首先我手機用的是 44,400 的 iPhone 12 Pro
+我手機用的是 44,400 的 iPhone 12 Pro
 {% asset_img iphone-12-pro.jpg %}
 
 使用的是英文介面
 {% asset_img iphone-12-pro-apple-id-info.jpg %}
-
 
 <!--more-->
 
