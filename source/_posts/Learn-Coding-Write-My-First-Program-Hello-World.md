@@ -11,9 +11,9 @@ This is the question I hear the most: I want to start to learn coding today! But
 
 Now you got to open the browser then press "Ctrl + Shift + J" on Windows or "Ctrl + Option + J" on Mac to open the developer console.
 {% asset_img terminal.jpg %}
-See the right-angle icon on the screen? You are an excellent programmer in front of a console now! Try not to copy any text in this article. Let's type something in the magic terminal then hit the enter key: `console.log('Hello, world!');`
+See the right-angle icon on the screen? I want you to type this magic text after the right-angle then press enter key: `console.log('Hello, world!');`: 
 {% asset_img hello-world.jpg %}
-Congratulations! You've written your first program and it's actually working! Tell me how much time did you spend? It's less than 10 minutes right? In your first program, you used the JavaScript programming language. You used the `console` object, called its `log` function, and passed the text "Hello, world!" to it. After hitting enter, the browser execute the code you wrote, print the message "Hello, world!" in the terminal.
+Boom! You've written your first program and it's actually working! Tell me how much time did you spend? It's less than 10 minutes right? In your first program, you used the JavaScript programming language. You used the `console` object, called its `log` function, and passed the text "Hello, world!" to it. After hitting enter, the browser execute the code you wrote, print the message "Hello, world!" in the terminal.
 
 Take a break! Let's take a look at five uses of programming languages:
 
