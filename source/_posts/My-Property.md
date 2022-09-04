@@ -35,3 +35,5 @@ category:
 {% youtube 0Pouli1WBac %}
 ![ReFa BEAUTECH DRYER](https://www.refa.tw/upload/products/2106181508180000001.jpg)
 
+椅子是 10,700 的 Razer Gaming Computer Chair (RZ38-02840100-R3U1 X (green))
+{% asset_img razer-gaming-computer-chair.jpg %}
