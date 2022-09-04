@@ -27,3 +27,6 @@ category:
 
 錢包用的是 32,765 的 TOM FORD Logo-Lettering Zip-Up Wallet
 {% asset_img tom-ford-logo-lettering-zip-up-wallet.jpg %}
+
+還有一組 11,610 的專業電繪版 Wacom Intuos Pro Medium PTH-660/K0
+![Wacom Intuos Pro Medium PTH-660/K0](https://store.wacom.tw/PostImages/0a0253eb-d2c3-4ae5-ba49-4a6739ca33f6/ShowImg/PTH660K0(1).jpg)
