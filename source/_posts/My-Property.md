@@ -43,3 +43,6 @@ category:
 {% youtube wly8U_fA2os %}
 
 ![Blue Yeti USB Microphone](https://s3.amazonaws.com/cd.bluemic.com/img/yeti/yeti-header-yetiblackout-desktop.png)
+
+音響是 3,990 的 [Edifier C2XD 2.1 Multimedia Speaker System](https://www.edifier.online/products/edifier-c2xd-2-1-multimedia-speaker-system-black)
+![Edifier C2XD 2.1 Multimedia Speaker System](https://cdn.shopify.com/s/files/1/0342/4731/1496/products/C2XD-1_1296x.jpg?v=1603358623)
