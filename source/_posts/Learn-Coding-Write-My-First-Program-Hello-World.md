@@ -49,7 +49,7 @@ In C the `int` keyword also specifies which type of value can be stored into the
 Hope this article give you some confidence in learning coding. You better be confident in learning coding. Looking forward to the beginning of your programming journey. See you in the next article.
 
 # Fun Quiz
-Open the developer console again! I want you to use two variables: one assigns a string, another assigns an integer. You need to have the browser print `"I give myself 100 points today!"`
+Open the developer console again! I want you to use two variables: one assigns a string, another assigns an integer. You have to have the browser print `"I give myself 100 points today!"`.
 *Tip: Use addition operator `+` to concatenate two variables.*
 
 # Special Topics
