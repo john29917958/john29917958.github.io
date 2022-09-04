@@ -13,7 +13,7 @@ Now you got to open the browser then press "Ctrl + Shift + J" on Windows or "Ctr
 {% asset_img terminal.jpg %}
 See the right-angle icon on the screen? I want you to type this magic text after the right-angle then press enter key: `console.log('Hello, world!');`: 
 {% asset_img hello-world.jpg %}
-Boom! You've written your first program and it works like a charm! Tell me how much time did you spend? It's less than 10 minutes right? In your first program, you used the JavaScript programming language. You used the `console` object, called its `log` function, and passed the text "Hello, world!" to it. After hitting enter, the browser execute the code you wrote, print the message "Hello, world!" in the terminal.
+Boom! You've written your first program and it works like a charm! It's as simple as doing that and this must have taken you only less than 10 minutes. In your first program, you used the JavaScript programming language. You used the `console` object, called its `log` function, and passed the text "Hello, world!" to it. After hitting enter, the browser execute the code you wrote, print the message "Hello, world!" in the terminal.
 
 Take a break! Let's take a look at five uses of programming languages:
 
