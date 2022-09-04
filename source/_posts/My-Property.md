@@ -31,5 +31,7 @@ category:
 還有一組 11,610 的專業電繪版 Wacom Intuos Pro Medium PTH-660/K0
 ![Wacom Intuos Pro Medium PTH-660/K0](https://store.wacom.tw/PostImages/0a0253eb-d2c3-4ae5-ba49-4a6739ca33f6/ShowImg/PTH660K0(1).jpg)
 
-吹風機是 11,600 的 ReFa BEAUTECH DRYER
+吹風機是 12,600 的 ReFa BEAUTECH DRYER
+{% youtube 0Pouli1WBac %}
 ![ReFa BEAUTECH DRYER](https://www.refa.tw/upload/products/2106181508180000001.jpg)
+
