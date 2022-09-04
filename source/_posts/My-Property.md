@@ -49,3 +49,6 @@ category:
 
 拖鞋是 2,703 的【La new】fun 鬆系列輕量手縫拖鞋
 {% asset_img la-new-slippers.jpg %}
+
+還有一個 2,490 的 ANKER SoundCore Bluetooth Speaker
+{% asset_img anker-sound-core-bluetooth-speaker.jpg %}
