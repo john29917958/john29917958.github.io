@@ -25,7 +25,7 @@ Now all you need to do is take a look at 5 uses of programming languages. I'll e
 | Computer graphics and high-performance systems | C, C++                                                        | Adobe Photoshop                                                        |
 | Games                                          | C# (Unity), C++ (Unreal)                                      | Fall Guys: Ultimate Knockout, Hellblade: Senua’s Sacrifice             |
 
-Before diving into the code, I think it's incredibly important that understanding what a program is first. Let me give you an example.
+Before diving into the code, I think it's incredibly important that understanding what a program is. I swear to you it is going to help you tremendously in the future. Let me give you an example.
 
 We place an order at McDonald's. The waiter receives the request and sends it for production. The production unit begins to prepare the ingredients and all the necessary things according to the recipe, going through the production process, controlling many factors such as temperature and time to make a perfect meal. Recipes for producing meals are like programs. Actions in recipes are like statements. Controlling factors such as temperature and time can be considered as variables assigned with appropriate values. So writing a program can be thought of as making a recipe! Computer follows the instructions of the program is like we cook according to the recipe. When we specify temperature in a recipe should be adjusted to 10 degree, it's like declare a variable and assign 10 to it.
 
