@@ -46,3 +46,6 @@ category:
 
 音響是 3,990 的 [Edifier C2XD 2.1 Multimedia Speaker System](https://www.edifier.online/products/edifier-c2xd-2-1-multimedia-speaker-system-black)
 ![Edifier C2XD 2.1 Multimedia Speaker System](https://cdn.shopify.com/s/files/1/0342/4731/1496/products/C2XD-1_1296x.jpg?v=1603358623)
+
+拖鞋是 2,703 的【La new】fun 鬆系列輕量手縫拖鞋
+{% asset_img la-new-slippers.jpg %}
