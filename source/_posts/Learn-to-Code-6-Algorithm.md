@@ -1,4 +1,4 @@
-title: 'Learn to Code 6: Algorithm'
+title: 'Learn Coding 6: Algorithm'
 visible: show
 date: 2022-07-28 00:02:54
 tags: [programming, coding, program, code, class, course, education, teaching]
