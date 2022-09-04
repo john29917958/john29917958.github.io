@@ -37,3 +37,9 @@ category:
 
 椅子是 10,700 的 Razer Gaming Computer Chair (RZ38-02840100-R3U1 X (green))
 {% asset_img razer-gaming-computer-chair.jpg %}
+
+麥克風是 5,300 的 [Blue Yeti USB Microphone](https://www.bluemic.com/en-us/products/yeti/)
+
+{% youtube wly8U_fA2os %}
+
+![Blue Yeti USB Microphone](https://s3.amazonaws.com/cd.bluemic.com/img/yeti/yeti-header-yetiblackout-desktop.png)
