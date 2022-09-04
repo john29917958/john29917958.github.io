@@ -29,7 +29,7 @@ Before diving into the code, I think it's incredibly important that you understa
 
 When you place an order in a restaurant, the waiter gets the name of the meal you order, then the chef have to follow a set of instructions in a recipe to make the meal. There're many control variables specified in a recipe, like temperature and time. To make a perfect meal, the chef have to control them in the cooking process.
 
-Now I want you to imagine that a program is like a recipe, code is like instructions in a recipe, variables in source code are like temperature and time that can be adjusted while cooking. The chef? is like the computer. Chef "cooks" a meal is like the computer "executes" a program producing outputs. I want you to look at the example below:
+Now I want you to imagine that a program is like a recipe, code is like instructions in a recipe, variables in source code are like temperature and time that can be adjusted while cooking. The chef? is like the computer. Chef "cooks" a meal is like the computer "executes" a program producing outputs. I want you to look at an example below:
 ```javascript
 var temperature = 10;
 console.log('The temperature should be controlled at: ' + temperature);
