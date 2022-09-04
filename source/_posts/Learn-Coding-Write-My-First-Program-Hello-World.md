@@ -9,11 +9,11 @@ This is the question I hear the most: I want to start to learn coding today! But
 
 <!--more-->
 
-Now you got to open the browser then press "Ctrl + Shift + J" on Windows or "Ctrl + Option + J" on Mac to open the developer console.
+Now you got to open the browser and press "Ctrl + Shift + J" on Windows or "Ctrl + Option + J" on Mac to open the developer console.
 {% asset_img terminal.jpg %}
-See the right-angle icon on the screen? I want you to type this magic text after the right-angle then press enter key: `console.log('Hello, world!');`: 
+See the right-angle icon on the screen? I want you to type this magic text after the icon and press enter key: `console.log('Hello, world!');`: 
 {% asset_img hello-world.jpg %}
-Boom! You've written your first program and it works like a charm! It's as simple as doing that and this must have taken you only less than 10 minutes. In your program, the programming language you use is called "JavaScript". You use the `console` object, call its `log` function, and pass the text "Hello, world!" to it. After you hit enter, the browser executed the code you've written, printed the message "Hello, world!" on the terminal.
+Boom! You've written your first program! It works like a charm! It's as simple as doing that and this must have taken you only less than 10 minutes, isn't it? In your program, the programming language you use is called "JavaScript". You use the `console` object, call its `log` function, and pass the text "Hello, world!" to it. After you hit enter, the browser executed the code you've written, printed the message "Hello, world!" on the terminal.
 
 Now all you need to do is take a look at 5 uses of programming languages. I'll explain the concept behind your code after you read it.
 
