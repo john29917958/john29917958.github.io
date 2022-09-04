@@ -13,7 +13,7 @@ Now you got to open the browser then press "Ctrl + Shift + J" on Windows or "Ctr
 {% asset_img terminal.jpg %}
 See the right-angle icon on the screen? I want you to type this magic text after the right-angle then press enter key: `console.log('Hello, world!');`: 
 {% asset_img hello-world.jpg %}
-Boom! You've written your first program and it works like a charm! It's as simple as doing that and this must have taken you only less than 10 minutes. In your program, the programming language you use is called "JavaScript". You use the `console` object, call its `log` function, and pass the text "Hello, world!" to it. After you hit enter, the browser executed the code you've written, printed the message "Hello, world!" in the terminal.
+Boom! You've written your first program and it works like a charm! It's as simple as doing that and this must have taken you only less than 10 minutes. In your program, the programming language you use is called "JavaScript". You use the `console` object, call its `log` function, and pass the text "Hello, world!" to it. After you hit enter, the browser executed the code you've written, printed the message "Hello, world!" on the terminal.
 
 Now all you need to do is take a look at five uses of programming languages. I'll explain the concept behind your code after you read it.
 
@@ -25,6 +25,7 @@ Now all you need to do is take a look at five uses of programming languages. I'l
 | Computer graphics and high-performance systems | C, C++                                                        | Adobe Photoshop                                                        |
 | Games                                          | C# (Unity), C++ (Unreal)                                      | Fall Guys: Ultimate Knockout, Hellblade: Senua’s Sacrifice             |
 
+You've 
 Break time is over! Before we dive into the code, let's first understand what a program is.
 
 We place an order at McDonald's. The waiter receives the request and sends it for production. The production unit begins to prepare the ingredients and all the necessary things according to the recipe, going through the production process, controlling many factors such as temperature and time to make a perfect meal. Recipes for producing meals are like programs. Actions in recipes are like statements. Controlling factors such as temperature and time can be considered as variables assigned with appropriate values. So writing a program can be thought of as making a recipe! Computer follows the instructions of the program is like we cook according to the recipe. When we specify temperature in a recipe should be adjusted to 10 degree, it's like declare a variable and assign 10 to it.
