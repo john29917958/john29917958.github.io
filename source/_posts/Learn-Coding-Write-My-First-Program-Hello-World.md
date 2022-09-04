@@ -1,11 +1,14 @@
-title: 'Learn to Code 1: My First Program - Hello, World!'
+title: 'Learn Coding: Write My First Program - Hello, World!'
 visible: show
-date: 2022-07-17 13:00:34
+date: 2022-09-04 19:13:34
 tags: [programming, coding, program, code, class, course, education, teaching]
 category: Programming
 ---
-Have you ever dreamed of writing your own app and publish it on Google Play and App Store in many countries? or writing a website and everyone can browse it through a web browser? Just 10 minutes, you can write your first program by yourself! Enter this article and let's get started!
+
+This is the question I hear the most: I want to start to learn coding today! But would it be difficult? Would I fail? Today I'm gonna turn you from a complete beginner to a coder. Click the more button, you'll write your first program today.
+
 <!--more-->
+
 Let's do this, open the browser and press "Ctrl + Shift + J" on Windows or "Ctrl + Option + J" on Mac to open the developer console.
 {% asset_img terminal.jpg %}
 See the right-angle icon on the screen? You are an excellent programmer in front of a console now! Try not to copy any text in this article. Let's type something in the magic terminal then hit the enter key: `console.log('Hello, world!');`
