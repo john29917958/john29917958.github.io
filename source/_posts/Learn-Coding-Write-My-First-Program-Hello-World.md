@@ -17,7 +17,7 @@ Boom! You've written your first program! It works like a charm! It's as simple a
 
 Now all you need to do is take a look at 5 uses of programming languages. I'll explain the concept behind your code after this table.
 
-| Purpose                                        | Language                                                      | Example                                                    |
+| Use                                        | Language                                                      | Example                                                    |
 | ---------------------------------------------- | ------------------------------------------------------------- | ---------------------------------------------------------------------- |
 | AI and machine learning, data analytics        | Python                                                        | Spotify uses Python and Hadoop to implement user recommendation system |
 | Web development                                | JavaScript, Java, Ruby, PHP, C#, Node.js (JavaScript), Python | Facebook is written in PHP, LinkedIn is written in Node.js             |
