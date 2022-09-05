@@ -1,4 +1,4 @@
-title: 'Learn Coding: Write Your First Program In 10 Minutes'
+title: 'Write Your First Program In 10 Minutes'
 visible: show
 date: 2022-09-04 19:13:34
 tags: [programming, coding, program, code, class, course, education, teaching]
