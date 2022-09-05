@@ -35,7 +35,7 @@ var temperature = 10;
 console.log('The temperature should be controlled at: ' + temperature);
 ```
 
-All you need to do now is type it in the developer console then press enter to see what will happen:
+All you need to do now is type it in the developer console and press enter to see what will happen:
 
 {% asset_img print-variable.jpg %}
 
