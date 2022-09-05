@@ -46,79 +46,8 @@ printf("The value of temperature is: %d", temperature);
 ```
 In C the `int` keyword also specifies which type of value can be stored into the variable, as well as how to operate it. Let's first understand in this way. Specifying `int` keyword is like specifying the chef can only control the temperature at 90, 95, 100 and any integer degree. I want you to see the previous JavaScript example. After the first `var` keyword is the second part, the variable name `temperature`. It's like the control factor name "temperature" in a recipe. You can access that variable by using the variable name. Then the third part is the assignment operator `=` that takes two operands. It's used to assign a value at the right-hand side to the variable at the left-hand side. The fourth part is an integer value `10` (a rvalue). The last part is the semicolon `;` - a terminator which tells this is the end of a statement. So the entire first statement meas declaring an integer variable called temperature, assigning integer value 10 to it, then the statement ends. The second line of code means taking value `10` from variable `temperature`, concatenating it with the string `"The value of number is: "` then calling `console.log()` function and passing the string `"The value of number is: 10"` to it. As a result, the `console.log()` function takes the string and prints it as `The temperature should be controlled at: 10`!
 
-Hope this article give you some confidence in learning coding. You better be confident in learning coding. Looking forward to the beginning of your programming journey. See you in the next article.
+Hope this article give you some confidence in learning coding. You better be confident in learning coding. Looking forward to the beginning of your programming journey. If you have any question, comment below. Until next time, I'll see you in the next article.
 
 # Fun Quiz
 Open the developer console again! I want you to use two variables: one assigns a string, another assigns an integer. You have to have the browser print `"I give myself 100 points today!"`.
 *Tip: Use addition operator `+` to concatenate two variables.*
-
-# Special Topics
-## 3 Good Programming Habits
-1. Googling
-2. Adopt tools to level up efficiency
-3. Be prepared to join a project
-
-### Googling
-Like the examples in this article, code is full of special symbols. What's more, programmers not only have to turn the features described in spoken language to these special symbols, but make sure it runs without error to serve customers. Programmers spend most of their days designing and debugging, bugs and errors can always come up. While the problems programmers face may seem clueless, in most cases, there're always others who have encountered them in the world. So Google ability is critical for programmers.
-
-### Adopt Tools to Level Up Efficiency
-In order to cope with these special symbols and to write higher quality code in less time. Programmers who are willing to use tools to improve their work efficiency are more valuable. For example, rather than typing code word by word, it is better to install some useful extensions to automatically generate some code snippets, and even automatically check whether statements have potential mistakes. These are examples of using tools to improve efficiency.
-
-### Be Prepared to Join A Project
-Most of the time, programmers who have entered the workplace have little chance of joining new projects. Most of them would join an existing project and trace the code, cooperate with team members to fix bugs or add / enhance features. So it's also very important for programmers to have a right attitude to be ready to join existing projects at any time!
-
-## Meet A Powerful Editor: Visual Studio Code
-![Visual Studio Code](https://code.visualstudio.com/assets/home/home-screenshot-win.png)
-
-Programmers love great tools, and Visual Studio Code is one of them. It's a code editor for programmers to complete daily tasks. It not only supports every languages, but can be installed with many powerful extensions that make coding easier. It's highly recommended for both beginners and experienced programmers. Now it's time to [install it](https://code.visualstudio.com/) on your computer and start coding!
-
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.js"
-></script>
-<div style="text-align: center;">
-    <a class="btn btn-primary" href="https://code.visualstudio.com/" style="color: white; text-decoration: none;">
-        <i class="fa-solid fa-download me-2"></i>
-        Get Latest Visual Studio Code
-    </a>
-</div>
-
-After installed the Visual Studio Code (let's say VSCode), run the editor and hit "Ctrl + N" to open a new file, then click the language name in the bottom right corner, type JavaScript and select it.
-![Visual Studio Code change language mode](https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/change_syntax.gif)
-
-Everything's ready now! Type `console.log('Hello, world!');` again, and you'll see the syntax highlighting effect.
-
-{% asset_img vs-code-hello-world.jpg %}
-
-And we can also hit "Ctrl + Shift + X" to bring up the Extensions view.
-
-![Visual Studio Code Extensions view](https://code.visualstudio.com/assets/docs/editor/extension-marketplace/extensions-popular.png)
-
-There're rich extensions there, let's type "JavaScript (ES6) code snippets" to the search bar and install it.
-
-{% asset_img vs-code-javascript-es6-extension.jpg %}
-
-Then we can test the feature provided by the extension. Try input code as follows:
-```javascript
-class HelloWorld {
-
-}
-```
-Then move the cursor to second line and type `con`
-
-{% asset_img es6-suggestion.jpg %}
-
-Now let's select 1st. option, then the extension would automatically write some code for us
-
-{% asset_img es6-constructor-code-snippet.jpg %}
-
-This is an example of using a powerful extension. Visual Studio Code is very versatile, and has a rich extension library. If you haven't installed it yet, click the link to start the installation now!
-
-<div style="text-align: center;">
-    <a class="btn btn-primary" href="https://code.visualstudio.com/" style="color: white; text-decoration: none;">
-        <i class="fa-solid fa-download me-2"></i>
-        Get Latest Visual Studio Code
-    </a>
-</div>
-
-What about you? What is your favorite programming language and editor? Please leave a comment below to share what they are good at with me!
