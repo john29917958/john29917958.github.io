@@ -15,7 +15,7 @@ See the right-angle icon on the screen? I want you to type this magic text after
 {% asset_img hello-world.jpg %}
 Boom! You've written your first program! It works like a charm! It's as simple as doing that and this must have taken you only less than 10 minutes, isn't it? In your program, the programming language you use is called "JavaScript". You use the `console` object, call its `log` function, and pass the text "Hello, world!" to it. After you hit enter, the browser executed the code you've written, printed the message "Hello, world!" on the terminal.
 
-Now all you need to do is take a look at 5 uses of programming languages. I'll explain the concept behind your code after you read it.
+Now all you need to do is take a look at 5 uses of programming languages. I'll explain the concept behind your code after this table.
 
 | Purpose                                        | Language                                                      | Example                                                    |
 | ---------------------------------------------- | ------------------------------------------------------------- | ---------------------------------------------------------------------- |
@@ -25,9 +25,9 @@ Now all you need to do is take a look at 5 uses of programming languages. I'll e
 | Computer graphics and high-performance systems | C, C++                                                        | Adobe Photoshop                                                        |
 | Games                                          | C# (Unity), C++ (Unreal)                                      | Fall Guys: Ultimate Knockout, Hellblade: Senua’s Sacrifice             |
 
-Before diving into the code, I think it's incredibly important that you understand what a program is. I swear to you it is going to help you tremendously in the future. Let me give you a perfect example.
+You've already known the uses of programming languages. Before diving into the code, I think it's incredibly important that you understand what a program is. I swear to you it is going to help you tremendously in the future. Let me give you a perfect example.
 
-When you place an order in a restaurant, the chef will follow a set of instructions in a recipe to make the meal. There're many control variables specified in a recipe, like temperature and time. To make a perfect meal, the chef have to control them in the cooking process.
+When you order a dish in a restaurant, a chef will follow a set of instructions in a recipe to make the meal. There're many control variables specified in a recipe, like temperature and time. To make a perfect meal, the chef have to control them in the cooking process.
 
 Now I want you to imagine that a program is like a recipe, code is like instructions in a recipe, variables in source code are like temperature and time that can be adjusted while cooking. The chef? is like the computer. Chef "cooks" a meal is like the computer "executes" a program producing outputs. I want you to look at an example below:
 ```javascript
