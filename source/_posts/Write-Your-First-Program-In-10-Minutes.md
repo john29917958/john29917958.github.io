@@ -57,7 +57,7 @@ Open the developer console again! I want you to use two variables: one assigns a
 3. Be prepared to join a project
 
 ### Googling
-Like the examples in this article, code is full of special symbols. What's more, programmers not only have to turn the features described in spoken language to these special symbols, but make sure it runs without error to serve customers. Programmers spend most of their days designing and debugging, bugs and errors can always come up. While the problems programmers face may seem clueless, in most cases, there're always others who have encountered them in the world. So Google ability is critical for programmers.
+Like the examples in this article, code is full of special symbols. Programmers not only have to turn the features described in spoken language to these special symbols, but make sure it runs without error to serve customers. Programmers spend most of their days designing and debugging, bugs and errors can always come up. While the problems programmers face may seem clueless, in most cases, there're always others who have encountered them in the world. So Google ability is critical for programmers.
 
 ### Use Powerful Tools to Level Up Efficiency
 In order to cope with these special symbols and to write higher quality code in less time. Programmers who are willing to use tools to improve their work efficiency are more valuable. For example, rather than typing code word by word, it is better to install some useful extensions to automatically generate some code snippets, and even automatically check whether statements have potential mistakes. These are examples of using tools to improve efficiency.
