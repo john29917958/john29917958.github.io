@@ -1,4 +1,4 @@
-title: 'Learn Coding: Write My First Program - Hello, World!'
+title: 'Learn Coding: People Say Coding Is Hard And You Write Your First Program in 10 Minutes'
 visible: show
 date: 2022-09-04 19:13:34
 tags: [programming, coding, program, code, class, course, education, teaching]
@@ -13,7 +13,7 @@ Now you got to open the browser and press "Ctrl + Shift + J" on Windows or "Ctrl
 {% asset_img terminal.jpg %}
 See the right-angle icon on the screen? I want you to type this magic text after the icon. Don't copy! Just type it and press the enter key to see what happens: `console.log('Hello, world!');`: 
 {% asset_img hello-world.jpg %}
-Boom! You've written your first program, it works like a charm. It only took you less than 10 minutes to do that, isn't it? It's as simple as doing that. In your program, the programming language you use is called "JavaScript". You use the `console` object, call its `log` function, and pass the text "Hello, world!" to it. After you hit enter, the browser executed the code you've written, printed the message "Hello, world!" on the terminal.
+Boom! You've written your first program. It only took you less than 10 minutes to do that, isn't it? It's as simple as doing that. In your program, the programming language you use is called "JavaScript". You use the `console` object, call its `log` function, and pass the text "Hello, world!" to it. After you hit enter, the browser executed the code you've written, printed the message "Hello, world!" on the terminal.
 
 Now all you need to do is take a look at 5 uses of programming languages. I'll explain the concept behind your code after this table.
 
