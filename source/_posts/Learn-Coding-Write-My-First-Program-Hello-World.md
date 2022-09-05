@@ -37,7 +37,7 @@ All you need to do now is type it in the developer console. Type it yourself, do
 
 {% asset_img print-variable.jpg %}
 
-Surprisingly, the console prints `The temperature should be controlled at: 10` instead of `'The temperature should be controlled at: ' + temperature`. All I want you to do now is look at the first line of code. It can be split into five parts: The first part is the `var` keyword. It's used to declare a variable, like a "temperature" control variable in a recipe. In some programming languages it also defines the data type, like C:
+Surprisingly, the console prints `The temperature should be controlled at: 10` instead of `'The temperature should be controlled at: ' + temperature`. There's a reason behind it. Look at the first line of code, it can be split into five parts. The first part is the `var` keyword. It's used to declare a variable, like a "temperature" control variable in a recipe. In some programming languages it also defines the data type, like C:
 ```c
 int temperature = 10;
 printf("The value of temperature is: %d", temperature);
