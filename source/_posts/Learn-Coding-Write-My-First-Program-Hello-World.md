@@ -27,7 +27,7 @@ Now all you need to do is take a look at 5 uses of programming languages. I'll e
 
 You've already known the uses of programming languages. Before diving into the code, I think it's incredibly important that you understand what a program is. I swear to you it is going to help you tremendously in the future. Let me give you a perfect example.
 
-When you order food at a restaurant, a chef will follow a set of instructions in a recipe to make the food. There're many control variables specified in a recipe, like temperature and time. To make a perfect food, the chef have to control them in the cooking process.
+When you order food at a restaurant, a chef will follow a set of instructions in a recipe to cook it. There're many control variables specified in a recipe, like temperature and time. To make a perfect food, the chef have to control them in the cooking process.
 
 Now I want you to imagine that a program is like a recipe, code is like instructions in a recipe, variables in source code are like temperature and time control variables. The chef? is like the computer. Chef "cooks" a food is like the computer "executes" a program producing outputs. I want you to look at an example below:
 ```javascript
