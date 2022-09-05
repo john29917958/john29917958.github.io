@@ -63,7 +63,7 @@ Like the examples in this article, code is full of special symbols. What's more,
 In order to cope with these special symbols and to write higher quality code in less time. Programmers who are willing to use tools to improve their work efficiency are more valuable. For example, rather than typing code word by word, it is better to install some useful extensions to automatically generate some code snippets, and even automatically check whether statements have potential mistakes. These are examples of using tools to improve efficiency.
 
 ### Be Prepared to Join A Project
-Most of the time, programmers who have entered the workplace have little chance of joining new projects. Most of them would join an existing project and trace the code, cooperate with team members to fix bugs or add / enhance features. So it's also very important for programmers to have a right attitude to be ready to join existing projects at any time!
+Most of the time, programmers have little chance to join a new project. Most of them would join an existing project and trace the code, cooperate with team members to fix bugs or add / enhance features. So it's also very important for programmers to have a right attitude to be ready to join existing projects at any time!
 
 ## Meet A Powerful Editor: Visual Studio Code
 ![Visual Studio Code](https://code.visualstudio.com/assets/home/home-screenshot-win.png)
