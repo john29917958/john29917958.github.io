@@ -5,7 +5,7 @@ tags: [programming, coding, program, code, class, course, education, teaching]
 category: Programming
 ---
 
-This is the question I hear the most: I want to start learning programming today! But would it be difficult? would I fail? Today I'm gonna turn you from a complete beginner to a person who can code. This is an article I wish I saw when I first started learning programming. Click the more button below, you'll write your first program today.
+This is the question I heard the most: I want to start learning programming today! But would it be difficult? would I fail? Today I'm gonna turn you from a complete beginner to a person who can code. This is an article I wish I saw when I first started learning programming. Click the more button below, you'll write your first program today.
 
 <!--more-->
 
@@ -13,7 +13,7 @@ Now you got to open the browser and press "Ctrl + Shift + J" on Windows or "Ctrl
 {% asset_img terminal.jpg %}
 See the right-angle icon on the screen? I want you to type this magic text after the icon. Don't copy! Just type it and press the enter key to see what happens: `console.log('Hello, world!');`: 
 {% asset_img hello-world.jpg %}
-Boom! You've written your first program. It only took you less than 10 minutes to do that, isn't it? It's as simple as doing that. In your program, the programming language you use is called "JavaScript". You use the `console` object, call its `log` function, and pass the text "Hello, world!" to it. After you hit enter, the browser executed the code you've written, printed the message "Hello, world!" on the terminal.
+Boom! You wrote your first program. It only took you less than 10 minutes to do that, isn't it? It's as simple as doing that. In your program, the programming language you use is called "JavaScript". You use the `console` object, call its `log` function, and pass the text "Hello, world!" to it. After you hit enter, the browser executed the code you've written, printed the message "Hello, world!" on the terminal.
 
 Now all you need to do is take a look at 5 uses of programming languages. I'll explain the concept behind your code after this table.
 
@@ -57,10 +57,10 @@ Open the developer console again! I want you to use two variables: one assigns a
 3. Be prepared to join a project
 
 ### Googling
-Like the examples in this article, code is full of special symbols. Programmers not only have to turn features described in spoken language to these special symbols, but make sure it runs without error to serve customers. Bugs can always come up! Programmers spend most of their days designing and debugging. While the problems programmers face may seem clueless, in most cases, there's always another programmer who has solved a similar problem in the world. So Googling ability is incredibly important to programmers.
+As you can see in this article code is full of special symbols, logical statements, control statements, objects, and so on. Programmers not only have to understand specifications described in spoken language and turn it to lines of code, but make sure it runs without error to serve customers. Trust me there're always another bug in a program even you've solved 1, 5, 10 even 20 bugs. Programmers spend most of their days designing and debugging. While some of the problems programmers face may seem hard to solve, in most cases, there's always another programmer who has solved a similar problem in the world. Like I say Googling ability is incredibly important to programmers.
 
 ### Use Powerful Tools to Level Up Efficiency
-In order to cope with these special symbols and to write higher quality code in less time. Programmers who are willing to use tools to improve their work efficiency are more valuable. For example, rather than typing code word by word, it is better to install some useful extensions to automatically generate some code snippets, and even automatically check whether statements have potential mistakes. These are examples of using tools to improve efficiency.
+To write these special symbols faster and to write higher quality code in less time, a valuable programmer always loves great tools and extensions to increase their productivity. For example, rather than typing code word by word, it is better to install some useful extensions to automatically generate some code snippets, and even automatically check whether statements have potential mistakes. These are examples of using tools to improve efficiency.
 
 ### Be Prepared to Join A Project
 Most of the time, programmers have little chance to join a new project. Most of them would join an existing project and trace the code, cooperate with team members to fix bugs or add / enhance features. So it's also very important for programmers to have a right attitude to be ready to join existing projects at any time!
