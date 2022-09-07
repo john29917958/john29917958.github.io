@@ -9,9 +9,9 @@ This is the question I have heard the most: I want to start learning programming
 
 <!--more-->
 
-Now you got to open the browser and press "Ctrl + Shift + J" on Windows or "Ctrl + Option + J" on Mac to open the developer console.
+So here's the first thing I want you to do: Open the browser and press "Ctrl + Shift + J" on Windows or "Ctrl + Option + J" on Mac to open the developer console.
 {% asset_img terminal.jpg %}
-See the right-angle icon on the screen? I want you to type this magic text after the icon. Don't copy! Just type it and press the enter key to see what happens: `console.log('Hello, world!');`: 
+As soon as you press these keys you must see a right-angle icon on the screen. I want you to type this magic text after the icon. Don't copy! Just type it and press the enter key to see what happens: `console.log('Hello, world!');`: 
 {% asset_img hello-world.jpg %}
 Boom! You wrote your first program. It only took you less than 10 minutes to do that, isn't it? It's as simple as doing that. In your program, the programming language you use is called "JavaScript". You use the `console` object, call its `log` function, and pass the text "Hello, world!" to it. After you hit enter, the browser executed the code you've written, printed the message "Hello, world!" on the terminal.
 
