@@ -47,8 +47,9 @@ Let's first understand in this way. In C the `int` keyword also specifies which 
 Hope this article give you some confidence in learning coding. You better be confident in learning coding. Looking forward to the beginning of your programming journey. If you have any question, comment below. Until next time, I'll see you in the next article.
 
 # Fun Quiz
-Open the developer console again! I want you to use three variables: two assigns a string, another assigns an integer. You have to have the browser print `"I give myself 100 points today!"`.
-*Tip: Use addition operator `+` to concatenate two variables.*
+Open the developer console again! I want you to have the browser print `"I give myself 100 points today!"`. You have to use three variables to pass the quiz. Tips:
+1. Assigns a string to each of the two variables, assigns an integer to the other one
+2. Use addition operator `+` to concatenate two variables
 
 # Special Topics
 ## 3 Good Programming Habits
