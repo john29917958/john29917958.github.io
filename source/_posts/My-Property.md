@@ -6,7 +6,6 @@ category:
 ---
 很高興跟你們分享我的財產。首先是帳戶總金額:
 {% asset_img account.jpg %}
-{% asset_img account-2.jpg %}
 
 我手機用的是 44,400 的 iPhone 12 Pro
 {% asset_img iphone-12-pro.jpg %}
