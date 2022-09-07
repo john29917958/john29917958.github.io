@@ -1,5 +1,5 @@
 title: My Property
-visible: show
+visible: hide
 date: 2022-09-04 10:04:02
 tags: [property]
 category: 
