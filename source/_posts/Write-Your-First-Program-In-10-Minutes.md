@@ -13,21 +13,21 @@ So here's the first thing I want you to do: Open the browser and press "Ctrl + S
 {% asset_img terminal.jpg %}
 As soon as you press these keys you must see a right-angle icon on the screen. I want you to type this magic text after the icon. Don't copy! Just type it and press the enter key to see what happens: `console.log('Hello, world!');`: 
 {% asset_img hello-world.jpg %}
-Boom! You wrote your first program. It only took you less than 10 minutes to do that, isn't it? It's as simple as doing that. In your program, the programming language you use is called "JavaScript". You use the `console` object, call its `log` function, and pass the text "Hello, world!" to it. After you hit enter, the browser executed the code you've written, printed the message "Hello, world!" on the terminal.
+Boom! You wrote your first program in 10 minutes. It's as simple as doing that. In your program, you use "JavaScript" programming language. You use the `console` object, call its `log` function, and pass the text "Hello, world!" to it. After you hit enter, the browser executed the code you've written, printed the message "Hello, world!" on the terminal.
 
-Now all you need to do is take a look at 5 uses of programming languages. I'll explain the concept behind your code after this table.
+Now all you need to do is take a look at 5 uses of programming languages. I'll explain the concept behind your code afterwards.
 
-| Use                                        | Language                                                      | Example                                                    |
+| Use                                            | Language                                                      | Example                                                                |
 | ---------------------------------------------- | ------------------------------------------------------------- | ---------------------------------------------------------------------- |
 | AI and machine learning, data analytics        | Python                                                        | Spotify uses Python and Hadoop to implement user recommendation system |
 | Web development                                | JavaScript, Java, Ruby, PHP, C#, Node.js (JavaScript), Python | Facebook is written in PHP, LinkedIn is written in Node.js             |
-| Mobile app                                     | Java (Android), Swift (IOS), Kotlin, React Native, Python     | Telegram mobile                                                        |
+| Mobile app                                     | Java (Android), Swift (IOS), Kotlin, React Native, Python     | Telegram app                                                           |
 | Computer graphics and high-performance systems | C, C++                                                        | Adobe Photoshop                                                        |
 | Games                                          | C# (Unity), C++ (Unreal)                                      | Fall Guys: Ultimate Knockout, Hellblade: Senua’s Sacrifice             |
 
 You've already known the uses of programming languages. Before diving into the code, I think it's incredibly important that you understand what a program is. I swear to you it is going to help you tremendously in the future. Let me give you a perfect example.
 
-When you order food at a restaurant, a chef will follow a set of instructions in a recipe to cook. There're many control variables in a recipe like baking time and temperature. To make perfect food, the chef have to control them while cooking. I want you to imagine that writing a program is like making a recipe card. You need to write lines of instructions on a recipe card, you need to write lines of code to make a program. You need to specify baking time and temperature in a recipe, you need to define variables in your code as well! You need to use a computer to execute a program, you need a chef to cook the food, too! I want you to think writing program is as simple as writing a recipe card. Let me give you another example:
+When you order food at a restaurant, a chef will follow a set of instructions in a recipe to cook. There're many control variables in a recipe like baking time and temperature. To make perfect food, the chef have to control them while cooking. I want you to imagine that writing a program is like making a recipe card. You need to write lines of instructions on a recipe card, you need to write lines of code to make a program. You need to specify baking time and temperature in a recipe, you need to define variables in your code as well! You need to use a computer to execute a program, a restaurant needs a chef to cook the food, too! I want you to think writing program is as simple as writing a recipe card. Let me give you another example:
 ```javascript
 var temperature = 10;
 console.log('The temperature should be controlled at: ' + temperature);
