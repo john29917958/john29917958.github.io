@@ -13,7 +13,7 @@ So here's the first thing I want you to do: Open the browser and press "Ctrl + S
 {% asset_img terminal.jpg %}
 As soon as the developer console opened you must see a right-angle icon on the screen. I want you to type this magic text after the icon. Don't copy! Just type it and press the enter key to see what happens: `console.log('Hello, world!');`: 
 {% asset_img hello-world.jpg %}
-Boom! You wrote your first program in 10 minutes. It's as simple as doing that. In your program, you use "JavaScript" programming language. You use the `console` object, call its `log` function, and pass the text "Hello, world!" to it. After you hit enter, the browser executed the code you've written, printed the message "Hello, world!" on the console.
+Boom! It's as simple as doing that. You wrote your first program in 10 minutes! In your program, you use "JavaScript" programming language. You use the `console` object, call its `log` function, and pass the text "Hello, world!" to it. After you hit enter, the browser executed the code you've written, printed the message "Hello, world!" to the console.
 
 Now all you need to do is take a look at 5 uses of programming languages. I'll explain the concept behind your code afterwards.
 
