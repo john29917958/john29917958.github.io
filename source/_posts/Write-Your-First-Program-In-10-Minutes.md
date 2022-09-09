@@ -29,7 +29,7 @@ You've already known 5 uses of programming languages. Now I want to talk about w
 
 When you order food at a restaurant, a chef will follow a set of instructions in a recipe to cook. There're many control variables in a recipe like baking time and temperature. To make perfect food, the chef has to control them while cooking. I want you to imagine that making a recipe card is like writing a program. A recipe is like a program. Instructions are like code. You need to write lines of instructions on a recipe card, you need to write lines of code to make a program. Control factors are like variables. You may specify baking time and temperature in a recipe, you may define variables in your code as well! A chef is like a computer. A restaurant needs a chef to cook the food, you need a computer to execute a program, too! Like I say writing a recipe card is really like writting a program. A computer program is a set of machine instructions. These machine instructions are compiled or interpreted from the source code written by programmers. And the "Human-readable programs" are called "source code". I want you to see the example below:
 ```javascript
-var temperature = 10;
+let temperature = 10;
 console.log('The temperature should be controlled at: ' + temperature);
 ```
 
@@ -37,7 +37,7 @@ All you need to do now is type it in the developer console. Type it yourself, do
 
 {% asset_img print-variable.jpg %}
 
-As you can see, the console prints `The temperature should be controlled at: 10` instead of `'The temperature should be controlled at: ' + temperature`. There's a reason behind it. Look at the first line of code, it can be split into five parts. The first part is the `var` keyword. It's used to declare a variable, like specifying a "baking temperature" control variable in a recipe. In some programming languages it also defines the data type, like C:
+As you can see, the console prints `The temperature should be controlled at: 10` instead of `'The temperature should be controlled at: ' + temperature`. There's a reason behind it. Firstly Let me divide the first line of code into five parts. The first part is the `let` keyword. It's used to declare a block-level variable, like specifying a "baking temperature" control variable in a recipe. In some programming languages like C, it also defines the data type that specifies how the computer explains the data stored in the memory address where the variable points to:
 ```c
 int temperature = 10;
 printf("The value of temperature is: %d", temperature);
