@@ -37,7 +37,7 @@ All you need to do now is type it in the developer console. Type it yourself, do
 
 {% asset_img print-variable.jpg %}
 
-As you can see, the console prints `The temperature should be controlled at: 10` instead of `'The temperature should be controlled at: ' + temperature`. There's a reason behind it. Firstly Let me divide the first line of code into five parts. The first part is the `let` keyword. It's used to declare a block-level variable, like specifying a "baking temperature" control variable in a recipe. In some programming languages like C, it also defines the data type that specifies how the computer explains the data stored in the memory address where the variable points to:
+As you can see, the console prints `The temperature should be controlled at: 10` instead of `'The temperature should be controlled at: ' + temperature`. There's a reason behind it. Firstly let me divide the first line of code into five parts. The first part is the `let` keyword. It's used to declare a block-level variable, like specifying a "baking temperature" control variable in a recipe. In some programming languages like C, it also defines the data type that specifies how the computer explains the data stored in the memory address where the variable points to:
 ```c
 int temperature = 10;
 printf("The value of temperature is: %d", temperature);
