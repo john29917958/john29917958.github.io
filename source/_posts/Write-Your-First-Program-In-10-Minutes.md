@@ -5,7 +5,7 @@ tags: [programming, coding, program, code, class, course, education, teaching]
 category: Programming
 ---
 
-This is the question I have heard the most: I want to start learning programming today! But would it be difficult? would I fail? Today I'm gonna turn you from a complete beginner to a person who can build something for yourself. This is an article I wish I saw when I first started learning programming. Click the more button below, you'll write your first program today.
+This is the question I have heard the most: I want to start learning programming today! But would it be difficult? would I fail? Today I will turn you from a complete beginner, a person who just started coding to a "little expert" who can not only write a program by yourself but understands the concept of a program. This is an article I wish I saw when I first started learning programming. Click the more button below, you'll write your first program today.
 
 <!--more-->
 
