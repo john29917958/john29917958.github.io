@@ -17,13 +17,13 @@ Boom! It's as simple as doing that. You wrote your first program in 10 minutes! 
 
 Now all you need to do is take a look at 5 uses of programming languages. I'll explain the concept behind your code afterwards.
 
-| Use                                            | Language                                                      | Example                                                                |
-| ---------------------------------------------- | ------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| AI and machine learning, data analytics        | Python                                                        | Spotify uses Python and Hadoop to implement user recommendation system |
-| Web development                                | JavaScript, Java, Ruby, PHP, C#, Node.js (JavaScript), Python | Facebook is written in PHP, LinkedIn is written in Node.js             |
-| Mobile app                                     | Java (Android), Swift (IOS), Kotlin, React Native, Python     | Telegram app                                                           |
-| Computer graphics and high-performance systems | C, C++                                                        | Adobe Photoshop                                                        |
-| Games                                          | C# (Unity), C++ (Unreal)                                      | Fall Guys: Ultimate Knockout, Hellblade: Senua’s Sacrifice             |
+| Uses                                           | Languages                                                     | Example                                                                                  |
+| ---------------------------------------------- | ------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| AI, machine learning, data analytics           | Python                                                        | Recommendation engine of Amazon                                                          |
+| Web development                                | JavaScript, Java, Ruby, PHP, C#, Node.js (JavaScript), Python | Facebook is written in PHP, LinkedIn is written in Node.js                               |
+| Mobile app                                     | Java (Android), Swift (IOS), Kotlin, React Native, Python     | Telegram for iPhone and iPad is written in Swift                                         |
+| Computer graphics and high-performance systems | C, C++                                                        | Adobe Photoshop is written in C++                                                        |
+| Games                                          | C# (Unity), C++ (Unreal)                                      | Fall Guys: Ultimate Knockout is made with Unity (C#). Fortnite is made with Unreal (C++) |
 
 You've already known the uses of programming languages. Before diving into the code, I think it's incredibly important that you understand what a program is. I swear to you it is going to help you tremendously in the future. Let me give you a perfect example.
 
