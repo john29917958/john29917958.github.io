@@ -9,7 +9,7 @@ keywords: 汪子超, Tzu-Chao Wang, 子超, Tzu-Chao, TC, 程式, 軟體, progra
 </span>
 
 ## About
-Hi this is Tzu-Chao (子超). I'm a Software engineer at [TSMC](https://www.tsmc.com/english/default.htm). I integrated two 10-year projects into one with feature toggle concept. I pursue challenge and excellence, I pursue originality in Taiwan. I'm kind and caring.
+Hi this is Tzu-Chao (子超). I'm a Software engineer at [TSMC](https://www.tsmc.com/english/default.htm). I integrated two 10-year projects into one with feature toggle concept. I pursue challenge and excellence, I pursue originality in Taiwan. I'm kind and caring. 
 
 ## Skills
 - C#, JavaScript, CSS3, HTML5
@@ -18,7 +18,7 @@ Hi this is Tzu-Chao (子超). I'm a Software engineer at [TSMC](https://www.tsmc
 
 ## Secondary Skills
 - 2D anime style art
-- [ClipStudioPaint](https://www.clipstudio.net/en/), [PhotoShop](https://www.adobe.com/products/photoshop.html), [Illustrator](https://www.adobe.com/products/illustrator.html), [Premiere Pro](https://www.adobe.com/products/premiere.html), [Audition](https://www.adobe.com/products/audition.html)
+- [Clip Studio Paint](https://www.clipstudio.net/en/), [Photoshop](https://www.adobe.com/products/photoshop.html), [Illustrator](https://www.adobe.com/products/illustrator.html), [Premiere Pro](https://www.adobe.com/products/premiere.html), [Audition](https://www.adobe.com/products/audition.html)
 
 ## Contact Information
 - E-mail: john29917958@gmail.com
