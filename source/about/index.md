@@ -9,7 +9,7 @@ keywords: 汪子超, Tzu-Chao Wang, 子超, Tzu-Chao, TC, 程式, 軟體, progra
 </span>
 
 ## About
-Hi this is Tzu-Chao (子超). I'm a Software engineer at [TSMC](https://www.tsmc.com/english/default.htm). I integrated two 10-year projects with same use into one with feature toggle concept, published it to four TSMC fabs, reduce 1/4 of the maintenance cost. I'm passionate about game making. In spare time I published a "voice-control" mobile game which has over 150 downloads, mostly in the U.S. and Taiwan. I pursue challenge and excellence, I pursue originality in Taiwan. I'm kind and caring. If you require any further information, please do not hesitate to contact me.
+Hi this is Tzu-Chao (子超). I'm a Software engineer at [TSMC](https://www.tsmc.com/english/default.htm). I integrated two 10-year projects with same use into one with feature toggle concept, published it to four TSMC fabs, reduce over 1/4 of the maintenance cost. I'm passionate about game making. In spare time I published a "voice-control" mobile game which has over 150 downloads, mostly in the U.S. and Taiwan. I pursue challenge and excellence, I pursue originality in Taiwan. I'm kind and caring. If you require any further information, please do not hesitate to contact me.
 
 ## Skills
 - C#, JavaScript, CSS3, HTML5
