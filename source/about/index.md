@@ -8,9 +8,11 @@ keywords: 汪子超, Tzu-Chao Wang, 子超, Tzu-Chao, TC, 程式, 軟體, progra
 {% img /images/profile-picture.jpg %}
 </span>
 
+<!--
 I'm good at software engineering and {% post_link Design-Pattern design pattern %}. There are two projects that I did refactoring to integrate several divergent-versioned systems into single one with "feature toggle" concept, and published to three TSMC fabs, contributing to reducing half of the maintenance effort.
 I'm passionate about {% post_link Ha-The-Game-Development-Review game making %}. In spare time I published a "voice-controlled" mobile game with Unity and Live 2D, in which got 100+ downloads in the U.S. and Taiwan.
 I pursue challenge and excellence, I pursue originality in Taiwan. I'm also kind and caring. Are my characteristics and capabilities what you need, what you seek? Can't wait to <a href = "mailto: john29917958@gmail.com">contact with you</a>!
+-->
 
 ## Basic Information
 - English Name: Tzu-Chao Wang
