@@ -8,12 +8,11 @@ keywords: 汪子超, Tzu-Chao Wang, 子超, Tzu-Chao, TC, 程式, 軟體, progra
 {% img /images/profile-picture.jpg %}
 </span>
 
-## Basic Information
-- English Name: Tzu-Chao Wang
-- Chinese name: 汪子超
-- Work: Software engineer @ [TSMC](https://www.tsmc.com/english/default.htm)
-- Language: Chinese
-- Location: Taichung, Taiwan
+English Name: Tzu-Chao Wang
+Chinese name: 汪子超
+Work: Software engineer @ [TSMC](https://www.tsmc.com/english/default.htm)
+Language: Chinese
+Location: Taichung, Taiwan
 
 ## Skills
 - C#, JavaScript, CSS3, HTML5
