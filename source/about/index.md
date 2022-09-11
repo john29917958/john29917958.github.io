@@ -13,15 +13,15 @@ I'm passionate about {% post_link Ha-The-Game-Development-Review game making %}.
 I pursue challenge and excellence, I pursue originality in Taiwan. I'm also kind and caring. Are my characteristics and capabilities what you need, what you seek? Can't wait to <a href = "mailto: john29917958@gmail.com">contact with you</a>!
 
 ## Basic Information
-- English Name: Tzu-Chao, Wang
+- English Name: Tzu-Chao Wang
 - Chinese name: 汪子超
 - Work: Software engineer @ [TSMC](https://www.tsmc.com/english/default.htm)
 - Language: Chinese
 - Location: Taichung, Taiwan
 
-## Professional Skills
+## Skills
 - C#, JavaScript, CSS3, HTML5
-- Unity, Bootstrap, Material Design, Laravel, ReactJS
+- Bootstrap, Materialize CSS, Unity, Laravel, ReactJS
 - Design pattern, UML
 
 ## Secondary Skills
