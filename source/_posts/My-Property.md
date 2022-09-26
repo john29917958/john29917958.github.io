@@ -16,7 +16,7 @@ category:
 
 <!--more-->
 
-我開的是尊爵 Toyota CC Hybrid LE 油電混和車。1798 CC，5 doors 5 seats 五門五人座，當時含配備購買總價格是 $1,020,000 元 (車子成交價是 950,000 元)。
+我開的是 2021 出廠的尊爵 Toyota CC Hybrid LE 油電混和車。1798 CC，5 doors 5 seats 五門五人座，當時含配備購買總價格是 $1,020,000 元 (車子成交價是 950,000 元)。
 性能數據: 98hp@5200rpm 14.5kgm@3600rpm 總輸出 122hp
 能量消耗 平均 21.9km/ltr 市區 22.82km/ltr 高速 21.35km/ltr
 變速系統 CVT無段變速
