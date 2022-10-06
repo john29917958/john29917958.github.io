@@ -60,3 +60,14 @@ category:
 
 拖鞋是 2,703 的【La new】fun 鬆系列輕量手縫拖鞋
 {% asset_img la-new-slippers.jpg %}
+
+最後這可能有一點點離題? 哈哈。這邊是我的 Medical Examination Report in August 2022 (健康檢查報告)
+{% asset_img medical-examination-report-tzu-chao-wang-2022-08-22-1.jpg %}
+
+{% asset_img medical-examination-report-tzu-chao-wang-2022-08-22-2.jpg %}
+
+{% asset_img medical-examination-report-tzu-chao-wang-2022-08-22-3.jpg %}
+
+{% asset_img medical-examination-report-tzu-chao-wang-2022-08-18-1.jpg %}
+
+{% asset_img medical-examination-report-tzu-chao-wang-2022-08-18-2.jpg %}
