@@ -1,4 +1,5 @@
 title: 5 Tips For You To Be A Real Dancer
+visible: hide
 date: 2016-06-03 09:02:11
 tags: [dance, music]
 category: Dance
