@@ -14,11 +14,11 @@ The system language of my 40 thousands above iPhone 12 Pro Blue, 40 thousands ab
 <!--more-->
 
 I drive 2021 Toyota CC Hybrid LE manufactured in 2021。1798 CC，5 doors 5 seats. The price is about $37,026 USD.
+{% asset_img car.jpg %}
 性能數據: 98hp@5200rpm 14.5kgm@3600rpm 總輸出 122hp
 能量消耗 平均 21.9km/ltr 市區 22.82km/ltr 高速 21.35km/ltr
 變速系統 CVT無段變速
 引擎形式 自然進氣, 直列4缸, DOHC雙凸輪軸, 16氣門
-{% asset_img car.jpg %}
 
 <!--
 再來是房子。我有一棟買 13,500,000，107 年實價登陸達 15,000,000，貸款剩下 7,781,117，賣掉後得 6,218,883 的四層樓房子、一層買 6,720,000，實價登陸達 7,500,000，貸款剩下 5,905,962，賣掉後得 1,594,038 的房子。
