@@ -13,7 +13,7 @@ The system language of my 40 thousands above iPhone 12 Pro Blue, 40 thousands ab
 
 <!--more-->
 
-I drive 2021 Toyota CC Hybrid LE manufactured in 2021。1798 CC，5 doors 5 seats. The price is about $31,785 USD.
+I drive 2021 Toyota CC Hybrid LE manufactured in 2021。1798 CC，5 doors 5 seats. The price is about $37,026 USD.
 性能數據: 98hp@5200rpm 14.5kgm@3600rpm 總輸出 122hp
 能量消耗 平均 21.9km/ltr 市區 22.82km/ltr 高速 21.35km/ltr
 變速系統 CVT無段變速
