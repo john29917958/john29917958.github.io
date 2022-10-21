@@ -8,7 +8,7 @@ category:
 <!--總資產超出 10,342,95，--> My account balances is:
 {% asset_img account.jpg %}
 
-The system language of my 44 thousands iPhone 12 Pro Blue, 45 thousands Laptop are set to English.
+The system language of my $1,589 iPhone 12 Pro Blue, $1,618 Laptop are set to English.
 {% asset_img systems.jpg %}
 
 <!--more-->
