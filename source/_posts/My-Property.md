@@ -8,7 +8,7 @@ category:
 <!--總資產超出 10,342,95，--> The current balance of my account is:
 {% asset_img account.jpg %}
 
-The system languages of my 40 thousands above iPhone 12 Pro Blue, 40 thousands above Laptop are set to English.
+The system language of my 40 thousands above iPhone 12 Pro Blue, 40 thousands above Laptop are set to English.
 {% asset_img systems.jpg %}
 
 <!--more-->
