@@ -8,11 +8,8 @@ category:
 <!--總資產超出 10,342,95，--> 這裡是目前的帳戶總金額:
 {% asset_img account.jpg %}
 
-我手機用的是 44,400 的 iPhone 12 Pro
-{% asset_img iphone-12-pro.jpg %}
-
-使用的是英文介面
-{% asset_img iphone-12-pro-apple-id-info.jpg %}
+The system languages of my 40 thousands above iPhone 12 Pro Blue, 40 thousands above Laptop are set to Englishh.
+{% asset_img systems.jpg %}
 
 <!--more-->
 
