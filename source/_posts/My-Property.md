@@ -8,7 +8,7 @@ category:
 <!--總資產超出 10,342,95，--> My account balances is:
 {% asset_img account.jpg %}
 
-The system language of my $1,589 iPhone 12 Pro Blue, $1,618 Laptop are set to English.
+The system language of my iPhone 12 Pro Blue ($1,589), Laptop ($1,618. Bought on December 12, 2021) are set to English.
 {% asset_img systems.jpg %}
 
 <!--more-->
