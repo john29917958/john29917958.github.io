@@ -5,7 +5,7 @@ tags: [property]
 category: 
 ---
 
-<!--總資產超出 10,342,95，--> The current balance of my account is:
+<!--總資產超出 10,342,95，--> My account balances is:
 {% asset_img account.jpg %}
 
 The system language of my 40 thousands above iPhone 12 Pro Blue, 40 thousands above Laptop are set to English.
