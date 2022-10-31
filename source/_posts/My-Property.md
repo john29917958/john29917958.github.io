@@ -8,7 +8,7 @@ category:
 <!--總資產超出 10,342,95，--> My account balances is:
 {% asset_img account.jpg %}
 
-The system language of my iPhone 12 Pro Blue ($1,589. Bought on February 2, 2021), laptop ($1,618. Bought on December 12, 2021) is set to English.
+My iPhone 12 Pro Blue ($1,589 USD. Bought on February 2, 2021) and my laptop ($1,618 USD. Bought on December 12, 2021) were set to English at the time I got them.
 {% asset_img systems.jpg %}
 
 <!--more-->
@@ -49,7 +49,7 @@ I drive 2021 Toyota CC Hybrid LE with 5 doors 5 seats (1798 CC). The price is ab
 麥克風是 5,300 的 [Blue Yeti USB Microphone](https://www.bluemic.com/en-us/products/yeti/)
 
 {% youtube wly8U_fA2os %}
-
+g
 ![Blue Yeti USB Microphone](https://s3.amazonaws.com/cd.bluemic.com/img/yeti/yeti-header-yetiblackout-desktop.png)
 
 音響是 3,990 的 [Edifier C2XD 2.1 Multimedia Speaker System](https://www.edifier.online/products/edifier-c2xd-2-1-multimedia-speaker-system-black)
