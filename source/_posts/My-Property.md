@@ -58,6 +58,9 @@ g
 拖鞋是 2,703 的【La new】fun 鬆系列輕量手縫拖鞋
 {% asset_img la-new-slippers.jpg %}
 
+My charitable contribution
+{% asset_img charitable-contribution.jpg %}
+
 This is my Medical Examination Report (August 2022)
 {% asset_img medical-examination-report-tzu-chao-wang-2022-08-22-1.jpg %}
 
