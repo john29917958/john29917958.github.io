@@ -1,5 +1,5 @@
 title: 為什麼不知道這三個關鍵，你會錯失在短時間內成長為高級工程師的機會
-visible: show
+visible: hide
 date: 2022-08-28 14:44:42
 tags: [programming, coding, program, code, class, course, education, teaching]
 category: Programming

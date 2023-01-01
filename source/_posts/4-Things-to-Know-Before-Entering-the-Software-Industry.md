@@ -1,5 +1,5 @@
 title: 進入程式產業需了解的 4 件事
-visible: show
+visible: hide
 date: 2021-01-17 21:30:33
 tags: [programming]
 category: Programming

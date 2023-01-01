@@ -1,5 +1,5 @@
 title: 'Learn Coding 7: Be An Artist - Coding Convention and Reuse'
-visible: show
+visible: hide
 date: 2022-07-31 14:31:49
 tags: [programming, coding, program, code, class, course, education, teaching]
 category: Programming

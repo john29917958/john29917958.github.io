@@ -1,5 +1,5 @@
 title: 6 Characteristics of High Value Programmer
-visible: show
+visible: hide
 date: 2020-10-22 22:06:16
 tags: programming
 category: Programming
