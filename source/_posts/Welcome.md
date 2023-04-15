@@ -5,6 +5,3 @@ tags:
 category:
 ---
 Hi this is Tzu-chao.
-<script>
-    window.location.href = "https://john29917958.github.io/about/"
-</script>
