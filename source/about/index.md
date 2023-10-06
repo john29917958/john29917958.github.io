@@ -36,7 +36,7 @@ Hi this is Tzu-Chao (子超). I have been doing software development for the las
 
 ### Taiwan Semiconductor Manufacturing Company Limited
 Daya, Taichung
-2017/08 ~ Now
+2017/08 ~ 2023/10/06
 Position: Computer Integrated Manufacturing Engineer
 Major contributions:
 - Used "feature toggle" concept for integrating divergent-versioned old systems into single distribution and published to three TSMC fabs twice.
