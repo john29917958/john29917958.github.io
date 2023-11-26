@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Learn Coding 6: Algorithm | TC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="你不覺得一個功能要跑 1 分鐘、2 分鐘、甚至 3 分鐘以上很久嗎? 你也許會聽到人們說:「天哪! 呼叫別人寫給我的搜尋功能後，我苦苦等了五分鐘才得到結果!」、「為什麼同事交接過來的 code 光開起來就要花 1 分鐘!」。當你遇到這種程式，你要如何優化它? 你要如何讓程式在可以被接受的時間內跑完? 今天，我將在這篇文裡教你如何寫出讓「執行時間」或「使用的資源」符合預期的程式。在我給你實際的演算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Learn Coding 6: Algorithm">
+<meta property="og:url" content="http://john29917958.github.io/2022/07/28/Learn-to-Code-6-Algorithm/index.html">
+<meta property="og:site_name" content="TC">
+<meta property="og:description" content="你不覺得一個功能要跑 1 分鐘、2 分鐘、甚至 3 分鐘以上很久嗎? 你也許會聽到人們說:「天哪! 呼叫別人寫給我的搜尋功能後，我苦苦等了五分鐘才得到結果!」、「為什麼同事交接過來的 code 光開起來就要花 1 分鐘!」。當你遇到這種程式，你要如何優化它? 你要如何讓程式在可以被接受的時間內跑完? 今天，我將在這篇文裡教你如何寫出讓「執行時間」或「使用的資源」符合預期的程式。在我給你實際的演算法">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2022-07-27T16:02:54.000Z">
+<meta property="article:modified_time" content="2023-11-26T11:37:25.350Z">
+<meta property="article:author" content="汪子超">
+<meta property="article:tag" content="programming">
+<meta property="article:tag" content="coding">
+<meta property="article:tag" content="program">
+<meta property="article:tag" content="code">
+<meta property="article:tag" content="class">
+<meta property="article:tag" content="course">
+<meta property="article:tag" content="education">
+<meta property="article:tag" content="teaching">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@john29917958">
+<link rel="publisher" href="+%E6%B1%AA%E5%AD%90%E8%B6%85">
+<meta property="fb:admins" content="100002225898735">
+<meta property="fb:app_id" content="284882215">
+  
+    <link rel="alternative" href="/atom.xml" title="TC" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-80121293-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  <script data-ad-client="ca-pub-8315401057994110" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">TC</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://john29917958.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Learn-to-Code-6-Algorithm" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/07/28/Learn-to-Code-6-Algorithm/" class="article-date">
+  <time datetime="2022-07-27T16:02:54.000Z" itemprop="datePublished">2022-07-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Programming/">Programming</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      
+        <header class="article-header">
+      
+      
+  
+    <h1 class="article-title" itemprop="name">
+      Learn Coding 6: Algorithm
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>你不覺得一個功能要跑 1 分鐘、2 分鐘、甚至 3 分鐘以上很久嗎? 你也許會聽到人們說:「天哪! 呼叫別人寫給我的搜尋功能後，我苦苦等了五分鐘才得到結果!」、「為什麼同事交接過來的 code 光開起來就要花 1 分鐘!」。當你遇到這種程式，你要如何優化它? 你要如何讓程式在可以被接受的時間內跑完? 今天，我將在這篇文裡教你如何寫出讓「執行時間」或「使用的資源」符合預期的程式。在我給你實際的演算法實例之前，我需要先教你一些基礎知識，再帶你進行一個完整的演算法設計流程，否則你會沒有辦法用必要的工具來設計演算法。如果你正頭痛該怎麼設計解決方案、如果你想突破現況朝向大師前進，你必須理解我想教給你的三個關鍵課題。點開這篇文章，我將把你變成一個能讓程式表現符合預期的專家!</p>
+<span id="more"></span>
+
+<h2 id="課題一-演算法是什麼"><a href="#課題一-演算法是什麼" class="headerlink" title="課題一: 演算法是什麼"></a>課題一: 演算法是什麼</h2><p>當人們收到一個需求，例如要把陣列裡的元素從小排到大，他們可能會直接把手放到鍵盤上，開始敲敲打打寫出一段 code 來解決問題。問題是，要解決的問題如果很複雜、或程式必須在一定時間內跑完、又或者這問題得花很多資源、只能花一定的資源來解決，我就不太同意直接開始寫程式。千萬不要直接開始寫程式! 很多人都不相信，先設計好演算法並且估算它的表現到哪裡，再依照演算法把程式寫出來，會更有機會成功寫出一份性能符合預期的 program。我想要你先看看這個例子，如果我們要從兩位學生中找出比較高的那一位，我們可以先開一份空白的文字檔，然後寫下該如何找到比較高的學生:</p>
+<ol>
+<li>問第一位學生的身高，把他的身高記下來</li>
+<li>問第二位學生的身高，把他的身高也記下來</li>
+<li>比較他們的身高，找出比較高的那一位</li>
+<li>問到這位學生的名字</li>
+<li>把這個名字提供出來</li>
+</ol>
+<p>這種用口語化的方式來設計、來描述一個問題該如何依序用有限的步驟來解決，就是演算法。好的演算法可以讓程式變得很簡單、很有效率，或只花預期內的資源就把問題解決；依照糟糕的演算法寫出來的 program，甚至可以跑好幾分鐘都跑不出來! 讓我給你一段照「找學生演算法」寫出來的程式:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">std::string <span class="title">find_taller</span><span class="params">(student* student1, student* student2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> height1 = student1-&gt;<span class="built_in">get_height</span>();</span><br><span class="line">    <span class="keyword">int</span> height2 = student2-&gt;<span class="built_in">get_height</span>();</span><br><span class="line">    student* taller_student = <span class="literal">nullptr</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (height1 &gt; height2)</span><br><span class="line">    &#123;</span><br><span class="line">        taller_student = student1;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        taller_student = student2;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    std::string name = taller_student-&gt;<span class="built_in">get_name</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> name;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>我想要你先看這段 code 的第三行，這裡用 <code>student-&gt;get_height()</code> 取得第一位學生的身高。接著，在第二行取得第二位學生的身高。然後在第 7 到第 14 行比較兩位學生的身高，找出比較高的學生。接下來在第 16 行問到這位學生的名字。最後在第 18 行把這個名字給出去。在這個例子裡，演算法的描述一行一行轉換成對應的程式碼。這才是應該用來解決複雜問題的流程: 先設計好演算法再把程式寫出來。現在，你已經知道什麼是演算法。接下來你必須學會如何計算一個演算法的「複雜度」。</p>
+<h2 id="課題二-複雜度"><a href="#課題二-複雜度" class="headerlink" title="課題二: 複雜度"></a>課題二: 複雜度</h2><p>我已經寫好找學生的演算法了，但要如何評估它最糟的執行時間呢? 到底什麼是複雜度? 其實說穿了「複雜度」就是指程式跑一段演算法的「最糟狀況」到哪裡。寫好演算法之後你只知道解決問題的步驟，接著你需要計算程式跑這段演算法得花多少時間或多少資源。複雜度會專注在兩種指標: 最多會花多少時間的時間複雜度 (time complexity) 跟花多少資源的空間複雜度 (space complexity)。在計算複雜度的時候，工程師會用世界通用的 big-O 標記 <code>O(n)</code> (念作 big-O n) 來用小括弧裡面的方程式描述複雜度會怎麼隨著輸入量變化。例如 <code>O(n)</code> 可以看做是 <code>Complexity = n</code> 的多項式、<code>O(2n + 1)</code> 可以看做是 <code>Complexity = 2n + 1</code> 的多項式。複雜度的成長速度大略可以概括成常數、線性、log 跟次方這幾種，讓我解釋這四類複雜度給你知道：</p>
+<ol>
+<li>O(1)：代表資料量增加不會影響複雜度</li>
+<li>O(n)：代表複雜度會隨著資料量增加跟著以線性成長</li>
+<li>O(n log(n))：代表複雜度一開始會隨著資料量增加跟著遽增，但隨著資料量持續增加，複雜度的成長會趨緩</li>
+<li>O(n<sup>2</sup>)：複雜度會隨著資料量增加跟著以指數上升。上升的速度會由次方數決定</li>
+</ol>
+<p>先計算出複雜度可以避免根據表現達不到目標的演算法來寫 code。複雜度主要關注在時間跟空間兩種需求，分別是 time complexity (時間複雜度) 跟 space complexity (空間複雜度)。讓我分別解給你聽:</p>
+<ol>
+<li>時間複雜度 (time complexity): 程式每次跑完花的時間可能都不一樣。時間複雜度是指程式跑完最多可能會花多少時間。我們通常會去算指令執行的數量來計算一個演算法的時間複雜度</li>
+<li>空間複雜度 (space complexity): 程式每次跑完使用的記憶體可能都不一樣。空間複雜度是指程式跑完最多可能會用多少 memory space。可以用每個變數分別被建立了幾次，分別乘上變數使用的記憶體大小，最後把它們全部加起來後得到一個演算法的空間複雜度</li>
+</ol>
+<p>太好了! 現在你已經知道所有必要的專業知識。接著讓我給你一個經典的演算法，帶你走過幫問題設計演算法、計算複雜度，一直到最後把程式寫好的完整流程。</p>
+<h2 id="課題三-演算法實例-泡沫排序-Bubble-Sort-algorithm"><a href="#課題三-演算法實例-泡沫排序-Bubble-Sort-algorithm" class="headerlink" title="課題三: 演算法實例 - 泡沫排序 (Bubble Sort algorithm)"></a>課題三: 演算法實例 - 泡沫排序 (Bubble Sort algorithm)</h2><p>Instagram 如何把你最酷愛的 Reel 短片排給你? Facebook 如何把你最喜愛的 Watch 影片遞送給你? YouTube 如何把你最熱愛的影片一個接一個建議給你? 排序的概念到處都是，Google Excel 文件裡的排序功能就是最好的例子。我們今天要談的是一個叫「Bubble Sort」的排序演算法。我要你想像一下: 今天放學的時候，每個班級的小學生都在排隊準備回家。有位老師想把五位小學生從最高到最低排好。但問題是，這位老師該怎麼做呢? 首先，這位老師先走到頭兩位學生前面比較他們的身高。如果學生沒有由高排到低就幫兩位學生交換位置。接著老師會比較第二跟第三位、第三跟第四位……一直到最後兩位。如果中間有幫任何學生交換位置，老師就會走到最前面從頭再檢查一輪，直到有任何一輪結束後都沒有幫學生交換位置為止。簡單來說，這段演算法總共由這三個步驟組成:</p>
+<ol>
+<li>老師會不斷從隊伍裡的第一位學生開始兩兩比較學生的身高</li>
+<li>如果後面的學生比前面的還高，就幫兩位學生交換位置</li>
+<li>不斷循環做第 1. 跟第 2. 步，直到有一輪完全沒有幫學生交換位置為止</li>
+</ol>
+<p>這段演算法已經描述了麼把學生由高排到低。接著讓我帶你一起算算這段演算法的時間複雜度。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] student_heights = &#123; <span class="number">149</span>, <span class="number">151</span>, <span class="number">152</span>, <span class="number">153</span>, <span class="number">156</span> &#125;;</span><br></pre></td></tr></table></figure>
+
+<p>我想要你先看過上面這個陣列，裡面儲存了每位學生的身高。依照寫出來的演算法，在第一輪的流程裡面總共會比較學生的身高 4 次，幫學生交換位置 4 次。如果我們用一個代數「n」來表示學生的數量，那麼在進行完第一輪流程之後總共比較了 n - 1 次 (4 次 = 5 - 1 次 = n - 1 次)、交換了 n - 1 次 (4 次 = 5 - 1 次 = n - 1 次)</p>
+<blockquote>
+<p>== 第一輪 ==<br>檢查了 n - 1 次<br>交換了 n - 1 次<br>[151, 152, 153, 156, 149]</p>
+</blockquote>
+<hr>
+<p>接著老師會回到隊伍的最前面，一樣再進行一輪演算法定義的流程。然而在第二輪流程裡面，第四位學生已經比第五位學生還要高，不需要被交換位置，所以當第二輪流程進行完之後，在過程中總共比較了 n - 1 次 (實際上是 4 次)，但只交換了 n - 2 次 (實際上是 3 次)。</p>
+<blockquote>
+<p>== 第二輪 ==<br>檢查了 n - 1 次<br>交換了 n - 2 次<br>[152, 153, 156, 151, 149]</p>
+</blockquote>
+<hr>
+<p>在開始第三輪的排序流程之前，我想要你感受一下: 在兩輪的排序過程之中，先是最矮的學生被不斷被往後排到隊伍的最後面，接著是第二矮的學生不斷被往後排到隊伍裡的倒數第二個位置。這個過程會讓越矮的學生一位一位往後排，就像「氣泡 (bubble)」一樣不斷往上冒出水面。這種不斷把最大或最小元素往陣列的某個方向交換過去的過程就是 bubble sort 演算法的特點。再來一輪吧! 這次做完比較跟交換的動作之後，總共做了 n - 1 次比較 (實際上是 4 次) 跟 n - 3 次交換 (實際上是 2 次)。</p>
+<blockquote>
+<p>== 第三輪 ==<br>檢查了 n - 1 次<br>交換了 n - 3 次<br>[153, 156, 152, 151, 149]</p>
+</blockquote>
+<hr>
+<p>依此類推，在第五輪的流程結束之後，總共在這次的流程裡做了 n - 1 次比較 (實際上是 4 次) 跟 n - 5 次交換 (實際上是 0 次)。</p>
+<blockquote>
+<p>== 第五輪 ==<br>檢查了 n - 1 次<br>交換了 n - 5 次<br>[156, 153, 152, 151, 149]</p>
+</blockquote>
+<hr>
+<p>最後我想要你看過總共五輪的排序歷史紀錄:</p>
+<table>
+<thead>
+<tr>
+<th>第幾輪</th>
+<th>檢查次數</th>
+<th>交換次數</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>第一輪</td>
+<td>n - 1</td>
+<td>n - 1</td>
+</tr>
+<tr>
+<td>第二輪</td>
+<td>n - 1</td>
+<td>n - 2</td>
+</tr>
+<tr>
+<td>第三輪</td>
+<td>n - 1</td>
+<td>n - 3</td>
+</tr>
+<tr>
+<td>第四輪</td>
+<td>n - 1</td>
+<td>n - 4</td>
+</tr>
+<tr>
+<td>第五輪</td>
+<td>n - 1</td>
+<td>n - 5</td>
+</tr>
+<tr>
+<td>Total</td>
+<td>5n - 5</td>
+<td>5n - 15</td>
+</tr>
+</tbody></table>
+<p>首先以檢查動作來看，可以得到總共做了 n(n - 1) 次動作<br>接著以交換動作來看，可以得到總共做了 (n - 1) + (n - 2) + (n - 3) + … + (n - n) = n(n - 1) / 2 次動作<br>最後把檢查跟交換動作的次數都加起來之後，會得到總共做了 n(n - 1) + n(n - 1) / 2 = 3n(n - 1) / 2 = 3(n<sup>2</sup> - n) / 2 次動作<br>到這邊讓我們再稍微修改一下這個複雜度:</p>
+<ol>
+<li>因為 n 的數值如果非常大，常數 3 跟 2 對複雜度就幾乎沒有影響，所以都可以被忽略掉。把常數都去掉之後會得到簡化過的時間複雜度: n<sup>2</sup> - n</li>
+<li>如果 n 的數值不斷往上增加，n 跟 n<sup>2</sup> 比起來也可以被看成是可被忽略的運算元。把 n 去掉之後會得到簡化過的時間複雜度: n<sup>2</sup></li>
+</ol>
+<p>結論就是，我們得到 bubble sort 演算法的時間複雜度是 O(n<sup>2</sup>)</p>
+<h2 id="Mathematical-Style-Pseudocode"><a href="#Mathematical-Style-Pseudocode" class="headerlink" title="Mathematical Style Pseudocode"></a>Mathematical Style Pseudocode</h2><p>上面是用比較高階、比較口語的方式來描述排學生的邏輯。接著，我們用比較低階的 pseudo code 把演算法寫出來:</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">algorithm bubble-<span class="built_in">sort</span> is</span><br><span class="line">    input: Array A <span class="keyword">with</span> capacity l</span><br><span class="line">    output: Array s such that s is <span class="keyword">a</span> sorted <span class="built_in">version</span> <span class="keyword">of</span> array A</span><br><span class="line"></span><br><span class="line">    s &lt;- [] <span class="literal">empty</span> array</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i &lt;- <span class="number">0</span> <span class="built_in">to</span> l - <span class="number">2</span> <span class="built_in">do</span></span><br><span class="line">        ith <span class="keyword">element</span> <span class="keyword">in</span> s &lt;- ith <span class="keyword">element</span> <span class="keyword">in</span> A</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> l = <span class="number">1</span></span><br><span class="line">        <span class="literal">return</span> s</span><br><span class="line"></span><br><span class="line">    has_swap_op &lt;- <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> has_swap_op = <span class="literal">true</span></span><br><span class="line">        has_swap_op &lt;- <span class="literal">false</span></span><br><span class="line">        <span class="keyword">for</span> i &lt;- <span class="number">0</span> <span class="built_in">to</span> l - <span class="number">1</span> <span class="built_in">do</span></span><br><span class="line">            <span class="keyword">if</span> ith <span class="keyword">element</span> <span class="keyword">in</span> s &lt; (i+<span class="number">1</span>)th <span class="keyword">element</span> <span class="keyword">in</span> s</span><br><span class="line">                temp &lt;- (i+<span class="number">1</span>)th <span class="keyword">element</span> <span class="keyword">in</span> s</span><br><span class="line">                (i+<span class="number">1</span>)th <span class="keyword">element</span> <span class="keyword">in</span> s &lt;- ith <span class="keyword">element</span> <span class="keyword">in</span> s</span><br><span class="line">                ith <span class="keyword">element</span> <span class="keyword">in</span> s &lt;- temp</span><br><span class="line">                has_swap_op &lt;- <span class="literal">true</span></span><br><span class="line">    </span><br><span class="line">    <span class="literal">return</span> s</span><br></pre></td></tr></table></figure>
+
+<p>是不是已經很像程式碼了呢? 上面的演算法有個專有名詞叫做「Mathematical Style Pseudocode」。第一行 <code>algorithm bubble-sort is</code> 是在定義一個名字叫做「bubble-sort」的演算法。第二行 <code>input:</code> 是用來定義這個演算法要接收什麼參數。以這個演算法來看要接收一個陣列，陣列的長度是 l。第三行 <code>output:</code> 是用來描述這個演算法要輸出什麼結果。以這個演算法來說，要輸出一個排序過的陣列。在 <code>output:</code> 之後就是演算法的內容啦! 內容跟前面的描述很類似，只是比較詳細了些。內容裡面有使用 pseudo code 常用的一些符號，例如 <code>&lt;-</code> 代表把右邊的數值指定到左邊的變數、<code>=</code> 代表的是比較左邊跟右邊兩個運算元的數值是不是相等、<code>for ... to ...</code> 代表的是要從某個數值開始一直重複做迴圈內定義的事情，直到某個終止數值為止。這邊有常見的 pseudo code 數學符號:</p>
+<table>
+<thead>
+<tr>
+<th>運算種類</th>
+<th>符號</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Assignment</td>
+<td><code>&lt;-</code> 或是 <code>:=</code></td>
+</tr>
+<tr>
+<td>Comparison</td>
+<td><code>=</code>, <code>≠</code>, <code>&lt;</code>, <code>&gt;</code>, <code>≤</code>, <code>≥</code></td>
+</tr>
+<tr>
+<td>Arithmetic</td>
+<td><code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>mod</code></td>
+</tr>
+<tr>
+<td>Floor/ceiling</td>
+<td><code>⌊ ⌋</code>, <code>⌈ ⌉</code></td>
+</tr>
+<tr>
+<td>Logical</td>
+<td><code>and</code>, <code>or</code></td>
+</tr>
+<tr>
+<td>Sums, products</td>
+<td><code>Σ</code>, <code>Π</code></td>
+</tr>
+</tbody></table>
+<p>到這裡我們已經知道演算法的目的，也知道怎麼把解法用比較口語、比較簡單的方式寫出來。接下來，就是屬於你的挑戰時間啦! 把上面的 pseudo code 用程式碼寫出來吧!</p>
+<h2 id="Implementation"><a href="#Implementation" class="headerlink" title="Implementation"></a>Implementation</h2><p>這裡是把設計好的 bubble sort 演算法用 C++ 程式語言寫出來:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">bubble_sort</span><span class="params">(<span class="keyword">int</span> array[], <span class="keyword">int</span> length)</span> </span>&#123;    </span><br><span class="line">    <span class="keyword">bool</span> has_swapped = <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (length == <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">do</span> &#123;</span><br><span class="line">        has_swapped = <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (array[i] &lt; array[i + <span class="number">1</span>]) &#123;</span><br><span class="line">                <span class="keyword">int</span> temp = array[i + <span class="number">1</span>];</span><br><span class="line">                array[i + <span class="number">1</span>] = array[i];</span><br><span class="line">                array[i] = temp;</span><br><span class="line">                has_swapped = <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">while</span> (has_swapped);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>* argv[])</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> student_heights[] = &#123; <span class="number">149</span>, <span class="number">151</span>, <span class="number">152</span>, <span class="number">153</span>, <span class="number">156</span> &#125;;</span><br><span class="line">    <span class="keyword">int</span> length = <span class="built_in"><span class="keyword">sizeof</span></span>(student_heights) / <span class="built_in"><span class="keyword">sizeof</span></span>(<span class="keyword">int</span>);</span><br><span class="line">    <span class="built_in">bubble_sort</span>(student_heights, length);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; length; i++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%dth student&#x27;s height is: %d\n&quot;</span>, i + <span class="number">1</span>, student_heights[i]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>從這份 C++ 程式碼我們可以發現，如果演算法設計的很好，寫出來的程式碼其實不會跟演算法差太多。<br>讓我們再來看一份 PHP 程式碼:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">    <span class="variable">$array</span> = <span class="keyword">array</span>(<span class="number">149</span>, <span class="number">151</span>, <span class="number">152</span>, <span class="number">153</span>, <span class="number">156</span>);</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">bubbleSort</span>(<span class="params"><span class="variable">$array</span></span>) </span>&#123;</span><br><span class="line">        <span class="variable">$hasSwapped</span> = <span class="literal">false</span>;</span><br><span class="line">        <span class="variable">$sortedArray</span> = [];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">foreach</span> (<span class="variable">$array</span> <span class="keyword">as</span> <span class="variable">$key</span> =&gt; <span class="variable">$value</span>) &#123;</span><br><span class="line">            array_push(<span class="variable">$sortedArray</span>, <span class="variable">$value</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">do</span> &#123;</span><br><span class="line">            <span class="variable">$hasSwapped</span> = <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span> (<span class="variable">$i</span> = <span class="number">0</span>; <span class="variable">$i</span> &lt; count(<span class="variable">$sortedArray</span>) - <span class="number">1</span>; <span class="variable">$i</span>++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (<span class="variable">$sortedArray</span>[<span class="variable">$i</span>] &lt; <span class="variable">$sortedArray</span>[<span class="variable">$i</span> + <span class="number">1</span>]) &#123;</span><br><span class="line">                    <span class="variable">$temp</span> = <span class="variable">$sortedArray</span>[<span class="variable">$i</span> + <span class="number">1</span>];</span><br><span class="line">                    <span class="variable">$sortedArray</span>[<span class="variable">$i</span> + <span class="number">1</span>] = <span class="variable">$sortedArray</span>[<span class="variable">$i</span>];</span><br><span class="line">                    <span class="variable">$sortedArray</span>[<span class="variable">$i</span>] = <span class="variable">$temp</span>;</span><br><span class="line">                    <span class="variable">$hasSwapped</span> = <span class="literal">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">while</span> (<span class="variable">$hasSwapped</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="variable">$sortedArray</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">foreach</span> (<span class="variable">$array</span> <span class="keyword">as</span> <span class="variable">$key</span> =&gt; <span class="variable">$value</span>) &#123;</span><br><span class="line">        <span class="keyword">echo</span>(<span class="string">&quot;&lt;li&gt;Student <span class="subst">$key</span>&#x27;s height is: <span class="subst">$value</span>&lt;/li&gt;&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="variable">$array</span> = bubbleSort(<span class="variable">$array</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">foreach</span> (<span class="variable">$array</span> <span class="keyword">as</span> <span class="variable">$key</span> =&gt; <span class="variable">$value</span>) &#123;</span><br><span class="line">        <span class="keyword">echo</span>(<span class="string">&quot;&lt;li&gt;Student <span class="subst">$key</span>&#x27;s height is: <span class="subst">$value</span>&lt;/li&gt;&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>發現了嗎? 兩份程式碼的寫法幾乎差不多! 用這次的例子我們也可以知道演算法寫好之後，不一定只能用某種語言寫出來。我們可以用演算法來設計跟描述怎麼解決一個問題。等方法設計出來之後，有機會可以用任何一種程式語言實作他!<br>希望今天的內容對您有幫助，有任何建議或想發問的地方歡迎在下面留言，我們下次 Learn to Code 見!</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://john29917958.github.io/2022/07/28/Learn-to-Code-6-Algorithm/" data-id="clpfeux1d0006kqz1atwt2neb" class="article-share-link">Share</a>
+      
+        <a href="http://john29917958.github.io/2022/07/28/Learn-to-Code-6-Algorithm/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/class/" rel="tag">class</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/code/" rel="tag">code</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/coding/" rel="tag">coding</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/course/" rel="tag">course</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/education/" rel="tag">education</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/program/" rel="tag">program</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/programming/" rel="tag">programming</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/teaching/" rel="tag">teaching</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2022/07/31/Learn-to-Code-7-Be-An-Artist-Coding-Convention-and-Reuse/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Learn Coding 7: Be An Artist - Coding Convention and Reuse
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/01/17/4-Things-to-Know-Before-Entering-the-Software-Industry/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">進入程式產業需了解的 4 件事</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a><span class="category-list-count">7</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/class/" rel="tag">class</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code/" rel="tag">code</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/coding/" rel="tag">coding</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/course/" rel="tag">course</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/education/" rel="tag">education</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/program/" rel="tag">program</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/programming/" rel="tag">programming</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/teaching/" rel="tag">teaching</a><span class="tag-list-count">4</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/class/" style="font-size: 10px;">class</a> <a href="/tags/code/" style="font-size: 10px;">code</a> <a href="/tags/coding/" style="font-size: 10px;">coding</a> <a href="/tags/course/" style="font-size: 10px;">course</a> <a href="/tags/education/" style="font-size: 10px;">education</a> <a href="/tags/program/" style="font-size: 10px;">program</a> <a href="/tags/programming/" style="font-size: 20px;">programming</a> <a href="/tags/teaching/" style="font-size: 10px;">teaching</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">一月 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">九月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">八月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">七月 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">一月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">十月 2020</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/01/01/Welcome/">Welcome</a>
+          </li>
+        
+          <li>
+            <a href="/2022/09/04/Write-Your-First-Program-In-10-Minutes/">Write Your First Program In 10 Minutes</a>
+          </li>
+        
+          <li>
+            <a href="/2022/08/28/3-keys-to-become-a-great-developer-in-short-time/">為什麼不知道這三個關鍵，你會錯失在短時間內成長為高級工程師的機會</a>
+          </li>
+        
+          <li>
+            <a href="/2022/07/31/Learn-to-Code-7-Be-An-Artist-Coding-Convention-and-Reuse/">Learn Coding 7: Be An Artist - Coding Convention and Reuse</a>
+          </li>
+        
+          <li>
+            <a href="/2022/07/28/Learn-to-Code-6-Algorithm/">Learn Coding 6: Algorithm</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2023 汪子超<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'john29917958-github';
+  
+  var disqus_url = 'http://john29917958.github.io/2022/07/28/Learn-to-Code-6-Algorithm/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+  </div>
+</body>
+</html>
