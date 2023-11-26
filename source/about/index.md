@@ -6,81 +6,69 @@ keywords: 汪子超, Tzu-Chao Wang, 子超, Tzu-Chao, TC, 程式, 軟體, progra
 
 <br/>
 
-<span class="img-left">
+<style>
+  #profile-photo a {
+    width: auto;
+  }
+  
+  #profile-photo img {
+    width: 100%;
+    height: auto;
+  }
+
+  @media only screen and (min-width: 576px) {
+    #profile-photo img {
+      width: 300px;
+      height: 300px;
+    }
+  }
+</style>
+
+<span class="img-left" id="profile-photo">
 {% img /images/profile-picture.jpg %}
 </span>
 
-## About
-Hi this is Tzu-Chao (子超). I have been doing software development for the last five years. I adopted the "feature toggle" technique to help the TSMC company do the integration of two similar systems running for fifteen years, contributing to the fact that the system was released at four TSMC fabs from only single source code. This accomplished reducing 25% of the maintenance cost. And that's what I'm passionate about. On the other hand, I'm specialized in helping people improve their programming skills. And in the last four months alone, I have helped several clients over four different industries. And that's exactly what I keep devoting myself to. In addition, I have great enthusiasm for building apps. In fact on Oct 24, 2020 I published a voice controlled mobile game which had over one hundred downloads within a month, mostly in the U.S. and Taiwan. I pursue challenge and excellence, I pursue Taiwan originality. I'm kind and caring. I'm looking for a chance to fight together with a top-level software development team that I could add value to, that I could produce the ease of future system extension, ease of module replacement, and simple, intuitive application programming interfaces for, so we could test any idea, test any market and get responses in short time. Is this what you are looking for? Please do not hesitate to contact me.
+Hi, this is TZU-CHAO, I have been doing software maintenance and development in the last six years. In 2022 I used feature toggle technique to helped TSMC to integrate two pairs of duplicate 15 year old systems to one pair and released it to more than 5 areas, greatly reduced the effort of maintaining the system. I'm passionate about networking and web design. I can work with the team to extend the React web app, to build new web app using ES6 and modularization techniques, and deliver a high-quality small increment every week. During my service at TSMC, I used object-oriented techniques to help TSMC refactor, maintain and develop projects. I'm enthusiastic, I value teamwork, I'm a team player. I have experience in developing team project with Facade design pattern. Are my traits and skills what you looking for?
+
+Contact me:
+- john29917958@gmail.com
+- [LinkedIn](https://www.linkedin.com/in/tzu-chao-wang/)
+- Line ID: john29917958
 
 ## Skills
-- C#, JavaScript, CSS3, HTML5
-- Bootstrap, Materialize CSS, Unity, Laravel, ReactJS
-- Design pattern, UML
+- JavaScript, HTML, CSS, MySQL, PHP, C#
+- Bootstrap, Materialize CSS, Laravel, React
+- Design pattern, UML, Git
 
 ## Secondary Skills
-- 2D anime style art
 - [Clip Studio Paint](https://www.clipstudio.net/en/), [Photoshop](https://www.adobe.com/products/photoshop.html), [Illustrator](https://www.adobe.com/products/illustrator.html), [Premiere Pro](https://www.adobe.com/products/premiere.html), [Audition](https://www.adobe.com/products/audition.html)
-
-## Contact Information
-- E-mail: john29917958@gmail.com
-- [LinkedIn](https://www.linkedin.com/in/john29917958)
-- Line ID: john29917958
 
 ## Interests
 1. Dancing and listening to music
-2. Programming
-3. Digital painting
+2. Web design and programming
+3. Digital painting. Please visit my [ArtStation](https://www.artstation.com/tzuchaowang)
 
 ## Work Experience
 
-### Taiwan Semiconductor Manufacturing Company Limited
-Daya, Taichung
+### [Taiwan Semiconductor Manufacturing Company Limited](https://www.tsmc.com/)
+Senior Computer Integrated Manufacturing Engineer
 2017/08 ~ 2023/10/06
-Position: Computer Integrated Manufacturing Engineer
+Daya, Taichung
+To use software technologies to help company automate, save labor costs and reduce labor loading.
 Major contributions:
-- Used "feature toggle" concept for integrating divergent-versioned old systems into single distribution and published to three TSMC fabs twice.
+- Used feature toggle technique to integrate two pairs of old systems to one pair, greatly reduced the effort of maintaining the system
+- Drawn farewell memorial book for the Mr. Morris Chang, founder of TSMC, established a good organization image for the department
 
----
+Job description:
+- Able to work with the team to extend React web app, to build new web app using ES6 and modularization techniques, and deliver a high-quality small increment every week
+- Able to use object-oriented techniques to help TSMC refactor, maintain and develop project
 
-### NCU Object-Oriented Lab
-Chungli, Taoyuan
-2015/08 ~ 2017/07
-
-#### KORAT
-A powerful regression test automation system with capture / replay ability.
-
-Positions: Chief programmer / architecture
-Major contributions:
-- Bring the KORAT prototype into a production level system
-- Did solve multi-threading, multi-process related issues of KORAT
-- Did cross language integration (C# and C++) issues of KORAT (image recognition efficiency related)
-
-#### Other Contributions
-- Makes a real-time web application for ADLINK to monitor the state of machines in SMT production line. Urgent support, delivered in 1 month
-- GitLab and other web service maintenance
-
----
-
-### NCU Computer Center Service Desk
-Chungli, Taoyuan
-2014/08 ~ 2017/08
-
-#### Service Desk Customer Service Web System
-A platform for students in NCU to propose questions and find solutions for their daily life in NCU: [https://sd.cc.ncu.edu.tw/](https://sd.cc.ncu.edu.tw/)
-
-First "real" teamwork experience, bring the idea of Service Desk into a real, production web system
-
----
-
-### NCU CHST College
-Chungli, Taoyuan
-2014/08 ~ 2015/07
-
-### Network Administrator
-Major contributions:
-- Migrate the production web server of CHST into Docker container
-- Manage all graphic design tasks of CHST
+## Contributions
+- In 2022 I used feature toggle technique to help [TSMC](https://www.tsmc.com/) to integrate two pairs of old systems to one pair and released it to more than 5 areas, greatly reduced the effort of maintaining the system
+- I helped TSMC of drawing a farewell memorial book for the Mr. Morris Chang, founder of TSMC, established a good organization image for the department
+- From 2022 to 2023 I have been doing programming education in 6 months, I helped students learn the basics of programming and the critical techniques of object-oriented programming
+- From 2015 to 2017 I helped National Central University of developing [Service Desk](https://sd.cc.ncu.edu.tw/) website and published it online for people to ask questions about the school
+- In 2016 I helped National Central University Object-Oriented Lab productize the GUI regression test software which becomes the product that helped the founding of [IsCoolLab Co., Ltd](https://iscoollab.com/)
 
 ## Education
 - [國立中央大學](http://www.ncu.edu.tw/) [資訊工程學系](http://www.csie.ncu.edu.tw/) [Object-Oriented Lab](http://oolab.csie.ncu.edu.tw/wiki/index.php/OO_Lab)
