@@ -19,7 +19,8 @@ keywords: 汪子超, Tzu-Chao Wang, 子超, Tzu-Chao, TC, 程式, 軟體, progra
   @media only screen and (min-width: 576px) {
     #profile-photo img {
       width: 300px;
-      height: 300px;
+      height: auto;
+      border-radius: 5px;
     }
   }
 </style>
