@@ -3,17 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2022/9 | TC</title>
+  <title>JavaScript的New Operator背後做了些什麼？ | TC</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Here holds all stories about me - A fanatic of bringing technique and art into Things.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="TC">
-<meta property="og:url" content="http://john29917958.github.io/archives/2022/09/index.html">
+  <meta name="description" content="今天學到了一個很重要的JavaScript觀念，是new operator在執行時，背後做了些什麼。以前都不知道，原來我們如果用new operator來呼叫constructor function，JavaScript執行環境會先建立一個空物件，然後把this指派給它。this其實是指向這個空物件，讓constructor function body可以使用的東西。接著，JavaScript執行">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript的New Operator背後做了些什麼？">
+<meta property="og:url" content="http://john29917958.github.io/2024/03/05/JavaScript-Reading-Day/index.html">
 <meta property="og:site_name" content="TC">
-<meta property="og:description" content="Here holds all stories about me - A fanatic of bringing technique and art into Things.">
+<meta property="og:description" content="今天學到了一個很重要的JavaScript觀念，是new operator在執行時，背後做了些什麼。以前都不知道，原來我們如果用new operator來呼叫constructor function，JavaScript執行環境會先建立一個空物件，然後把this指派給它。this其實是指向這個空物件，讓constructor function body可以使用的東西。接著，JavaScript執行">
 <meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2024-03-05T12:31:21.000Z">
+<meta property="article:modified_time" content="2024-03-05T12:35:14.683Z">
 <meta property="article:author" content="汪子超">
-<meta property="article:tag" content="程式, code, program, 軟體, 軟體工程, 資訊">
+<meta property="article:tag" content="code, javascript, programming">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:creator" content="@john29917958">
 <link rel="publisher" href="+%E6%B1%AA%E5%AD%90%E8%B6%85">
@@ -82,14 +84,69 @@ ga('send', 'pageview');
   </div>
 </header>
       <div class="outer">
-        <section id="main">
+        <section id="main"><article id="post-JavaScript-Reading-Day" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/03/05/JavaScript-Reading-Day/" class="article-date">
+  <time datetime="2024-03-05T12:31:21.000Z" itemprop="datePublished">2024-03-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/programming/">programming</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      
+        <header class="article-header">
+      
+      
   
+    <h1 class="article-title" itemprop="name">
+      JavaScript的New Operator背後做了些什麼？
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今天學到了一個很重要的JavaScript觀念，是<code>new</code> operator在執行時，背後做了些什麼。以前都不知道，原來我們如果用<code>new</code> operator來呼叫constructor function，JavaScript執行環境會先建立一個空物件，然後把<code>this</code>指派給它。<code>this</code>其實是指向這個空物件，讓constructor function body可以使用的東西。接著，JavaScript執行環境會呼叫constructor function，把參數指派給它，再執行constructor function body，最後讓執行完的constructor function回傳<code>this</code>出來，讓JavaScript programmer決定要怎麼使用它。學到這些感覺很新鮮，以後看到它就知道背後在運行的時候，是怎麼一回事了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://john29917958.github.io/2024/03/05/JavaScript-Reading-Day/" data-id="cltecmuvt0000b7z1ety42ssn" class="article-share-link">Share</a>
+      
+        <a href="http://john29917958.github.io/2024/03/05/JavaScript-Reading-Day/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/code-javascript-programming/" rel="tag">code, javascript, programming</a></li></ul>
+
+    </footer>
+  </div>
   
     
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2023/01/01/Welcome/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Welcome</div>
+    </a>
   
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
 </section>
         
           <aside id="sidebar">
@@ -187,11 +244,13 @@ ga('send', 'pageview');
 <script>
   var disqus_shortname = 'john29917958-github';
   
+  var disqus_url = 'http://john29917958.github.io/2024/03/05/JavaScript-Reading-Day/';
+  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
