@@ -5,15 +5,15 @@
   
   <title>Free Variable | TC</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="有人說，懂JavaScript的closure可以加薪，那closure（閉包）到底是什麼？為什麼會closure可以避免產生global變數？避免跟別人的程式碼發生衝突？避免讓變數意外得被外界程式修改而導致bug產生？其實，在學習如何加薪之前（X）closure（O）之前，必須先建立free variable的觀念，它對closure來說非常重要">
+  <meta name="description" content="有人說，懂JavaScript的closure可以加薪，那closure（閉包）到底是什麼？為什麼會closure可以避免產生global變數？避免跟別人的程式碼發生衝突？避免讓變數意外得被外界程式修改而導致bug產生？其實，在學習如何加薪（X）closure（O）之前，必須先建立free variable的觀念，它對closure來說非常重要">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Free Variable">
 <meta property="og:url" content="http://john29917958.github.io/2024/03/06/Free-Variable/index.html">
 <meta property="og:site_name" content="TC">
-<meta property="og:description" content="有人說，懂JavaScript的closure可以加薪，那closure（閉包）到底是什麼？為什麼會closure可以避免產生global變數？避免跟別人的程式碼發生衝突？避免讓變數意外得被外界程式修改而導致bug產生？其實，在學習如何加薪之前（X）closure（O）之前，必須先建立free variable的觀念，它對closure來說非常重要">
+<meta property="og:description" content="有人說，懂JavaScript的closure可以加薪，那closure（閉包）到底是什麼？為什麼會closure可以避免產生global變數？避免跟別人的程式碼發生衝突？避免讓變數意外得被外界程式修改而導致bug產生？其實，在學習如何加薪（X）closure（O）之前，必須先建立free variable的觀念，它對closure來說非常重要">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2024-03-06T12:29:39.000Z">
-<meta property="article:modified_time" content="2024-03-06T13:27:56.509Z">
+<meta property="article:modified_time" content="2024-03-06T13:43:14.188Z">
 <meta property="article:author" content="汪子超">
 <meta property="article:tag" content="web design, javascript, programming, code">
 <meta name="twitter:card" content="summary">
@@ -112,11 +112,11 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>有人說，懂JavaScript的closure可以加薪，那closure（閉包）到底是什麼？為什麼會closure可以避免產生global變數？避免跟別人的程式碼發生衝突？避免讓變數意外得被外界程式修改而導致bug產生？其實，在學習如何加薪之前（X）closure（O）之前，必須先建立free variable的觀念，它對closure來說非常重要</p>
+        <p>有人說，懂JavaScript的closure可以加薪，那closure（閉包）到底是什麼？為什麼會closure可以避免產生global變數？避免跟別人的程式碼發生衝突？避免讓變數意外得被外界程式修改而導致bug產生？其實，在學習如何加薪（X）closure（O）之前，必須先建立free variable的觀念，它對closure來說非常重要</p>
 <span id="more"></span>
-<p>那究竟，什麼是free variable呢？就不賣關子了，free variable其實是在function body裡沒有被定義，但有被使用到的變數。先看看下面的範例程式碼：</p>
+<p>那究竟，什麼是free variable呢？就不賣關子了，free variable其實是在function body裡沒有被定義，但有被用到的變數。先看看下面的範例程式碼：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getIncreaseSalaryFunc</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> salary = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">increaseSalary</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> message = <span class="string">&quot;Salary is &quot;</span>;</span><br><span class="line">    salary = salary + <span class="number">1000</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(message + salary);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> increaseSalary;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> increaseSalary = getIncreaseSalaryFunc();</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">99999</span>; i++) &#123;</span><br><span class="line">  increaseSalary(); <span class="comment">// This prints my current salary</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>這段程式碼宣告了3個變數，一個是<code>salary</code>，一個是<code>message</code>，還有一個是<code>increaseSalary</code>，那究竟哪個是free variable呢？Ladies and gentlemen，答案是：<code>salary</code>！它在<code>increaseSalary</code> function裡面有被用到，但卻沒有在<code>increaseSalary</code> function裡面被宣告，而是被宣告在<code>increaseSalary</code> function外面的<code>getIncreaseSalaryFunc</code> function裡。這裡我們就可以說，<code>salary</code>變數是<code>increaseSalary</code> function的free variable。<br>好啦，那這跟我們的加薪閉包，也就是closure，有什麼關係呢？恩，我書看到一半，沒辦法，下次再寫吧～<br>（恩……上面的範例程式碼就製造了一個加薪閉包～）。</p>
+<p>這段程式碼宣告了3個變數，一個是<code>salary</code>，一個是<code>message</code>，還有一個是<code>increaseSalary</code>，那究竟哪個是free variable呢？Ladies and gentlemen，答案是：<code>salary</code>！它在<code>increaseSalary</code> function裡有被用到，但卻沒有被宣告在<code>increaseSalary</code> function裡，而是被宣告在外面的<code>getIncreaseSalaryFunc</code> function裡。這裡我們就可以說，<code>salary</code>變數是<code>increaseSalary</code> function的free variable。<br>好啦，那這跟我們的加薪閉包，也就是closure，有什麼關係呢？恩，我書看到一半，沒辦法，下次再寫吧～<br>（恩……上面的範例程式碼就製造了一個加薪閉包～）。</p>
 
       
     </div>
