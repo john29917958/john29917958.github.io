@@ -20,6 +20,6 @@ function Cat(name, age) {
 天哪！那我（其實是筆者我啦）還真是個壞傢伙，寫出了這份糟code。我知道，沒有方法可以避免method function被不斷複製，還可以在呼叫物件方法時，讓JavaScript去呼叫到記憶體中的同一個function，我知道，這只是個幻想……而我，就只能是那個壞傢伙……
 
 # 將將將，prototype登場！
-如果有個地方有很多工具，大家都知道地點，有需求但自己又沒有工具時，就可以去那裡找，不用自己準備……等等，如果functions也可以這樣放在一個共享的地方，那每個instance需要工具自己卻沒有時，就可以去那個地方找，而不用自己存一份*重複的function*，那不就省了很多記憶體嗎？原來，我們在存取物件屬性的時候，JavaScript會先去物件身上找有沒有這屬性，如果有就直接用，如果沒有，就去找物件的prototype屬性裡面有沒有。那麼prototype屬性又是什麼呢？原來我們在定義constructor function時，這個constructor function object被建立後就會有一個prototype屬性，我們在瀏覽器Developer Tools的Console裡輸入下面的程式碼就可以看到:
+如果有個地方有很多工具，大家都知道地點，有需求但自己又沒有工具時，就可以去那裡找，不用自己準備……等等，如果functions也可以這樣放在一個共享的地方，那每個instance需要工具自己卻沒有時，就可以去那個地方找，而不用自己存一份*重複的function*，那不就省了很多記憶體嗎？原來，我們在存取物件屬性的時候，JavaScript會先去物件身上找有沒有這屬性，如果有就直接用，如果沒有，就去找物件的prototype屬性裡面有沒有。那麼prototype屬性又是什麼呢？原來我們在定義constructor function後，只要這個constructor function object被建立就會有一個prototype屬性，我們可以打開瀏覽器的Developer Tools，在Console裡輸入下面的程式碼來看到:
 {% asset_img constructor-prototype-property.jpg %}
 用constructor function建立的instances都會有個prototype屬性指向constructor function object的prototype。那我們如果把建立method的程式碼從constructor function body裡搬出來，並且把method建立到constructor function object的prototype裡面，那用constructor建立instance時，就不會重複建立到內容一樣的method function了，當JavaScript在instance裡找不到要呼叫的method時，會自己去prototype裡找，這麼一來記憶體的使用就更省更有效率囉！
