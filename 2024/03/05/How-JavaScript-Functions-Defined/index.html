@@ -3,17 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: program | TC</title>
+  <title>How JavaScript Functions Defined | TC</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Here holds all stories about me - A fanatic of bringing technique and art into Things.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="TC">
-<meta property="og:url" content="http://john29917958.github.io/tags/program/index.html">
+  <meta name="description" content="原來我以前也不知道，JavaScript執行環境還要先掃一次，再run一次？Function有兩種定義方式？天那！這豈不是要搞混我們嗎？其實，function declaration跟function expression是很有用的！只要弄懂它們背後是如何運作的，可以為寫code生活帶來不少便利性。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How JavaScript Functions Defined">
+<meta property="og:url" content="http://john29917958.github.io/2024/03/05/How-JavaScript-Functions-Defined/index.html">
 <meta property="og:site_name" content="TC">
-<meta property="og:description" content="Here holds all stories about me - A fanatic of bringing technique and art into Things.">
+<meta property="og:description" content="原來我以前也不知道，JavaScript執行環境還要先掃一次，再run一次？Function有兩種定義方式？天那！這豈不是要搞混我們嗎？其實，function declaration跟function expression是很有用的！只要弄懂它們背後是如何運作的，可以為寫code生活帶來不少便利性。">
 <meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2024-03-05T12:46:16.000Z">
+<meta property="article:modified_time" content="2024-03-06T06:40:02.013Z">
 <meta property="article:author" content="汪子超">
-<meta property="article:tag" content="程式, code, program, 軟體, 軟體工程, 資訊">
+<meta property="article:tag" content="web design, javascript, programming, code">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:creator" content="@john29917958">
 <link rel="publisher" href="+%E6%B1%AA%E5%AD%90%E8%B6%85">
@@ -82,20 +84,84 @@ ga('send', 'pageview');
   </div>
 </header>
       <div class="outer">
-        <section id="main">
+        <section id="main"><article id="post-How-JavaScript-Functions-Defined" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/03/05/How-JavaScript-Functions-Defined/" class="article-date">
+  <time datetime="2024-03-05T12:46:16.000Z" itemprop="datePublished">2024-03-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Programming/">Programming</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      
+        <header class="article-header">
+      
+      
   
+    <h1 class="article-title" itemprop="name">
+      How JavaScript Functions Defined
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>原來我以前也不知道，JavaScript執行環境還要先掃一次，再run一次？Function有兩種定義方式？天那！這豈不是要搞混我們嗎？其實，function declaration跟function expression是很有用的！只要弄懂它們背後是如何運作的，可以為寫code生活帶來不少便利性。</p>
+<span id="more"></span>
+<h1 id="兩種Function定義方式"><a href="#兩種Function定義方式" class="headerlink" title="兩種Function定義方式"></a>兩種Function定義方式</h1><p>Function的兩種定義方式到底長什麼樣子呢？我們來參考下面兩段程式碼片段。首先這裡是fucntion declaration的程式碼片段:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">doSomething</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;Do something&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>再來是function expression：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> doSomething = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;Do something&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>兩種都是得到一個名稱是<code>doSomething</code>的function，但程式碼長得卻完全不一樣呢！要知道它們的差別，我們首先要知道JavaScript執行環境如何parse JavaScript檔案。當JavaScript執行環境收到</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://john29917958.github.io/2024/03/05/How-JavaScript-Functions-Defined/" data-id="clted61nh0000tqz1bzx5fhpg" class="article-share-link">Share</a>
+      
+        <a href="http://john29917958.github.io/2024/03/05/How-JavaScript-Functions-Defined/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-design-javascript-programming-code/" rel="tag">web design, javascript, programming, code</a></li></ul>
+
+    </footer>
+  </div>
   
     
+<nav id="article-nav">
   
-    
+    <a href="/2024/03/06/Why-Understand-JavaScript-Prototype/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          為什麼要知道JavaScript Prototype?
+        
+      </div>
+    </a>
   
-    
   
-    
+    <a href="/2024/03/05/JavaScript-Reading-Day/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">JavaScript的New Operator背後做了些什麼？</div>
+    </a>
   
+</nav>
+
   
-    </div></section>
-  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
 </section>
         
           <aside id="sidebar">
@@ -193,11 +259,13 @@ ga('send', 'pageview');
 <script>
   var disqus_shortname = 'john29917958-github';
   
+  var disqus_url = 'http://john29917958.github.io/2024/03/05/How-JavaScript-Functions-Defined/';
+  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
