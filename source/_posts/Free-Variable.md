@@ -1,8 +1,9 @@
 title: Free Variable
 visible: show
 date: 2024-03-06 20:29:39
-tags: web design, javascript, programming, code
+tags: [code, javascript, programming, web, webdesign]
 category: Programming
+keywords: web design, javascript, programming, code
 ---
 有人說，懂JavaScript的closure可以加薪，那closure（閉包）到底是什麼？為什麼會closure可以避免產生global變數？避免跟別人的程式碼發生衝突？避免讓變數意外得被外界程式修改而導致bug產生？其實，在學習如何加薪（X）closure（O）之前，必須先建立free variable的觀念，它對closure來說非常重要
 <!-- more -->

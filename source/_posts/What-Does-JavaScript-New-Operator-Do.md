@@ -1,8 +1,9 @@
 title: JavaScript的New Operator背後做了些什麼？
 visible: show
 date: 2024-03-05 20:31:21
-tags: code, javascript, programming
-category: programming
+tags: [code, javascript, programming, web, webdesign]
+category: Programming
+keywords: web design, javascript, programming, code
 ---
 以前都不知道，原來我們用`new` operator來呼叫constructor function，JavaScript執行環境會做下面幾件事：
 1. 先建立一個空物件，這個空物件會存在JavaScript執行環境的記憶體裡

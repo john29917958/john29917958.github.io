@@ -1,8 +1,9 @@
 title: 為什麼要知道JavaScript Prototype?
 visible: show
 date: 2024-03-06 14:38:47
-tags: web design, javascript, programming, code
+tags: [code, javascript, programming, web, webdesign]
 category: Programming
+keywords: web design, javascript, programming, code
 ---
 我好久以前只知道JavaScript有prototype這東西，但完全不知道為什麼要用它建立物件？今天終於知道，原來prototype可以用來「避免讓物件的method被重複建立」。可以想像嗎？我們不斷用new operator建立物件，做了上百個instances出來，結果裡面的method全都是複製出來的，佔了一堆記憶體。我有reuse code啊？每個instances的method都是由constructor function建立出來的，沒有重寫，也沒有複製貼上啊？問題到底出在哪呢？舉例來說，我們先來看看下面這段code：
 <!-- more -->
