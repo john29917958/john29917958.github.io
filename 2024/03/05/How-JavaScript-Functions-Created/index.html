@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Free Variable | TC</title>
+  <title>How JavaScript Functions Created? | TC</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="有人說，懂JavaScript的closure可以加薪，那closure（閉包）到底是什麼？為什麼會closure可以避免產生global變數？避免跟別人的程式碼發生衝突？避免讓變數意外得被外界程式修改而導致bug產生？其實，在學習如何加薪（X）closure（O）之前，必須先建立free variable的觀念，它對closure來說非常重要">
+  <meta name="description" content="原來我以前也不知道，JavaScript engine還要先掃一次，再run一次？Function有兩種建立方式？其實，function declaration跟function expression是很有用的！只要弄懂它們背後如何運作，就可以為寫code生活帶來不少便利性。Function的兩種定義方式到底長什麼樣子呢？我們直接來參考下面兩段程式碼：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Free Variable">
-<meta property="og:url" content="http://john29917958.github.io/2024/03/06/Free-Variable/index.html">
+<meta property="og:title" content="How JavaScript Functions Created?">
+<meta property="og:url" content="http://john29917958.github.io/2024/03/05/How-JavaScript-Functions-Created/index.html">
 <meta property="og:site_name" content="TC">
-<meta property="og:description" content="有人說，懂JavaScript的closure可以加薪，那closure（閉包）到底是什麼？為什麼會closure可以避免產生global變數？避免跟別人的程式碼發生衝突？避免讓變數意外得被外界程式修改而導致bug產生？其實，在學習如何加薪（X）closure（O）之前，必須先建立free variable的觀念，它對closure來說非常重要">
+<meta property="og:description" content="原來我以前也不知道，JavaScript engine還要先掃一次，再run一次？Function有兩種建立方式？其實，function declaration跟function expression是很有用的！只要弄懂它們背後如何運作，就可以為寫code生活帶來不少便利性。Function的兩種定義方式到底長什麼樣子呢？我們直接來參考下面兩段程式碼：">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2024-03-06T12:29:39.000Z">
-<meta property="article:modified_time" content="2024-03-07T02:13:24.877Z">
+<meta property="article:published_time" content="2024-03-05T12:46:16.000Z">
+<meta property="article:modified_time" content="2024-03-07T03:37:55.647Z">
 <meta property="article:author" content="汪子超">
 <meta property="article:tag" content="programming">
 <meta property="article:tag" content="code">
@@ -88,10 +88,10 @@ ga('send', 'pageview');
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Free-Variable" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-How-JavaScript-Functions-Created" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2024/03/06/Free-Variable/" class="article-date">
-  <time datetime="2024-03-06T12:29:39.000Z" itemprop="datePublished">2024-03-06</time>
+    <a href="/2024/03/05/How-JavaScript-Functions-Created/" class="article-date">
+  <time datetime="2024-03-05T12:46:16.000Z" itemprop="datePublished">2024-03-05</time>
 </a>
     
   <div class="article-category">
@@ -108,7 +108,7 @@ ga('send', 'pageview');
       
   
     <h1 class="article-title" itemprop="name">
-      Free Variable
+      How JavaScript Functions Created?
     </h1>
   
 
@@ -116,18 +116,29 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>有人說，懂JavaScript的closure可以加薪，那closure（閉包）到底是什麼？為什麼會closure可以避免產生global變數？避免跟別人的程式碼發生衝突？避免讓變數意外得被外界程式修改而導致bug產生？其實，在學習如何加薪（X）closure（O）之前，必須先建立free variable的觀念，它對closure來說非常重要</p>
+        <p>原來我以前也不知道，JavaScript engine還要先掃一次，再run一次？Function有兩種建立方式？其實，function declaration跟function expression是很有用的！只要弄懂它們背後如何運作，就可以為寫code生活帶來不少便利性。Function的兩種定義方式到底長什麼樣子呢？我們直接來參考下面兩段程式碼：</p>
 <span id="more"></span>
-<p>那究竟，什麼是free variable呢？就不賣關子了，free variable其實是在function body裡沒有被定義，但有被用到的變數。先看看下面的範例程式碼：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getIncreaseSalaryFunc</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> salary = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">increaseSalary</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> message = <span class="string">&quot;Salary is &quot;</span>;</span><br><span class="line">    salary = salary + <span class="number">1000</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(message + salary);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> increaseSalary;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> increaseSalary = getIncreaseSalaryFunc();</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">99999</span>; i++) &#123;</span><br><span class="line">  increaseSalary(); <span class="comment">// This prints my current salary</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>這段程式碼宣告了3個變數，一個是<code>salary</code>，一個是<code>message</code>，還有一個是<code>increaseSalary</code>，那究竟哪個是free variable呢？Ladies and gentlemen，答案是：<code>salary</code>！它在<code>increaseSalary</code> function裡有被用到，但卻沒有被宣告在<code>increaseSalary</code> function裡，而是被宣告在外面的<code>getIncreaseSalaryFunc</code> function裡。這裡我們就可以說，<code>salary</code>變數是<code>increaseSalary</code> function的free variable。<br>好啦，那這跟我們的加薪閉包，也就是closure，有什麼關係呢？恩，我書看到一半，沒辦法，下次再寫吧～<br>（恩……上面的範例程式碼就製造了一個加薪閉包～）。</p>
+
+<h1 id="兩種Function的定義方式"><a href="#兩種Function的定義方式" class="headerlink" title="兩種Function的定義方式"></a>兩種Function的定義方式</h1><p>首先這裡是fucntion declaration的程式碼片段:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">doSomething</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;Do something&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>再來是function expression：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> doSomething = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;Do something&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>用這兩種方法都可以得到名字叫<code>doSomething</code>的function，但程式碼長得卻完全不一樣呢！要知道它們的差別，我們首先要知道JavaScript engine如何處理下載好的JavaScript文件。</p>
+<h1 id="JavaScript-Engine如何處理JavaScript文件"><a href="#JavaScript-Engine如何處理JavaScript文件" class="headerlink" title="JavaScript Engine如何處理JavaScript文件?"></a>JavaScript Engine如何處理JavaScript文件?</h1><h2 id="Function-Declarations"><a href="#Function-Declarations" class="headerlink" title="Function Declarations"></a>Function Declarations</h2><p>一開始，JavaScript engine會先從文件的開頭掃到文件的結尾，為的是找出所有的function declaration statements。每找到一個function declaration statement，JavaScript會在記憶體裡建立一個function物件，然後根據function的名稱來建立一個名字一模一樣的變數，並將一個指向function物件的reference指派這個變數。到這裡，JavaScript engine就完成所有的function declaration工作啦！不過，JavaScript engine的工作還沒完呢！</p>
+<h2 id="Function-Expressions"><a href="#Function-Expressions" class="headerlink" title="Function Expressions"></a>Function Expressions</h2><p>緊接著，JavaScript engine會再回到JavaScript文件的開頭，開始執行程式碼。如果在執行過程中有看到function expression的程式碼，JavaScript engine會在記憶體中建立一個function物件，並且回傳它的reference出來，交給程式設計師使用。舉例來說，JavaScript程式設計師可以把這個reference指定給一個變數，儲存起來以便之後使用。咦，那function expression程式碼還沒被執行到，不就不會建立可以用的function出來嗎？</p>
+<h1 id="兩種建立方法，哪裡不一樣？"><a href="#兩種建立方法，哪裡不一樣？" class="headerlink" title="兩種建立方法，哪裡不一樣？"></a>兩種建立方法，哪裡不一樣？</h1><p>我認為它們最大的差別就是可以被存取到的地方不同啦！用function delcaration建立的function，在它被建立的scope裡面的任何地方，都可以存取得到。這是因為JavaScript engine會把建立function後自行建立的變數移到目前scope的開頭，稱為hoisting，所以即使function declaration被寫在文件的尾端，我們也可以在JavaScript程式碼的開頭使用它：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">showMeYourAge(); <span class="comment">// Humm, I&#x27;m always 18 years old, wherever I call that</span></span><br><span class="line"><span class="comment">// function declaration thing.</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">showMeYourAge</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;I&#x27;m always 18 years old.&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">showMeYourAge(); <span class="comment">// Humm, I&#x27;m still 18 years old, like I just said.</span></span><br></pre></td></tr></table></figure>
+<p>那麼用function expression建立的functions呢？恩，我們就只能在function expression程式碼被JavaScript engine evaluate之後才能使用了：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">showMeYourAge(); <span class="comment">// We can&#x27;t do this here</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> showMeYourAge = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;I&#x27;m 18 years old only after I was born.&quot;</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">showMeYourAge(); <span class="comment">// This is correct</span></span><br></pre></td></tr></table></figure>
+
+<p>掌握function declaration和function expression，開啟嶄新的JavaScript道路吧！</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://john29917958.github.io/2024/03/06/Free-Variable/" data-id="cltfs0x070000jrz1dusa9r7y" class="article-share-link">Share</a>
+      <a data-url="http://john29917958.github.io/2024/03/05/How-JavaScript-Functions-Created/" data-id="cltglj9mu0000mmz17vlr7ah9" class="article-share-link">Share</a>
       
-        <a href="http://john29917958.github.io/2024/03/06/Free-Variable/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://john29917958.github.io/2024/03/05/How-JavaScript-Functions-Created/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/code/" rel="tag">code</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/programming/" rel="tag">programming</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web/" rel="tag">web</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webdesign/" rel="tag">webdesign</a></li></ul>
@@ -138,10 +149,19 @@ ga('send', 'pageview');
     
 <nav id="article-nav">
   
+    <a href="/2024/03/06/Why-Understand-JavaScript-Prototype/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          為什麼要知道JavaScript Prototype?
+        
+      </div>
+    </a>
   
-    <a href="/2024/03/06/Why-Understand-JavaScript-Prototype/" id="article-nav-older" class="article-nav-link-wrap">
+  
+    <a href="/2024/03/05/What-Does-JavaScript-New-Operator-Do/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">為什麼要知道JavaScript Prototype?</div>
+      <div class="article-nav-title">JavaScript的New Operator背後做了些什麼？</div>
     </a>
   
 </nav>
@@ -252,7 +272,7 @@ ga('send', 'pageview');
 <script>
   var disqus_shortname = 'john29917958-github';
   
-  var disqus_url = 'http://john29917958.github.io/2024/03/06/Free-Variable/';
+  var disqus_url = 'http://john29917958.github.io/2024/03/05/How-JavaScript-Functions-Created/';
   
   (function(){
     var dsq = document.createElement('script');

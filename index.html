@@ -191,6 +191,59 @@ ga('send', 'pageview');
     
   
     
+      <article id="post-How-JavaScript-Functions-Created" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/03/05/How-JavaScript-Functions-Created/" class="article-date">
+  <time datetime="2024-03-05T12:46:16.000Z" itemprop="datePublished">2024-03-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Programming/">Programming</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      
+        <header class="article-header default-header">
+      
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/03/05/How-JavaScript-Functions-Created/">How JavaScript Functions Created?</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>原來我以前也不知道，JavaScript engine還要先掃一次，再run一次？Function有兩種建立方式？其實，function declaration跟function expression是很有用的！只要弄懂它們背後如何運作，就可以為寫code生活帶來不少便利性。Function的兩種定義方式到底長什麼樣子呢？我們直接來參考下面兩段程式碼：</p>
+        
+          <p class="article-more-link">
+            <a href="/2024/03/05/How-JavaScript-Functions-Created/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://john29917958.github.io/2024/03/05/How-JavaScript-Functions-Created/" data-id="cltglj9mu0000mmz17vlr7ah9" class="article-share-link">Share</a>
+      
+        <a href="http://john29917958.github.io/2024/03/05/How-JavaScript-Functions-Created/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/code/" rel="tag">code</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/programming/" rel="tag">programming</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web/" rel="tag">web</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webdesign/" rel="tag">webdesign</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+    
+  
+    
       <article id="post-What-Does-JavaScript-New-Operator-Do" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2024/03/05/What-Does-JavaScript-New-Operator-Do/" class="article-date">
@@ -219,11 +272,11 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>以前都不知道，原來我們用<code>new</code> operator來呼叫constructor function，JavaScript執行環境會做下面幾件事：</p>
+        <p>以前都不知道，原來我們用<code>new</code> operator來呼叫constructor function，JavaScript engine會做下面幾件事：</p>
 <ol>
-<li>先建立一個空物件，這個空物件會存在JavaScript執行環境的記憶體裡</li>
+<li>先建立一個空物件，這個空物件會存在記憶體裡</li>
 <li>然後把<code>this</code>指派給這個空物件。<code>this</code>其實是指向這個空物件，讓constructor function body可以用的東西，通常會被用來新增物件的屬性，例如：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Dog</span>(<span class="params">name, age, weight</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">this</span>.name = name; <span class="comment">// Uses this keyword to initialize object property &quot;name&quot;</span></span><br><span class="line">  <span class="built_in">this</span>.age = age;</span><br><span class="line">  <span class="built_in">this</span>.weight = weight;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>接著，JavaScript執行環境會呼叫constructor function，把參數指派進去</li>
+<li>接著，JavaScript engine會呼叫constructor function，把參數指派進去</li>
 <li>執行constructor function body，讓程式碼來擴充物件的屬性</li>
 <li>最後讓執行完的constructor function回傳<code>this</code>出來，讓JavaScript programmer決定要怎麼使用它。例如把它放到變數裡存起來：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> jack = <span class="keyword">new</span> Dog(<span class="string">&quot;Jack&quot;</span>, <span class="number">5</span>, <span class="number">7</span>);</span><br></pre></td></tr></table></figure></li>
 </ol>
@@ -300,8 +353,6 @@ ga('send', 'pageview');
   
     
   
-    
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
@@ -315,7 +366,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a><span class="category-list-count">10</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a><span class="category-list-count">11</span></li></ul>
     </div>
   </div>
 
@@ -324,7 +375,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/class/" rel="tag">class</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code/" rel="tag">code</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/coding/" rel="tag">coding</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/course/" rel="tag">course</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/education/" rel="tag">education</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/" rel="tag">javascript</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/program/" rel="tag">program</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/programming/" rel="tag">programming</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/teaching/" rel="tag">teaching</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web/" rel="tag">web</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webdesign/" rel="tag">webdesign</a><span class="tag-list-count">3</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/class/" rel="tag">class</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code/" rel="tag">code</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/coding/" rel="tag">coding</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/course/" rel="tag">course</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/education/" rel="tag">education</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/" rel="tag">javascript</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/program/" rel="tag">program</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/programming/" rel="tag">programming</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/teaching/" rel="tag">teaching</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web/" rel="tag">web</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webdesign/" rel="tag">webdesign</a><span class="tag-list-count">4</span></li></ul>
     </div>
   </div>
 
@@ -333,7 +384,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/class/" style="font-size: 13.33px;">class</a> <a href="/tags/code/" style="font-size: 16.67px;">code</a> <a href="/tags/coding/" style="font-size: 13.33px;">coding</a> <a href="/tags/course/" style="font-size: 13.33px;">course</a> <a href="/tags/education/" style="font-size: 13.33px;">education</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/program/" style="font-size: 13.33px;">program</a> <a href="/tags/programming/" style="font-size: 20px;">programming</a> <a href="/tags/teaching/" style="font-size: 13.33px;">teaching</a> <a href="/tags/web/" style="font-size: 10px;">web</a> <a href="/tags/webdesign/" style="font-size: 10px;">webdesign</a>
+      <a href="/tags/class/" style="font-size: 10px;">class</a> <a href="/tags/code/" style="font-size: 15px;">code</a> <a href="/tags/coding/" style="font-size: 10px;">coding</a> <a href="/tags/course/" style="font-size: 10px;">course</a> <a href="/tags/education/" style="font-size: 10px;">education</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/program/" style="font-size: 10px;">program</a> <a href="/tags/programming/" style="font-size: 20px;">programming</a> <a href="/tags/teaching/" style="font-size: 10px;">teaching</a> <a href="/tags/web/" style="font-size: 10px;">web</a> <a href="/tags/webdesign/" style="font-size: 10px;">webdesign</a>
     </div>
   </div>
 
@@ -342,7 +393,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">三月 2024</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">一月 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">九月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">八月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">七月 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">一月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">十月 2020</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">三月 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">一月 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">九月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">八月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">七月 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">一月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">十月 2020</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -362,15 +413,15 @@ ga('send', 'pageview');
           </li>
         
           <li>
+            <a href="/2024/03/05/How-JavaScript-Functions-Created/">How JavaScript Functions Created?</a>
+          </li>
+        
+          <li>
             <a href="/2024/03/05/What-Does-JavaScript-New-Operator-Do/">JavaScript的New Operator背後做了些什麼？</a>
           </li>
         
           <li>
             <a href="/2023/01/01/Welcome/">Welcome</a>
-          </li>
-        
-          <li>
-            <a href="/2022/09/04/Write-Your-First-Program-In-10-Minutes/">Write Your First Program In 10 Minutes</a>
           </li>
         
       </ul>
