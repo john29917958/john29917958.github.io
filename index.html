@@ -191,9 +191,9 @@ ga('send', 'pageview');
     
   
     
-      <article id="post-JavaScript-Reading-Day" class="article article-type-post" itemscope itemprop="blogPost">
+      <article id="post-What-Does-JavaScript-New-Operator-Do" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2024/03/05/JavaScript-Reading-Day/" class="article-date">
+    <a href="/2024/03/05/What-Does-JavaScript-New-Operator-Do/" class="article-date">
   <time datetime="2024-03-05T12:31:21.000Z" itemprop="datePublished">2024-03-05</time>
 </a>
     
@@ -211,7 +211,7 @@ ga('send', 'pageview');
       
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2024/03/05/JavaScript-Reading-Day/">JavaScript的New Operator背後做了些什麼？</a>
+      <a class="article-title" href="/2024/03/05/What-Does-JavaScript-New-Operator-Do/">JavaScript的New Operator背後做了些什麼？</a>
     </h1>
   
 
@@ -219,14 +219,22 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>今天學到了一個很重要的JavaScript觀念，是<code>new</code> operator在執行時，背後做了些什麼。以前都不知道，原來我們如果用<code>new</code> operator來呼叫constructor function，JavaScript執行環境會先建立一個空物件，然後把<code>this</code>指派給它。<code>this</code>其實是指向這個空物件，讓constructor function body可以使用的東西。接著，JavaScript執行環境會呼叫constructor function，把參數指派給它，再執行constructor function body，最後讓執行完的constructor function回傳<code>this</code>出來，讓JavaScript programmer決定要怎麼使用它。學到這些感覺很新鮮，以後看到它就知道背後在運行的時候，是怎麼一回事了。</p>
+        <p>以前都不知道，原來我們用<code>new</code> operator來呼叫constructor function，JavaScript執行環境會做下面幾件事：</p>
+<ol>
+<li>先建立一個空物件，這個空物件會存在JavaScript執行環境的記憶體裡</li>
+<li>然後把<code>this</code>指派給這個空物件。<code>this</code>其實是指向這個空物件，讓constructor function body可以用的東西，通常會被用來新增物件的屬性，例如：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Dog</span>(<span class="params">name, age, weight</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">this</span>.name = name; <span class="comment">// Uses this keyword to initialize object property &quot;name&quot;</span></span><br><span class="line">  <span class="built_in">this</span>.age = age;</span><br><span class="line">  <span class="built_in">this</span>.weight = weight;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>接著，JavaScript執行環境會呼叫constructor function，把參數指派進去</li>
+<li>執行constructor function body，讓程式碼來擴充物件的屬性</li>
+<li>最後讓執行完的constructor function回傳<code>this</code>出來，讓JavaScript programmer決定要怎麼使用它。例如把它放到變數裡存起來：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> jack = <span class="keyword">new</span> Dog(<span class="string">&quot;Jack&quot;</span>, <span class="number">5</span>, <span class="number">7</span>);</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>學到這些感覺很新鮮，以後看到new operator時就知道，它背後是如何運行了。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://john29917958.github.io/2024/03/05/JavaScript-Reading-Day/" data-id="cltecmuvt0000b7z1ety42ssn" class="article-share-link">Share</a>
+      <a data-url="http://john29917958.github.io/2024/03/05/What-Does-JavaScript-New-Operator-Do/" data-id="cltgl03m100068pz18x8f9kpa" class="article-share-link">Share</a>
       
-        <a href="http://john29917958.github.io/2024/03/05/JavaScript-Reading-Day/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://john29917958.github.io/2024/03/05/What-Does-JavaScript-New-Operator-Do/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/code-javascript-programming/" rel="tag">code, javascript, programming</a></li></ul>
@@ -354,7 +362,7 @@ ga('send', 'pageview');
           </li>
         
           <li>
-            <a href="/2024/03/05/JavaScript-Reading-Day/">JavaScript的New Operator背後做了些什麼？</a>
+            <a href="/2024/03/05/What-Does-JavaScript-New-Operator-Do/">JavaScript的New Operator背後做了些什麼？</a>
           </li>
         
           <li>
