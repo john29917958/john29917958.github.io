@@ -5,15 +5,15 @@
   
   <title>How JavaScript Functions Created? | TC</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="原來我以前也不知道，JavaScript engine還要先掃一次文件，再run一次？Function有兩種建立方式？其實，function declaration跟function expression是很有用的！只要弄懂它們背後如何運作，就可以為寫code生活帶來不少便利性。Function的兩種定義方式到底長什麼樣子呢？我們直接來參考下面兩段程式碼：">
+  <meta name="description" content="原來我以前也不知道，JavaScript engine下載完JavaScript文件，還要先掃一次，再run一次？Function有兩種建立方式？其實，function declaration跟function expression是很有用的！弄懂它們背後如何運作，應該可以為寫code生活帶來不少便利性。Function的兩種定義方式到底長什麼樣子呢？先直接來看看下面兩段程式碼：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="How JavaScript Functions Created?">
 <meta property="og:url" content="http://john29917958.github.io/2024/03/05/How-JavaScript-Functions-Created/index.html">
 <meta property="og:site_name" content="TC">
-<meta property="og:description" content="原來我以前也不知道，JavaScript engine還要先掃一次文件，再run一次？Function有兩種建立方式？其實，function declaration跟function expression是很有用的！只要弄懂它們背後如何運作，就可以為寫code生活帶來不少便利性。Function的兩種定義方式到底長什麼樣子呢？我們直接來參考下面兩段程式碼：">
+<meta property="og:description" content="原來我以前也不知道，JavaScript engine下載完JavaScript文件，還要先掃一次，再run一次？Function有兩種建立方式？其實，function declaration跟function expression是很有用的！弄懂它們背後如何運作，應該可以為寫code生活帶來不少便利性。Function的兩種定義方式到底長什麼樣子呢？先直接來看看下面兩段程式碼：">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2024-03-05T12:46:16.000Z">
-<meta property="article:modified_time" content="2024-03-07T03:42:43.402Z">
+<meta property="article:modified_time" content="2024-03-07T03:58:33.951Z">
 <meta property="article:author" content="汪子超">
 <meta property="article:tag" content="programming">
 <meta property="article:tag" content="code">
@@ -116,22 +116,22 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>原來我以前也不知道，JavaScript engine還要先掃一次文件，再run一次？Function有兩種建立方式？其實，function declaration跟function expression是很有用的！只要弄懂它們背後如何運作，就可以為寫code生活帶來不少便利性。Function的兩種定義方式到底長什麼樣子呢？我們直接來參考下面兩段程式碼：</p>
+        <p>原來我以前也不知道，JavaScript engine下載完JavaScript文件，還要先掃一次，再run一次？Function有兩種建立方式？其實，function declaration跟function expression是很有用的！弄懂它們背後如何運作，應該可以為寫code生活帶來不少便利性。Function的兩種定義方式到底長什麼樣子呢？先直接來看看下面兩段程式碼：</p>
 <span id="more"></span>
 
 <h1 id="兩種Function的定義方式"><a href="#兩種Function的定義方式" class="headerlink" title="兩種Function的定義方式"></a>兩種Function的定義方式</h1><p>首先這裡是fucntion declaration的程式碼片段:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">doSomething</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;Do something&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>再來是function expression：</p>
+<p>再來是function expression的：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> doSomething = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;Do something&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>用這兩種方法都可以得到名字叫<code>doSomething</code>的function，但程式碼長得卻完全不一樣呢！要知道它們的差別，我們首先要知道JavaScript engine如何處理下載好的JavaScript文件。</p>
-<h1 id="JavaScript-Engine如何處理JavaScript文件"><a href="#JavaScript-Engine如何處理JavaScript文件" class="headerlink" title="JavaScript Engine如何處理JavaScript文件?"></a>JavaScript Engine如何處理JavaScript文件?</h1><h2 id="Function-Declarations"><a href="#Function-Declarations" class="headerlink" title="Function Declarations"></a>Function Declarations</h2><p>一開始，JavaScript engine會先從文件的開頭掃到文件的結尾，為的是找出所有的function declaration statements。每找到一個function declaration statement，JavaScript會在記憶體裡建立一個function物件，然後根據function的名稱來建立一個名字一模一樣的變數，並將一個指向function物件的reference指派這個變數。到這裡，JavaScript engine就完成所有的function declaration工作啦！不過，JavaScript engine的工作還沒完呢！</p>
-<h2 id="Function-Expressions"><a href="#Function-Expressions" class="headerlink" title="Function Expressions"></a>Function Expressions</h2><p>緊接著，JavaScript engine會再回到JavaScript文件的開頭，開始執行程式碼。如果在執行過程中有看到function expression的程式碼，JavaScript engine會在記憶體中建立一個function物件，並且回傳它的reference出來，交給程式設計師使用。舉例來說，JavaScript程式設計師可以把這個reference指定給一個變數，儲存起來以便之後使用。咦，那function expression程式碼還沒被執行到，不就不會建立可以用的function出來嗎？</p>
-<h1 id="兩種建立方法，哪裡不一樣？"><a href="#兩種建立方法，哪裡不一樣？" class="headerlink" title="兩種建立方法，哪裡不一樣？"></a>兩種建立方法，哪裡不一樣？</h1><p>我認為它們最大的差別就是可以被存取到的地方不同啦！用function delcaration建立的function，在它被建立的scope裡面的任何地方，都可以存取得到。這是因為JavaScript engine會把建立function後自行建立的變數移到目前scope的開頭，稱為hoisting，所以即使function declaration被寫在文件的尾端，我們也可以在JavaScript程式碼的開頭使用它：</p>
+<p>用這兩種方法都可以得到名字叫<code>doSomething</code>的function，但程式碼長得卻完全不一樣呢！這有差別嗎？要知道它們的差別，我們首先要知道JavaScript engine如何處理下載好的JavaScript文件。</p>
+<h1 id="JavaScript-Engine如何處理JavaScript文件"><a href="#JavaScript-Engine如何處理JavaScript文件" class="headerlink" title="JavaScript Engine如何處理JavaScript文件?"></a>JavaScript Engine如何處理JavaScript文件?</h1><h2 id="Function-Declarations"><a href="#Function-Declarations" class="headerlink" title="Function Declarations"></a>Function Declarations</h2><p>一開始，JavaScript engine會先從文件的開頭掃到文件的結尾，為的是找出所有的function declaration statements。每找到一個function declaration statement，JavaScript engine會在記憶體裡建立一個function物件，然後根據function的名稱來建立一個名字一模一樣的變數，並將一個指向function物件的reference指派給這個變數。到這裡，JavaScript engine就完成所有的function declaration工作啦！不過，JavaScript engine的工作還沒結束呢！</p>
+<h2 id="Function-Expressions"><a href="#Function-Expressions" class="headerlink" title="Function Expressions"></a>Function Expressions</h2><p>緊接著，JavaScript engine會再回到JavaScript文件的開頭，開始執行程式碼。如果在執行過程中看到function expression的程式碼，JavaScript engine會建立一個function物件到記憶體裡，並回傳它的reference出來，交給程式設計師使用。舉例來說，JavaScript程式設計師可以把這個reference指定給一個變數，儲存起來以便之後使用。咦，那function expression程式碼還沒被執行到，不就不能用這個function了嗎？</p>
+<h1 id="兩種建立方法，哪裡不一樣？"><a href="#兩種建立方法，哪裡不一樣？" class="headerlink" title="兩種建立方法，哪裡不一樣？"></a>兩種建立方法，哪裡不一樣？</h1><p>我認為它們最大的差別就是可以被存取到的地方不同啦！用function delcaration建立的function，在它被建立的scope裡的任何地方，都可以存取得到。這是因為JavaScript engine會把建立function後自行建立的變數移到目前scope的開頭，稱為hoisting，所以即使function declaration被寫在文件的尾端，我們也可以在JavaScript程式碼的開頭使用它：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">showMeYourAge(); <span class="comment">// Humm, I&#x27;m always 18 years old, wherever I call that</span></span><br><span class="line"><span class="comment">// function declaration thing.</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">showMeYourAge</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;I&#x27;m always 18 years old.&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">showMeYourAge(); <span class="comment">// Humm, I&#x27;m still 18 years old, like I just said.</span></span><br></pre></td></tr></table></figure>
 <p>那麼用function expression建立的functions呢？恩，我們就只能在function expression程式碼被JavaScript engine evaluate之後才能使用了：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">showMeYourAge(); <span class="comment">// We can&#x27;t do this here</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> showMeYourAge = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;I&#x27;m 18 years old only after I was born.&quot;</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">showMeYourAge(); <span class="comment">// This is correct</span></span><br></pre></td></tr></table></figure>
 
-<p>掌握function declaration和function expression，開啟嶄新的JavaScript道路吧！</p>
+<p>快來掌握function declaration和function expression，開啟嶄新的JavaScript道路吧！</p>
 
       
     </div>
