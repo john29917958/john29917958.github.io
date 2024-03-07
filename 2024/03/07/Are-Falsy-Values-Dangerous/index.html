@@ -3,20 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>為什麼要知道JavaScript Prototype? | TC</title>
+  <title>Falsy Values危險嗎？ | TC</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我好久以前只知道JavaScript有prototype這東西，但完全不知道為什麼要用它建立物件？今天終於知道，原來prototype可以用來「避免讓物件的method被重複建立」。可以想像嗎？我們不斷用new operator建立物件，做了上百個instances出來，結果裡面的method全都是複製出來的，佔了一堆記憶體。我有reuse code啊？每個instances的method都是由c">
+  <meta name="description" content="JavaScript的falsy values很危險嗎？它們是什麼？我到處都在用啊？">
 <meta property="og:type" content="article">
-<meta property="og:title" content="為什麼要知道JavaScript Prototype?">
-<meta property="og:url" content="http://john29917958.github.io/2024/03/06/Why-Understand-JavaScript-Prototype/index.html">
+<meta property="og:title" content="Falsy Values危險嗎？">
+<meta property="og:url" content="http://john29917958.github.io/2024/03/07/Are-Falsy-Values-Dangerous/index.html">
 <meta property="og:site_name" content="TC">
-<meta property="og:description" content="我好久以前只知道JavaScript有prototype這東西，但完全不知道為什麼要用它建立物件？今天終於知道，原來prototype可以用來「避免讓物件的method被重複建立」。可以想像嗎？我們不斷用new operator建立物件，做了上百個instances出來，結果裡面的method全都是複製出來的，佔了一堆記憶體。我有reuse code啊？每個instances的method都是由c">
+<meta property="og:description" content="JavaScript的falsy values很危險嗎？它們是什麼？我到處都在用啊？">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="http://john29917958.github.io/2024/03/06/Why-Understand-JavaScript-Prototype/constructor-prototype-property.jpg">
-<meta property="og:image" content="http://john29917958.github.io/2024/03/06/Why-Understand-JavaScript-Prototype/instance-prototype-property.jpg">
-<meta property="og:image" content="http://john29917958.github.io/2024/03/06/Why-Understand-JavaScript-Prototype/prototype-run-result.jpg">
-<meta property="article:published_time" content="2024-03-06T06:38:47.000Z">
-<meta property="article:modified_time" content="2024-03-07T02:13:10.255Z">
+<meta property="article:published_time" content="2024-03-07T04:08:56.000Z">
+<meta property="article:modified_time" content="2024-03-07T13:09:36.730Z">
 <meta property="article:author" content="汪子超">
 <meta property="article:tag" content="programming">
 <meta property="article:tag" content="code">
@@ -24,7 +21,6 @@
 <meta property="article:tag" content="webdesign">
 <meta property="article:tag" content="web">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://john29917958.github.io/2024/03/06/Why-Understand-JavaScript-Prototype/constructor-prototype-property.jpg">
 <meta name="twitter:creator" content="@john29917958">
 <link rel="publisher" href="+%E6%B1%AA%E5%AD%90%E8%B6%85">
 <meta property="fb:admins" content="100002225898735">
@@ -89,10 +85,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Why-Understand-JavaScript-Prototype" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Are-Falsy-Values-Dangerous" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2024/03/06/Why-Understand-JavaScript-Prototype/" class="article-date">
-  <time datetime="2024-03-06T06:38:47.000Z" itemprop="datePublished">2024-03-06</time>
+    <a href="/2024/03/07/Are-Falsy-Values-Dangerous/" class="article-date">
+  <time datetime="2024-03-07T04:08:56.000Z" itemprop="datePublished">2024-03-07</time>
 </a>
     
   <div class="article-category">
@@ -109,7 +105,7 @@
       
   
     <h1 class="article-title" itemprop="name">
-      為什麼要知道JavaScript Prototype?
+      Falsy Values危險嗎？
     </h1>
   
 
@@ -117,25 +113,22 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>我好久以前只知道JavaScript有prototype這東西，但完全不知道為什麼要用它建立物件？今天終於知道，原來prototype可以用來「避免讓物件的method被重複建立」。可以想像嗎？我們不斷用new operator建立物件，做了上百個instances出來，結果裡面的method全都是複製出來的，佔了一堆記憶體。我有reuse code啊？每個instances的method都是由constructor function建立出來的，沒有重寫，也沒有複製貼上啊？問題到底出在哪呢？舉例來說，我們先來看看下面這段code：</p>
+        <p>JavaScript的falsy values很危險嗎？它們是什麼？我到處都在用啊？</p>
 <span id="more"></span>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Cat</span>(<span class="params">name, age</span>) </span>&#123;</span><br><span class="line"> <span class="built_in">this</span>.name = name;</span><br><span class="line"> <span class="built_in">this</span>.age = age;</span><br><span class="line"> <span class="built_in">this</span>.meow = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">   <span class="built_in">console</span>.log(<span class="built_in">this</span>.name + <span class="string">&quot; meowed.&quot;</span>);</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="被重複建立的Method-Function"><a href="#被重複建立的Method-Function" class="headerlink" title="被重複建立的Method Function"></a>被重複建立的Method Function</h1><p>依照上面的範例來看，如果我們用這個Cat constructor function建立物件，的確不需要幫每個instances都寫一次meow method，只要在constructor裡面寫好就好。那麼，這段code有什麼問題嗎？原來問題就出在<code>this.meow</code>的定義。直接寫function expression並指定給meow屬性，會讓Cat物件被建立時，不斷產生新的meow function到記憶體中，即便function的內容都一樣。<br>天哪！那我（其實是筆者我啦）還真是個壞傢伙，寫出了這份糟code。我知道，沒有方法可以避免method function被不斷複製，還可以在呼叫物件方法時，讓JavaScript去呼叫到記憶體中的同一個function，我知道，這只是個幻想……而我，就只能是那個壞傢伙……</p>
-<h1 id="將將將，prototype登場！"><a href="#將將將，prototype登場！" class="headerlink" title="將將將，prototype登場！"></a>將將將，prototype登場！</h1><p>如果有個地方有很多工具，大家都知道地點，有需求但自己又沒有工具時，就可以去那裡找，不用自己準備……等等，如果functions也可以這樣放在一個共享的地方，那每個instance需要工具自己卻沒有時，就可以去那裡找，而不用自己存一份<em>重複的function</em>，這樣不就省了很多記憶體嗎？原來，我們在存取物件屬性的時候，JavaScript會先去物件身上找有沒有這屬性，如果有就直接用，如果沒有，就去物件的prototype屬性裡面找。那麼prototype又是什麼呢？原來在我們定義constructor function後，只要這個constructor function object被建立，它就會有一個prototype屬性。我們可以打開瀏覽器的Developer Tools，在Console裡輸入下面的程式碼來看到:</p>
-<img src="/2024/03/06/Why-Understand-JavaScript-Prototype/constructor-prototype-property.jpg" class="">
-<p>而用constructor function建立的instances，都會有個prototype屬性指向constructor function object的prototype：</p>
-<img src="/2024/03/06/Why-Understand-JavaScript-Prototype/instance-prototype-property.jpg" class="">
-<p>那我們如果把建立method的程式碼從constructor function body裡搬出來，並且把method建立到constructor function object的prototype裡面，那用constructor建立instance時，就不會重複建立到內容一樣的method function了，當JavaScript在instance裡找不到要呼叫的method時，會自己去prototype裡找，這麼一來記憶體的使用就更省更有效率囉！下面是優化後的範例程式碼：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Cat</span>(<span class="params">name, age</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">this</span>.name = name;</span><br><span class="line">  <span class="built_in">this</span>.age = age;</span><br><span class="line">&#125;</span><br><span class="line">Cat.prototype.meow = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">this</span>.name + <span class="string">&quot; meowed.&quot;</span>);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">let</span> alice = <span class="keyword">new</span> Cat(<span class="string">&quot;Alice&quot;</span>, <span class="number">5</span>);</span><br><span class="line">alice.meow();</span><br><span class="line"><span class="keyword">let</span> bob = <span class="keyword">new</span> Cat(<span class="string">&quot;Bob&quot;</span>, <span class="number">7</span>);</span><br><span class="line">bob.meow();</span><br></pre></td></tr></table></figure>
-<p>把它放到HTML文件裡、用瀏覽器Developer Tools的Console、或是Node.js等執行看看吧！</p>
-<img src="/2024/03/06/Why-Understand-JavaScript-Prototype/prototype-run-result.jpg" class="">
+
+<p>大綱：</p>
+<ul>
+<li>Falsy values是什麼?</li>
+<li>Conditionals和comparison operator</li>
+<li></li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://john29917958.github.io/2024/03/06/Why-Understand-JavaScript-Prototype/" data-id="cltfmq2wm000cfdz1bleqf826" class="article-share-link">Share</a>
+      <a data-url="http://john29917958.github.io/2024/03/07/Are-Falsy-Values-Dangerous/" data-id="clth8vr0z0000t7z1hjwzbcvt" class="article-share-link">Share</a>
       
-        <a href="http://john29917958.github.io/2024/03/06/Why-Understand-JavaScript-Prototype/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://john29917958.github.io/2024/03/07/Are-Falsy-Values-Dangerous/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/code/" rel="tag">code</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/programming/" rel="tag">programming</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web/" rel="tag">web</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webdesign/" rel="tag">webdesign</a></li></ul>
@@ -146,19 +139,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2024/03/06/Free-Variable/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Free Variable
-        
-      </div>
-    </a>
   
-  
-    <a href="/2024/03/05/How-JavaScript-Functions-Created/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2024/03/06/Free-Variable/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">How JavaScript Functions Created?</div>
+      <div class="article-nav-title">Free Variable</div>
     </a>
   
 </nav>
@@ -269,7 +253,7 @@
 <script>
   var disqus_shortname = 'john29917958-github';
   
-  var disqus_url = 'http://john29917958.github.io/2024/03/06/Why-Understand-JavaScript-Prototype/';
+  var disqus_url = 'http://john29917958.github.io/2024/03/07/Are-Falsy-Values-Dangerous/';
   
   (function(){
     var dsq = document.createElement('script');
