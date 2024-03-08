@@ -14,7 +14,7 @@
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="http://john29917958.github.io/2024/03/07/Are-Falsy-Values-Dangerous/unexpected-result.jpg">
 <meta property="article:published_time" content="2024-03-07T04:08:56.000Z">
-<meta property="article:modified_time" content="2024-03-08T10:31:52.805Z">
+<meta property="article:modified_time" content="2024-03-08T10:39:44.009Z">
 <meta property="article:author" content="汪子超">
 <meta property="article:tag" content="programming">
 <meta property="article:tag" content="code">
@@ -120,7 +120,7 @@
 <p>恩，實際上，如果我們真的這樣寫，執行後的結果會是：</p>
 <span id="more"></span>
 <img src="/2024/03/07/Are-Falsy-Values-Dangerous/unexpected-result.jpg" class="">
-<p>什麼！？我明明就用空字串<code>&quot;&quot;</code>初始化第二地址<code>address2</code>變數了，怎麼JavaScript還是把它當成沒有初始化呢？原來是JavaScript在conditional裡面會把空字串當成<code>false</code>啦！所以即使我們已經初始化好<code>address2</code>變數了，還是得到意料之外的結果。</p>
+<p>什麼！？我明明就用空字串<code>&quot;&quot;</code>初始化第二地址<code>address2</code>變數了，怎麼JavaScript還是把它當成沒有初始化呢？原來是JavaScript在conditional裡面會把空字串當成<code>false</code>啦！所以即使我們已經用空字串<code>&quot;&quot;</code>初始化好<code>address2</code>變數了，它在conditionals裡還是被當成<code>false</code>，接著經由一個<code>!</code>的logical not operator運算之後，就得到意料之外的結果啦！</p>
 <h1 id="Falsy-Falsey-Values"><a href="#Falsy-Falsey-Values" class="headerlink" title="Falsy (Falsey) Values"></a>Falsy (Falsey) Values</h1><p>這種會讓JavaScript engine在conditional裡面自動當成<code>false</code>的數值，叫做falsy values，又叫做falsey values。雖然直接這麼寫有時真的很方便，JavaScript的conditonal判斷實在有很多詭異的地方，我們還是多加注意吧！那麼，falsy values到底有哪些呢？讓我們熟記下面這5個吧！準備好了嗎？它們分別是：</p>
 <table>
 <thead>
