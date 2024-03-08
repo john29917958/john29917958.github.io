@@ -28,6 +28,6 @@ if (!address2) {
 | `undefined`           | 沒有被初始化的變數。                                                                                |
 | `""`                  | 空字串。                                                                                          |
 | `0`                   | 數字0。                                                                                          |
-| `NaN`                 | 沒辦法在JavaScript裡呈現的數字，例如對-1開根號，全名是Not a Number。<br />備註：`NaN`不等於任何數值，甚至是它自己。 |
+| `NaN`                 | 沒辦法在JavaScript裡呈現的數字，例如對-1開根號，全名是Not a Number。<br />備註：`NaN`不等於任何數值，甚至是它自己。如果要檢查變數的值是不是`NaN`，要用`isNaN()`方法來做到。 |
 
 一起熟記falsy values，避開JavaScript conditional地雷吧！
