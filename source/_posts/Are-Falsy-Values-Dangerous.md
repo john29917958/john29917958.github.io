@@ -20,7 +20,7 @@ if (!address2) {
 什麼！？我明明就用空字串`""`初始化第二地址`address2`變數了，怎麼JavaScript還是把它當成沒有初始化呢？原來是JavaScript在conditional裡面會把空字串當成`false`啦！所以即使我們已經用空字串`""`初始化好`address2`變數了，它在conditionals裡還是被當成`false`，接著經由一個`!`的logical not operator運算之後，就得到意料之外的結果啦！
 
 # Falsy (Falsey) Values
-這種會讓JavaScript engine在conditional裡面自動當成`false`的數值，叫做falsy values，又叫做falsey values。雖然直接這麼寫有時真的很方便，JavaScript的conditonal判斷實在有很多詭異的地方，我們還是多加注意吧！那麼，falsy values到底有哪些呢？讓我們熟記下面這5個吧！準備好了嗎？它們分別是：
+這種會讓JavaScript engine在conditional裡面自動當成`false`的數值，叫做falsy values，又叫做falsey values。只要不是falsy value的數值，在conditional裡面都會被當成`true`，例如`3`、`"Some text"`和`[1]`等等。雖然直接這麼寫有時真的很方便，JavaScript的conditonal判斷實在有很多詭異的地方，我們還是多加注意吧！那麼，falsy values到底有哪些呢？讓我們熟記下面這5個吧！準備好了嗎？它們分別是：
 
 | Falsy (Falsey) Values | 說明                                                                                             |
 |-----------------------|--------------------------------------------------------------------------------------------------|
