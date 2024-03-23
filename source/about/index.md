@@ -58,7 +58,7 @@ Contact information:
 
 ### [Pantuo](https://www.pantuo.com.tw/index.php)
 Back-End Developer
-2024/03 ~ now
+2024/03/18 ~ now
 Beitun, Taichung
 
 ### [Taiwan Semiconductor Manufacturing Company Limited](https://www.tsmc.com/)
