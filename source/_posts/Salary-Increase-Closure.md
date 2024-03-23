@@ -26,5 +26,8 @@ for (let i = 0; i < 99999; i++) {
 }
 ```
 我們可以看到`increaseSalary` function裡面用的`salary`就是一個free variable，它在`increaseSalary` function裡面沒有被建立，而是被建立在外面的`getIncreaseSalaryFunc` function裡。在這種情況下，`increaseSalary` function還是可以存取到`salary`變數。這是怎麼一回事呢？我們先來看看closure是什麼意思：
-Closure是一個function，附上一個包含所有free variables的referencing environment。
+> Closure是一個function，附上一個包含所有free variables的referencing environment。
+
 當`increaseSalary` function被建立時，closure就產生了，而當`increaseSalary` function被return出去時，可以想成是把整個closure回傳出去。於是，當包含free variable的function被執行時，JavaScript會從closure裡的referencing environment尋找free variable的數值。這也就是為什麼，在裡面的`increaseSalary` function可以存取到外面的`getIncreaseSalaryFunc` function的`salary`變數啦！
+
+到這裡，我們再來看看用closure的好處！這麼做的其中一個好處是，我們可以避免function要用的變數被外界存取到，想想如果有目的不同的程式碼存取到名字一樣的變數，會不會發生意外的side effect呢？我們可以回過頭來看看呼叫`increaseSalary()`的地方，在這裡是存取不到`salary`變數的，也就避免`salary`變數被`increaseSalary` function和`getIncreaseSalaryFunc` function以外的程式碼存取到啦！
