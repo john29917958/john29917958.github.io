@@ -1,4 +1,4 @@
-title: Lexical Scope和Closure的關係是什麼?
+title: Lexical Scope和Closure有什麼關係?
 visible: show
 date: 2024-03-23 19:08:03
 tags: [code, javascript, programming, web, webdesign]
