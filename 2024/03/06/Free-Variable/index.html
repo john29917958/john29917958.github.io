@@ -13,7 +13,7 @@
 <meta property="og:description" content="有人說，懂JavaScript的closure可以加薪，那closure（閉包）到底是什麼？為什麼會closure可以避免產生global變數？避免跟別人的程式碼發生衝突？避免讓變數意外得被外界程式修改而導致bug產生？其實，在學習如何加薪（X）closure（O）之前，必須先建立free variable的觀念，它對closure來說非常重要">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2024-03-06T12:29:39.000Z">
-<meta property="article:modified_time" content="2024-03-07T02:13:24.877Z">
+<meta property="article:modified_time" content="2024-03-23T12:19:22.277Z">
 <meta property="article:author" content="汪子超">
 <meta property="article:tag" content="programming">
 <meta property="article:tag" content="code">
@@ -22,7 +22,6 @@
 <meta property="article:tag" content="web">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:creator" content="@john29917958">
-<link rel="publisher" href="+%E6%B1%AA%E5%AD%90%E8%B6%85">
 <meta property="fb:admins" content="100002225898735">
 <meta property="fb:app_id" content="284882215">
   
@@ -48,7 +47,7 @@
 
 
   <script data-ad-client="ca-pub-8315401057994110" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 7.1.1"></head>
 <body>
   <div id="container">
     <div id="wrap">
@@ -122,7 +121,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://john29917958.github.io/2024/03/06/Free-Variable/" data-id="cltfs0x070000jrz1dusa9r7y" class="article-share-link">Share</a>
+      <a data-url="http://john29917958.github.io/2024/03/06/Free-Variable/" data-id="clu423bwt000092z1dkwi3khp" class="article-share-link">Share</a>
       
         <a href="http://john29917958.github.io/2024/03/06/Free-Variable/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -158,7 +157,7 @@
 
 <section id="comments">
   <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   </div>
 </section>
 </section>
@@ -169,7 +168,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a><span class="category-list-count">15</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/">programming</a><span class="category-list-count">0</span></li></ul>
     </div>
   </div>
 
@@ -178,7 +177,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/class/" rel="tag">class</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code/" rel="tag">code</a><span class="tag-list-count">12</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/coding/" rel="tag">coding</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/course/" rel="tag">course</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/education/" rel="tag">education</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/" rel="tag">javascript</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/program/" rel="tag">program</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/programming/" rel="tag">programming</a><span class="tag-list-count">15</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/teaching/" rel="tag">teaching</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web/" rel="tag">web</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webdesign/" rel="tag">webdesign</a><span class="tag-list-count">8</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/class/" rel="tag">class</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code/" rel="tag">code</a><span class="tag-list-count">12</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code-javascript-programming/" rel="tag">code, javascript, programming</a><span class="tag-list-count">0</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code-programming-javascript/" rel="tag">code, programming, javascript</a><span class="tag-list-count">0</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/coding/" rel="tag">coding</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/course/" rel="tag">course</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/education/" rel="tag">education</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/" rel="tag">javascript</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/program/" rel="tag">program</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/programming/" rel="tag">programming</a><span class="tag-list-count">15</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/teaching/" rel="tag">teaching</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web/" rel="tag">web</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web-design/" rel="tag">web design</a><span class="tag-list-count">0</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web-design-javascript-programming-code/" rel="tag">web design, javascript, programming, code</a><span class="tag-list-count">0</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webdesign/" rel="tag">webdesign</a><span class="tag-list-count">8</span></li></ul>
     </div>
   </div>
 
@@ -187,7 +186,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/class/" style="font-size: 10px;">class</a> <a href="/tags/code/" style="font-size: 16.67px;">code</a> <a href="/tags/coding/" style="font-size: 10px;">coding</a> <a href="/tags/course/" style="font-size: 10px;">course</a> <a href="/tags/education/" style="font-size: 10px;">education</a> <a href="/tags/javascript/" style="font-size: 13.33px;">javascript</a> <a href="/tags/program/" style="font-size: 10px;">program</a> <a href="/tags/programming/" style="font-size: 20px;">programming</a> <a href="/tags/teaching/" style="font-size: 10px;">teaching</a> <a href="/tags/web/" style="font-size: 13.33px;">web</a> <a href="/tags/webdesign/" style="font-size: 13.33px;">webdesign</a>
+      <a href="/tags/class/" style="font-size: 12.5px;">class</a> <a href="/tags/code/" style="font-size: 17.5px;">code</a> <a href="/tags/code-javascript-programming/" style="font-size: 10px;">code, javascript, programming</a> <a href="/tags/code-programming-javascript/" style="font-size: 10px;">code, programming, javascript</a> <a href="/tags/coding/" style="font-size: 12.5px;">coding</a> <a href="/tags/course/" style="font-size: 12.5px;">course</a> <a href="/tags/education/" style="font-size: 12.5px;">education</a> <a href="/tags/javascript/" style="font-size: 15px;">javascript</a> <a href="/tags/program/" style="font-size: 12.5px;">program</a> <a href="/tags/programming/" style="font-size: 20px;">programming</a> <a href="/tags/teaching/" style="font-size: 12.5px;">teaching</a> <a href="/tags/web/" style="font-size: 15px;">web</a> <a href="/tags/web-design/" style="font-size: 10px;">web design</a> <a href="/tags/web-design-javascript-programming-code/" style="font-size: 10px;">web design, javascript, programming, code</a> <a href="/tags/webdesign/" style="font-size: 15px;">webdesign</a>
     </div>
   </div>
 
