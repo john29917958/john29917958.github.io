@@ -3,17 +3,23 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2022/7 | TC</title>
+  <title>Lexical Scope和Closure的關係是什麼? | TC</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Here holds all stories about me - A fanatic of bringing technique and art into Things.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="TC">
-<meta property="og:url" content="http://john29917958.github.io/archives/2022/07/index.html">
+  <meta name="description" content="在前一篇的加薪閉包裡，我們看過了JavaScript closure是怎麼施展魔法，避免產生global變數。但為什麼我們可以知道，一個function的free variables被定義在哪裡呢？今天我們就要來一探究竟！是的，答案就在標題上，是因為JavaScript的lexical scope特性啦！我們先來看看lexical scope的說明：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Lexical Scope和Closure的關係是什麼?">
+<meta property="og:url" content="http://john29917958.github.io/2024/03/23/What-s-the-Relationship-Between-Lexical-Scope-and-Closure/index.html">
 <meta property="og:site_name" content="TC">
-<meta property="og:description" content="Here holds all stories about me - A fanatic of bringing technique and art into Things.">
+<meta property="og:description" content="在前一篇的加薪閉包裡，我們看過了JavaScript closure是怎麼施展魔法，避免產生global變數。但為什麼我們可以知道，一個function的free variables被定義在哪裡呢？今天我們就要來一探究竟！是的，答案就在標題上，是因為JavaScript的lexical scope特性啦！我們先來看看lexical scope的說明：">
 <meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2024-03-23T11:08:03.000Z">
+<meta property="article:modified_time" content="2024-03-23T11:39:28.922Z">
 <meta property="article:author" content="汪子超">
-<meta property="article:tag" content="程式, code, program, 軟體, 軟體工程, 資訊">
+<meta property="article:tag" content="programming">
+<meta property="article:tag" content="code">
+<meta property="article:tag" content="javascript">
+<meta property="article:tag" content="webdesign">
+<meta property="article:tag" content="web">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:creator" content="@john29917958">
 <link rel="publisher" href="+%E6%B1%AA%E5%AD%90%E8%B6%85">
@@ -79,16 +85,73 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
+        <section id="main"><article id="post-What-s-the-Relationship-Between-Lexical-Scope-and-Closure" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/03/23/What-s-the-Relationship-Between-Lexical-Scope-and-Closure/" class="article-date">
+  <time datetime="2024-03-23T11:08:03.000Z" itemprop="datePublished">2024-03-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Programming/">Programming</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      
+        <header class="article-header">
+      
+      
   
+    <h1 class="article-title" itemprop="name">
+      Lexical Scope和Closure的關係是什麼?
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在前一篇的<a href="/2024/03/10/Salary-Increase-Closure/" title="加薪閉包">加薪閉包</a>裡，我們看過了JavaScript closure是怎麼施展魔法，避免產生global變數。但為什麼我們可以知道，一個function的free variables被定義在哪裡呢？今天我們就要來一探究竟！是的，答案就在標題上，是因為JavaScript的lexical scope特性啦！我們先來看看lexical scope的說明：</p>
+<span id="more"></span>
+<p>Lexical scope是，我們可以藉由閱讀程式碼的結構，知道存取到的變數被定義位置。舉例來說，我們可以看看下面這段程式碼：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> number = <span class="number">20</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getDoSomethingFunc</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> number = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">doSomething</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(number);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> doSomething;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> doSomething = getDoSomethingFunc();</span><br><span class="line">doSomething();</span><br></pre></td></tr></table></figure>
+<p>執行這段程式碼之後，會在console裡印出什麼呢？答案是<code>10</code>，而不是<code>20</code>呢！因為要尋找<code>doSomething</code> function的free variable「<code>number</code>」，我們應該從<code>doSomething</code> function開始找，發現找不到，接著我們往外面一層scope找，也就是<code>getDoSomethingFunc</code> function的scope，在這裡找到了variable「<code>var number = 10;</code>」的定義。所以，程式碼執行之後印出來的，是<code>10</code>，而不是在最外層的<code>number</code>變數，其數值是<code>20</code>囉！也就是跟<code>doSomething</code> function在哪裡被執行沒有關係啦！<br>最後我們再來看一次，藉由JavaScript的lexical scope，我們可以只閱讀程式碼，就知道存取的變數被定義的位置了！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://john29917958.github.io/2024/03/23/What-s-the-Relationship-Between-Lexical-Scope-and-Closure/" data-id="clu3zm1rb00006yz1916t9okx" class="article-share-link">Share</a>
+      
+        <a href="http://john29917958.github.io/2024/03/23/What-s-the-Relationship-Between-Lexical-Scope-and-Closure/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/code/" rel="tag">code</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/programming/" rel="tag">programming</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web/" rel="tag">web</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webdesign/" rel="tag">webdesign</a></li></ul>
+
+    </footer>
+  </div>
   
     
+<nav id="article-nav">
   
-    
   
+    <a href="/2024/03/10/Salary-Increase-Closure/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">加薪閉包 - Closure</div>
+    </a>
   
-    </div></section>
+</nav>
+
   
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
 </section>
         
           <aside id="sidebar">
@@ -186,11 +249,13 @@
 <script>
   var disqus_shortname = 'john29917958-github';
   
+  var disqus_url = 'http://john29917958.github.io/2024/03/23/What-s-the-Relationship-Between-Lexical-Scope-and-Closure/';
+  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
